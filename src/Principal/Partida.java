@@ -82,6 +82,4 @@ public class Partida{
    public void setVenceu(boolean venceu){
        this.venceu=venceu;
    }
-  /*public int getQuantidadeMaximaErrosAtual(){
-		return this.quantidadeMaximaErrosAtual;*/
   }
