@@ -1,17 +1,19 @@
 package Principal;
 
+import java.util.Date;
+
+
 public class Partida{
   private Jogador jogador;
   private Tabuleiro tabuleiro = new Tabuleiro();
   private int quantidadeErros=0;
   private boolean venceu;
-  private long tempo;
+  private Date tempo= new Date();
   private int score;
   private DificuldadePartida dificuldade;
   private int quantidadeMaximaErrosAtual;
   
   public Partida(String nome){
-    this.tempo = System.currentTimeMillis() + 5000;
     this.jogador = new Jogador(nome);
   }
 
@@ -41,7 +43,7 @@ public class Partida{
           default:
               break;
       }
-    }
+  }
     
   public boolean isFimDeJogo(){
       if(this.quantidadeErros>=this.quantidadeMaximaErrosAtual){
@@ -49,13 +51,13 @@ public class Partida{
           return true;
       }
       return false;
-      }
+  }
       
   
   
-    public void iniciaPartida(){
+  public void iniciaPartida(){
       this.quantidadeErros=0;
-      this.tempo = System.currentTimeMillis() + 200;
+      this.tempo= new Date();
       this.venceu= false;
       this.tabuleiro.geraTabuleiro();
   }
@@ -65,21 +67,18 @@ public class Partida{
     return this.jogador.getNome();
   }
   
-  public long getTempo(){
-    return this.tempo;
-  }
   public int getQuantidadeErros(){
     return this.quantidadeErros;
   }
-   public int[][] getGridTabuleiro(){
+  public int[][] getGridTabuleiro(){
             return tabuleiro.getGrid();
-        }
+  }
    
-   public boolean getVenceu(){
+  public boolean getVenceu(){
        return this.venceu;
-   }
+  }
    
-   public void setVenceu(boolean venceu){
+  public void setVenceu(boolean venceu){
        this.venceu=venceu;
    }
   }

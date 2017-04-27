@@ -2,7 +2,7 @@ package Principal;
 
 /**
  *
- * @author Glicia Tigre
+ * @author Glicia Tigre and Dylan Santos
  */
 public class Main {
     public static void main(String[] args) {
