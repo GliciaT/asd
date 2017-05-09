@@ -1,4 +1,4 @@
-package Principal;
+package br.com.poli;
 
 public class Jogador extends Pessoa {
 

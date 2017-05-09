@@ -1,4 +1,4 @@
-package Principal;
+package br.com.poli;
 
 public enum DificuldadePartida {
     FACIL(0, 10), NORMAL(1, 5), DIFICIL(2, 3);
