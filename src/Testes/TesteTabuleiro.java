@@ -1,5 +1,8 @@
 
-package Principal;
+package Testes;
+
+import br.com.poli.Tabuleiro;
+import br.com.poli.Tabuleiro;
 
 public class TesteTabuleiro {
     public static void main(String[] args){

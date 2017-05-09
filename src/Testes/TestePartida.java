@@ -1,4 +1,6 @@
-package Principal;
+package Testes;
+
+import br.com.poli.Partida;
 
 public class TestePartida {
     public static void main(String[] args){
