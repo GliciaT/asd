@@ -1,5 +1,7 @@
 
-package Principal;
+package Testes;
+
+import br.com.poli.DificuldadePartida;
 
 public class TesteDificuldadePartida {
     public static void main(String[] args){
