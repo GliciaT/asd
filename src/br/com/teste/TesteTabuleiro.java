@@ -1,5 +1,5 @@
 
-package Testes;
+package br.com.teste;
 
 import br.com.poli.Tabuleiro;
 import br.com.poli.Tabuleiro;
