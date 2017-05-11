@@ -1,6 +1,6 @@
-package br.com.teste;
+package br.com.poli.testes;
 
-import br.com.poli.Partida;
+import br.com.poli.principal.Partida;
 
 public class TestePartida {
     public static void main(String[] args){
