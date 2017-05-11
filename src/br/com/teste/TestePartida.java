@@ -1,4 +1,4 @@
-package Testes;
+package br.com.teste;
 
 import br.com.poli.Partida;
 
