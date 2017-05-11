@@ -1,8 +1,7 @@
+package br.com.poli.testes;
 
-package br.com.teste;
-
-import br.com.poli.Tabuleiro;
-import br.com.poli.Tabuleiro;
+import br.com.poli.principal.Tabuleiro;
+import br.com.poli.principal.Tabuleiro;
 
 public class TesteTabuleiro {
     public static void main(String[] args){
