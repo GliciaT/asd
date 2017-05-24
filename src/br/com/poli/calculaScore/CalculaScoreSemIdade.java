@@ -13,7 +13,13 @@ public class CalculaScoreSemIdade implements CalculaScore{
     @Override
     public void calcula(Partida partida) {
         partida.getQuantidadeErros();
+<<<<<<< Pt3
         partida.getQuantidadeMaximaErrosDificuldade();
+=======
+        partida.dificuldade.getQuantidadeMaximaErros(); //A quantidade maxima de erros define a Dificuldade da Partida
+        partida.getTempoFinal();
+        partida.getTempoInicial();
+>>>>>>> Metodo calcula das Classes de Score iniciado
         
     }
     
