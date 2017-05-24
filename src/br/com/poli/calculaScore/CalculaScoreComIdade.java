@@ -12,7 +12,7 @@ public class CalculaScoreComIdade implements CalculaScore{
 
     @Override
     public void calcula(Partida partida) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        
     }
     
 }

@@ -10,13 +10,15 @@ public class Partida {
     private Tabuleiro tabuleiro = new Tabuleiro();
     private int quantidadeErros = 0;
     private boolean venceu;
-    private Date tempo = new Date();
+    private Date tempoInicial = new Date();
+    private Date tempoFinal = new Date();
     private int score;
     private DificuldadePartida dificuldade;
-    private int quantidadeMaximaErrosAtual;
 
-    public Partida(String nome) {
+    public Partida(String nome, DificuldadePartida dificuldade) {
+        this.tempoInicial.getTime();
         this.jogador = new Jogador(nome);
+        this.dificuldade = dificuldade;
     }
 
     public void executaMovimento(int x, int y, int valor) throws MovimentoInvalidoException, MovimentoIncorretoException {
@@ -33,26 +35,9 @@ public class Partida {
         }
     }
 
-    public void escolherDificuldade(String dificuldade) {
-        if (null != dificuldade) {
-            switch (dificuldade) {
-                case "FACIL":
-                    this.quantidadeMaximaErrosAtual = DificuldadePartida.FACIL.getQuantidadeMaximaErros();
-                    break;
-                case "NORMAL":
-                    this.quantidadeMaximaErrosAtual = DificuldadePartida.NORMAL.getQuantidadeMaximaErros();
-                    break;
-                case "DIFICIL":
-                    this.quantidadeMaximaErrosAtual = DificuldadePartida.DIFICIL.getQuantidadeMaximaErros();
-                    break;
-                default:
-                    break;
-            }
-        }
-    }
-
     public boolean isFimDeJogo() {
-        if (this.quantidadeErros >= this.quantidadeMaximaErrosAtual) {
+        this.tempoFinal.getTime();
+        if (this.quantidadeErros >= this.dificuldade.getQuantidadeMaximaErros()) {
             System.out.println("Errou mais do que podia. GAME OVER");
             return true;
         }
@@ -61,7 +46,7 @@ public class Partida {
 
     public void iniciaPartida() {
         this.quantidadeErros = 0;
-        this.tempo = new Date();
+        this.tempoInicial = new Date();
         this.venceu = false;
         this.tabuleiro.geraTabuleiro(DificuldadePartida.FACIL);
     }
@@ -84,5 +69,12 @@ public class Partida {
 
     public void setVenceu(boolean venceu) {
         this.venceu = venceu;
+        
     }
+    public int tempoDaPartida(){
+        Date tempoPartida = this.tempoFinal - this.tempoInicial;
+        return tempoPartida;
+    }
+    
+    
 }
