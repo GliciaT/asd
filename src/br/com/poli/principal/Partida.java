@@ -1,5 +1,7 @@
 package br.com.poli.principal;
 
+import br.com.poli.exception.MovimentoIncorretoException;
+import br.com.poli.exception.MovimentoInvalidoException;
 import java.util.Date;
 
 public class Partida {
@@ -17,15 +19,17 @@ public class Partida {
         this.jogador = new Jogador(nome);
     }
 
-    public void executaMovimento(int x, int y, int valor) {
-        if (x <= 9 && y <= 9) {
+    public void executaMovimento(int x, int y, int valor) throws MovimentoInvalidoException, MovimentoIncorretoException {
+        try {
             boolean movimentoValido = this.tabuleiro.executaMovimento(x, y, valor);
-            if (movimentoValido == true) {
+            if (movimentoValido) {
                 this.venceu = tabuleiro.isTabuleiroPreenchido();
             }
-            if (movimentoValido == false) {
-                this.quantidadeErros += 1;
-            }
+        } catch (MovimentoInvalidoException e) {
+            System.out.println(e.getMessage());
+        } catch (MovimentoIncorretoException e) {
+            System.out.println(e.getMessage());
+            this.quantidadeErros += 1;
         }
     }
 
@@ -59,7 +63,7 @@ public class Partida {
         this.quantidadeErros = 0;
         this.tempo = new Date();
         this.venceu = false;
-        this.tabuleiro.geraTabuleiro();
+        this.tabuleiro.geraTabuleiro(DificuldadePartida.FACIL);
     }
 
     public String getNomeJogador() {
