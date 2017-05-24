@@ -12,7 +12,11 @@ public class CalculaScoreSemIdade implements CalculaScore{
 
     @Override
     public void calcula(Partida partida) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        partida.getQuantidadeErros();
+        partida.dificuldade.getQuantidadeMaximaErros(); //A quantidade maxima de erros define a Dificuldade da Partida
+        partida.getTempoFinal();
+        partida.getTempoInicial();
+        
     }
     
 }
