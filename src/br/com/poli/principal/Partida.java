@@ -12,8 +12,8 @@ public class Partida {
     private boolean venceu;
     private Date tempoInicial = new Date();
     private Date tempoFinal = new Date();
-    private int score;
     private DificuldadePartida dificuldade;
+    private long score;
 
     public Partida(String nome, DificuldadePartida dificuldade) {
         this.tempoInicial.getTime();
@@ -66,6 +66,7 @@ public class Partida {
         return tabuleiro.getGrid();
     }
 
+
     public int[][] getGabaritoTabuleiro() {
         return tabuleiro.getGabarito();
     }
@@ -80,8 +81,8 @@ public class Partida {
 
     public void setVenceu(boolean venceu) {
         this.venceu = venceu;
-
     }
+        
 
     public Date getTempoFinal() {
         return this.tempoFinal;
@@ -89,6 +90,14 @@ public class Partida {
 
     public Date getTempoInicial() {
         return this.tempoInicial;
+
+    }
+    public void setScore(long score){
+        this.score=score;
+    }
+    public long diferencaTempo(long tempo){
+        tempo=tempoFinal.getTime() - tempoInicial.getTime();
+        return tempo;
     }
 
 }

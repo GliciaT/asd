@@ -11,11 +11,10 @@ import br.com.poli.principal.Partida;
 public class CalculaScoreSemIdade implements CalculaScore{
 
     @Override
-    public void calcula(Partida partida) {
-        partida.getQuantidadeErros();
-        partida.getQuantidadeMaximaErrosDificuldade(); //A quantidade maxima de erros define a Dificuldade da Partida
-        partida.getTempoFinal();
-        partida.getTempoInicial();        
+    public void calcula(Partida partida) {    
+
+        partida.setScore(partida.getQuantidadeMaximaErrosDificuldade()-partida.getQuantidadeErros()/partida.diferencaTempo(0));
+        
     }
     
 }
