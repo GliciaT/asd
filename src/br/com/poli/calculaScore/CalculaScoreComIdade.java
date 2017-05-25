@@ -12,15 +12,11 @@ public class CalculaScoreComIdade implements CalculaScore{
 
     @Override
     public void calcula(Partida partida) {
-<<<<<<< Pt3
-=======
         partida.getQuantidadeErros();
-        partida.dificuldade.getQuantidadeMaximaErros(); //A quantidade maxima de erros define a Dificuldade da Partida
+        partida.getQuantidadeMaximaErrosDificuldade(); //A quantidade maxima de erros define a Dificuldade da Partida
         partida.getTempoFinal();
         partida.getTempoInicial();
-        pessoa.idade();
-        
->>>>>>> Metodo calcula das Classes de Score iniciado
+        //partida.idade();
         
     }
     

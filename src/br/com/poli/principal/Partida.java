@@ -13,11 +13,7 @@ public class Partida {
     private Date tempoInicial = new Date();
     private Date tempoFinal = new Date();
     private int score;
-<<<<<<< Pt3
     private DificuldadePartida dificuldade;
-=======
-    public DificuldadePartida dificuldade;
->>>>>>> Metodo calcula das Classes de Score iniciado
 
     public Partida(String nome, DificuldadePartida dificuldade) {
         this.tempoInicial.getTime();
@@ -41,11 +37,7 @@ public class Partida {
 
     public boolean isFimDeJogo() {
         this.tempoFinal.getTime();
-<<<<<<< Pt3
-        if (this.quantidadeErros == this.dificuldade.getQuantidadeMaximaErros()) {
-=======
         if (this.quantidadeErros >= this.dificuldade.getQuantidadeMaximaErros()) {
->>>>>>> Metodo calcula das Classes de Score iniciado
             System.out.println("Errou mais do que podia. GAME OVER");
             return true;
         }
@@ -88,16 +80,6 @@ public class Partida {
 
     public void setVenceu(boolean venceu) {
         this.venceu = venceu;
-<<<<<<< Pt3
-
-    }
-    /*
-    public Date tempoDaPartida() {
-        Date tempoPartida = this.tempoFinal - this.tempoInicial;
-        return tempoPartida;
-    }
-     */
-=======
         
     }
     public Date getTempoFinal(){
@@ -106,7 +88,4 @@ public class Partida {
     public Date getTempoInicial(){
         return this.tempoInicial;
     }
-    
-    
->>>>>>> Metodo calcula das Classes de Score iniciado
 }
