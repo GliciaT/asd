@@ -24,20 +24,20 @@ public class Partida {
     public void executaMovimento(int x, int y, int valor) throws MovimentoInvalidoException, MovimentoIncorretoException {
         try {
             boolean movimentoValido = this.tabuleiro.executaMovimento(x, y, valor);
-            if (movimentoValido) {
+            if (movimentoValido == true) {
                 this.venceu = tabuleiro.isTabuleiroPreenchido();
             }
-        } catch (MovimentoInvalidoException e) {
-            System.out.println(e.getMessage());
-        } catch (MovimentoIncorretoException e) {
-            System.out.println(e.getMessage());
+        } catch (MovimentoInvalidoException e1) {
+            System.out.println(e1.getMessage());
+        } catch (MovimentoIncorretoException e2) {
+            System.out.println(e2.getMessage());
             this.quantidadeErros += 1;
         }
     }
 
     public boolean isFimDeJogo() {
         this.tempoFinal.getTime();
-        if (this.quantidadeErros >= this.dificuldade.getQuantidadeMaximaErros()) {
+        if (this.quantidadeErros == this.dificuldade.getQuantidadeMaximaErros()) {
             System.out.println("Errou mais do que podia. GAME OVER");
             return true;
         }
@@ -48,7 +48,10 @@ public class Partida {
         this.quantidadeErros = 0;
         this.tempoInicial = new Date();
         this.venceu = false;
-        this.tabuleiro.geraTabuleiro(DificuldadePartida.FACIL);
+        this.tabuleiro.geraTabuleiro(dificuldade);
+        /*como a função de geraTabuleiro só tem assinatura, 
+         *vou instanciar tabuleiro para ter um tabuleiro vazio*/
+        this.tabuleiro = new Tabuleiro();
     }
 
     public String getNomeJogador() {
@@ -62,10 +65,15 @@ public class Partida {
     public int[][] getGridTabuleiro() {
         return tabuleiro.getGrid();
     }
-    
-    public int getQuantidadeMaximaErrosDificuldade(){
+
+    public int[][] getGabaritoTabuleiro() {
+        return tabuleiro.getGabarito();
+    }
+
+    public int getQuantidadeMaximaErrosDificuldade() {
         return this.dificuldade.getQuantidadeMaximaErros();
     }
+
     public boolean getVenceu() {
         return this.venceu;
     }
@@ -74,10 +82,10 @@ public class Partida {
         this.venceu = venceu;
 
     }
-
+    /*
     public Date tempoDaPartida() {
         Date tempoPartida = this.tempoFinal - this.tempoInicial;
         return tempoPartida;
     }
-
+     */
 }

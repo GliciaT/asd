@@ -17,6 +17,10 @@ public class Tabuleiro {
             {2, 3, 1, 4, 8, 5, 9, 6, 7}};
     ;
     ;
+
+    public int[][] getGabarito() {
+        return gabarito;
+    }
     private int[][] grid = new int[9][9];
 
     public Tabuleiro() {
@@ -47,7 +51,7 @@ public class Tabuleiro {
 
     public boolean isTabuleiroPreenchido() {
         for (int i = 0; i < this.grid.length; i++) {
-            for (int j = 0; j < this.grid.length; j++) {
+            for (int j = 0; j < this.grid[i].length; j++) {
                 if (this.grid[i][j] == 0) {
                     return false;
                 }

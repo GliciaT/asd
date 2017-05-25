@@ -11,7 +11,7 @@ public class TesteTabuleiro {
         Tabuleiro jogo1 = new Tabuleiro();
         //mostrar tabuleiro vazio
         for (int i = 0; i < jogo1.getGrid().length; i++) {
-            for (int j = 0; j < jogo1.getGrid().length; j++) {
+            for (int j = 0; j < jogo1.getGrid()[i].length; j++) {
                 System.out.print(jogo1.getGrid()[i][j]);
             }
             System.out.println("");
@@ -45,7 +45,7 @@ public class TesteTabuleiro {
         //Mostra o tabuleiro após as jogadas realizadas
         System.out.println("\nTabuleiro Atual \n");
         for (int i = 0; i < jogo1.getGrid().length; i++) {
-            for (int j = 0; j < jogo1.getGrid().length; j++) {
+            for (int j = 0; j < jogo1.getGrid()[i].length; j++) {
                 System.out.print(jogo1.getGrid()[i][j]);
             }
             System.out.println("");
