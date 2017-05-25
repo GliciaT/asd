@@ -16,7 +16,8 @@ public class CalculaScoreComIdade implements CalculaScore{
         partida.getQuantidadeMaximaErrosDificuldade(); //A quantidade maxima de erros define a Dificuldade da Partida
         partida.getTempoFinal();
         partida.getTempoInicial();
-        //partida.idade();
+        pessoa.idade();
+
         
     }
     

@@ -15,6 +15,7 @@ public class Partida {
     private int score;
     private DificuldadePartida dificuldade;
 
+
     public Partida(String nome, DificuldadePartida dificuldade) {
         this.tempoInicial.getTime();
         this.jogador = new Jogador(nome);
@@ -88,4 +89,6 @@ public class Partida {
     public Date getTempoInicial(){
         return this.tempoInicial;
     }
+    
+    
 }
