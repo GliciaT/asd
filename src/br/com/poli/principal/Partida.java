@@ -25,6 +25,7 @@ public class Partida {
         try {
             boolean movimentoValido = this.tabuleiro.executaMovimento(x, y, valor);
             if (movimentoValido == true) {
+                this.setScore(100);
                 this.venceu = tabuleiro.isTabuleiroPreenchido();
             }
         } catch (MovimentoInvalidoException e1) {
@@ -66,7 +67,6 @@ public class Partida {
         return tabuleiro.getGrid();
     }
 
-
     public int[][] getGabaritoTabuleiro() {
         return tabuleiro.getGabarito();
     }
@@ -82,7 +82,6 @@ public class Partida {
     public void setVenceu(boolean venceu) {
         this.venceu = venceu;
     }
-        
 
     public Date getTempoFinal() {
         return this.tempoFinal;
@@ -92,11 +91,17 @@ public class Partida {
         return this.tempoInicial;
 
     }
-    public void setScore(long score){
-        this.score=score;
+
+    public void setScore(long score) {
+        this.score += score;
     }
-    public long diferencaTempo(long tempo){
-        tempo=tempoFinal.getTime() - tempoInicial.getTime();
+
+    public long getScore() {
+        return score;
+    }
+
+    public long diferencaTempo() {
+        long tempo = tempoFinal.getTime() - tempoInicial.getTime();
         return tempo;
     }
 

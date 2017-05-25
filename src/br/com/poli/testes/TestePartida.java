@@ -1,7 +1,10 @@
 package br.com.poli.testes;
 
+import br.com.poli.calculaScore.CalculaScoreComIdade;
+import br.com.poli.calculaScore.CalculaScoreSemIdade;
 import br.com.poli.exception.MovimentoIncorretoException;
 import br.com.poli.exception.MovimentoInvalidoException;
+import br.com.poli.interfaces.CalculaScore;
 import br.com.poli.principal.DificuldadePartida;
 import br.com.poli.principal.Partida;
 import java.util.logging.Level;
@@ -41,7 +44,12 @@ public class TestePartida {
             }
 
         }
-
+        
+        //Calculo do score
+        CalculaScoreComIdade calcula = new CalculaScoreComIdade();
+        calcula.calcula(jogo1);
+        System.out.println(jogo1.getScore());
+        
         jogo1.iniciaPartida();
         System.out.println("\nNOVO JOGO VAI COMEÇAR \n");
         //provocar vencer
