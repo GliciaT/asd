@@ -13,7 +13,7 @@ public class CalculaScoreSemIdade implements CalculaScore{
     @Override
     public void calcula(Partida partida) {
         partida.getQuantidadeErros();
-        partida.dificuldade.getQuantidadeMaximaErros();
+        partida.getQuantidadeMaximaErrosDificuldade();
         
     }
     

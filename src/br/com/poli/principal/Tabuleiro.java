@@ -27,8 +27,9 @@ public class Tabuleiro {
         if (valor <= 9 && valor >= 1) {
             if (x >= 0 && x <= 8 && y >= 0 && y <= 8) {
                 if (this.grid[x][y] == 0) {
-                    if (valor == this.gabarito[x][y]) {
+                    if (this.gabarito[x][y] == valor) {
                         this.grid[x][y] = valor;
+                        System.out.println("Acertou");
                         return true;
                     } else {
                         throw new MovimentoIncorretoException("Jogada errada");

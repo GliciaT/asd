@@ -62,19 +62,22 @@ public class Partida {
     public int[][] getGridTabuleiro() {
         return tabuleiro.getGrid();
     }
-
+    
+    public int getQuantidadeMaximaErrosDificuldade(){
+        return this.dificuldade.getQuantidadeMaximaErros();
+    }
     public boolean getVenceu() {
         return this.venceu;
     }
 
     public void setVenceu(boolean venceu) {
         this.venceu = venceu;
-        
+
     }
-    public int tempoDaPartida(){
+
+    public Date tempoDaPartida() {
         Date tempoPartida = this.tempoFinal - this.tempoInicial;
         return tempoPartida;
     }
-    
-    
+
 }
