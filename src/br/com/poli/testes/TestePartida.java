@@ -46,7 +46,7 @@ public class TestePartida {
         }
         
         //Calculo do score
-        CalculaScoreComIdade calcula = new CalculaScoreComIdade();
+        CalculaScoreSemIdade calcula = new CalculaScoreSemIdade();
         calcula.calcula(jogo1);
         System.out.println(jogo1.getScore());
         
