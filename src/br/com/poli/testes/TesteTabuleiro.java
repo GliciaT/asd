@@ -1,10 +1,12 @@
 package br.com.poli.testes;
 
+import br.com.poli.exception.MovimentoIncorretoException;
+import br.com.poli.exception.MovimentoInvalidoException;
 import br.com.poli.principal.Tabuleiro;
 import br.com.poli.principal.Tabuleiro;
 
 public class TesteTabuleiro {
-    public static void main(String[] args){
+    public static void main(String[] args) throws MovimentoInvalidoException, MovimentoIncorretoException{
         Tabuleiro jogo1 = new Tabuleiro();
             //mostrar tabuleiro vazio
             for(int i=0;i < jogo1.getGrid().length;i++) {
