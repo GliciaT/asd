@@ -1,5 +1,7 @@
 package br.com.poli.principal;
 
+import br.com.poli.exception.MovimentoIncorretoException;
+import br.com.poli.exception.MovimentoInvalidoException;
 import java.util.Date;
 
 public class Partida {
@@ -8,47 +10,37 @@ public class Partida {
     private Tabuleiro tabuleiro = new Tabuleiro();
     private int quantidadeErros = 0;
     private boolean venceu;
-    private Date tempo = new Date();
+    private Date tempoInicial = new Date();
+    private Date tempoFinal = new Date();
     private int score;
     private DificuldadePartida dificuldade;
-    private int quantidadeMaximaErrosAtual;
 
-    public Partida(String nome) {
+
+    public Partida(String nome, DificuldadePartida dificuldade) {
+        this.tempoInicial.getTime();
         this.jogador = new Jogador(nome);
+        this.dificuldade = dificuldade;
     }
 
-    public void executaMovimento(int x, int y, int valor) {
-        if (x <= 9 && y <= 9) {
+    public void executaMovimento(int x, int y, int valor) throws MovimentoInvalidoException, MovimentoIncorretoException {
+        try {
             boolean movimentoValido = this.tabuleiro.executaMovimento(x, y, valor);
             if (movimentoValido == true) {
                 this.venceu = tabuleiro.isTabuleiroPreenchido();
             }
-            if (movimentoValido == false) {
-                this.quantidadeErros += 1;
-            }
-        }
-    }
-
-    public void escolherDificuldade(String dificuldade) {
-        if (null != dificuldade) {
-            switch (dificuldade) {
-                case "FACIL":
-                    this.quantidadeMaximaErrosAtual = DificuldadePartida.FACIL.getQuantidadeMaximaErros();
-                    break;
-                case "NORMAL":
-                    this.quantidadeMaximaErrosAtual = DificuldadePartida.NORMAL.getQuantidadeMaximaErros();
-                    break;
-                case "DIFICIL":
-                    this.quantidadeMaximaErrosAtual = DificuldadePartida.DIFICIL.getQuantidadeMaximaErros();
-                    break;
-                default:
-                    break;
-            }
+        } catch (MovimentoInvalidoException e1) {
+            System.out.println(e1.getMessage());
+            throw e1;
+        } catch (MovimentoIncorretoException e2) {
+            System.out.println(e2.getMessage());
+            this.quantidadeErros += 1;
+            throw e2;
         }
     }
 
     public boolean isFimDeJogo() {
-        if (this.quantidadeErros >= this.quantidadeMaximaErrosAtual) {
+        this.tempoFinal.getTime();
+        if (this.quantidadeErros >= this.dificuldade.getQuantidadeMaximaErros()) {
             System.out.println("Errou mais do que podia. GAME OVER");
             return true;
         }
@@ -57,9 +49,12 @@ public class Partida {
 
     public void iniciaPartida() {
         this.quantidadeErros = 0;
-        this.tempo = new Date();
+        this.tempoInicial = new Date();
         this.venceu = false;
-        this.tabuleiro.geraTabuleiro();
+        this.tabuleiro.geraTabuleiro(dificuldade);
+        /*como a função de geraTabuleiro só tem assinatura, 
+         *vou instanciar tabuleiro para ter um tabuleiro vazio*/
+        this.tabuleiro = new Tabuleiro();
     }
 
     public String getNomeJogador() {
@@ -74,11 +69,28 @@ public class Partida {
         return tabuleiro.getGrid();
     }
 
+    public int[][] getGabaritoTabuleiro() {
+        return tabuleiro.getGabarito();
+    }
+
+    public int getQuantidadeMaximaErrosDificuldade() {
+        return this.dificuldade.getQuantidadeMaximaErros();
+    }
+
     public boolean getVenceu() {
         return this.venceu;
     }
 
     public void setVenceu(boolean venceu) {
         this.venceu = venceu;
+        
     }
+    public Date getTempoFinal(){
+        return this.tempoFinal;
+    }
+    public Date getTempoInicial(){
+        return this.tempoInicial;
+    }
+    
+    
 }
