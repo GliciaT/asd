@@ -30,9 +30,11 @@ public class Partida {
             }
         } catch (MovimentoInvalidoException e1) {
             System.out.println(e1.getMessage());
+            throw e1;
         } catch (MovimentoIncorretoException e2) {
             System.out.println(e2.getMessage());
             this.quantidadeErros += 1;
+            throw e2;
         }
     }
 
