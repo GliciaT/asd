@@ -4,10 +4,12 @@ import br.com.poli.exception.MovimentoIncorretoException;
 import br.com.poli.exception.MovimentoInvalidoException;
 import br.com.poli.principal.DificuldadePartida;
 import br.com.poli.principal.Partida;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 public class TestePartida {
 
-    public static void main(String[] args) throws MovimentoInvalidoException, MovimentoIncorretoException {
+    public static void main(String[] args) {
         Partida jogo1;
         jogo1 = new Partida("Ana", DificuldadePartida.FACIL);
         //mostrar tabuleiro vazio
@@ -19,13 +21,24 @@ public class TestePartida {
         }
         System.out.println("\nInicio do Jogo \n");
         //teste de executa movimento
-
-        jogo1.executaMovimento(0, 0, 8);
-        jogo1.executaMovimento(0, 0, 7);
+        try {
+            jogo1.executaMovimento(0, 0, 8);
+            jogo1.executaMovimento(0, 0, 7);
+        } catch (MovimentoInvalidoException e1) {
+            System.out.println(e1.getMessage());
+        } catch (MovimentoIncorretoException e2) {
+            System.out.println(e2.getMessage());
+        }
 
         //provocar Fim de jogo
         while (jogo1.isFimDeJogo() != true) {
-            jogo1.executaMovimento(1, 0, 7);
+            try {
+                jogo1.executaMovimento(1, 0, 7);
+            } catch (MovimentoInvalidoException e1) {
+                System.out.println(e1.getMessage());
+            } catch (MovimentoIncorretoException e2) {
+                System.out.println(e2.getMessage());
+            }
 
         }
 
@@ -35,7 +48,13 @@ public class TestePartida {
         while (jogo1.isFimDeJogo() != true) {
             for (int i = 0; i < jogo1.getGridTabuleiro().length; i++) {
                 for (int j = 0; j < jogo1.getGridTabuleiro()[i].length; j++) {
-                    jogo1.executaMovimento(i, j, jogo1.getGabaritoTabuleiro()[i][j]);
+                    try {
+                        jogo1.executaMovimento(i, j, jogo1.getGabaritoTabuleiro()[i][j]);
+                    } catch (MovimentoInvalidoException e1) {
+                        System.out.println(e1.getMessage());
+                    } catch (MovimentoIncorretoException e2) {
+                        System.out.println(e2.getMessage());
+                    }
                 }
             }
             if (jogo1.getVenceu() == true) {

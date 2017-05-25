@@ -15,7 +15,6 @@ public class Partida {
     private int score;
     private DificuldadePartida dificuldade;
 
-
     public Partida(String nome, DificuldadePartida dificuldade) {
         this.tempoInicial.getTime();
         this.jogador = new Jogador(nome);
@@ -29,10 +28,8 @@ public class Partida {
                 this.venceu = tabuleiro.isTabuleiroPreenchido();
             }
         } catch (MovimentoInvalidoException e1) {
-            System.out.println(e1.getMessage());
             throw e1;
         } catch (MovimentoIncorretoException e2) {
-            System.out.println(e2.getMessage());
             this.quantidadeErros += 1;
             throw e2;
         }
@@ -83,14 +80,15 @@ public class Partida {
 
     public void setVenceu(boolean venceu) {
         this.venceu = venceu;
-        
+
     }
-    public Date getTempoFinal(){
+
+    public Date getTempoFinal() {
         return this.tempoFinal;
     }
-    public Date getTempoInicial(){
+
+    public Date getTempoInicial() {
         return this.tempoInicial;
     }
-    
-    
+
 }
