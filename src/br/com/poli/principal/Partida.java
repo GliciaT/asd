@@ -21,6 +21,12 @@ public class Partida {
         this.dificuldade = dificuldade;
     }
 
+    public Partida(String nome, DificuldadePartida dificuldade, int idade) {
+        this.tempoInicial.getTime();
+        this.jogador = new Jogador(nome, idade);
+        this.dificuldade = dificuldade;
+    }
+
     public void executaMovimento(int x, int y, int valor) throws MovimentoInvalidoException, MovimentoIncorretoException {
         try {
             boolean movimentoValido = this.tabuleiro.executaMovimento(x, y, valor);
@@ -73,6 +79,14 @@ public class Partida {
 
     public int getQuantidadeMaximaErrosDificuldade() {
         return this.dificuldade.getQuantidadeMaximaErros();
+    }
+
+    public int getIdadeJogador() {
+        return this.jogador.getIdade();
+    }
+
+    public void setIdadeJogador(int idade) {
+        this.jogador.setIdade(idade);
     }
 
     public boolean getVenceu() {

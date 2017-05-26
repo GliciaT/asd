@@ -9,6 +9,11 @@ public abstract class Pessoa {
         this.nome = nome;
     }
 
+    public Pessoa(String nome, int idade) {
+        this.nome = nome;
+        this.idade = idade;
+    }
+
     public int getIdade() {
         return idade;
     }

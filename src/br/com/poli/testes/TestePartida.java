@@ -70,6 +70,11 @@ public class TestePartida {
                 break;
             }
         }
+        jogo1.setIdadeJogador(20);
+        //Calculo baseado na idade
+        CalculaScoreComIdade calculaComIdade = new CalculaScoreComIdade();
+        calculaComIdade.calcula(jogo1);
+        System.out.println(jogo1.getScore());
         //loop feito para não ter que preencher o tabuleiro manualmente
         /*while(jogo1.isFimDeJogo()!=true){
                 int b=3;
