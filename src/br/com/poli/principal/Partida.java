@@ -10,14 +10,20 @@ public class Partida {
     private Tabuleiro tabuleiro = new Tabuleiro();
     private int quantidadeErros = 0;
     private boolean venceu;
-    private Date tempoInicial = new Date();
-    private Date tempoFinal = new Date();
+    private Date tempoInicial;
+    private Date tempoFinal;
     private DificuldadePartida dificuldade;
     private long score;
 
     public Partida(String nome, DificuldadePartida dificuldade) {
-        this.tempoInicial.getTime();
+        this.tempoInicial= new Date(System.currentTimeMillis());
         this.jogador = new Jogador(nome);
+        this.dificuldade = dificuldade;
+    }
+
+    public Partida(String nome, DificuldadePartida dificuldade, int idade) {
+        this.tempoInicial= new Date(System.currentTimeMillis());
+        this.jogador = new Jogador(nome, idade);
         this.dificuldade = dificuldade;
     }
 
@@ -25,6 +31,7 @@ public class Partida {
         try {
             boolean movimentoValido = this.tabuleiro.executaMovimento(x, y, valor);
             if (movimentoValido == true) {
+                this.setScore(100);
                 this.venceu = tabuleiro.isTabuleiroPreenchido();
             }
         } catch (MovimentoInvalidoException e1) {
@@ -36,9 +43,14 @@ public class Partida {
     }
 
     public boolean isFimDeJogo() {
-        this.tempoFinal.getTime();
         if (this.quantidadeErros >= this.dificuldade.getQuantidadeMaximaErros()) {
             System.out.println("Errou mais do que podia. GAME OVER");
+            this.tempoFinal= new Date(System.currentTimeMillis());
+            return true;
+        }
+        if(this.venceu == true){
+            System.out.println("Voce venceu!");
+            this.tempoFinal= new Date(System.currentTimeMillis());
             return true;
         }
         return false;
@@ -46,7 +58,7 @@ public class Partida {
 
     public void iniciaPartida() {
         this.quantidadeErros = 0;
-        this.tempoInicial = new Date();
+        this.tempoInicial = new Date(System.currentTimeMillis());
         this.venceu = false;
         this.tabuleiro.geraTabuleiro(dificuldade);
         /*como a função de geraTabuleiro só tem assinatura, 
@@ -66,13 +78,20 @@ public class Partida {
         return tabuleiro.getGrid();
     }
 
-
     public int[][] getGabaritoTabuleiro() {
         return tabuleiro.getGabarito();
     }
 
     public int getQuantidadeMaximaErrosDificuldade() {
         return this.dificuldade.getQuantidadeMaximaErros();
+    }
+
+    public int getIdadeJogador() {
+        return this.jogador.getIdade();
+    }
+
+    public void setIdadeJogador(int idade) {
+        this.jogador.setIdade(idade);
     }
 
     public boolean getVenceu() {
@@ -82,7 +101,6 @@ public class Partida {
     public void setVenceu(boolean venceu) {
         this.venceu = venceu;
     }
-        
 
     public Date getTempoFinal() {
         return this.tempoFinal;
@@ -92,11 +110,17 @@ public class Partida {
         return this.tempoInicial;
 
     }
-    public void setScore(long score){
-        this.score=score;
+
+    public void setScore(long score) {
+        this.score += score;
     }
-    public long diferencaTempo(long tempo){
-        tempo=tempoFinal.getTime() - tempoInicial.getTime();
+
+    public long getScore() {
+        return score;
+    }
+
+    public long diferencaTempo() {
+        long tempo = tempoFinal.getTime() - tempoInicial.getTime();
         return tempo;
     }
 

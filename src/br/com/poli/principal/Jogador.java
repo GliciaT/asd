@@ -8,6 +8,10 @@ public class Jogador extends Pessoa {
         super(nome);
     }
 
+    public Jogador(String nome, int idade) {
+        super(nome, idade);
+    }
+
     public void setScoreRecord(int scoreRecord) {
         this.scoreRecord = scoreRecord;
     }
