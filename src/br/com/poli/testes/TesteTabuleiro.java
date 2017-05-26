@@ -3,7 +3,6 @@ package br.com.poli.testes;
 import br.com.poli.exception.MovimentoIncorretoException;
 import br.com.poli.exception.MovimentoInvalidoException;
 import br.com.poli.principal.Tabuleiro;
-import br.com.poli.principal.Tabuleiro;
 
 public class TesteTabuleiro {
 

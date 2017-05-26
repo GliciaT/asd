@@ -59,6 +59,7 @@ public class TestePartida {
         jogo1.setIdadeJogador(20);
         //Calculo baseado na idade
         CalculaScoreComIdade calculaComIdade = new CalculaScoreComIdade();
+        //cada movimento valido adiciona +100 ao score
         calculaComIdade.calcula(jogo1);
         System.out.println(jogo1.getScore());
     }
