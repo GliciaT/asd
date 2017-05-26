@@ -22,7 +22,7 @@ public class Partida {
     }
 
     public Partida(String nome, DificuldadePartida dificuldade, int idade) {
-        this.tempoInicial.getTime();
+        this.tempoInicial= new Date(System.currentTimeMillis());
         this.jogador = new Jogador(nome, idade);
         this.dificuldade = dificuldade;
     }
@@ -43,9 +43,14 @@ public class Partida {
     }
 
     public boolean isFimDeJogo() {
-        this.tempoFinal= new Date(System.currentTimeMillis());
         if (this.quantidadeErros >= this.dificuldade.getQuantidadeMaximaErros()) {
             System.out.println("Errou mais do que podia. GAME OVER");
+            this.tempoFinal= new Date(System.currentTimeMillis());
+            return true;
+        }
+        if(this.venceu == true){
+            System.out.println("Voce venceu!");
+            this.tempoFinal= new Date(System.currentTimeMillis());
             return true;
         }
         return false;
@@ -53,7 +58,7 @@ public class Partida {
 
     public void iniciaPartida() {
         this.quantidadeErros = 0;
-        this.tempoInicial = new Date();
+        this.tempoInicial = new Date(System.currentTimeMillis());
         this.venceu = false;
         this.tabuleiro.geraTabuleiro(dificuldade);
         /*como a função de geraTabuleiro só tem assinatura, 
