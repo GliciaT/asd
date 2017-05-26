@@ -49,6 +49,7 @@ public class TestePartida {
         CalculaScoreSemIdade calcula = new CalculaScoreSemIdade();
         calcula.calcula(jogo1);
         System.out.println(jogo1.getScore());
+        System.out.println(jogo1.diferencaTempo());
         
         jogo1.iniciaPartida();
         System.out.println("\nNOVO JOGO VAI COMEÇAR \n");

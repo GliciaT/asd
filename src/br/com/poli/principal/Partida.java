@@ -10,13 +10,13 @@ public class Partida {
     private Tabuleiro tabuleiro = new Tabuleiro();
     private int quantidadeErros = 0;
     private boolean venceu;
-    private Date tempoInicial = new Date();
-    private Date tempoFinal = new Date();
+    private Date tempoInicial;
+    private Date tempoFinal;
     private DificuldadePartida dificuldade;
     private long score;
 
     public Partida(String nome, DificuldadePartida dificuldade) {
-        this.tempoInicial.getTime();
+        this.tempoInicial= new Date(System.currentTimeMillis());
         this.jogador = new Jogador(nome);
         this.dificuldade = dificuldade;
     }
@@ -43,7 +43,7 @@ public class Partida {
     }
 
     public boolean isFimDeJogo() {
-        this.tempoFinal.getTime();
+        this.tempoFinal= new Date(System.currentTimeMillis());
         if (this.quantidadeErros >= this.dificuldade.getQuantidadeMaximaErros()) {
             System.out.println("Errou mais do que podia. GAME OVER");
             return true;
