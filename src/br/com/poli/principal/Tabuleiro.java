@@ -2,6 +2,7 @@ package br.com.poli.principal;
 
 import br.com.poli.exception.MovimentoIncorretoException;
 import br.com.poli.exception.MovimentoInvalidoException;
+import br.com.poli.exception.SemSolucaoException;
 import br.com.poli.interfaces.ResolvedorSudoku;
 import java.util.Random;
 
@@ -74,12 +75,12 @@ public class Tabuleiro implements ResolvedorSudoku {
         //this.grid = new int[9][9];
         int y;
         //corrigir nas exceptions
-        for (int d = 0; d <= 30 + (20 * dificuldadePartida.getValor()); d++) {
+        for (int d = 0; d <= 35 + (15 * dificuldadePartida.getValor()); d++) {
             x = random.nextInt(9);
             y = random.nextInt(9);
             if (this.grid[x][y] != 0) {
                 this.grid[x][y] = 0;
-            }
+            } else d--;
         }
     }
 
@@ -87,9 +88,7 @@ public class Tabuleiro implements ResolvedorSudoku {
         return grid;
     }
 
-    /**
-     * Class para fazer uma representação separada da matriz. Matriz => (x, y)
-     */
+    //Class para fazer uma representação separada da matriz e resolver.
     public class Cell {
 
         int linha, col;
@@ -169,7 +168,7 @@ public class Tabuleiro implements ResolvedorSudoku {
 
     // deve retornar true, se o sudoku foi solucionado, retorna false caso n
     @Override
-    public boolean resolveTabuleiro(Cell cur) {
+    public boolean resolveTabuleiro(Cell cur){
 
         if (cur == null) {
             return true;
@@ -199,10 +198,24 @@ public class Tabuleiro implements ResolvedorSudoku {
                 grid[cur.linha][cur.col] = 0;
             }
         }
-
         return false;
     }
-
+    @Override
+    public boolean isResolvivel() throws SemSolucaoException{
+        boolean resolve = resolveTabuleiro(cell);
+        if (!resolve) {
+            throw new SemSolucaoException("Sem solução.");
+        }
+        System.out.println("Solucao\n");
+        for (int i = 0; i < getGrid().length; i++) {
+            for (int j = 0; j < getGrid()[i].length; j++) {
+                System.out.print(getGrid()[i][j]);
+            }
+            System.out.println("");
+        }
+        return true;
+    }
+}
     /*public void main(String[] args) {
   boolean solved = resolveTabuleiro(new Cell(0, 0));
   if (!solved) {
@@ -213,4 +226,4 @@ public class Tabuleiro implements ResolvedorSudoku {
   printGrid(grid);
  }*/
     // utility to print the grid
-}
+

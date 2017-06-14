@@ -2,6 +2,7 @@ package br.com.poli.principal;
 
 import br.com.poli.exception.MovimentoIncorretoException;
 import br.com.poli.exception.MovimentoInvalidoException;
+import br.com.poli.exception.SemSolucaoException;
 import java.util.Date;
 
 public class Partida {
@@ -46,13 +47,25 @@ public class Partida {
 
     public boolean isFimDeJogo() {
         if (this.quantidadeErros >= this.dificuldade.getQuantidadeMaximaErros()) {
-            System.out.println("Errou mais do que podia. GAME OVER");
+            System.out.println("Errou mais do que podia. GAME OVER\n");
             this.tempoFinal = new Date(System.currentTimeMillis());
+            try {
+                resolvePartida();
+            } catch (SemSolucaoException e) {
+                System.out.println(e.getMessage());
+            }
             return true;
         }
         if (this.venceu == true) {
-            System.out.println("Voce venceu!");
+            System.out.println("Voce venceu!\n");
             this.tempoFinal = new Date(System.currentTimeMillis());
+            System.out.println("\nTabuleiro Final \n");
+            for (int i = 0; i < getGridTabuleiro().length; i++) {
+                for (int j = 0; j < getGridTabuleiro()[i].length; j++) {
+                    System.out.print(getGridTabuleiro()[i][j]);
+                }
+                System.out.println("");
+            }
             return true;
         }
         return false;
@@ -63,9 +76,6 @@ public class Partida {
         this.tempoInicial = new Date(System.currentTimeMillis());
         this.venceu = false;
         this.tabuleiro = new Tabuleiro(dificuldade);
-        /*como a função de geraTabuleiro só tem assinatura, 
-         *vou instanciar tabuleiro para ter um tabuleiro vazio*/
-        this.tabuleiro = new Tabuleiro(this.dificuldade);
     }
 
     public String getNomeJogador() {
@@ -126,4 +136,7 @@ public class Partida {
         return tempo;
     }
 
+    public boolean resolvePartida() throws SemSolucaoException {
+        return this.tabuleiro.isResolvivel();
+    }
 }
