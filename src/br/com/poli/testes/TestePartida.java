@@ -6,6 +6,7 @@ import br.com.poli.exception.MovimentoIncorretoException;
 import br.com.poli.exception.MovimentoInvalidoException;
 import br.com.poli.principal.DificuldadePartida;
 import br.com.poli.principal.Partida;
+//modificar os testes
 
 public class TestePartida {
 
@@ -29,9 +30,9 @@ public class TestePartida {
         }
 
         //provocar Fim de jogo
-        while (jogo1.isFimDeJogo() != true) {
+        /*while (jogo1.isFimDeJogo() != true) {
             try {
-                jogo1.executaMovimento(1, 0, 7);
+                jogo1.executaMovimento(1, 0, 1);
             } catch (MovimentoInvalidoException | MovimentoIncorretoException e1) {
                 System.out.println(e1.getMessage());
             }
@@ -41,7 +42,7 @@ public class TestePartida {
         //Calculo do score sem informar idade
         CalculaScoreSemIdade calcula = new CalculaScoreSemIdade();
         calcula.calcula(jogo1);
-        System.out.println(jogo1.getScore());
+        System.out.println(jogo1.getScore());*/
         jogo1.iniciaPartida();
         System.out.println("\nNOVO JOGO VAI COMEÇAR \n");
         //provocar vencer
@@ -55,6 +56,13 @@ public class TestePartida {
                     }
                 }
             }
+        }
+        System.out.println("\nTabuleiro Final \n");
+        for (int i = 0; i < jogo1.getGridTabuleiro().length; i++) {
+            for (int j = 0; j < jogo1.getGridTabuleiro()[i].length; j++) {
+                System.out.print(jogo1.getGridTabuleiro()[i][j]);
+            }
+            System.out.println("");
         }
         jogo1.setIdadeJogador(20);
         //Calculo baseado na idade

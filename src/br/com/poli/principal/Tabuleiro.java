@@ -2,29 +2,22 @@ package br.com.poli.principal;
 
 import br.com.poli.exception.MovimentoIncorretoException;
 import br.com.poli.exception.MovimentoInvalidoException;
+import br.com.poli.interfaces.ResolvedorSudoku;
+import java.util.Random;
 
-public class Tabuleiro {
+public class Tabuleiro implements ResolvedorSudoku {
 
-    private int[][] gabarito
-            = {{8, 4, 2, 7, 3, 9, 1, 5, 6},
-            {9, 5, 3, 1, 2, 6, 8, 7, 4},
-            {1, 7, 6, 5, 4, 8, 2, 3, 9},
-            {3, 8, 4, 6, 1, 2, 7, 9, 5},
-            {7, 1, 9, 8, 5, 3, 6, 4, 2},
-            {6, 2, 5, 9, 7, 4, 3, 1, 8},
-            {5, 9, 8, 3, 6, 7, 4, 2, 1},
-            {4, 6, 7, 2, 9, 1, 5, 8, 3},
-            {2, 3, 1, 4, 8, 5, 9, 6, 7}};
-    ;
-    ;
+    private int[][] grid = new int[9][9];
+    private int[][] gabarito = new int[9][9];
+    public Cell cell;
 
     public int[][] getGabarito() {
         return gabarito;
     }
-    private int[][] grid = new int[9][9];
 
-    public Tabuleiro() {
-
+    public Tabuleiro(DificuldadePartida dificuldadePartida) {
+        geraTabuleiro(dificuldadePartida);
+        cell = new Cell(0, 0);
     }
 
     public boolean executaMovimento(int x, int y, int valor) throws MovimentoInvalidoException, MovimentoIncorretoException {
@@ -61,15 +54,163 @@ public class Tabuleiro {
         return true;
     }
 
-    public void resolveTabuleiro() {
+    private void geraTabuleiro(DificuldadePartida dificuldadePartida) {
+        Random random = new Random();
 
-    }
-
-    public void geraTabuleiro(DificuldadePartida dificuldadePartida) {
-
+        final int n = 3;//aqui vai o número de elementos do seu sudoku(3 vai ser um sudoku 3×3
+        int x = random.nextInt(1000);//semente aleatória para não gerar o mesmo sudoku
+        for (int i = 0; i < n; i++, x++) {
+            for (int j = 0; j < n; j++, x += n) {
+                for (int k = 0; k < n * n; k++, x++) {
+                    this.grid[n * i + j][k] = (x % (n * n)) + 1;
+                }
+            }
+        }
+        for (int i = 0; i < this.grid.length; i++) {
+            for (int j = 0; j < this.grid[i].length; j++) {
+                this.gabarito[i][j] = this.grid[i][j];
+            }
+        }
+        //this.grid = new int[9][9];
+        int y;
+        //corrigir nas exceptions
+        for (int d = 0; d <= 30 + (20 * dificuldadePartida.getValor()); d++) {
+            x = random.nextInt(9);
+            y = random.nextInt(9);
+            if (this.grid[x][y] != 0) {
+                this.grid[x][y] = 0;
+            }
+        }
     }
 
     public int[][] getGrid() {
         return grid;
     }
+
+    /**
+     * Class para fazer uma representação separada da matriz. Matriz => (x, y)
+     */
+    public class Cell {
+
+        int linha, col;
+
+        public Cell(int linha, int col) {
+            super();
+            this.linha = linha;
+            this.col = col;
+        }
+
+        @Override
+        public String toString() {
+            return "Cell [linha=" + linha + ", col=" + col + "]";
+        }
+    };
+
+    boolean isValid(Cell cell, int value) {
+
+        if (grid[cell.linha][cell.col] != 0) {
+            throw new RuntimeException(
+                    "Cannot call for cell which already has a value");
+        }
+
+        // se existir nessa linha, return false
+        for (int c = 0; c < 9; c++) {
+            if (grid[cell.linha][c] == value) {
+                return false;
+            }
+        }
+
+        // if existir nessa coluna, return false
+        for (int r = 0; r < 9; r++) {
+            if (grid[r][cell.col] == value) {
+                return false;
+            }
+        }
+
+        // se presente nesse quadrante, return false
+        // para fazer o quadrante (x1,y1) (x2,y2)
+        int x1 = 3 * (cell.linha / 3);
+        int y1 = 3 * (cell.col / 3);
+        int x2 = x1 + 2;
+        int y2 = y1 + 2;
+
+        for (int x = x1; x <= x2; x++) {
+            for (int y = y1; y <= y2; y++) {
+                if (grid[x][y] == value) {
+                    return false;
+                }
+            }
+        }
+
+        // se não existir esse valor na mesma linha, coluna ou quadrante, return true
+        return true;
+    }
+
+    Cell getNextCell(Cell cur) {
+
+        int row = cur.linha;
+        int col = cur.col;
+
+        col++;
+
+        if (col > 8) {
+            // goto next line
+            col = 0;
+            row++;
+        }
+
+        // atingiu o final da matriz, return null
+        if (row > 8) {
+            return null; //
+        }
+        Cell next = new Cell(row, col);
+        return next;
+    }
+
+    // deve retornar true, se o sudoku foi solucionado, retorna false caso n
+    @Override
+    public boolean resolveTabuleiro(Cell cur) {
+
+        if (cur == null) {
+            return true;
+        }
+
+        //se já tiver um valor preenchido, pula
+        if (grid[cur.linha][cur.col] != 0) {
+            return resolveTabuleiro(getNextCell(cur));
+        }
+
+        // Se grid[cur] não tem um valor válido, tenta o próximo valor
+        for (int i = 1; i <= 9; i++) {
+            // checa se está válido. Caso sim, atualiza
+            boolean valid = isValid(cur, i);
+
+            if (!valid) {
+                continue;
+            }
+
+            grid[cur.linha][cur.col] = i;
+
+            boolean solved = resolveTabuleiro(getNextCell(cur));
+
+            if (solved) {
+                return true;
+            } else {
+                grid[cur.linha][cur.col] = 0;
+            }
+        }
+
+        return false;
+    }
+
+    /*public void main(String[] args) {
+  boolean solved = resolveTabuleiro(new Cell(0, 0));
+  if (!solved) {
+   System.out.println("SUDOKU cannot be solved.");
+   return;
+  }
+  System.out.println("SOLUTION\n");
+  printGrid(grid);
+ }*/
+    // utility to print the grid
 }

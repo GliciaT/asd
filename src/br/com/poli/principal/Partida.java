@@ -7,7 +7,7 @@ import java.util.Date;
 public class Partida {
 
     private Jogador jogador;
-    private Tabuleiro tabuleiro = new Tabuleiro();
+    private Tabuleiro tabuleiro;
     private int quantidadeErros = 0;
     private boolean venceu;
     private Date tempoInicial;
@@ -16,13 +16,15 @@ public class Partida {
     private long score;
 
     public Partida(String nome, DificuldadePartida dificuldade) {
-        this.tempoInicial= new Date(System.currentTimeMillis());
+        this.tempoInicial = new Date(System.currentTimeMillis());
+        //modificar para começar a partida com o metodo inicia partida
+        this.tabuleiro = new Tabuleiro(dificuldade);
         this.jogador = new Jogador(nome);
         this.dificuldade = dificuldade;
     }
 
     public Partida(String nome, DificuldadePartida dificuldade, int idade) {
-        this.tempoInicial= new Date(System.currentTimeMillis());
+        this.tempoInicial = new Date(System.currentTimeMillis());
         this.jogador = new Jogador(nome, idade);
         this.dificuldade = dificuldade;
     }
@@ -45,12 +47,12 @@ public class Partida {
     public boolean isFimDeJogo() {
         if (this.quantidadeErros >= this.dificuldade.getQuantidadeMaximaErros()) {
             System.out.println("Errou mais do que podia. GAME OVER");
-            this.tempoFinal= new Date(System.currentTimeMillis());
+            this.tempoFinal = new Date(System.currentTimeMillis());
             return true;
         }
-        if(this.venceu == true){
+        if (this.venceu == true) {
             System.out.println("Voce venceu!");
-            this.tempoFinal= new Date(System.currentTimeMillis());
+            this.tempoFinal = new Date(System.currentTimeMillis());
             return true;
         }
         return false;
@@ -60,10 +62,10 @@ public class Partida {
         this.quantidadeErros = 0;
         this.tempoInicial = new Date(System.currentTimeMillis());
         this.venceu = false;
-        this.tabuleiro.geraTabuleiro(dificuldade);
+        this.tabuleiro = new Tabuleiro(dificuldade);
         /*como a função de geraTabuleiro só tem assinatura, 
          *vou instanciar tabuleiro para ter um tabuleiro vazio*/
-        this.tabuleiro = new Tabuleiro();
+        this.tabuleiro = new Tabuleiro(this.dificuldade);
     }
 
     public String getNomeJogador() {
