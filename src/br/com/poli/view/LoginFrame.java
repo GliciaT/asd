@@ -5,9 +5,7 @@
  */
 package br.com.poli.view;
 
-import br.com.poli.principal.DificuldadePartida;
 import br.com.poli.principal.Partida;
-import static java.lang.Integer.parseInt;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 import javax.swing.JOptionPane;
