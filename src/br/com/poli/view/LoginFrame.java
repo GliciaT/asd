@@ -138,16 +138,18 @@ public class LoginFrame extends javax.swing.JFrame {
 
     private void playButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_playButtonActionPerformed
 
-        if (nome.getText().equals("")) {
-            JOptionPane.showMessageDialog(null, "Campo nome não preenchido");
-        }
         Pattern p = Pattern.compile("[0-9]+");
         Matcher m = p.matcher(idade.getText());
         boolean valido = m.matches();
-        if (!idade.getText().equals("")&&!valido) {
+        if (!nome.getText().equals("")) {
+            if (idade.getText().equals("") || valido) {
+                dispose();
+                new TabuleiroFrame().setVisible(true);
+            } else {
                 JOptionPane.showMessageDialog(null, "A idade só deve incluir números");
-        } else{
-        dispose();new TabuleiroFrame().setVisible(true);
+            }
+        } else {
+            JOptionPane.showMessageDialog(null, "Campo nome não preenchido");
         }
         /*else {
             int idadeDoJogador = Integer.parseInt(idade.getText());
