@@ -3,7 +3,10 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/C:/Users/Glicia%20Tigre/Documents/Projetos/Lpoo/Sudoku/src/br/com/poli/view/FXML.fxml</file>
+            <file>file:/home/dylan/Documentos/Sudoku-V2/src/br/com/poli/view/TabuleiroFrame.java</file>
+            <file>file:/home/dylan/Documentos/Sudoku-V2/src/br/com/poli/view/LoginFrame.java</file>
+            <file>file:/home/dylan/Documentos/Sudoku-V2/src/br/com/poli/principal/Tabuleiro.java</file>
+            <file>file:/home/dylan/Documentos/Sudoku-V2/src/br/com/poli/interfaces/ResolvedorSudoku.java</file>
         </group>
     </open-files>
 </project-private>
