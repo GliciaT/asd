@@ -161,6 +161,7 @@ public class TabuleiroFrame extends javax.swing.JFrame {
         });
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setResizable(false);
 
         jTextField1.setFont(new java.awt.Font("Dialog", 0, 18)); // NOI18N
         jTextField1.setPreferredSize(new java.awt.Dimension(30, 30));
@@ -1511,7 +1512,8 @@ public class TabuleiroFrame extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
-        // TODO add your handling code here:
+        dispose();
+                new FimDeJogoFrame().setVisible(true);
     }//GEN-LAST:event_jButton2ActionPerformed
 
     /**

@@ -138,10 +138,13 @@ public class LoginFrame extends javax.swing.JFrame {
 
     private void playButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_playButtonActionPerformed
 
-        Pattern p = Pattern.compile("[0-9]+");
-        Matcher m = p.matcher(idade.getText());
+        Pattern p = Pattern.compile("[a-zA-z0-9]+");
+        Matcher m = p.matcher(nome.getText());
         boolean valido = m.matches();
-        if (!nome.getText().equals("")) {
+        if (valido) {
+            p = Pattern.compile("[0-9]+");
+            m = p.matcher(idade.getText());
+            valido = m.matches();
             if (idade.getText().equals("") || valido) {
                 dispose();
                 new TabuleiroFrame().setVisible(true);
