@@ -6,6 +6,7 @@
 package br.com.poli.view;
 
 import br.com.poli.principal.Partida;
+import static java.lang.Integer.parseInt;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 import javax.swing.JOptionPane;
@@ -34,12 +35,12 @@ public class LoginFrame extends javax.swing.JFrame {
 
         jLabel1 = new javax.swing.JLabel();
         nome = new javax.swing.JTextField();
-        idade = new javax.swing.JTextField();
         dificuldade = new javax.swing.JComboBox<>();
         playButton = new javax.swing.JButton();
         jLabel2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
+        idade = new javax.swing.JSpinner();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setBackground(new java.awt.Color(152, 152, 152));
@@ -55,13 +56,6 @@ public class LoginFrame extends javax.swing.JFrame {
         nome.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 nomeActionPerformed(evt);
-            }
-        });
-
-        idade.setBackground(new java.awt.Color(254, 254, 254));
-        idade.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                idadeActionPerformed(evt);
             }
         });
 
@@ -86,6 +80,8 @@ public class LoginFrame extends javax.swing.JFrame {
 
         jLabel4.setText("DIFICULDADE");
 
+        idade.setModel(new javax.swing.SpinnerNumberModel(0, 0, 100, 1));
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -98,12 +94,12 @@ public class LoginFrame extends javax.swing.JFrame {
                         .addGap(3, 3, 3)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jLabel2)
-                            .addComponent(jLabel3)
-                            .addComponent(idade, javax.swing.GroupLayout.PREFERRED_SIZE, 118, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(nome, javax.swing.GroupLayout.PREFERRED_SIZE, 118, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jLabel4)
                             .addComponent(dificuldade, javax.swing.GroupLayout.PREFERRED_SIZE, 118, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(playButton, javax.swing.GroupLayout.PREFERRED_SIZE, 118, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                            .addComponent(playButton, javax.swing.GroupLayout.PREFERRED_SIZE, 118, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(idade, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabel3))))
                 .addGap(100, 100, 100))
         );
         layout.setVerticalGroup(
@@ -132,27 +128,24 @@ public class LoginFrame extends javax.swing.JFrame {
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
-    private void idadeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_idadeActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_idadeActionPerformed
-
     private void playButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_playButtonActionPerformed
 
         Pattern p = Pattern.compile("[a-zA-z0-9]+");
         Matcher m = p.matcher(nome.getText());
         boolean valido = m.matches();
+        boolean ok;
         if (valido) {
-            p = Pattern.compile("[0-9]+");
-            m = p.matcher(idade.getText());
-            valido = m.matches();
-            if (idade.getText().equals("") || valido) {
-                dispose();
-                new TabuleiroFrame().setVisible(true);
-            } else {
-                JOptionPane.showMessageDialog(null, "A idade só deve incluir números");
-            }
+            ok=true;
         } else {
+            ok=false;
             JOptionPane.showMessageDialog(null, "Campo nome não preenchido");
+        }
+        if(ok){
+           String nomeUsuario = nome.getText();
+           String a = dificuldade.getSelectedItem().toString();
+           JOptionPane.showMessageDialog(null, "O jogo vai começar"+idade.getValue());
+           dispose();
+           new TabuleiroFrame().setVisible(true); 
         }
         /*else {
             int idadeDoJogador = Integer.parseInt(idade.getText());
@@ -204,7 +197,6 @@ public class LoginFrame extends javax.swing.JFrame {
         java.awt.EventQueue.invokeLater(new Runnable() {
             @Override
             public void run() {
-                Partida jogo;
                 new LoginFrame().setVisible(true);
             }
         });
@@ -212,7 +204,7 @@ public class LoginFrame extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JComboBox<String> dificuldade;
-    private javax.swing.JTextField idade;
+    private javax.swing.JSpinner idade;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
