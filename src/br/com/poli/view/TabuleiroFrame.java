@@ -5,50 +5,64 @@
  */
 package br.com.poli.view;
 
+import br.com.poli.principal.DificuldadePartida;
+import static br.com.poli.principal.DificuldadePartida.FACIL;
+import br.com.poli.principal.Partida;
+import javax.swing.JOptionPane;
+
 /**
  *
  * @author dylan
  */
 public class TabuleiroFrame extends javax.swing.JFrame {
+
+    Partida novoJogo;
+
     /**
      * Creates new form TabuleiroFrame
      */
     public TabuleiroFrame() {
-        
         initComponents();
         clock1.start();
-        
     }
-    Thread clock1 = new Thread(){
-        
-            @Override
-            public void run(){
-                int hor=00, min=00, seg=00;
-                
-                for(;;){
-                    try{
-                        //System.out.println(hor + ":" + min + ":" + seg);
-                        seg++;
-                        if(seg>59){
-                            seg=0;
-                            min++;
-                        }
-                        if(min>59){
-                            seg=0;
-                            min=0;
-                            hor++;
-                        }
-                        if(min==2){
-                            dispose();
-                        }
-                        tempo.setText(hor + ":" + min + ":" + seg);
-                        Thread.sleep(999);
-                        }catch (InterruptedException e){
-                            
+
+    public TabuleiroFrame(String nome, DificuldadePartida dificuldade, int idade) {
+        novoJogo = new Partida(nome, dificuldade, idade);
+        initComponents();
+        setAllTextField();
+        clock1.start();
+
+    }
+    Thread clock1 = new Thread() {
+
+        @Override
+        public void run() {
+            int hor = 00, min = 00, seg = 00;
+
+            for (;;) {
+                try {
+                    //System.out.println(hor + ":" + min + ":" + seg);
+                    seg++;
+                    if (seg > 59) {
+                        seg = 0;
+                        min++;
                     }
+                    if (min > 59) {
+                        seg = 0;
+                        min = 0;
+                        hor++;
+                    }
+                    if (min == 2) {
+                        dispose();
+                    }
+                    tempo.setText(hor + ":" + min + ":" + seg);
+                    Thread.sleep(999);
+                } catch (InterruptedException e) {
+
                 }
             }
-        };
+        }
+    };
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -60,7 +74,7 @@ public class TabuleiroFrame extends javax.swing.JFrame {
     private void initComponents() {
 
         jTextField16 = new javax.swing.JTextField();
-        jTextField1 = new javax.swing.JTextField();
+        grid00 = new javax.swing.JTextField();
         jTextField4 = new javax.swing.JTextField();
         jTextField5 = new javax.swing.JTextField();
         jTextField6 = new javax.swing.JTextField();
@@ -69,7 +83,7 @@ public class TabuleiroFrame extends javax.swing.JFrame {
         jTextField9 = new javax.swing.JTextField();
         jTextField10 = new javax.swing.JTextField();
         jTextField11 = new javax.swing.JTextField();
-        jTextField83 = new javax.swing.JTextField();
+        grid01 = new javax.swing.JTextField();
         jTextField84 = new javax.swing.JTextField();
         jTextField85 = new javax.swing.JTextField();
         jTextField86 = new javax.swing.JTextField();
@@ -78,7 +92,7 @@ public class TabuleiroFrame extends javax.swing.JFrame {
         jTextField89 = new javax.swing.JTextField();
         jTextField90 = new javax.swing.JTextField();
         jTextField91 = new javax.swing.JTextField();
-        jTextField92 = new javax.swing.JTextField();
+        grid02 = new javax.swing.JTextField();
         jTextField93 = new javax.swing.JTextField();
         jTextField94 = new javax.swing.JTextField();
         jTextField95 = new javax.swing.JTextField();
@@ -87,7 +101,7 @@ public class TabuleiroFrame extends javax.swing.JFrame {
         jTextField98 = new javax.swing.JTextField();
         jTextField99 = new javax.swing.JTextField();
         jTextField100 = new javax.swing.JTextField();
-        jTextField101 = new javax.swing.JTextField();
+        grid03 = new javax.swing.JTextField();
         jTextField102 = new javax.swing.JTextField();
         jTextField103 = new javax.swing.JTextField();
         jTextField104 = new javax.swing.JTextField();
@@ -96,7 +110,7 @@ public class TabuleiroFrame extends javax.swing.JFrame {
         jTextField107 = new javax.swing.JTextField();
         jTextField108 = new javax.swing.JTextField();
         jTextField109 = new javax.swing.JTextField();
-        jTextField110 = new javax.swing.JTextField();
+        grid04 = new javax.swing.JTextField();
         jTextField111 = new javax.swing.JTextField();
         jTextField112 = new javax.swing.JTextField();
         jTextField113 = new javax.swing.JTextField();
@@ -105,7 +119,7 @@ public class TabuleiroFrame extends javax.swing.JFrame {
         jTextField116 = new javax.swing.JTextField();
         jTextField117 = new javax.swing.JTextField();
         jTextField118 = new javax.swing.JTextField();
-        jTextField119 = new javax.swing.JTextField();
+        grid05 = new javax.swing.JTextField();
         jTextField120 = new javax.swing.JTextField();
         jTextField121 = new javax.swing.JTextField();
         jTextField122 = new javax.swing.JTextField();
@@ -163,15 +177,28 @@ public class TabuleiroFrame extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setResizable(false);
 
-        jTextField1.setFont(new java.awt.Font("Dialog", 0, 18)); // NOI18N
-        jTextField1.setPreferredSize(new java.awt.Dimension(30, 30));
-        jTextField1.addActionListener(new java.awt.event.ActionListener() {
+        grid00.setFont(new java.awt.Font("Dialog", 0, 18)); // NOI18N
+        grid00.setAlignmentX(0.0F);
+        grid00.setAlignmentY(0.0F);
+        grid00.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                grid00MouseClicked(evt);
+            }
+        });
+        grid00.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField1ActionPerformed(evt);
+                grid00ActionPerformed(evt);
+            }
+        });
+        grid00.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                grid00KeyTyped(evt);
             }
         });
 
         jTextField4.setFont(new java.awt.Font("Dialog", 0, 18)); // NOI18N
+        jTextField4.setAlignmentX(1.0F);
+        jTextField4.setAlignmentY(0.0F);
         jTextField4.setPreferredSize(new java.awt.Dimension(30, 30));
         jTextField4.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -180,6 +207,8 @@ public class TabuleiroFrame extends javax.swing.JFrame {
         });
 
         jTextField5.setFont(new java.awt.Font("Dialog", 0, 18)); // NOI18N
+        jTextField5.setAlignmentX(2.0F);
+        jTextField5.setAlignmentY(0.0F);
         jTextField5.setPreferredSize(new java.awt.Dimension(30, 30));
         jTextField5.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -188,6 +217,8 @@ public class TabuleiroFrame extends javax.swing.JFrame {
         });
 
         jTextField6.setFont(new java.awt.Font("Dialog", 0, 18)); // NOI18N
+        jTextField6.setAlignmentX(3.0F);
+        jTextField6.setAlignmentY(0.0F);
         jTextField6.setPreferredSize(new java.awt.Dimension(30, 30));
         jTextField6.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -196,6 +227,8 @@ public class TabuleiroFrame extends javax.swing.JFrame {
         });
 
         jTextField7.setFont(new java.awt.Font("Dialog", 0, 18)); // NOI18N
+        jTextField7.setAlignmentX(4.0F);
+        jTextField7.setAlignmentY(0.0F);
         jTextField7.setPreferredSize(new java.awt.Dimension(30, 30));
         jTextField7.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -204,6 +237,8 @@ public class TabuleiroFrame extends javax.swing.JFrame {
         });
 
         jTextField8.setFont(new java.awt.Font("Dialog", 0, 18)); // NOI18N
+        jTextField8.setAlignmentX(5.0F);
+        jTextField8.setAlignmentY(0.0F);
         jTextField8.setPreferredSize(new java.awt.Dimension(30, 30));
         jTextField8.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -212,6 +247,8 @@ public class TabuleiroFrame extends javax.swing.JFrame {
         });
 
         jTextField9.setFont(new java.awt.Font("Dialog", 0, 18)); // NOI18N
+        jTextField9.setAlignmentX(6.0F);
+        jTextField9.setAlignmentY(0.0F);
         jTextField9.setPreferredSize(new java.awt.Dimension(30, 30));
         jTextField9.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -220,6 +257,8 @@ public class TabuleiroFrame extends javax.swing.JFrame {
         });
 
         jTextField10.setFont(new java.awt.Font("Dialog", 0, 18)); // NOI18N
+        jTextField10.setAlignmentX(7.0F);
+        jTextField10.setAlignmentY(0.0F);
         jTextField10.setPreferredSize(new java.awt.Dimension(30, 30));
         jTextField10.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -228,6 +267,8 @@ public class TabuleiroFrame extends javax.swing.JFrame {
         });
 
         jTextField11.setFont(new java.awt.Font("Dialog", 0, 18)); // NOI18N
+        jTextField11.setAlignmentX(8.0F);
+        jTextField11.setAlignmentY(0.0F);
         jTextField11.setPreferredSize(new java.awt.Dimension(30, 30));
         jTextField11.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -235,11 +276,13 @@ public class TabuleiroFrame extends javax.swing.JFrame {
             }
         });
 
-        jTextField83.setFont(new java.awt.Font("Dialog", 0, 18)); // NOI18N
-        jTextField83.setPreferredSize(new java.awt.Dimension(30, 30));
-        jTextField83.addActionListener(new java.awt.event.ActionListener() {
+        grid01.setFont(new java.awt.Font("Dialog", 0, 18)); // NOI18N
+        grid01.setAlignmentX(0.0F);
+        grid01.setAlignmentY(1.0F);
+        grid01.setPreferredSize(new java.awt.Dimension(30, 30));
+        grid01.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField83ActionPerformed(evt);
+                grid01ActionPerformed(evt);
             }
         });
 
@@ -307,11 +350,11 @@ public class TabuleiroFrame extends javax.swing.JFrame {
             }
         });
 
-        jTextField92.setFont(new java.awt.Font("Dialog", 0, 18)); // NOI18N
-        jTextField92.setPreferredSize(new java.awt.Dimension(30, 30));
-        jTextField92.addActionListener(new java.awt.event.ActionListener() {
+        grid02.setFont(new java.awt.Font("Dialog", 0, 18)); // NOI18N
+        grid02.setPreferredSize(new java.awt.Dimension(30, 30));
+        grid02.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField92ActionPerformed(evt);
+                grid02ActionPerformed(evt);
             }
         });
 
@@ -379,11 +422,11 @@ public class TabuleiroFrame extends javax.swing.JFrame {
             }
         });
 
-        jTextField101.setFont(new java.awt.Font("Dialog", 0, 18)); // NOI18N
-        jTextField101.setPreferredSize(new java.awt.Dimension(30, 30));
-        jTextField101.addActionListener(new java.awt.event.ActionListener() {
+        grid03.setFont(new java.awt.Font("Dialog", 0, 18)); // NOI18N
+        grid03.setPreferredSize(new java.awt.Dimension(30, 30));
+        grid03.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField101ActionPerformed(evt);
+                grid03ActionPerformed(evt);
             }
         });
 
@@ -451,11 +494,11 @@ public class TabuleiroFrame extends javax.swing.JFrame {
             }
         });
 
-        jTextField110.setFont(new java.awt.Font("Dialog", 0, 18)); // NOI18N
-        jTextField110.setPreferredSize(new java.awt.Dimension(30, 30));
-        jTextField110.addActionListener(new java.awt.event.ActionListener() {
+        grid04.setFont(new java.awt.Font("Dialog", 0, 18)); // NOI18N
+        grid04.setPreferredSize(new java.awt.Dimension(30, 30));
+        grid04.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField110ActionPerformed(evt);
+                grid04ActionPerformed(evt);
             }
         });
 
@@ -523,11 +566,11 @@ public class TabuleiroFrame extends javax.swing.JFrame {
             }
         });
 
-        jTextField119.setFont(new java.awt.Font("Dialog", 0, 18)); // NOI18N
-        jTextField119.setPreferredSize(new java.awt.Dimension(30, 30));
-        jTextField119.addActionListener(new java.awt.event.ActionListener() {
+        grid05.setFont(new java.awt.Font("Dialog", 0, 18)); // NOI18N
+        grid05.setPreferredSize(new java.awt.Dimension(30, 30));
+        grid05.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField119ActionPerformed(evt);
+                grid05ActionPerformed(evt);
             }
         });
 
@@ -898,7 +941,7 @@ public class TabuleiroFrame extends javax.swing.JFrame {
                         .addComponent(jTextField135, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                         .addGroup(layout.createSequentialGroup()
-                            .addComponent(jTextField92, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(grid02, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                             .addComponent(jTextField93, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -917,7 +960,7 @@ public class TabuleiroFrame extends javax.swing.JFrame {
                             .addComponent(jTextField100, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(layout.createSequentialGroup()
-                                .addComponent(jTextField83, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(grid01, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addComponent(jTextField84, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -937,7 +980,7 @@ public class TabuleiroFrame extends javax.swing.JFrame {
                             .addGroup(layout.createSequentialGroup()
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addGroup(layout.createSequentialGroup()
-                                        .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addComponent(grid00, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                         .addComponent(jTextField4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -977,7 +1020,7 @@ public class TabuleiroFrame extends javax.swing.JFrame {
                         .addComponent(jTextField154, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                         .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                            .addComponent(jTextField119, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(grid05, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                             .addComponent(jTextField120, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -996,7 +1039,7 @@ public class TabuleiroFrame extends javax.swing.JFrame {
                             .addComponent(jTextField127, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(layout.createSequentialGroup()
-                                .addComponent(jTextField110, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(grid04, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addComponent(jTextField111, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -1014,7 +1057,7 @@ public class TabuleiroFrame extends javax.swing.JFrame {
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addComponent(jTextField118, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                             .addGroup(layout.createSequentialGroup()
-                                .addComponent(jTextField101, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(grid03, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addComponent(jTextField102, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -1035,7 +1078,7 @@ public class TabuleiroFrame extends javax.swing.JFrame {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(jProgressBar2, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 174, Short.MAX_VALUE)
+                            .addComponent(jProgressBar2, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                             .addComponent(jProgressBar1, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                             .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
@@ -1059,7 +1102,7 @@ public class TabuleiroFrame extends javax.swing.JFrame {
                 .addComponent(jLabel1)
                 .addGap(42, 42, 42)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(grid00, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jTextField4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jTextField5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jTextField6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -1072,7 +1115,7 @@ public class TabuleiroFrame extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                        .addComponent(jTextField83, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(grid01, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addComponent(jTextField84, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addComponent(jTextField85, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addComponent(jTextField86, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -1084,7 +1127,7 @@ public class TabuleiroFrame extends javax.swing.JFrame {
                     .addComponent(jProgressBar2, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jTextField92, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(grid02, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jTextField93, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jTextField94, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jTextField95, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -1095,7 +1138,7 @@ public class TabuleiroFrame extends javax.swing.JFrame {
                     .addComponent(jTextField100, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jTextField101, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(grid03, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jTextField102, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jTextField103, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jTextField104, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -1109,7 +1152,7 @@ public class TabuleiroFrame extends javax.swing.JFrame {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jTextField110, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(grid04, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jTextField111, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jTextField112, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jTextField113, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -1121,7 +1164,7 @@ public class TabuleiroFrame extends javax.swing.JFrame {
                             .addComponent(jLabel2))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jTextField119, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(grid05, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jTextField120, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jTextField121, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jTextField122, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -1179,9 +1222,9 @@ public class TabuleiroFrame extends javax.swing.JFrame {
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jTextField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField1ActionPerformed
+    private void grid00ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_grid00ActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField1ActionPerformed
+    }//GEN-LAST:event_grid00ActionPerformed
 
     private void jTextField4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField4ActionPerformed
         // TODO add your handling code here:
@@ -1219,9 +1262,9 @@ public class TabuleiroFrame extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_jTextField16ActionPerformed
 
-    private void jTextField83ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField83ActionPerformed
+    private void grid01ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_grid01ActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField83ActionPerformed
+    }//GEN-LAST:event_grid01ActionPerformed
 
     private void jTextField84ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField84ActionPerformed
         // TODO add your handling code here:
@@ -1255,9 +1298,9 @@ public class TabuleiroFrame extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_jTextField91ActionPerformed
 
-    private void jTextField92ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField92ActionPerformed
+    private void grid02ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_grid02ActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField92ActionPerformed
+    }//GEN-LAST:event_grid02ActionPerformed
 
     private void jTextField93ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField93ActionPerformed
         // TODO add your handling code here:
@@ -1291,9 +1334,9 @@ public class TabuleiroFrame extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_jTextField100ActionPerformed
 
-    private void jTextField101ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField101ActionPerformed
+    private void grid03ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_grid03ActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField101ActionPerformed
+    }//GEN-LAST:event_grid03ActionPerformed
 
     private void jTextField102ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField102ActionPerformed
         // TODO add your handling code here:
@@ -1327,9 +1370,9 @@ public class TabuleiroFrame extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_jTextField109ActionPerformed
 
-    private void jTextField110ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField110ActionPerformed
+    private void grid04ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_grid04ActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField110ActionPerformed
+    }//GEN-LAST:event_grid04ActionPerformed
 
     private void jTextField111ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField111ActionPerformed
         // TODO add your handling code here:
@@ -1363,9 +1406,9 @@ public class TabuleiroFrame extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_jTextField118ActionPerformed
 
-    private void jTextField119ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField119ActionPerformed
+    private void grid05ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_grid05ActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField119ActionPerformed
+    }//GEN-LAST:event_grid05ActionPerformed
 
     private void jTextField120ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField120ActionPerformed
         // TODO add your handling code here:
@@ -1513,9 +1556,29 @@ public class TabuleiroFrame extends javax.swing.JFrame {
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
         dispose();
-                new FimDeJogoFrame().setVisible(true);
+        new FimDeJogoFrame().setVisible(true);
     }//GEN-LAST:event_jButton2ActionPerformed
 
+    private void grid00KeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_grid00KeyTyped
+        // TODO add your handling code here:
+    }//GEN-LAST:event_grid00KeyTyped
+
+    private void grid00MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_grid00MouseClicked
+        //if (grid00.getText().equals("")) {
+            String a = Integer.toString(novoJogo.getGridTabuleiro()[0][0]);
+            JOptionPane.showMessageDialog(null, a);
+            
+            //grid00.setText(String.valueOf(2));
+            
+            //grid00.setText(String.valueOf(novoJogo.getGridTabuleiro()[(int) grid00.getAlignmentX()][(int) grid00.getAlignmentY()]));
+            grid00.setEditable(false);
+
+        //}
+    }//GEN-LAST:event_grid00MouseClicked
+//sujeito a melhores implementações 
+    public void setAllTextField(){
+    grid00.setText(String.valueOf(novoJogo.getGridTabuleiro()[(int) grid00.getAlignmentX()][(int) grid00.getAlignmentY()]));
+}
     /**
      * @param args the command line arguments
      */
@@ -1546,12 +1609,19 @@ public class TabuleiroFrame extends javax.swing.JFrame {
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
+                TabuleiroFrame s = new TabuleiroFrame("a", FACIL, 2);
                 new TabuleiroFrame().setVisible(true);
             }
         });
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JTextField grid00;
+    private javax.swing.JTextField grid01;
+    private javax.swing.JTextField grid02;
+    private javax.swing.JTextField grid03;
+    private javax.swing.JTextField grid04;
+    private javax.swing.JTextField grid05;
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
     private javax.swing.JLabel jLabel1;
@@ -1561,10 +1631,8 @@ public class TabuleiroFrame extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel5;
     private javax.swing.JProgressBar jProgressBar1;
     private javax.swing.JProgressBar jProgressBar2;
-    private javax.swing.JTextField jTextField1;
     private javax.swing.JTextField jTextField10;
     private javax.swing.JTextField jTextField100;
-    private javax.swing.JTextField jTextField101;
     private javax.swing.JTextField jTextField102;
     private javax.swing.JTextField jTextField103;
     private javax.swing.JTextField jTextField104;
@@ -1574,7 +1642,6 @@ public class TabuleiroFrame extends javax.swing.JFrame {
     private javax.swing.JTextField jTextField108;
     private javax.swing.JTextField jTextField109;
     private javax.swing.JTextField jTextField11;
-    private javax.swing.JTextField jTextField110;
     private javax.swing.JTextField jTextField111;
     private javax.swing.JTextField jTextField112;
     private javax.swing.JTextField jTextField113;
@@ -1583,7 +1650,6 @@ public class TabuleiroFrame extends javax.swing.JFrame {
     private javax.swing.JTextField jTextField116;
     private javax.swing.JTextField jTextField117;
     private javax.swing.JTextField jTextField118;
-    private javax.swing.JTextField jTextField119;
     private javax.swing.JTextField jTextField120;
     private javax.swing.JTextField jTextField121;
     private javax.swing.JTextField jTextField122;
@@ -1625,7 +1691,6 @@ public class TabuleiroFrame extends javax.swing.JFrame {
     private javax.swing.JTextField jTextField6;
     private javax.swing.JTextField jTextField7;
     private javax.swing.JTextField jTextField8;
-    private javax.swing.JTextField jTextField83;
     private javax.swing.JTextField jTextField84;
     private javax.swing.JTextField jTextField85;
     private javax.swing.JTextField jTextField86;
@@ -1635,7 +1700,6 @@ public class TabuleiroFrame extends javax.swing.JFrame {
     private javax.swing.JTextField jTextField9;
     private javax.swing.JTextField jTextField90;
     private javax.swing.JTextField jTextField91;
-    private javax.swing.JTextField jTextField92;
     private javax.swing.JTextField jTextField93;
     private javax.swing.JTextField jTextField94;
     private javax.swing.JTextField jTextField95;

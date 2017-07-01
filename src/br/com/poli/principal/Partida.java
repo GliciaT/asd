@@ -15,7 +15,8 @@ public class Partida {
     private Date tempoFinal;
     private DificuldadePartida dificuldade;
     private long score;
-
+    
+    //apagar esse depois e alterar os testes que o usam
     public Partida(String nome, DificuldadePartida dificuldade) {
         this.tempoInicial = new Date(System.currentTimeMillis());
         //modificar para começar a partida com o metodo inicia partida
@@ -28,6 +29,7 @@ public class Partida {
         this.tempoInicial = new Date(System.currentTimeMillis());
         this.jogador = new Jogador(nome, idade);
         this.dificuldade = dificuldade;
+        this.tabuleiro = new Tabuleiro(dificuldade);
     }
 
     public void executaMovimento(int x, int y, int valor) throws MovimentoInvalidoException, MovimentoIncorretoException {

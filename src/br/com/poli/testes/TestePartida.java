@@ -4,7 +4,7 @@ import br.com.poli.calculaScore.CalculaScoreComIdade;
 import br.com.poli.calculaScore.CalculaScoreSemIdade;
 import br.com.poli.exception.MovimentoIncorretoException;
 import br.com.poli.exception.MovimentoInvalidoException;
-import br.com.poli.exception.SemSolucaoException;
+//import br.com.poli.exception.SemSolucaoException;
 import br.com.poli.principal.DificuldadePartida;
 import br.com.poli.principal.Partida;
 import java.util.Random;
@@ -18,7 +18,7 @@ public class TestePartida {
         //para forçar testes
         Random random = new Random();
         int x = 0, y = 0;
-        //mostrar tabuleiro vazio
+        //mostrar tabuleiro inicial
         for (int i = 0; i < jogo1.getGridTabuleiro().length; i++) {
             for (int j = 0; j < jogo1.getGridTabuleiro()[i].length; j++) {
                 System.out.print(jogo1.getGridTabuleiro()[i][j]);

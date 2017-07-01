@@ -5,6 +5,7 @@
  */
 package br.com.poli.view;
 
+import br.com.poli.principal.DificuldadePartida;
 import br.com.poli.principal.Partida;
 import static java.lang.Integer.parseInt;
 import java.util.regex.Matcher;
@@ -135,17 +136,32 @@ public class LoginFrame extends javax.swing.JFrame {
         boolean valido = m.matches();
         boolean ok;
         if (valido) {
-            ok=true;
+            ok = true;
         } else {
-            ok=false;
+            ok = false;
             JOptionPane.showMessageDialog(null, "Campo nome não preenchido");
         }
-        if(ok){
-           String nomeUsuario = nome.getText();
-           String a = dificuldade.getSelectedItem().toString();
-           JOptionPane.showMessageDialog(null, "O jogo vai começar"+idade.getValue());
-           dispose();
-           new TabuleiroFrame().setVisible(true); 
+        if (ok) {
+            String nomeUsuario = nome.getText();
+            String a = dificuldade.getSelectedItem().toString();
+            //JOptionPane.showMessageDialog(null, "O jogo vai começar"+idade.getValue());
+
+            
+            switch (dificuldade.getSelectedItem().toString()) {
+                case "FACIL":
+                    abrirTabuleiro(nome.getText(), DificuldadePartida.FACIL, (int) idade.getValue());
+                    break;
+                case "NORMAL":
+                    abrirTabuleiro(nome.getText(), DificuldadePartida.NORMAL, (int) idade.getValue());
+                    break;
+                case "DIFICIL":
+                    abrirTabuleiro(nome.getText(), DificuldadePartida.DIFICIL, (int) idade.getValue());
+                    break;
+                default:
+                    break;
+            }
+            dispose();
+            //new TabuleiroFrame().setVisible(true);
         }
         /*else {
             int idadeDoJogador = Integer.parseInt(idade.getText());
@@ -200,6 +216,11 @@ public class LoginFrame extends javax.swing.JFrame {
                 new LoginFrame().setVisible(true);
             }
         });
+    }
+    public void abrirTabuleiro(String nome, DificuldadePartida dificuldade, int idade){
+        TabuleiroFrame tab = new TabuleiroFrame(nome,dificuldade,idade);
+        dispose();
+        tab.setVisible(true);
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
