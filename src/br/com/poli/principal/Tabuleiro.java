@@ -80,7 +80,9 @@ public class Tabuleiro implements ResolvedorSudoku {
             y = random.nextInt(9);
             if (this.grid[x][y] != 0) {
                 this.grid[x][y] = 0;
-            } else d--;
+            } else {
+                d--;
+            }
         }
     }
 
@@ -168,7 +170,7 @@ public class Tabuleiro implements ResolvedorSudoku {
 
     // deve retornar true, se o sudoku foi solucionado, retorna false caso n
     @Override
-    public boolean resolveTabuleiro(Cell cur){
+    public boolean resolveTabuleiro(Cell cur) {
 
         if (cur == null) {
             return true;
@@ -200,8 +202,9 @@ public class Tabuleiro implements ResolvedorSudoku {
         }
         return false;
     }
+
     @Override
-    public boolean isResolvivel() throws SemSolucaoException{
+    public boolean isResolvivel() throws SemSolucaoException {
         boolean resolve = resolveTabuleiro(cell);
         if (!resolve) {
             throw new SemSolucaoException("Sem solução.");
@@ -215,8 +218,15 @@ public class Tabuleiro implements ResolvedorSudoku {
         }
         return true;
     }
+
+    /*Serve para o proprio sistema poder mexer no tabuleiro depois,
+    sendo limitado as classes do mesmo pacote (Interface não vai ter acesso a isso)
+     */
+    protected void setMovimentoEspecial(int x, int y, int valor) {
+        this.grid[x][y] = valor;
+    }
 }
-    /*public void main(String[] args) {
+/*public void main(String[] args) {
   boolean solved = resolveTabuleiro(new Cell(0, 0));
   if (!solved) {
    System.out.println("SUDOKU cannot be solved.");
@@ -225,5 +235,5 @@ public class Tabuleiro implements ResolvedorSudoku {
   System.out.println("SOLUTION\n");
   printGrid(grid);
  }*/
-    // utility to print the grid
+// utility to print the grid
 
