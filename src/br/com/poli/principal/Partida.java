@@ -18,8 +18,13 @@ public class Partida {
     private DificuldadePartida dificuldade;
     private long score;
     private int dicas = 0;
+    //somente para auxilio nas operações
     Random random = new Random();
-    
+
+    public int getDicas() {
+        return dicas;
+    }
+
     //apagar esse depois e alterar os testes que o usam
     public Partida(String nome, DificuldadePartida dificuldade) {
         this.tempoInicial = new Date(System.currentTimeMillis());
@@ -145,20 +150,21 @@ public class Partida {
     public boolean resolvePartida() throws SemSolucaoException {
         return this.tabuleiro.isResolvivel();
     }
-    
-    public void darDicas() throws DicasInsuficienteException{
-      if(this.dicas <= dificuldade.getQuantidadeMaximaDicas()){
-          int x=0,y=0;
-          while(tabuleiro.getGrid()[x][y]!=0){
-                x= random.nextInt(9);
-                y= random.nextInt(9);
+
+    public void darDicas() throws DicasInsuficienteException {
+        if (this.dicas <= dificuldade.getQuantidadeMaximaDicas()) {
+            int x = 0, y = 0;
+            while (tabuleiro.getGrid()[x][y] != 0) {
+                x = random.nextInt(9);
+                y = random.nextInt(9);
             }
-          tabuleiro.setMovimentoEspecial(x, y, tabuleiro.getGabarito()[x][y]);
-          this.dicas++;
-      } else{
-          throw new DicasInsuficienteException("Acabaram as Dicas");
-      }
+            tabuleiro.setMovimentoEspecial(x, y, tabuleiro.getGabarito()[x][y]);
+            this.dicas++;
+        } else {
+            throw new DicasInsuficienteException("Acabaram as Dicas");
+        }
     }
+
     public int getQuantidadeMaximaErrosDicas() {
         return this.dificuldade.getQuantidadeMaximaDicas();
     }
