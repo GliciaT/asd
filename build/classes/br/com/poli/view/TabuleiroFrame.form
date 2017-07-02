@@ -240,7 +240,7 @@
               <Group type="103" groupAlignment="0" attributes="0">
                   <Group type="102" alignment="1" attributes="0">
                       <Group type="103" groupAlignment="1" attributes="0">
-                          <Component id="jProgressBar2" alignment="0" max="32767" attributes="0"/>
+                          <Component id="progressoErros" alignment="0" max="32767" attributes="0"/>
                           <Component id="jProgressBar1" alignment="0" max="32767" attributes="0"/>
                           <Group type="102" alignment="0" attributes="0">
                               <Group type="103" groupAlignment="1" attributes="0">
@@ -298,7 +298,7 @@
                       <Component id="grid71" alignment="3" min="-2" max="-2" attributes="0"/>
                       <Component id="grid81" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
-                  <Component id="jProgressBar2" min="-2" pref="30" max="-2" attributes="0"/>
+                  <Component id="progressoErros" min="-2" pref="30" max="-2" attributes="0"/>
               </Group>
               <EmptySpace max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
@@ -416,8 +416,6 @@
         <Property name="alignmentY" type="float" value="0.0"/>
       </Properties>
       <Events>
-        <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="grid00MouseClicked"/>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="grid00ActionPerformed"/>
         <EventHandler event="keyTyped" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="grid00KeyTyped"/>
       </Events>
       <AuxValues>
@@ -588,9 +586,6 @@
           <Dimension value="[30, 30]"/>
         </Property>
       </Properties>
-      <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="grid31ActionPerformed"/>
-      </Events>
     </Component>
     <Component class="javax.swing.JTextField" name="grid41">
       <Properties>
@@ -1546,13 +1541,15 @@
         <Property name="value" type="int" value="30"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JProgressBar" name="jProgressBar2">
+    <Component class="javax.swing.JProgressBar" name="progressoErros">
       <Properties>
         <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
           <Color blue="31" green="1e" red="12" type="rgb"/>
         </Property>
-        <Property name="value" type="int" value="70"/>
       </Properties>
+      <Events>
+        <EventHandler event="propertyChange" listener="java.beans.PropertyChangeListener" parameters="java.beans.PropertyChangeEvent" handler="progressoErrosPropertyChange"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JLabel" name="jLabel2">
     </Component>
