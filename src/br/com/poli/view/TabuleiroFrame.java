@@ -20,7 +20,7 @@ import javax.swing.JOptionPane;
  * @author dylan
  */
 public class TabuleiroFrame extends javax.swing.JFrame {
-
+    
     Partida novoJogo;
 
     /**
@@ -30,20 +30,20 @@ public class TabuleiroFrame extends javax.swing.JFrame {
         initComponents();
         clock1.start();
     }
-
+    
     public TabuleiroFrame(String nome, DificuldadePartida dificuldade, int idade) {
         novoJogo = new Partida(nome, dificuldade, idade);
         initComponents();
         setAllTextField();
         clock1.start();
-
+        
     }
     Thread clock1 = new Thread() {
-
+        
         @Override
         public void run() {
             int hor = 00, min = 00, seg = 00;
-
+            
             for (;;) {
                 try {
                     //System.out.println(hor + ":" + min + ":" + seg);
@@ -63,7 +63,7 @@ public class TabuleiroFrame extends javax.swing.JFrame {
                     tempo.setText(hor + ":" + min + ":" + seg);
                     Thread.sleep(999);
                 } catch (InterruptedException e) {
-
+                    
                 }
             }
         }
@@ -1262,8 +1262,9 @@ public class TabuleiroFrame extends javax.swing.JFrame {
     }//GEN-LAST:event_buttonDicaActionPerformed
 
     private void buttonDesistirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonDesistirActionPerformed
-        dispose();
-        new FimDeJogoFrame().setVisible(true);
+        novoJogo.setDesistiu(true);
+        novoJogo.isFimDeJogo();
+        abrirFimDeJogo(novoJogo);
     }//GEN-LAST:event_buttonDesistirActionPerformed
     // grid00
     private void grid00KeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_grid00KeyTyped
@@ -1277,9 +1278,9 @@ public class TabuleiroFrame extends javax.swing.JFrame {
                 JOptionPane.showMessageDialog(null, ex.getMessage());
             } catch (MovimentoIncorretoException ex) {
                 progressoErros.setValue(novoJogo.getQuantidadeErros());
-                if(novoJogo.isFimDeJogo()){
+                if (novoJogo.isFimDeJogo()) {
                     JOptionPane.showMessageDialog(null, "O jogo acabou");
-                    setAllTextField();
+                    abrirFimDeJogo(novoJogo);
                 }
                 JOptionPane.showMessageDialog(null, ex.getMessage());
             }
@@ -2506,10 +2507,10 @@ public class TabuleiroFrame extends javax.swing.JFrame {
     private void progressoDicasPropertyChange(java.beans.PropertyChangeEvent evt) {//GEN-FIRST:event_progressoDicasPropertyChange
         progressoDicas.setMaximum(novoJogo.getQuantidadeMaximaErrosDicas());
     }//GEN-LAST:event_progressoDicasPropertyChange
-/*Sujeito a melhores implementações 
+    /*Sujeito a melhores implementações 
  *Serve para colocar os valores do tabuleiro na interface
   São independente em relação ao tabuleiro, ou seja, as alterações neles não implicam diretamente na matriz*/
-
+    
     public void setAllTextField() {
         grid00.setText(String.valueOf(novoJogo.getGridTabuleiro()[0][0]));
         if (!grid00.getText().equals("0")) {
@@ -2997,6 +2998,12 @@ public class TabuleiroFrame extends javax.swing.JFrame {
         } else {
             grid88.setText("");
         }
+    }
+
+    public void abrirFimDeJogo(Partida aux) {
+        FimDeJogoFrame tab = new FimDeJogoFrame(aux);
+        dispose();
+        tab.setVisible(true);
     }
 
     /**

@@ -18,12 +18,10 @@ public class Partida {
     private DificuldadePartida dificuldade;
     private long score;
     private int dicas = 0;
+    private boolean desistiu;
+
     //somente para auxilio nas operações
     Random random = new Random();
-
-    public int getDicas() {
-        return dicas;
-    }
 
     //apagar esse depois e alterar os testes que o usam
     public Partida(String nome, DificuldadePartida dificuldade) {
@@ -32,6 +30,7 @@ public class Partida {
         this.tabuleiro = new Tabuleiro(dificuldade);
         this.jogador = new Jogador(nome);
         this.dificuldade = dificuldade;
+        this.desistiu = false;
     }
 
     public Partida(String nome, DificuldadePartida dificuldade, int idade) {
@@ -39,6 +38,7 @@ public class Partida {
         this.jogador = new Jogador(nome, idade);
         this.dificuldade = dificuldade;
         this.tabuleiro = new Tabuleiro(dificuldade);
+        this.desistiu = false;
     }
 
     public void executaMovimento(int x, int y, int valor) throws MovimentoInvalidoException, MovimentoIncorretoException {
@@ -79,6 +79,14 @@ public class Partida {
             }
             return true;
         }
+        if (desistiu) {
+            try {
+                resolvePartida();
+            } catch (SemSolucaoException e) {
+                System.out.println(e.getMessage());
+            }
+            return true;
+        }
         return false;
     }
 
@@ -87,6 +95,7 @@ public class Partida {
         this.tempoInicial = new Date(System.currentTimeMillis());
         this.venceu = false;
         this.tabuleiro = new Tabuleiro(dificuldade);
+        this.desistiu = false;
     }
 
     public String getNomeJogador() {
@@ -167,5 +176,13 @@ public class Partida {
 
     public int getQuantidadeMaximaErrosDicas() {
         return this.dificuldade.getQuantidadeMaximaDicas();
+    }
+
+    public void setDesistiu(boolean desistiu) {
+        this.desistiu = desistiu;
+    }
+
+    public int getDicas() {
+        return dicas;
     }
 }

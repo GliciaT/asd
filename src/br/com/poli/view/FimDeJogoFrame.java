@@ -5,17 +5,23 @@
  */
 package br.com.poli.view;
 
+import br.com.poli.calculaScore.CalculaScoreComIdade;
+import br.com.poli.calculaScore.CalculaScoreSemIdade;
+import br.com.poli.principal.Partida;
+
 /**
  *
  * @author dylan
  */
 public class FimDeJogoFrame extends javax.swing.JFrame {
-
+    Partida aux;
     /**
      * Creates new form FimDeJogoFrame
      */
-    public FimDeJogoFrame() {
+    public FimDeJogoFrame(Partida partida) {
+        this.aux = partida;
         initComponents();
+        setAllTextField();
     }
 
     /**
@@ -27,744 +33,96 @@ public class FimDeJogoFrame extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jTextField120 = new javax.swing.JTextField();
-        jTextField121 = new javax.swing.JTextField();
-        jTextField122 = new javax.swing.JTextField();
-        jTextField123 = new javax.swing.JTextField();
-        jTextField9 = new javax.swing.JTextField();
-        jTextField124 = new javax.swing.JTextField();
-        jTextField10 = new javax.swing.JTextField();
-        jTextField125 = new javax.swing.JTextField();
-        jTextField11 = new javax.swing.JTextField();
-        jTextField126 = new javax.swing.JTextField();
-        jTextField83 = new javax.swing.JTextField();
-        jTextField127 = new javax.swing.JTextField();
-        jTextField84 = new javax.swing.JTextField();
-        jTextField128 = new javax.swing.JTextField();
-        jTextField85 = new javax.swing.JTextField();
-        jTextField129 = new javax.swing.JTextField();
-        jTextField86 = new javax.swing.JTextField();
-        jTextField87 = new javax.swing.JTextField();
-        jTextField88 = new javax.swing.JTextField();
-        jTextField89 = new javax.swing.JTextField();
-        jTextField130 = new javax.swing.JTextField();
-        jTextField131 = new javax.swing.JTextField();
-        jTextField132 = new javax.swing.JTextField();
-        jTextField133 = new javax.swing.JTextField();
-        jTextField90 = new javax.swing.JTextField();
-        jTextField134 = new javax.swing.JTextField();
-        jTextField91 = new javax.swing.JTextField();
-        jTextField135 = new javax.swing.JTextField();
-        jTextField92 = new javax.swing.JTextField();
-        jTextField136 = new javax.swing.JTextField();
-        jTextField93 = new javax.swing.JTextField();
-        jTextField137 = new javax.swing.JTextField();
-        jTextField94 = new javax.swing.JTextField();
-        jTextField138 = new javax.swing.JTextField();
-        jTextField95 = new javax.swing.JTextField();
-        jTextField139 = new javax.swing.JTextField();
-        jTextField96 = new javax.swing.JTextField();
-        jTextField97 = new javax.swing.JTextField();
-        jTextField98 = new javax.swing.JTextField();
-        jTextField99 = new javax.swing.JTextField();
-        jTextField140 = new javax.swing.JTextField();
-        jTextField141 = new javax.swing.JTextField();
-        jTextField142 = new javax.swing.JTextField();
-        jTextField143 = new javax.swing.JTextField();
-        jTextField100 = new javax.swing.JTextField();
-        jTextField144 = new javax.swing.JTextField();
-        jTextField101 = new javax.swing.JTextField();
-        jTextField145 = new javax.swing.JTextField();
-        jTextField102 = new javax.swing.JTextField();
-        jTextField146 = new javax.swing.JTextField();
-        jTextField103 = new javax.swing.JTextField();
-        jTextField147 = new javax.swing.JTextField();
-        jTextField104 = new javax.swing.JTextField();
-        jTextField148 = new javax.swing.JTextField();
-        jTextField105 = new javax.swing.JTextField();
-        jTextField149 = new javax.swing.JTextField();
-        jTextField106 = new javax.swing.JTextField();
-        jTextField107 = new javax.swing.JTextField();
-        jTextField108 = new javax.swing.JTextField();
-        jTextField109 = new javax.swing.JTextField();
-        jTextField150 = new javax.swing.JTextField();
-        jTextField151 = new javax.swing.JTextField();
-        jTextField152 = new javax.swing.JTextField();
-        jTextField153 = new javax.swing.JTextField();
-        jTextField110 = new javax.swing.JTextField();
-        jTextField154 = new javax.swing.JTextField();
-        jTextField111 = new javax.swing.JTextField();
-        jTextField112 = new javax.swing.JTextField();
-        jTextField113 = new javax.swing.JTextField();
-        jTextField114 = new javax.swing.JTextField();
-        jTextField115 = new javax.swing.JTextField();
-        jTextField116 = new javax.swing.JTextField();
-        jTextField117 = new javax.swing.JTextField();
-        jTextField1 = new javax.swing.JTextField();
-        jTextField118 = new javax.swing.JTextField();
-        jTextField4 = new javax.swing.JTextField();
-        jTextField119 = new javax.swing.JTextField();
-        jTextField5 = new javax.swing.JTextField();
-        jTextField6 = new javax.swing.JTextField();
-        jTextField7 = new javax.swing.JTextField();
-        jTextField8 = new javax.swing.JTextField();
         jLabel2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
-        Pontuacao = new javax.swing.JLabel();
-        JogarNovamente = new javax.swing.JButton();
-        Sair = new javax.swing.JButton();
-        jLabel5 = new javax.swing.JLabel();
+        score = new javax.swing.JLabel();
+        buttonJogarNovamente = new javax.swing.JButton();
+        buttonSair = new javax.swing.JButton();
+        textSituacao = new javax.swing.JLabel();
+        grid76 = new javax.swing.JTextField();
+        grid86 = new javax.swing.JTextField();
+        grid66 = new javax.swing.JTextField();
+        grid07 = new javax.swing.JTextField();
+        grid22 = new javax.swing.JTextField();
+        grid17 = new javax.swing.JTextField();
+        grid32 = new javax.swing.JTextField();
+        grid27 = new javax.swing.JTextField();
+        grid42 = new javax.swing.JTextField();
+        grid37 = new javax.swing.JTextField();
+        grid52 = new javax.swing.JTextField();
+        grid47 = new javax.swing.JTextField();
+        grid62 = new javax.swing.JTextField();
+        grid57 = new javax.swing.JTextField();
+        grid72 = new javax.swing.JTextField();
+        grid67 = new javax.swing.JTextField();
+        grid82 = new javax.swing.JTextField();
+        grid00 = new javax.swing.JTextField();
+        grid03 = new javax.swing.JTextField();
+        grid10 = new javax.swing.JTextField();
+        grid13 = new javax.swing.JTextField();
+        grid20 = new javax.swing.JTextField();
+        grid23 = new javax.swing.JTextField();
+        grid30 = new javax.swing.JTextField();
+        grid40 = new javax.swing.JTextField();
+        grid50 = new javax.swing.JTextField();
+        grid60 = new javax.swing.JTextField();
+        grid70 = new javax.swing.JTextField();
+        grid80 = new javax.swing.JTextField();
+        grid01 = new javax.swing.JTextField();
+        grid77 = new javax.swing.JTextField();
+        grid87 = new javax.swing.JTextField();
+        grid08 = new javax.swing.JTextField();
+        grid18 = new javax.swing.JTextField();
+        grid33 = new javax.swing.JTextField();
+        grid28 = new javax.swing.JTextField();
+        grid43 = new javax.swing.JTextField();
+        grid38 = new javax.swing.JTextField();
+        grid53 = new javax.swing.JTextField();
+        grid48 = new javax.swing.JTextField();
+        grid63 = new javax.swing.JTextField();
+        grid58 = new javax.swing.JTextField();
+        grid73 = new javax.swing.JTextField();
+        grid68 = new javax.swing.JTextField();
+        grid83 = new javax.swing.JTextField();
+        grid78 = new javax.swing.JTextField();
+        grid04 = new javax.swing.JTextField();
+        grid14 = new javax.swing.JTextField();
+        grid24 = new javax.swing.JTextField();
+        grid34 = new javax.swing.JTextField();
+        grid88 = new javax.swing.JTextField();
+        grid44 = new javax.swing.JTextField();
+        grid54 = new javax.swing.JTextField();
+        grid64 = new javax.swing.JTextField();
+        grid74 = new javax.swing.JTextField();
+        grid84 = new javax.swing.JTextField();
+        grid05 = new javax.swing.JTextField();
+        grid15 = new javax.swing.JTextField();
+        grid25 = new javax.swing.JTextField();
+        grid35 = new javax.swing.JTextField();
+        grid45 = new javax.swing.JTextField();
+        grid55 = new javax.swing.JTextField();
+        grid65 = new javax.swing.JTextField();
+        grid75 = new javax.swing.JTextField();
+        grid85 = new javax.swing.JTextField();
+        grid11 = new javax.swing.JTextField();
+        grid06 = new javax.swing.JTextField();
+        grid21 = new javax.swing.JTextField();
+        grid16 = new javax.swing.JTextField();
+        grid31 = new javax.swing.JTextField();
+        grid26 = new javax.swing.JTextField();
+        grid41 = new javax.swing.JTextField();
+        grid36 = new javax.swing.JTextField();
+        grid51 = new javax.swing.JTextField();
+        grid46 = new javax.swing.JTextField();
+        grid61 = new javax.swing.JTextField();
+        grid56 = new javax.swing.JTextField();
+        grid71 = new javax.swing.JTextField();
+        grid81 = new javax.swing.JTextField();
+        grid02 = new javax.swing.JTextField();
+        grid12 = new javax.swing.JTextField();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setResizable(false);
-
-        jTextField120.setFont(new java.awt.Font("Dialog", 0, 18)); // NOI18N
-        jTextField120.setPreferredSize(new java.awt.Dimension(30, 30));
-        jTextField120.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField120ActionPerformed(evt);
-            }
-        });
-
-        jTextField121.setFont(new java.awt.Font("Dialog", 0, 18)); // NOI18N
-        jTextField121.setPreferredSize(new java.awt.Dimension(30, 30));
-        jTextField121.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField121ActionPerformed(evt);
-            }
-        });
-
-        jTextField122.setFont(new java.awt.Font("Dialog", 0, 18)); // NOI18N
-        jTextField122.setPreferredSize(new java.awt.Dimension(30, 30));
-        jTextField122.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField122ActionPerformed(evt);
-            }
-        });
-
-        jTextField123.setFont(new java.awt.Font("Dialog", 0, 18)); // NOI18N
-        jTextField123.setPreferredSize(new java.awt.Dimension(30, 30));
-        jTextField123.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField123ActionPerformed(evt);
-            }
-        });
-
-        jTextField9.setFont(new java.awt.Font("Dialog", 0, 18)); // NOI18N
-        jTextField9.setPreferredSize(new java.awt.Dimension(30, 30));
-        jTextField9.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField9ActionPerformed(evt);
-            }
-        });
-
-        jTextField124.setFont(new java.awt.Font("Dialog", 0, 18)); // NOI18N
-        jTextField124.setPreferredSize(new java.awt.Dimension(30, 30));
-        jTextField124.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField124ActionPerformed(evt);
-            }
-        });
-
-        jTextField10.setFont(new java.awt.Font("Dialog", 0, 18)); // NOI18N
-        jTextField10.setPreferredSize(new java.awt.Dimension(30, 30));
-        jTextField10.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField10ActionPerformed(evt);
-            }
-        });
-
-        jTextField125.setFont(new java.awt.Font("Dialog", 0, 18)); // NOI18N
-        jTextField125.setPreferredSize(new java.awt.Dimension(30, 30));
-        jTextField125.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField125ActionPerformed(evt);
-            }
-        });
-
-        jTextField11.setFont(new java.awt.Font("Dialog", 0, 18)); // NOI18N
-        jTextField11.setPreferredSize(new java.awt.Dimension(30, 30));
-        jTextField11.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField11ActionPerformed(evt);
-            }
-        });
-
-        jTextField126.setFont(new java.awt.Font("Dialog", 0, 18)); // NOI18N
-        jTextField126.setPreferredSize(new java.awt.Dimension(30, 30));
-        jTextField126.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField126ActionPerformed(evt);
-            }
-        });
-
-        jTextField83.setFont(new java.awt.Font("Dialog", 0, 18)); // NOI18N
-        jTextField83.setPreferredSize(new java.awt.Dimension(30, 30));
-        jTextField83.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField83ActionPerformed(evt);
-            }
-        });
-
-        jTextField127.setFont(new java.awt.Font("Dialog", 0, 18)); // NOI18N
-        jTextField127.setPreferredSize(new java.awt.Dimension(30, 30));
-        jTextField127.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField127ActionPerformed(evt);
-            }
-        });
-
-        jTextField84.setFont(new java.awt.Font("Dialog", 0, 18)); // NOI18N
-        jTextField84.setPreferredSize(new java.awt.Dimension(30, 30));
-        jTextField84.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField84ActionPerformed(evt);
-            }
-        });
-
-        jTextField128.setFont(new java.awt.Font("Dialog", 0, 18)); // NOI18N
-        jTextField128.setPreferredSize(new java.awt.Dimension(30, 30));
-        jTextField128.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField128ActionPerformed(evt);
-            }
-        });
-
-        jTextField85.setFont(new java.awt.Font("Dialog", 0, 18)); // NOI18N
-        jTextField85.setPreferredSize(new java.awt.Dimension(30, 30));
-        jTextField85.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField85ActionPerformed(evt);
-            }
-        });
-
-        jTextField129.setFont(new java.awt.Font("Dialog", 0, 18)); // NOI18N
-        jTextField129.setPreferredSize(new java.awt.Dimension(30, 30));
-        jTextField129.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField129ActionPerformed(evt);
-            }
-        });
-
-        jTextField86.setFont(new java.awt.Font("Dialog", 0, 18)); // NOI18N
-        jTextField86.setPreferredSize(new java.awt.Dimension(30, 30));
-        jTextField86.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField86ActionPerformed(evt);
-            }
-        });
-
-        jTextField87.setFont(new java.awt.Font("Dialog", 0, 18)); // NOI18N
-        jTextField87.setPreferredSize(new java.awt.Dimension(30, 30));
-        jTextField87.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField87ActionPerformed(evt);
-            }
-        });
-
-        jTextField88.setFont(new java.awt.Font("Dialog", 0, 18)); // NOI18N
-        jTextField88.setPreferredSize(new java.awt.Dimension(30, 30));
-        jTextField88.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField88ActionPerformed(evt);
-            }
-        });
-
-        jTextField89.setFont(new java.awt.Font("Dialog", 0, 18)); // NOI18N
-        jTextField89.setPreferredSize(new java.awt.Dimension(30, 30));
-        jTextField89.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField89ActionPerformed(evt);
-            }
-        });
-
-        jTextField130.setFont(new java.awt.Font("Dialog", 0, 18)); // NOI18N
-        jTextField130.setPreferredSize(new java.awt.Dimension(30, 30));
-        jTextField130.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField130ActionPerformed(evt);
-            }
-        });
-
-        jTextField131.setFont(new java.awt.Font("Dialog", 0, 18)); // NOI18N
-        jTextField131.setPreferredSize(new java.awt.Dimension(30, 30));
-        jTextField131.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField131ActionPerformed(evt);
-            }
-        });
-
-        jTextField132.setFont(new java.awt.Font("Dialog", 0, 18)); // NOI18N
-        jTextField132.setPreferredSize(new java.awt.Dimension(30, 30));
-        jTextField132.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField132ActionPerformed(evt);
-            }
-        });
-
-        jTextField133.setFont(new java.awt.Font("Dialog", 0, 18)); // NOI18N
-        jTextField133.setPreferredSize(new java.awt.Dimension(30, 30));
-        jTextField133.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField133ActionPerformed(evt);
-            }
-        });
-
-        jTextField90.setFont(new java.awt.Font("Dialog", 0, 18)); // NOI18N
-        jTextField90.setPreferredSize(new java.awt.Dimension(30, 30));
-        jTextField90.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField90ActionPerformed(evt);
-            }
-        });
-
-        jTextField134.setFont(new java.awt.Font("Dialog", 0, 18)); // NOI18N
-        jTextField134.setPreferredSize(new java.awt.Dimension(30, 30));
-        jTextField134.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField134ActionPerformed(evt);
-            }
-        });
-
-        jTextField91.setFont(new java.awt.Font("Dialog", 0, 18)); // NOI18N
-        jTextField91.setPreferredSize(new java.awt.Dimension(30, 30));
-        jTextField91.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField91ActionPerformed(evt);
-            }
-        });
-
-        jTextField135.setFont(new java.awt.Font("Dialog", 0, 18)); // NOI18N
-        jTextField135.setPreferredSize(new java.awt.Dimension(30, 30));
-        jTextField135.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField135ActionPerformed(evt);
-            }
-        });
-
-        jTextField92.setFont(new java.awt.Font("Dialog", 0, 18)); // NOI18N
-        jTextField92.setPreferredSize(new java.awt.Dimension(30, 30));
-        jTextField92.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField92ActionPerformed(evt);
-            }
-        });
-
-        jTextField136.setFont(new java.awt.Font("Dialog", 0, 18)); // NOI18N
-        jTextField136.setPreferredSize(new java.awt.Dimension(30, 30));
-        jTextField136.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField136ActionPerformed(evt);
-            }
-        });
-
-        jTextField93.setFont(new java.awt.Font("Dialog", 0, 18)); // NOI18N
-        jTextField93.setPreferredSize(new java.awt.Dimension(30, 30));
-        jTextField93.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField93ActionPerformed(evt);
-            }
-        });
-
-        jTextField137.setFont(new java.awt.Font("Dialog", 0, 18)); // NOI18N
-        jTextField137.setPreferredSize(new java.awt.Dimension(30, 30));
-        jTextField137.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField137ActionPerformed(evt);
-            }
-        });
-
-        jTextField94.setFont(new java.awt.Font("Dialog", 0, 18)); // NOI18N
-        jTextField94.setPreferredSize(new java.awt.Dimension(30, 30));
-        jTextField94.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField94ActionPerformed(evt);
-            }
-        });
-
-        jTextField138.setFont(new java.awt.Font("Dialog", 0, 18)); // NOI18N
-        jTextField138.setPreferredSize(new java.awt.Dimension(30, 30));
-        jTextField138.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField138ActionPerformed(evt);
-            }
-        });
-
-        jTextField95.setFont(new java.awt.Font("Dialog", 0, 18)); // NOI18N
-        jTextField95.setPreferredSize(new java.awt.Dimension(30, 30));
-        jTextField95.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField95ActionPerformed(evt);
-            }
-        });
-
-        jTextField139.setFont(new java.awt.Font("Dialog", 0, 18)); // NOI18N
-        jTextField139.setPreferredSize(new java.awt.Dimension(30, 30));
-        jTextField139.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField139ActionPerformed(evt);
-            }
-        });
-
-        jTextField96.setFont(new java.awt.Font("Dialog", 0, 18)); // NOI18N
-        jTextField96.setPreferredSize(new java.awt.Dimension(30, 30));
-        jTextField96.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField96ActionPerformed(evt);
-            }
-        });
-
-        jTextField97.setFont(new java.awt.Font("Dialog", 0, 18)); // NOI18N
-        jTextField97.setPreferredSize(new java.awt.Dimension(30, 30));
-        jTextField97.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField97ActionPerformed(evt);
-            }
-        });
-
-        jTextField98.setFont(new java.awt.Font("Dialog", 0, 18)); // NOI18N
-        jTextField98.setPreferredSize(new java.awt.Dimension(30, 30));
-        jTextField98.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField98ActionPerformed(evt);
-            }
-        });
-
-        jTextField99.setFont(new java.awt.Font("Dialog", 0, 18)); // NOI18N
-        jTextField99.setPreferredSize(new java.awt.Dimension(30, 30));
-        jTextField99.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField99ActionPerformed(evt);
-            }
-        });
-
-        jTextField140.setFont(new java.awt.Font("Dialog", 0, 18)); // NOI18N
-        jTextField140.setPreferredSize(new java.awt.Dimension(30, 30));
-        jTextField140.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField140ActionPerformed(evt);
-            }
-        });
-
-        jTextField141.setFont(new java.awt.Font("Dialog", 0, 18)); // NOI18N
-        jTextField141.setPreferredSize(new java.awt.Dimension(30, 30));
-        jTextField141.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField141ActionPerformed(evt);
-            }
-        });
-
-        jTextField142.setFont(new java.awt.Font("Dialog", 0, 18)); // NOI18N
-        jTextField142.setPreferredSize(new java.awt.Dimension(30, 30));
-        jTextField142.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField142ActionPerformed(evt);
-            }
-        });
-
-        jTextField143.setFont(new java.awt.Font("Dialog", 0, 18)); // NOI18N
-        jTextField143.setPreferredSize(new java.awt.Dimension(30, 30));
-        jTextField143.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField143ActionPerformed(evt);
-            }
-        });
-
-        jTextField100.setFont(new java.awt.Font("Dialog", 0, 18)); // NOI18N
-        jTextField100.setPreferredSize(new java.awt.Dimension(30, 30));
-        jTextField100.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField100ActionPerformed(evt);
-            }
-        });
-
-        jTextField144.setFont(new java.awt.Font("Dialog", 0, 18)); // NOI18N
-        jTextField144.setPreferredSize(new java.awt.Dimension(30, 30));
-        jTextField144.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField144ActionPerformed(evt);
-            }
-        });
-
-        jTextField101.setFont(new java.awt.Font("Dialog", 0, 18)); // NOI18N
-        jTextField101.setPreferredSize(new java.awt.Dimension(30, 30));
-        jTextField101.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField101ActionPerformed(evt);
-            }
-        });
-
-        jTextField145.setFont(new java.awt.Font("Dialog", 0, 18)); // NOI18N
-        jTextField145.setPreferredSize(new java.awt.Dimension(30, 30));
-        jTextField145.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField145ActionPerformed(evt);
-            }
-        });
-
-        jTextField102.setFont(new java.awt.Font("Dialog", 0, 18)); // NOI18N
-        jTextField102.setPreferredSize(new java.awt.Dimension(30, 30));
-        jTextField102.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField102ActionPerformed(evt);
-            }
-        });
-
-        jTextField146.setFont(new java.awt.Font("Dialog", 0, 18)); // NOI18N
-        jTextField146.setPreferredSize(new java.awt.Dimension(30, 30));
-        jTextField146.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField146ActionPerformed(evt);
-            }
-        });
-
-        jTextField103.setFont(new java.awt.Font("Dialog", 0, 18)); // NOI18N
-        jTextField103.setPreferredSize(new java.awt.Dimension(30, 30));
-        jTextField103.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField103ActionPerformed(evt);
-            }
-        });
-
-        jTextField147.setFont(new java.awt.Font("Dialog", 0, 18)); // NOI18N
-        jTextField147.setPreferredSize(new java.awt.Dimension(30, 30));
-        jTextField147.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField147ActionPerformed(evt);
-            }
-        });
-
-        jTextField104.setFont(new java.awt.Font("Dialog", 0, 18)); // NOI18N
-        jTextField104.setPreferredSize(new java.awt.Dimension(30, 30));
-        jTextField104.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField104ActionPerformed(evt);
-            }
-        });
-
-        jTextField148.setFont(new java.awt.Font("Dialog", 0, 18)); // NOI18N
-        jTextField148.setPreferredSize(new java.awt.Dimension(30, 30));
-        jTextField148.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField148ActionPerformed(evt);
-            }
-        });
-
-        jTextField105.setFont(new java.awt.Font("Dialog", 0, 18)); // NOI18N
-        jTextField105.setPreferredSize(new java.awt.Dimension(30, 30));
-        jTextField105.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField105ActionPerformed(evt);
-            }
-        });
-
-        jTextField149.setFont(new java.awt.Font("Dialog", 0, 18)); // NOI18N
-        jTextField149.setPreferredSize(new java.awt.Dimension(30, 30));
-        jTextField149.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField149ActionPerformed(evt);
-            }
-        });
-
-        jTextField106.setFont(new java.awt.Font("Dialog", 0, 18)); // NOI18N
-        jTextField106.setPreferredSize(new java.awt.Dimension(30, 30));
-        jTextField106.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField106ActionPerformed(evt);
-            }
-        });
-
-        jTextField107.setFont(new java.awt.Font("Dialog", 0, 18)); // NOI18N
-        jTextField107.setPreferredSize(new java.awt.Dimension(30, 30));
-        jTextField107.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField107ActionPerformed(evt);
-            }
-        });
-
-        jTextField108.setFont(new java.awt.Font("Dialog", 0, 18)); // NOI18N
-        jTextField108.setPreferredSize(new java.awt.Dimension(30, 30));
-        jTextField108.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField108ActionPerformed(evt);
-            }
-        });
-
-        jTextField109.setFont(new java.awt.Font("Dialog", 0, 18)); // NOI18N
-        jTextField109.setPreferredSize(new java.awt.Dimension(30, 30));
-        jTextField109.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField109ActionPerformed(evt);
-            }
-        });
-
-        jTextField150.setFont(new java.awt.Font("Dialog", 0, 18)); // NOI18N
-        jTextField150.setPreferredSize(new java.awt.Dimension(30, 30));
-        jTextField150.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField150ActionPerformed(evt);
-            }
-        });
-
-        jTextField151.setFont(new java.awt.Font("Dialog", 0, 18)); // NOI18N
-        jTextField151.setPreferredSize(new java.awt.Dimension(30, 30));
-        jTextField151.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField151ActionPerformed(evt);
-            }
-        });
-
-        jTextField152.setFont(new java.awt.Font("Dialog", 0, 18)); // NOI18N
-        jTextField152.setPreferredSize(new java.awt.Dimension(30, 30));
-        jTextField152.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField152ActionPerformed(evt);
-            }
-        });
-
-        jTextField153.setFont(new java.awt.Font("Dialog", 0, 18)); // NOI18N
-        jTextField153.setPreferredSize(new java.awt.Dimension(30, 30));
-        jTextField153.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField153ActionPerformed(evt);
-            }
-        });
-
-        jTextField110.setFont(new java.awt.Font("Dialog", 0, 18)); // NOI18N
-        jTextField110.setPreferredSize(new java.awt.Dimension(30, 30));
-        jTextField110.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField110ActionPerformed(evt);
-            }
-        });
-
-        jTextField154.setFont(new java.awt.Font("Dialog", 0, 18)); // NOI18N
-        jTextField154.setPreferredSize(new java.awt.Dimension(30, 30));
-        jTextField154.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField154ActionPerformed(evt);
-            }
-        });
-
-        jTextField111.setFont(new java.awt.Font("Dialog", 0, 18)); // NOI18N
-        jTextField111.setPreferredSize(new java.awt.Dimension(30, 30));
-        jTextField111.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField111ActionPerformed(evt);
-            }
-        });
-
-        jTextField112.setFont(new java.awt.Font("Dialog", 0, 18)); // NOI18N
-        jTextField112.setPreferredSize(new java.awt.Dimension(30, 30));
-        jTextField112.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField112ActionPerformed(evt);
-            }
-        });
-
-        jTextField113.setFont(new java.awt.Font("Dialog", 0, 18)); // NOI18N
-        jTextField113.setPreferredSize(new java.awt.Dimension(30, 30));
-        jTextField113.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField113ActionPerformed(evt);
-            }
-        });
-
-        jTextField114.setFont(new java.awt.Font("Dialog", 0, 18)); // NOI18N
-        jTextField114.setPreferredSize(new java.awt.Dimension(30, 30));
-        jTextField114.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField114ActionPerformed(evt);
-            }
-        });
-
-        jTextField115.setFont(new java.awt.Font("Dialog", 0, 18)); // NOI18N
-        jTextField115.setPreferredSize(new java.awt.Dimension(30, 30));
-        jTextField115.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField115ActionPerformed(evt);
-            }
-        });
-
-        jTextField116.setFont(new java.awt.Font("Dialog", 0, 18)); // NOI18N
-        jTextField116.setPreferredSize(new java.awt.Dimension(30, 30));
-        jTextField116.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField116ActionPerformed(evt);
-            }
-        });
-
-        jTextField117.setFont(new java.awt.Font("Dialog", 0, 18)); // NOI18N
-        jTextField117.setPreferredSize(new java.awt.Dimension(30, 30));
-        jTextField117.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField117ActionPerformed(evt);
-            }
-        });
-
-        jTextField1.setFont(new java.awt.Font("Dialog", 0, 18)); // NOI18N
-        jTextField1.setPreferredSize(new java.awt.Dimension(30, 30));
-        jTextField1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField1ActionPerformed(evt);
-            }
-        });
-
-        jTextField118.setFont(new java.awt.Font("Dialog", 0, 18)); // NOI18N
-        jTextField118.setPreferredSize(new java.awt.Dimension(30, 30));
-        jTextField118.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField118ActionPerformed(evt);
-            }
-        });
-
-        jTextField4.setFont(new java.awt.Font("Dialog", 0, 18)); // NOI18N
-        jTextField4.setPreferredSize(new java.awt.Dimension(30, 30));
-        jTextField4.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField4ActionPerformed(evt);
-            }
-        });
-
-        jTextField119.setFont(new java.awt.Font("Dialog", 0, 18)); // NOI18N
-        jTextField119.setPreferredSize(new java.awt.Dimension(30, 30));
-        jTextField119.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField119ActionPerformed(evt);
-            }
-        });
-
-        jTextField5.setFont(new java.awt.Font("Dialog", 0, 18)); // NOI18N
-        jTextField5.setPreferredSize(new java.awt.Dimension(30, 30));
-        jTextField5.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField5ActionPerformed(evt);
-            }
-        });
-
-        jTextField6.setFont(new java.awt.Font("Dialog", 0, 18)); // NOI18N
-        jTextField6.setPreferredSize(new java.awt.Dimension(30, 30));
-        jTextField6.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField6ActionPerformed(evt);
-            }
-        });
-
-        jTextField7.setFont(new java.awt.Font("Dialog", 0, 18)); // NOI18N
-        jTextField7.setPreferredSize(new java.awt.Dimension(30, 30));
-        jTextField7.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField7ActionPerformed(evt);
-            }
-        });
-
-        jTextField8.setFont(new java.awt.Font("Dialog", 0, 18)); // NOI18N
-        jTextField8.setPreferredSize(new java.awt.Dimension(30, 30));
-        jTextField8.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField8ActionPerformed(evt);
-            }
-        });
 
         jLabel2.setFont(new java.awt.Font("DejaVu Sans Light", 0, 18)); // NOI18N
         jLabel2.setText("GABARITO:");
@@ -772,30 +130,310 @@ public class FimDeJogoFrame extends javax.swing.JFrame {
         jLabel3.setFont(new java.awt.Font("DejaVu Sans Light", 0, 18)); // NOI18N
         jLabel3.setText("PONTUAÇÃO:");
 
-        Pontuacao.setFont(new java.awt.Font("DejaVu Sans Light", 2, 36)); // NOI18N
-        Pontuacao.setText("xxxxxxx");
-        Pontuacao.addPropertyChangeListener(new java.beans.PropertyChangeListener() {
+        score.setFont(new java.awt.Font("DejaVu Sans Light", 2, 36)); // NOI18N
+        score.setText("xxxxxxx");
+        score.addPropertyChangeListener(new java.beans.PropertyChangeListener() {
             public void propertyChange(java.beans.PropertyChangeEvent evt) {
-                PontuacaoPropertyChange(evt);
+                scorePropertyChange(evt);
             }
         });
 
-        JogarNovamente.setText("JOGAR NOVAMENTE");
-        JogarNovamente.addActionListener(new java.awt.event.ActionListener() {
+        buttonJogarNovamente.setText("JOGAR NOVAMENTE");
+        buttonJogarNovamente.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                JogarNovamenteActionPerformed(evt);
+                buttonJogarNovamenteActionPerformed(evt);
             }
         });
 
-        Sair.setText("SAIR");
-        Sair.addActionListener(new java.awt.event.ActionListener() {
+        buttonSair.setText("SAIR");
+        buttonSair.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                SairActionPerformed(evt);
+                buttonSairActionPerformed(evt);
             }
         });
 
-        jLabel5.setFont(new java.awt.Font("DejaVu Sans Light", 3, 36)); // NOI18N
-        jLabel5.setText("VENCEU/PERDEU");
+        textSituacao.setFont(new java.awt.Font("DejaVu Sans Light", 3, 36)); // NOI18N
+        textSituacao.setText("VENCEU/PERDEU");
+        textSituacao.addPropertyChangeListener(new java.beans.PropertyChangeListener() {
+            public void propertyChange(java.beans.PropertyChangeEvent evt) {
+                textSituacaoPropertyChange(evt);
+            }
+        });
+
+        grid76.setFont(new java.awt.Font("Dialog", 0, 18)); // NOI18N
+        grid76.setPreferredSize(new java.awt.Dimension(30, 30));
+
+        grid86.setFont(new java.awt.Font("Dialog", 0, 18)); // NOI18N
+        grid86.setPreferredSize(new java.awt.Dimension(30, 30));
+
+        grid66.setFont(new java.awt.Font("Dialog", 0, 18)); // NOI18N
+        grid66.setPreferredSize(new java.awt.Dimension(30, 30));
+
+        grid07.setFont(new java.awt.Font("Dialog", 0, 18)); // NOI18N
+        grid07.setAlignmentX(0.0F);
+        grid07.setAlignmentY(7.0F);
+        grid07.setPreferredSize(new java.awt.Dimension(30, 30));
+
+        grid22.setFont(new java.awt.Font("Dialog", 0, 18)); // NOI18N
+        grid22.setPreferredSize(new java.awt.Dimension(30, 30));
+
+        grid17.setFont(new java.awt.Font("Dialog", 0, 18)); // NOI18N
+        grid17.setPreferredSize(new java.awt.Dimension(30, 30));
+
+        grid32.setFont(new java.awt.Font("Dialog", 0, 18)); // NOI18N
+        grid32.setPreferredSize(new java.awt.Dimension(30, 30));
+
+        grid27.setFont(new java.awt.Font("Dialog", 0, 18)); // NOI18N
+        grid27.setPreferredSize(new java.awt.Dimension(30, 30));
+
+        grid42.setFont(new java.awt.Font("Dialog", 0, 18)); // NOI18N
+        grid42.setPreferredSize(new java.awt.Dimension(30, 30));
+
+        grid37.setFont(new java.awt.Font("Dialog", 0, 18)); // NOI18N
+        grid37.setPreferredSize(new java.awt.Dimension(30, 30));
+
+        grid52.setFont(new java.awt.Font("Dialog", 0, 18)); // NOI18N
+        grid52.setPreferredSize(new java.awt.Dimension(30, 30));
+
+        grid47.setFont(new java.awt.Font("Dialog", 0, 18)); // NOI18N
+        grid47.setPreferredSize(new java.awt.Dimension(30, 30));
+
+        grid62.setFont(new java.awt.Font("Dialog", 0, 18)); // NOI18N
+        grid62.setPreferredSize(new java.awt.Dimension(30, 30));
+
+        grid57.setFont(new java.awt.Font("Dialog", 0, 18)); // NOI18N
+        grid57.setPreferredSize(new java.awt.Dimension(30, 30));
+
+        grid72.setFont(new java.awt.Font("Dialog", 0, 18)); // NOI18N
+        grid72.setPreferredSize(new java.awt.Dimension(30, 30));
+
+        grid67.setFont(new java.awt.Font("Dialog", 0, 18)); // NOI18N
+        grid67.setPreferredSize(new java.awt.Dimension(30, 30));
+
+        grid82.setFont(new java.awt.Font("Dialog", 0, 18)); // NOI18N
+        grid82.setPreferredSize(new java.awt.Dimension(30, 30));
+
+        grid00.setFont(new java.awt.Font("Dialog", 0, 18)); // NOI18N
+        grid00.setAlignmentX(0.0F);
+        grid00.setAlignmentY(0.0F);
+
+        grid03.setFont(new java.awt.Font("Dialog", 0, 18)); // NOI18N
+        grid03.setAlignmentX(0.0F);
+        grid03.setAlignmentY(3.0F);
+        grid03.setPreferredSize(new java.awt.Dimension(30, 30));
+
+        grid10.setFont(new java.awt.Font("Dialog", 0, 18)); // NOI18N
+        grid10.setAlignmentX(1.0F);
+        grid10.setAlignmentY(0.0F);
+
+        grid13.setFont(new java.awt.Font("Dialog", 0, 18)); // NOI18N
+        grid13.setPreferredSize(new java.awt.Dimension(30, 30));
+
+        grid20.setFont(new java.awt.Font("Dialog", 0, 18)); // NOI18N
+        grid20.setAlignmentX(2.0F);
+        grid20.setAlignmentY(0.0F);
+        grid20.setPreferredSize(new java.awt.Dimension(30, 30));
+
+        grid23.setFont(new java.awt.Font("Dialog", 0, 18)); // NOI18N
+        grid23.setPreferredSize(new java.awt.Dimension(30, 30));
+
+        grid30.setFont(new java.awt.Font("Dialog", 0, 18)); // NOI18N
+        grid30.setAlignmentX(3.0F);
+        grid30.setAlignmentY(0.0F);
+        grid30.setPreferredSize(new java.awt.Dimension(30, 30));
+
+        grid40.setFont(new java.awt.Font("Dialog", 0, 18)); // NOI18N
+        grid40.setAlignmentX(4.0F);
+        grid40.setAlignmentY(0.0F);
+        grid40.setPreferredSize(new java.awt.Dimension(30, 30));
+
+        grid50.setFont(new java.awt.Font("Dialog", 0, 18)); // NOI18N
+        grid50.setAlignmentX(5.0F);
+        grid50.setAlignmentY(0.0F);
+        grid50.setPreferredSize(new java.awt.Dimension(30, 30));
+
+        grid60.setFont(new java.awt.Font("Dialog", 0, 18)); // NOI18N
+        grid60.setAlignmentX(6.0F);
+        grid60.setAlignmentY(0.0F);
+        grid60.setPreferredSize(new java.awt.Dimension(30, 30));
+
+        grid70.setFont(new java.awt.Font("Dialog", 0, 18)); // NOI18N
+        grid70.setAlignmentX(7.0F);
+        grid70.setAlignmentY(0.0F);
+        grid70.setPreferredSize(new java.awt.Dimension(30, 30));
+
+        grid80.setFont(new java.awt.Font("Dialog", 0, 18)); // NOI18N
+        grid80.setAlignmentX(8.0F);
+        grid80.setAlignmentY(0.0F);
+        grid80.setPreferredSize(new java.awt.Dimension(30, 30));
+
+        grid01.setFont(new java.awt.Font("Dialog", 0, 18)); // NOI18N
+        grid01.setAlignmentX(0.0F);
+        grid01.setAlignmentY(1.0F);
+        grid01.setPreferredSize(new java.awt.Dimension(30, 30));
+
+        grid77.setFont(new java.awt.Font("Dialog", 0, 18)); // NOI18N
+        grid77.setPreferredSize(new java.awt.Dimension(30, 30));
+
+        grid87.setFont(new java.awt.Font("Dialog", 0, 18)); // NOI18N
+        grid87.setPreferredSize(new java.awt.Dimension(30, 30));
+
+        grid08.setFont(new java.awt.Font("Dialog", 0, 18)); // NOI18N
+        grid08.setAlignmentX(0.0F);
+        grid08.setAlignmentY(8.0F);
+        grid08.setPreferredSize(new java.awt.Dimension(30, 30));
+
+        grid18.setFont(new java.awt.Font("Dialog", 0, 18)); // NOI18N
+        grid18.setPreferredSize(new java.awt.Dimension(30, 30));
+
+        grid33.setFont(new java.awt.Font("Dialog", 0, 18)); // NOI18N
+        grid33.setPreferredSize(new java.awt.Dimension(30, 30));
+
+        grid28.setFont(new java.awt.Font("Dialog", 0, 18)); // NOI18N
+        grid28.setPreferredSize(new java.awt.Dimension(30, 30));
+
+        grid43.setFont(new java.awt.Font("Dialog", 0, 18)); // NOI18N
+        grid43.setPreferredSize(new java.awt.Dimension(30, 30));
+
+        grid38.setFont(new java.awt.Font("Dialog", 0, 18)); // NOI18N
+        grid38.setPreferredSize(new java.awt.Dimension(30, 30));
+
+        grid53.setFont(new java.awt.Font("Dialog", 0, 18)); // NOI18N
+        grid53.setPreferredSize(new java.awt.Dimension(30, 30));
+
+        grid48.setFont(new java.awt.Font("Dialog", 0, 18)); // NOI18N
+        grid48.setPreferredSize(new java.awt.Dimension(30, 30));
+
+        grid63.setFont(new java.awt.Font("Dialog", 0, 18)); // NOI18N
+        grid63.setPreferredSize(new java.awt.Dimension(30, 30));
+
+        grid58.setFont(new java.awt.Font("Dialog", 0, 18)); // NOI18N
+        grid58.setPreferredSize(new java.awt.Dimension(30, 30));
+
+        grid73.setFont(new java.awt.Font("Dialog", 0, 18)); // NOI18N
+        grid73.setPreferredSize(new java.awt.Dimension(30, 30));
+
+        grid68.setFont(new java.awt.Font("Dialog", 0, 18)); // NOI18N
+        grid68.setPreferredSize(new java.awt.Dimension(30, 30));
+
+        grid83.setFont(new java.awt.Font("Dialog", 0, 18)); // NOI18N
+        grid83.setPreferredSize(new java.awt.Dimension(30, 30));
+
+        grid78.setFont(new java.awt.Font("Dialog", 0, 18)); // NOI18N
+        grid78.setPreferredSize(new java.awt.Dimension(30, 30));
+
+        grid04.setFont(new java.awt.Font("Dialog", 0, 18)); // NOI18N
+        grid04.setAlignmentX(0.0F);
+        grid04.setAlignmentY(4.0F);
+        grid04.setPreferredSize(new java.awt.Dimension(30, 30));
+
+        grid14.setFont(new java.awt.Font("Dialog", 0, 18)); // NOI18N
+        grid14.setPreferredSize(new java.awt.Dimension(30, 30));
+
+        grid24.setFont(new java.awt.Font("Dialog", 0, 18)); // NOI18N
+        grid24.setPreferredSize(new java.awt.Dimension(30, 30));
+
+        grid34.setFont(new java.awt.Font("Dialog", 0, 18)); // NOI18N
+        grid34.setPreferredSize(new java.awt.Dimension(30, 30));
+
+        grid88.setFont(new java.awt.Font("Dialog", 0, 18)); // NOI18N
+        grid88.setPreferredSize(new java.awt.Dimension(30, 30));
+
+        grid44.setFont(new java.awt.Font("Dialog", 0, 18)); // NOI18N
+        grid44.setPreferredSize(new java.awt.Dimension(30, 30));
+
+        grid54.setFont(new java.awt.Font("Dialog", 0, 18)); // NOI18N
+        grid54.setPreferredSize(new java.awt.Dimension(30, 30));
+
+        grid64.setFont(new java.awt.Font("Dialog", 0, 18)); // NOI18N
+        grid64.setPreferredSize(new java.awt.Dimension(30, 30));
+
+        grid74.setFont(new java.awt.Font("Dialog", 0, 18)); // NOI18N
+        grid74.setPreferredSize(new java.awt.Dimension(30, 30));
+
+        grid84.setFont(new java.awt.Font("Dialog", 0, 18)); // NOI18N
+        grid84.setPreferredSize(new java.awt.Dimension(30, 30));
+
+        grid05.setFont(new java.awt.Font("Dialog", 0, 18)); // NOI18N
+        grid05.setAlignmentX(0.0F);
+        grid05.setAlignmentY(5.0F);
+        grid05.setPreferredSize(new java.awt.Dimension(30, 30));
+
+        grid15.setFont(new java.awt.Font("Dialog", 0, 18)); // NOI18N
+        grid15.setPreferredSize(new java.awt.Dimension(30, 30));
+
+        grid25.setFont(new java.awt.Font("Dialog", 0, 18)); // NOI18N
+        grid25.setPreferredSize(new java.awt.Dimension(30, 30));
+
+        grid35.setFont(new java.awt.Font("Dialog", 0, 18)); // NOI18N
+        grid35.setPreferredSize(new java.awt.Dimension(30, 30));
+
+        grid45.setFont(new java.awt.Font("Dialog", 0, 18)); // NOI18N
+        grid45.setPreferredSize(new java.awt.Dimension(30, 30));
+
+        grid55.setFont(new java.awt.Font("Dialog", 0, 18)); // NOI18N
+        grid55.setPreferredSize(new java.awt.Dimension(30, 30));
+
+        grid65.setFont(new java.awt.Font("Dialog", 0, 18)); // NOI18N
+        grid65.setPreferredSize(new java.awt.Dimension(30, 30));
+
+        grid75.setFont(new java.awt.Font("Dialog", 0, 18)); // NOI18N
+        grid75.setPreferredSize(new java.awt.Dimension(30, 30));
+
+        grid85.setFont(new java.awt.Font("Dialog", 0, 18)); // NOI18N
+        grid85.setPreferredSize(new java.awt.Dimension(30, 30));
+
+        grid11.setFont(new java.awt.Font("Dialog", 0, 18)); // NOI18N
+        grid11.setPreferredSize(new java.awt.Dimension(30, 30));
+
+        grid06.setFont(new java.awt.Font("Dialog", 0, 18)); // NOI18N
+        grid06.setAlignmentX(0.0F);
+        grid06.setAlignmentY(6.0F);
+        grid06.setPreferredSize(new java.awt.Dimension(30, 30));
+
+        grid21.setFont(new java.awt.Font("Dialog", 0, 18)); // NOI18N
+        grid21.setPreferredSize(new java.awt.Dimension(30, 30));
+
+        grid16.setFont(new java.awt.Font("Dialog", 0, 18)); // NOI18N
+        grid16.setPreferredSize(new java.awt.Dimension(30, 30));
+
+        grid31.setFont(new java.awt.Font("Dialog", 0, 18)); // NOI18N
+        grid31.setPreferredSize(new java.awt.Dimension(30, 30));
+
+        grid26.setFont(new java.awt.Font("Dialog", 0, 18)); // NOI18N
+        grid26.setPreferredSize(new java.awt.Dimension(30, 30));
+
+        grid41.setFont(new java.awt.Font("Dialog", 0, 18)); // NOI18N
+        grid41.setPreferredSize(new java.awt.Dimension(30, 30));
+
+        grid36.setFont(new java.awt.Font("Dialog", 0, 18)); // NOI18N
+        grid36.setPreferredSize(new java.awt.Dimension(30, 30));
+
+        grid51.setFont(new java.awt.Font("Dialog", 0, 18)); // NOI18N
+        grid51.setPreferredSize(new java.awt.Dimension(30, 30));
+
+        grid46.setFont(new java.awt.Font("Dialog", 0, 18)); // NOI18N
+        grid46.setPreferredSize(new java.awt.Dimension(30, 30));
+
+        grid61.setFont(new java.awt.Font("Dialog", 0, 18)); // NOI18N
+        grid61.setPreferredSize(new java.awt.Dimension(30, 30));
+
+        grid56.setFont(new java.awt.Font("Dialog", 0, 18)); // NOI18N
+        grid56.setPreferredSize(new java.awt.Dimension(30, 30));
+
+        grid71.setFont(new java.awt.Font("Dialog", 0, 18)); // NOI18N
+        grid71.setPreferredSize(new java.awt.Dimension(30, 30));
+
+        grid81.setFont(new java.awt.Font("Dialog", 0, 18)); // NOI18N
+        grid81.setPreferredSize(new java.awt.Dimension(30, 30));
+
+        grid02.setFont(new java.awt.Font("Dialog", 0, 18)); // NOI18N
+        grid02.setAlignmentX(0.0F);
+        grid02.setAlignmentY(2.0F);
+        grid02.setPreferredSize(new java.awt.Dimension(30, 30));
+
+        grid12.setFont(new java.awt.Font("Dialog", 0, 18)); // NOI18N
+        grid12.setPreferredSize(new java.awt.Dimension(30, 30));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -803,177 +441,177 @@ public class FimDeJogoFrame extends javax.swing.JFrame {
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addGap(23, 23, 23)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 102, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(layout.createSequentialGroup()
-                        .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 102, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(228, 228, 228))
-                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
-                        .addComponent(jTextField83, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(159, 159, 159)
+                        .addComponent(buttonJogarNovamente))
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(grid07, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jTextField84, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(grid17, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jTextField85, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(grid27, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(jTextField86, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(grid37, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jTextField87, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(grid47, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jTextField88, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(grid57, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(jTextField89, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(grid67, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(6, 6, 6)
-                        .addComponent(jTextField90, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(grid77, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jTextField91, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
-                        .addComponent(jTextField137, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(grid87, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(grid06, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jTextField138, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(grid16, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jTextField139, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(grid26, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(jTextField140, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(grid36, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jTextField141, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(grid46, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jTextField142, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(jTextField143, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(6, 6, 6)
-                        .addComponent(jTextField144, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jTextField145, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
-                        .addComponent(jTextField128, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jTextField129, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jTextField130, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(jTextField131, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jTextField132, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jTextField133, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(grid56, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(12, 12, 12)
-                        .addComponent(jTextField136, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(grid66, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jTextField134, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(grid76, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(6, 6, 6)
-                        .addComponent(jTextField135, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
-                        .addComponent(jTextField92, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jTextField93, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jTextField94, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(jTextField95, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jTextField96, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jTextField97, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(jTextField98, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(6, 6, 6)
-                        .addComponent(jTextField99, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jTextField100, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                        .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                            .addComponent(jTextField119, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(grid86, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                        .addGroup(layout.createSequentialGroup()
+                            .addComponent(grid02, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                            .addComponent(jTextField120, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(grid12, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                            .addComponent(jTextField121, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(grid22, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                            .addComponent(jTextField122, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(grid32, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                            .addComponent(jTextField123, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(grid42, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                            .addComponent(jTextField124, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(grid52, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                            .addComponent(jTextField125, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(grid62, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addGap(6, 6, 6)
-                            .addComponent(jTextField126, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(grid72, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                            .addComponent(jTextField127, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(grid82, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(grid01, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(grid11, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(grid21, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addComponent(grid31, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(grid41, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(grid51, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addComponent(grid61, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(6, 6, 6)
+                                .addComponent(grid71, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(grid81, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(grid00, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(grid10, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(grid20, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addComponent(grid30, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(grid40, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(grid50, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addComponent(grid60, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(6, 6, 6)
+                                .addComponent(grid70, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(grid80, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                            .addComponent(grid05, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                            .addComponent(grid15, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                            .addComponent(grid25, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                            .addComponent(grid35, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                            .addComponent(grid45, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                            .addComponent(grid55, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                            .addComponent(grid65, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addGap(6, 6, 6)
+                            .addComponent(grid75, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                            .addComponent(grid85, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(layout.createSequentialGroup()
-                                .addComponent(jTextField110, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(grid04, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(jTextField111, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(grid14, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(jTextField112, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(grid24, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addComponent(jTextField113, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(grid34, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(jTextField114, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(grid44, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(jTextField115, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(grid54, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addComponent(jTextField116, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(grid64, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addGap(6, 6, 6)
-                                .addComponent(jTextField117, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(grid74, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(jTextField118, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addComponent(grid84, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                             .addGroup(layout.createSequentialGroup()
-                                .addComponent(jTextField101, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(grid03, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(jTextField102, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(grid13, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(jTextField103, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(grid23, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addComponent(jTextField104, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(grid33, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(jTextField105, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(grid43, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(jTextField106, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(grid53, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addComponent(jTextField107, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(grid63, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addGap(6, 6, 6)
-                                .addComponent(jTextField108, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(grid73, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(jTextField109, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
-                        .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(grid83, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(grid08, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jTextField4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(grid18, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jTextField5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(grid28, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(jTextField6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(grid38, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jTextField7, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(grid48, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jTextField8, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(grid58, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(jTextField9, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(grid68, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(6, 6, 6)
-                        .addComponent(jTextField10, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(grid78, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jTextField11, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(JogarNovamente)
-                            .addGroup(layout.createSequentialGroup()
-                                .addComponent(jTextField146, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(jTextField147, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(jTextField148, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addComponent(jTextField149, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(jTextField150, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(jTextField151, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addComponent(jTextField152, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(6, 6, 6)
-                                .addComponent(jTextField153, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jTextField154, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addComponent(grid88, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
@@ -981,134 +619,134 @@ public class FimDeJogoFrame extends javax.swing.JFrame {
                         .addGap(93, 93, 93))
                     .addGroup(layout.createSequentialGroup()
                         .addGap(65, 65, 65)
-                        .addComponent(Pontuacao)))
+                        .addComponent(score)))
                 .addGap(70, 70, 70))
             .addGroup(layout.createSequentialGroup()
                 .addGap(415, 415, 415)
-                .addComponent(Sair, javax.swing.GroupLayout.PREFERRED_SIZE, 142, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(buttonSair, javax.swing.GroupLayout.PREFERRED_SIZE, 142, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                 .addContainerGap(183, Short.MAX_VALUE)
-                .addComponent(jLabel5)
+                .addComponent(textSituacao)
                 .addGap(183, 183, 183))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jLabel5)
+                .addComponent(textSituacao)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 106, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(jLabel3)
+                        .addGap(78, 78, 78)
+                        .addComponent(score))
                     .addGroup(layout.createSequentialGroup()
                         .addComponent(jLabel2)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jTextField4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jTextField5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jTextField6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jTextField7, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jTextField8, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jTextField9, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jTextField10, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jTextField11, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(grid00, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(grid10, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(grid20, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(grid30, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(grid40, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(grid50, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(grid60, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(grid70, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(grid80, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jTextField83, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jTextField84, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jTextField85, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jTextField86, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jTextField87, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jTextField88, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jTextField89, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jTextField90, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jTextField91, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                            .addComponent(grid01, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(grid11, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(grid21, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(grid31, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(grid41, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(grid51, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(grid61, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(grid71, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(grid81, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(11, 11, 11)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jTextField92, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jTextField93, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jTextField94, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jTextField95, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jTextField96, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jTextField97, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jTextField98, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jTextField99, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jTextField100, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(grid02, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(grid12, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(grid22, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(grid32, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(grid42, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(grid52, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(grid62, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(grid72, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(grid82, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jTextField101, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jTextField102, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jTextField103, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jTextField104, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jTextField105, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jTextField106, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jTextField107, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jTextField108, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jTextField109, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                    .addGroup(layout.createSequentialGroup()
-                        .addComponent(jLabel3)
-                        .addGap(78, 78, 78)
-                        .addComponent(Pontuacao)))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                            .addComponent(grid03, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(grid13, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(grid23, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(grid33, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(grid43, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(grid53, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(grid63, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(grid73, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(grid83, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(grid04, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(grid14, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(grid24, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(grid34, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(grid44, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(grid54, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(grid64, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(grid74, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(grid84, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(grid05, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(grid15, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(grid25, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(grid35, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(grid45, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(grid55, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(grid65, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(grid75, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(grid85, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                .addComponent(grid06, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(grid16, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(grid26, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(grid36, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(grid46, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(grid56, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(grid76, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(grid86, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(grid66, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(grid07, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(grid17, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(grid27, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(grid37, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(grid47, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(grid57, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(grid67, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(grid77, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(grid87, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(grid08, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(grid18, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(grid28, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(grid38, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(grid48, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(grid58, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(grid68, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(grid78, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(grid88, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                .addGap(63, 63, 63)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jTextField110, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jTextField111, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jTextField112, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jTextField113, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jTextField114, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jTextField115, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jTextField116, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jTextField117, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jTextField118, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jTextField119, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jTextField120, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jTextField121, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jTextField122, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jTextField123, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jTextField124, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jTextField125, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jTextField126, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jTextField127, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                        .addComponent(jTextField128, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(jTextField129, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(jTextField130, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(jTextField131, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(jTextField132, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(jTextField133, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(jTextField134, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(jTextField135, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addComponent(jTextField136, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jTextField137, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jTextField138, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jTextField139, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jTextField140, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jTextField141, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jTextField142, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jTextField143, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jTextField144, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jTextField145, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jTextField146, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jTextField147, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jTextField148, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jTextField149, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jTextField150, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jTextField151, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jTextField152, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jTextField153, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jTextField154, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(68, 68, 68)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(JogarNovamente)
-                    .addComponent(Sair))
+                    .addComponent(buttonJogarNovamente)
+                    .addComponent(buttonSair))
                 .addGap(45, 45, 45))
         );
 
@@ -1116,342 +754,522 @@ public class FimDeJogoFrame extends javax.swing.JFrame {
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jTextField120ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField120ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField120ActionPerformed
-
-    private void jTextField121ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField121ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField121ActionPerformed
-
-    private void jTextField122ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField122ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField122ActionPerformed
-
-    private void jTextField123ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField123ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField123ActionPerformed
-
-    private void jTextField9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField9ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField9ActionPerformed
-
-    private void jTextField124ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField124ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField124ActionPerformed
-
-    private void jTextField10ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField10ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField10ActionPerformed
-
-    private void jTextField125ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField125ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField125ActionPerformed
-
-    private void jTextField11ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField11ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField11ActionPerformed
-
-    private void jTextField126ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField126ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField126ActionPerformed
-
-    private void jTextField83ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField83ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField83ActionPerformed
-
-    private void jTextField127ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField127ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField127ActionPerformed
-
-    private void jTextField84ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField84ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField84ActionPerformed
-
-    private void jTextField128ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField128ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField128ActionPerformed
-
-    private void jTextField85ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField85ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField85ActionPerformed
-
-    private void jTextField129ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField129ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField129ActionPerformed
-
-    private void jTextField86ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField86ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField86ActionPerformed
-
-    private void jTextField87ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField87ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField87ActionPerformed
-
-    private void jTextField88ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField88ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField88ActionPerformed
-
-    private void jTextField89ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField89ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField89ActionPerformed
-
-    private void jTextField130ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField130ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField130ActionPerformed
-
-    private void jTextField131ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField131ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField131ActionPerformed
-
-    private void jTextField132ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField132ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField132ActionPerformed
-
-    private void jTextField133ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField133ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField133ActionPerformed
-
-    private void jTextField90ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField90ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField90ActionPerformed
-
-    private void jTextField134ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField134ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField134ActionPerformed
-
-    private void jTextField91ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField91ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField91ActionPerformed
-
-    private void jTextField135ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField135ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField135ActionPerformed
-
-    private void jTextField92ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField92ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField92ActionPerformed
-
-    private void jTextField136ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField136ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField136ActionPerformed
-
-    private void jTextField93ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField93ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField93ActionPerformed
-
-    private void jTextField137ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField137ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField137ActionPerformed
-
-    private void jTextField94ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField94ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField94ActionPerformed
-
-    private void jTextField138ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField138ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField138ActionPerformed
-
-    private void jTextField95ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField95ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField95ActionPerformed
-
-    private void jTextField139ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField139ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField139ActionPerformed
-
-    private void jTextField96ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField96ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField96ActionPerformed
-
-    private void jTextField97ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField97ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField97ActionPerformed
-
-    private void jTextField98ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField98ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField98ActionPerformed
-
-    private void jTextField99ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField99ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField99ActionPerformed
-
-    private void jTextField140ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField140ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField140ActionPerformed
-
-    private void jTextField141ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField141ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField141ActionPerformed
-
-    private void jTextField142ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField142ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField142ActionPerformed
-
-    private void jTextField143ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField143ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField143ActionPerformed
-
-    private void jTextField100ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField100ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField100ActionPerformed
-
-    private void jTextField144ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField144ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField144ActionPerformed
-
-    private void jTextField101ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField101ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField101ActionPerformed
-
-    private void jTextField145ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField145ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField145ActionPerformed
-
-    private void jTextField102ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField102ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField102ActionPerformed
-
-    private void jTextField146ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField146ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField146ActionPerformed
-
-    private void jTextField103ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField103ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField103ActionPerformed
-
-    private void jTextField147ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField147ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField147ActionPerformed
-
-    private void jTextField104ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField104ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField104ActionPerformed
-
-    private void jTextField148ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField148ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField148ActionPerformed
-
-    private void jTextField105ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField105ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField105ActionPerformed
-
-    private void jTextField149ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField149ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField149ActionPerformed
-
-    private void jTextField106ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField106ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField106ActionPerformed
-
-    private void jTextField107ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField107ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField107ActionPerformed
-
-    private void jTextField108ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField108ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField108ActionPerformed
-
-    private void jTextField109ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField109ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField109ActionPerformed
-
-    private void jTextField150ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField150ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField150ActionPerformed
-
-    private void jTextField151ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField151ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField151ActionPerformed
-
-    private void jTextField152ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField152ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField152ActionPerformed
-
-    private void jTextField153ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField153ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField153ActionPerformed
-
-    private void jTextField110ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField110ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField110ActionPerformed
-
-    private void jTextField154ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField154ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField154ActionPerformed
-
-    private void jTextField111ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField111ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField111ActionPerformed
-
-    private void jTextField112ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField112ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField112ActionPerformed
-
-    private void jTextField113ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField113ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField113ActionPerformed
-
-    private void jTextField114ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField114ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField114ActionPerformed
-
-    private void jTextField115ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField115ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField115ActionPerformed
-
-    private void jTextField116ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField116ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField116ActionPerformed
-
-    private void jTextField117ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField117ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField117ActionPerformed
-
-    private void jTextField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField1ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField1ActionPerformed
-
-    private void jTextField118ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField118ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField118ActionPerformed
-
-    private void jTextField4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField4ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField4ActionPerformed
-
-    private void jTextField119ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField119ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField119ActionPerformed
-
-    private void jTextField5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField5ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField5ActionPerformed
-
-    private void jTextField6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField6ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField6ActionPerformed
-
-    private void jTextField7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField7ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField7ActionPerformed
-
-    private void jTextField8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField8ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField8ActionPerformed
-
-    private void JogarNovamenteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_JogarNovamenteActionPerformed
-        
-    }//GEN-LAST:event_JogarNovamenteActionPerformed
-
-    private void SairActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_SairActionPerformed
+    private void buttonJogarNovamenteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonJogarNovamenteActionPerformed
         dispose();
-    }//GEN-LAST:event_SairActionPerformed
+        new LoginFrame().setVisible(true);
+    }//GEN-LAST:event_buttonJogarNovamenteActionPerformed
 
-    private void PontuacaoPropertyChange(java.beans.PropertyChangeEvent evt) {//GEN-FIRST:event_PontuacaoPropertyChange
-        
-    }//GEN-LAST:event_PontuacaoPropertyChange
+    private void buttonSairActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonSairActionPerformed
+        dispose();
+    }//GEN-LAST:event_buttonSairActionPerformed
 
+    private void scorePropertyChange(java.beans.PropertyChangeEvent evt) {//GEN-FIRST:event_scorePropertyChange
+        if(aux.getIdadeJogador()==0){
+            CalculaScoreSemIdade calcula = new CalculaScoreSemIdade();
+            calcula.calcula(aux);
+            score.setText(""+aux.getScore());
+        } else {
+            CalculaScoreComIdade calcula = new CalculaScoreComIdade();
+            calcula.calcula(aux);
+            score.setText(""+aux.getScore());
+        }
+    }//GEN-LAST:event_scorePropertyChange
+
+    private void textSituacaoPropertyChange(java.beans.PropertyChangeEvent evt) {//GEN-FIRST:event_textSituacaoPropertyChange
+        if(aux.getVenceu()){
+            textSituacao.setText("Venceu");
+        } else{
+            textSituacao.setText("Perdeu");
+        }
+    }//GEN-LAST:event_textSituacaoPropertyChange
+     public void setAllTextField() {
+        grid00.setText(String.valueOf(aux.getGridTabuleiro()[0][0]));
+        if (!grid00.getText().equals("0")) {
+            grid00.setEditable(false);
+        } else {
+            grid00.setText("");
+        }
+        grid01.setText(String.valueOf(aux.getGridTabuleiro()[1][0]));
+        if (!grid01.getText().equals("0")) {
+            grid01.setEditable(false);
+        } else {
+            grid01.setText("");
+        }
+        grid02.setText(String.valueOf(aux.getGridTabuleiro()[2][0]));
+        if (!grid02.getText().equals("0")) {
+            grid02.setEditable(false);
+        } else {
+            grid02.setText("");
+        }
+        grid03.setText(String.valueOf(aux.getGridTabuleiro()[3][0]));
+        if (!grid03.getText().equals("0")) {
+            grid03.setEditable(false);
+        } else {
+            grid03.setText("");
+        }
+        grid04.setText(String.valueOf(aux.getGridTabuleiro()[4][0]));
+        if (!grid04.getText().equals("0")) {
+            grid04.setEditable(false);
+        } else {
+            grid04.setText("");
+        }
+        grid05.setText(String.valueOf(aux.getGridTabuleiro()[5][0]));
+        if (!grid05.getText().equals("0")) {
+            grid05.setEditable(false);
+        } else {
+            grid05.setText("");
+        }
+        grid06.setText(String.valueOf(aux.getGridTabuleiro()[6][0]));
+        if (!grid06.getText().equals("0")) {
+            grid06.setEditable(false);
+        } else {
+            grid06.setText("");
+        }
+        grid07.setText(String.valueOf(aux.getGridTabuleiro()[7][0]));
+        if (!grid07.getText().equals("0")) {
+            grid07.setEditable(false);
+        } else {
+            grid07.setText("");
+        }
+        grid08.setText(String.valueOf(aux.getGridTabuleiro()[8][0]));
+        if (!grid08.getText().equals("0")) {
+            grid08.setEditable(false);
+        } else {
+            grid08.setText("");
+        }
+        grid10.setText(String.valueOf(aux.getGridTabuleiro()[0][1]));
+        if (!grid10.getText().equals("0")) {
+            grid10.setEditable(false);
+        } else {
+            grid10.setText("");
+        }
+        grid11.setText(String.valueOf(aux.getGridTabuleiro()[1][1]));
+        if (!grid11.getText().equals("0")) {
+            grid11.setEditable(false);
+        } else {
+            grid11.setText("");
+        }
+        grid12.setText(String.valueOf(aux.getGridTabuleiro()[1][2]));
+        if (!grid12.getText().equals("0")) {
+            grid12.setEditable(false);
+        } else {
+            grid12.setText("");
+        }
+        grid13.setText(String.valueOf(aux.getGridTabuleiro()[1][3]));
+        if (!grid13.getText().equals("0")) {
+            grid13.setEditable(false);
+        } else {
+            grid13.setText("");
+        }
+        grid14.setText(String.valueOf(aux.getGridTabuleiro()[1][4]));
+        if (!grid14.getText().equals("0")) {
+            grid14.setEditable(false);
+        } else {
+            grid14.setText("");
+        }
+        grid15.setText(String.valueOf(aux.getGridTabuleiro()[1][5]));
+        if (!grid15.getText().equals("0")) {
+            grid15.setEditable(false);
+        } else {
+            grid15.setText("");
+        }
+        grid16.setText(String.valueOf(aux.getGridTabuleiro()[1][6]));
+        if (!grid16.getText().equals("0")) {
+            grid16.setEditable(false);
+        } else {
+            grid16.setText("");
+        }
+        grid17.setText(String.valueOf(aux.getGridTabuleiro()[1][7]));
+        if (!grid17.getText().equals("0")) {
+            grid17.setEditable(false);
+        } else {
+            grid17.setText("");
+        }
+        grid18.setText(String.valueOf(aux.getGridTabuleiro()[1][8]));
+        if (!grid18.getText().equals("0")) {
+            grid18.setEditable(false);
+        } else {
+            grid18.setText("");
+        }
+        grid20.setText(String.valueOf(aux.getGridTabuleiro()[2][0]));
+        if (!grid20.getText().equals("0")) {
+            grid20.setEditable(false);
+        } else {
+            grid20.setText("");
+        }
+        grid21.setText(String.valueOf(aux.getGridTabuleiro()[2][1]));
+        if (!grid21.getText().equals("0")) {
+            grid21.setEditable(false);
+        } else {
+            grid21.setText("");
+        }
+        grid22.setText(String.valueOf(aux.getGridTabuleiro()[2][2]));
+        if (!grid22.getText().equals("0")) {
+            grid02.setEditable(false);
+        } else {
+            grid22.setText("");
+        }
+        grid23.setText(String.valueOf(aux.getGridTabuleiro()[2][3]));
+        if (!grid23.getText().equals("0")) {
+            grid23.setEditable(false);
+        } else {
+            grid23.setText("");
+        }
+        grid24.setText(String.valueOf(aux.getGridTabuleiro()[2][4]));
+        if (!grid24.getText().equals("0")) {
+            grid24.setEditable(false);
+        } else {
+            grid24.setText("");
+        }
+        grid25.setText(String.valueOf(aux.getGridTabuleiro()[2][5]));
+        if (!grid25.getText().equals("0")) {
+            grid25.setEditable(false);
+        } else {
+            grid25.setText("");
+        }
+        grid26.setText(String.valueOf(aux.getGridTabuleiro()[2][6]));
+        if (!grid26.getText().equals("0")) {
+            grid26.setEditable(false);
+        } else {
+            grid26.setText("");
+        }
+        grid27.setText(String.valueOf(aux.getGridTabuleiro()[2][7]));
+        if (!grid27.getText().equals("0")) {
+            grid27.setEditable(false);
+        } else {
+            grid27.setText("");
+        }
+        grid28.setText(String.valueOf(aux.getGridTabuleiro()[2][8]));
+        if (!grid28.getText().equals("0")) {
+            grid28.setEditable(false);
+        } else {
+            grid28.setText("");
+        }
+        grid30.setText(String.valueOf(aux.getGridTabuleiro()[3][0]));
+        if (!grid30.getText().equals("0")) {
+            grid30.setEditable(false);
+        } else {
+            grid30.setText("");
+        }
+        grid31.setText(String.valueOf(aux.getGridTabuleiro()[3][1]));
+        if (!grid31.getText().equals("0")) {
+            grid31.setEditable(false);
+        } else {
+            grid31.setText("");
+        }
+        grid32.setText(String.valueOf(aux.getGridTabuleiro()[3][2]));
+        if (!grid32.getText().equals("0")) {
+            grid32.setEditable(false);
+        } else {
+            grid32.setText("");
+        }
+        grid33.setText(String.valueOf(aux.getGridTabuleiro()[3][3]));
+        if (!grid33.getText().equals("0")) {
+            grid33.setEditable(false);
+        } else {
+            grid33.setText("");
+        }
+        grid34.setText(String.valueOf(aux.getGridTabuleiro()[3][4]));
+        if (!grid34.getText().equals("0")) {
+            grid34.setEditable(false);
+        } else {
+            grid34.setText("");
+        }
+        grid35.setText(String.valueOf(aux.getGridTabuleiro()[3][5]));
+        if (!grid35.getText().equals("0")) {
+            grid35.setEditable(false);
+        } else {
+            grid35.setText("");
+        }
+        grid36.setText(String.valueOf(aux.getGridTabuleiro()[3][6]));
+        if (!grid36.getText().equals("0")) {
+            grid36.setEditable(false);
+        } else {
+            grid36.setText("");
+        }
+        grid37.setText(String.valueOf(aux.getGridTabuleiro()[3][7]));
+        if (!grid37.getText().equals("0")) {
+            grid37.setEditable(false);
+        } else {
+            grid37.setText("");
+        }
+        grid38.setText(String.valueOf(aux.getGridTabuleiro()[3][8]));
+        if (!grid38.getText().equals("0")) {
+            grid38.setEditable(false);
+        } else {
+            grid38.setText("");
+        }
+        grid40.setText(String.valueOf(aux.getGridTabuleiro()[4][0]));
+        if (!grid40.getText().equals("0")) {
+            grid40.setEditable(false);
+        } else {
+            grid40.setText("");
+        }
+        grid41.setText(String.valueOf(aux.getGridTabuleiro()[4][1]));
+        if (!grid41.getText().equals("0")) {
+            grid41.setEditable(false);
+        } else {
+            grid41.setText("");
+        }
+        grid42.setText(String.valueOf(aux.getGridTabuleiro()[4][2]));
+        if (!grid42.getText().equals("0")) {
+            grid42.setEditable(false);
+        } else {
+            grid42.setText("");
+        }
+        grid43.setText(String.valueOf(aux.getGridTabuleiro()[4][3]));
+        if (!grid43.getText().equals("0")) {
+            grid43.setEditable(false);
+        } else {
+            grid43.setText("");
+        }
+        grid44.setText(String.valueOf(aux.getGridTabuleiro()[4][4]));
+        if (!grid44.getText().equals("0")) {
+            grid44.setEditable(false);
+        } else {
+            grid44.setText("");
+        }
+        grid45.setText(String.valueOf(aux.getGridTabuleiro()[4][5]));
+        if (!grid45.getText().equals("0")) {
+            grid45.setEditable(false);
+        } else {
+            grid45.setText("");
+        }
+        grid46.setText(String.valueOf(aux.getGridTabuleiro()[4][6]));
+        if (!grid46.getText().equals("0")) {
+            grid46.setEditable(false);
+        } else {
+            grid46.setText("");
+        }
+        grid47.setText(String.valueOf(aux.getGridTabuleiro()[4][7]));
+        if (!grid47.getText().equals("0")) {
+            grid47.setEditable(false);
+        } else {
+            grid47.setText("");
+        }
+        grid48.setText(String.valueOf(aux.getGridTabuleiro()[4][8]));
+        if (!grid48.getText().equals("0")) {
+            grid48.setEditable(false);
+        } else {
+            grid48.setText("");
+        }
+        grid50.setText(String.valueOf(aux.getGridTabuleiro()[5][0]));
+        if (!grid50.getText().equals("0")) {
+            grid50.setEditable(false);
+        } else {
+            grid50.setText("");
+        }
+        grid51.setText(String.valueOf(aux.getGridTabuleiro()[5][1]));
+        if (!grid51.getText().equals("0")) {
+            grid51.setEditable(false);
+        } else {
+            grid51.setText("");
+        }
+        grid52.setText(String.valueOf(aux.getGridTabuleiro()[5][2]));
+        if (!grid52.getText().equals("0")) {
+            grid52.setEditable(false);
+        } else {
+            grid52.setText("");
+        }
+        grid53.setText(String.valueOf(aux.getGridTabuleiro()[5][3]));
+        if (!grid53.getText().equals("0")) {
+            grid53.setEditable(false);
+        } else {
+            grid53.setText("");
+        }
+        grid54.setText(String.valueOf(aux.getGridTabuleiro()[5][4]));
+        if (!grid54.getText().equals("0")) {
+            grid54.setEditable(false);
+        } else {
+            grid54.setText("");
+        }
+        grid55.setText(String.valueOf(aux.getGridTabuleiro()[5][5]));
+        if (!grid55.getText().equals("0")) {
+            grid55.setEditable(false);
+        } else {
+            grid55.setText("");
+        }
+        grid56.setText(String.valueOf(aux.getGridTabuleiro()[5][6]));
+        if (!grid56.getText().equals("0")) {
+            grid56.setEditable(false);
+        } else {
+            grid56.setText("");
+        }
+        grid57.setText(String.valueOf(aux.getGridTabuleiro()[5][7]));
+        if (!grid57.getText().equals("0")) {
+            grid57.setEditable(false);
+        } else {
+            grid57.setText("");
+        }
+        grid58.setText(String.valueOf(aux.getGridTabuleiro()[5][8]));
+        if (!grid58.getText().equals("0")) {
+            grid58.setEditable(false);
+        } else {
+            grid58.setText("");
+        }
+        grid60.setText(String.valueOf(aux.getGridTabuleiro()[6][0]));
+        if (!grid60.getText().equals("0")) {
+            grid60.setEditable(false);
+        } else {
+            grid60.setText("");
+        }
+        grid61.setText(String.valueOf(aux.getGridTabuleiro()[6][1]));
+        if (!grid61.getText().equals("0")) {
+            grid61.setEditable(false);
+        } else {
+            grid61.setText("");
+        }
+        grid62.setText(String.valueOf(aux.getGridTabuleiro()[6][2]));
+        if (!grid62.getText().equals("0")) {
+            grid62.setEditable(false);
+        } else {
+            grid62.setText("");
+        }
+        grid63.setText(String.valueOf(aux.getGridTabuleiro()[6][3]));
+        if (!grid63.getText().equals("0")) {
+            grid63.setEditable(false);
+        } else {
+            grid63.setText("");
+        }
+        grid64.setText(String.valueOf(aux.getGridTabuleiro()[6][4]));
+        if (!grid64.getText().equals("0")) {
+            grid64.setEditable(false);
+        } else {
+            grid64.setText("");
+        }
+        grid65.setText(String.valueOf(aux.getGridTabuleiro()[6][5]));
+        if (!grid65.getText().equals("0")) {
+            grid65.setEditable(false);
+        } else {
+            grid65.setText("");
+        }
+        grid66.setText(String.valueOf(aux.getGridTabuleiro()[6][6]));
+        if (!grid66.getText().equals("0")) {
+            grid66.setEditable(false);
+        } else {
+            grid66.setText("");
+        }
+        grid67.setText(String.valueOf(aux.getGridTabuleiro()[6][7]));
+        if (!grid67.getText().equals("0")) {
+            grid67.setEditable(false);
+        } else {
+            grid67.setText("");
+        }
+        grid68.setText(String.valueOf(aux.getGridTabuleiro()[6][8]));
+        if (!grid68.getText().equals("0")) {
+            grid68.setEditable(false);
+        } else {
+            grid68.setText("");
+        }
+        grid70.setText(String.valueOf(aux.getGridTabuleiro()[7][0]));
+        if (!grid70.getText().equals("0")) {
+            grid70.setEditable(false);
+        } else {
+            grid70.setText("");
+        }
+        grid71.setText(String.valueOf(aux.getGridTabuleiro()[7][1]));
+        if (!grid71.getText().equals("0")) {
+            grid71.setEditable(false);
+        } else {
+            grid71.setText("");
+        }
+        grid72.setText(String.valueOf(aux.getGridTabuleiro()[7][2]));
+        if (!grid72.getText().equals("0")) {
+            grid72.setEditable(false);
+        } else {
+            grid72.setText("");
+        }
+        grid73.setText(String.valueOf(aux.getGridTabuleiro()[7][3]));
+        if (!grid73.getText().equals("0")) {
+            grid73.setEditable(false);
+        } else {
+            grid73.setText("");
+        }
+        grid74.setText(String.valueOf(aux.getGridTabuleiro()[7][4]));
+        if (!grid74.getText().equals("0")) {
+            grid74.setEditable(false);
+        } else {
+            grid74.setText("");
+        }
+        grid75.setText(String.valueOf(aux.getGridTabuleiro()[7][5]));
+        if (!grid75.getText().equals("0")) {
+            grid75.setEditable(false);
+        } else {
+            grid75.setText("");
+        }
+        grid76.setText(String.valueOf(aux.getGridTabuleiro()[7][6]));
+        if (!grid76.getText().equals("0")) {
+            grid76.setEditable(false);
+        } else {
+            grid76.setText("");
+        }
+        grid77.setText(String.valueOf(aux.getGridTabuleiro()[7][7]));
+        if (!grid77.getText().equals("0")) {
+            grid77.setEditable(false);
+        } else {
+            grid77.setText("");
+        }
+        grid78.setText(String.valueOf(aux.getGridTabuleiro()[7][8]));
+        if (!grid78.getText().equals("0")) {
+            grid78.setEditable(false);
+        } else {
+            grid78.setText("");
+        }
+        grid80.setText(String.valueOf(aux.getGridTabuleiro()[8][0]));
+        if (!grid80.getText().equals("0")) {
+            grid80.setEditable(false);
+        } else {
+            grid80.setText("");
+        }
+        grid81.setText(String.valueOf(aux.getGridTabuleiro()[8][1]));
+        if (!grid81.getText().equals("0")) {
+            grid81.setEditable(false);
+        } else {
+            grid81.setText("");
+        }
+        grid82.setText(String.valueOf(aux.getGridTabuleiro()[8][2]));
+        if (!grid82.getText().equals("0")) {
+            grid82.setEditable(false);
+        } else {
+            grid82.setText("");
+        }
+        grid83.setText(String.valueOf(aux.getGridTabuleiro()[8][3]));
+        if (!grid83.getText().equals("0")) {
+            grid83.setEditable(false);
+        } else {
+            grid83.setText("");
+        }
+        grid84.setText(String.valueOf(aux.getGridTabuleiro()[8][4]));
+        if (!grid84.getText().equals("0")) {
+            grid84.setEditable(false);
+        } else {
+            grid84.setText("");
+        }
+        grid85.setText(String.valueOf(aux.getGridTabuleiro()[8][5]));
+        if (!grid85.getText().equals("0")) {
+            grid85.setEditable(false);
+        } else {
+            grid85.setText("");
+        }
+        grid86.setText(String.valueOf(aux.getGridTabuleiro()[8][6]));
+        if (!grid86.getText().equals("0")) {
+            grid86.setEditable(false);
+        } else {
+            grid86.setText("");
+        }
+        grid87.setText(String.valueOf(aux.getGridTabuleiro()[8][7]));
+        if (!grid87.getText().equals("0")) {
+            grid87.setEditable(false);
+        } else {
+            grid87.setText("");
+        }
+        grid88.setText(String.valueOf(aux.getGridTabuleiro()[8][8]));
+        if (!grid88.getText().equals("0")) {
+            grid88.setEditable(false);
+        } else {
+            grid88.setText("");
+        }
+    }
     /**
      * @param args the command line arguments
      */
@@ -1482,98 +1300,98 @@ public class FimDeJogoFrame extends javax.swing.JFrame {
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new FimDeJogoFrame().setVisible(true);
+                //new FimDeJogoFrame().setVisible(true);
             }
         });
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton JogarNovamente;
-    private javax.swing.JLabel Pontuacao;
-    private javax.swing.JButton Sair;
+    private javax.swing.JButton buttonJogarNovamente;
+    private javax.swing.JButton buttonSair;
+    private javax.swing.JTextField grid00;
+    private javax.swing.JTextField grid01;
+    private javax.swing.JTextField grid02;
+    private javax.swing.JTextField grid03;
+    private javax.swing.JTextField grid04;
+    private javax.swing.JTextField grid05;
+    private javax.swing.JTextField grid06;
+    private javax.swing.JTextField grid07;
+    private javax.swing.JTextField grid08;
+    private javax.swing.JTextField grid10;
+    private javax.swing.JTextField grid11;
+    private javax.swing.JTextField grid12;
+    private javax.swing.JTextField grid13;
+    private javax.swing.JTextField grid14;
+    private javax.swing.JTextField grid15;
+    private javax.swing.JTextField grid16;
+    private javax.swing.JTextField grid17;
+    private javax.swing.JTextField grid18;
+    private javax.swing.JTextField grid20;
+    private javax.swing.JTextField grid21;
+    private javax.swing.JTextField grid22;
+    private javax.swing.JTextField grid23;
+    private javax.swing.JTextField grid24;
+    private javax.swing.JTextField grid25;
+    private javax.swing.JTextField grid26;
+    private javax.swing.JTextField grid27;
+    private javax.swing.JTextField grid28;
+    private javax.swing.JTextField grid30;
+    private javax.swing.JTextField grid31;
+    private javax.swing.JTextField grid32;
+    private javax.swing.JTextField grid33;
+    private javax.swing.JTextField grid34;
+    private javax.swing.JTextField grid35;
+    private javax.swing.JTextField grid36;
+    private javax.swing.JTextField grid37;
+    private javax.swing.JTextField grid38;
+    private javax.swing.JTextField grid40;
+    private javax.swing.JTextField grid41;
+    private javax.swing.JTextField grid42;
+    private javax.swing.JTextField grid43;
+    private javax.swing.JTextField grid44;
+    private javax.swing.JTextField grid45;
+    private javax.swing.JTextField grid46;
+    private javax.swing.JTextField grid47;
+    private javax.swing.JTextField grid48;
+    private javax.swing.JTextField grid50;
+    private javax.swing.JTextField grid51;
+    private javax.swing.JTextField grid52;
+    private javax.swing.JTextField grid53;
+    private javax.swing.JTextField grid54;
+    private javax.swing.JTextField grid55;
+    private javax.swing.JTextField grid56;
+    private javax.swing.JTextField grid57;
+    private javax.swing.JTextField grid58;
+    private javax.swing.JTextField grid60;
+    private javax.swing.JTextField grid61;
+    private javax.swing.JTextField grid62;
+    private javax.swing.JTextField grid63;
+    private javax.swing.JTextField grid64;
+    private javax.swing.JTextField grid65;
+    private javax.swing.JTextField grid66;
+    private javax.swing.JTextField grid67;
+    private javax.swing.JTextField grid68;
+    private javax.swing.JTextField grid70;
+    private javax.swing.JTextField grid71;
+    private javax.swing.JTextField grid72;
+    private javax.swing.JTextField grid73;
+    private javax.swing.JTextField grid74;
+    private javax.swing.JTextField grid75;
+    private javax.swing.JTextField grid76;
+    private javax.swing.JTextField grid77;
+    private javax.swing.JTextField grid78;
+    private javax.swing.JTextField grid80;
+    private javax.swing.JTextField grid81;
+    private javax.swing.JTextField grid82;
+    private javax.swing.JTextField grid83;
+    private javax.swing.JTextField grid84;
+    private javax.swing.JTextField grid85;
+    private javax.swing.JTextField grid86;
+    private javax.swing.JTextField grid87;
+    private javax.swing.JTextField grid88;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
-    private javax.swing.JLabel jLabel5;
-    private javax.swing.JTextField jTextField1;
-    private javax.swing.JTextField jTextField10;
-    private javax.swing.JTextField jTextField100;
-    private javax.swing.JTextField jTextField101;
-    private javax.swing.JTextField jTextField102;
-    private javax.swing.JTextField jTextField103;
-    private javax.swing.JTextField jTextField104;
-    private javax.swing.JTextField jTextField105;
-    private javax.swing.JTextField jTextField106;
-    private javax.swing.JTextField jTextField107;
-    private javax.swing.JTextField jTextField108;
-    private javax.swing.JTextField jTextField109;
-    private javax.swing.JTextField jTextField11;
-    private javax.swing.JTextField jTextField110;
-    private javax.swing.JTextField jTextField111;
-    private javax.swing.JTextField jTextField112;
-    private javax.swing.JTextField jTextField113;
-    private javax.swing.JTextField jTextField114;
-    private javax.swing.JTextField jTextField115;
-    private javax.swing.JTextField jTextField116;
-    private javax.swing.JTextField jTextField117;
-    private javax.swing.JTextField jTextField118;
-    private javax.swing.JTextField jTextField119;
-    private javax.swing.JTextField jTextField120;
-    private javax.swing.JTextField jTextField121;
-    private javax.swing.JTextField jTextField122;
-    private javax.swing.JTextField jTextField123;
-    private javax.swing.JTextField jTextField124;
-    private javax.swing.JTextField jTextField125;
-    private javax.swing.JTextField jTextField126;
-    private javax.swing.JTextField jTextField127;
-    private javax.swing.JTextField jTextField128;
-    private javax.swing.JTextField jTextField129;
-    private javax.swing.JTextField jTextField130;
-    private javax.swing.JTextField jTextField131;
-    private javax.swing.JTextField jTextField132;
-    private javax.swing.JTextField jTextField133;
-    private javax.swing.JTextField jTextField134;
-    private javax.swing.JTextField jTextField135;
-    private javax.swing.JTextField jTextField136;
-    private javax.swing.JTextField jTextField137;
-    private javax.swing.JTextField jTextField138;
-    private javax.swing.JTextField jTextField139;
-    private javax.swing.JTextField jTextField140;
-    private javax.swing.JTextField jTextField141;
-    private javax.swing.JTextField jTextField142;
-    private javax.swing.JTextField jTextField143;
-    private javax.swing.JTextField jTextField144;
-    private javax.swing.JTextField jTextField145;
-    private javax.swing.JTextField jTextField146;
-    private javax.swing.JTextField jTextField147;
-    private javax.swing.JTextField jTextField148;
-    private javax.swing.JTextField jTextField149;
-    private javax.swing.JTextField jTextField150;
-    private javax.swing.JTextField jTextField151;
-    private javax.swing.JTextField jTextField152;
-    private javax.swing.JTextField jTextField153;
-    private javax.swing.JTextField jTextField154;
-    private javax.swing.JTextField jTextField4;
-    private javax.swing.JTextField jTextField5;
-    private javax.swing.JTextField jTextField6;
-    private javax.swing.JTextField jTextField7;
-    private javax.swing.JTextField jTextField8;
-    private javax.swing.JTextField jTextField83;
-    private javax.swing.JTextField jTextField84;
-    private javax.swing.JTextField jTextField85;
-    private javax.swing.JTextField jTextField86;
-    private javax.swing.JTextField jTextField87;
-    private javax.swing.JTextField jTextField88;
-    private javax.swing.JTextField jTextField89;
-    private javax.swing.JTextField jTextField9;
-    private javax.swing.JTextField jTextField90;
-    private javax.swing.JTextField jTextField91;
-    private javax.swing.JTextField jTextField92;
-    private javax.swing.JTextField jTextField93;
-    private javax.swing.JTextField jTextField94;
-    private javax.swing.JTextField jTextField95;
-    private javax.swing.JTextField jTextField96;
-    private javax.swing.JTextField jTextField97;
-    private javax.swing.JTextField jTextField98;
-    private javax.swing.JTextField jTextField99;
+    private javax.swing.JLabel score;
+    private javax.swing.JLabel textSituacao;
     // End of variables declaration//GEN-END:variables
 }
