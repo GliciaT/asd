@@ -57,9 +57,6 @@ public class TabuleiroFrame extends javax.swing.JFrame {
                         min = 0;
                         hor++;
                     }
-                    if (min == 15) {
-                        dispose();
-                    }
                     tempo.setText(hor + ":" + min + ":" + seg);
                     Thread.sleep(999);
                 } catch (InterruptedException e) {
