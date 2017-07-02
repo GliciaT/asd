@@ -57,7 +57,7 @@ public class TabuleiroFrame extends javax.swing.JFrame {
                         min = 0;
                         hor++;
                     }
-                    if (min == 2) {
+                    if (min == 15) {
                         dispose();
                     }
                     tempo.setText(hor + ":" + min + ":" + seg);
@@ -1277,6 +1277,10 @@ public class TabuleiroFrame extends javax.swing.JFrame {
                 JOptionPane.showMessageDialog(null, ex.getMessage());
             } catch (MovimentoIncorretoException ex) {
                 progressoErros.setValue(novoJogo.getQuantidadeErros());
+                if(novoJogo.isFimDeJogo()){
+                    JOptionPane.showMessageDialog(null, "O jogo acabou");
+                    setAllTextField();
+                }
                 JOptionPane.showMessageDialog(null, ex.getMessage());
             }
         }
@@ -2513,49 +2517,49 @@ public class TabuleiroFrame extends javax.swing.JFrame {
         } else {
             grid00.setText("");
         }
-        grid01.setText(String.valueOf(novoJogo.getGridTabuleiro()[0][1]));
+        grid01.setText(String.valueOf(novoJogo.getGridTabuleiro()[1][0]));
         if (!grid01.getText().equals("0")) {
             grid01.setEditable(false);
         } else {
             grid01.setText("");
         }
-        grid02.setText(String.valueOf(novoJogo.getGridTabuleiro()[0][2]));
+        grid02.setText(String.valueOf(novoJogo.getGridTabuleiro()[2][0]));
         if (!grid02.getText().equals("0")) {
             grid02.setEditable(false);
         } else {
             grid02.setText("");
         }
-        grid03.setText(String.valueOf(novoJogo.getGridTabuleiro()[0][3]));
+        grid03.setText(String.valueOf(novoJogo.getGridTabuleiro()[3][0]));
         if (!grid03.getText().equals("0")) {
             grid03.setEditable(false);
         } else {
             grid03.setText("");
         }
-        grid04.setText(String.valueOf(novoJogo.getGridTabuleiro()[0][4]));
+        grid04.setText(String.valueOf(novoJogo.getGridTabuleiro()[4][0]));
         if (!grid04.getText().equals("0")) {
             grid04.setEditable(false);
         } else {
             grid04.setText("");
         }
-        grid05.setText(String.valueOf(novoJogo.getGridTabuleiro()[0][5]));
+        grid05.setText(String.valueOf(novoJogo.getGridTabuleiro()[5][0]));
         if (!grid05.getText().equals("0")) {
             grid05.setEditable(false);
         } else {
             grid05.setText("");
         }
-        grid06.setText(String.valueOf(novoJogo.getGridTabuleiro()[0][6]));
+        grid06.setText(String.valueOf(novoJogo.getGridTabuleiro()[6][0]));
         if (!grid06.getText().equals("0")) {
             grid06.setEditable(false);
         } else {
             grid06.setText("");
         }
-        grid07.setText(String.valueOf(novoJogo.getGridTabuleiro()[0][7]));
+        grid07.setText(String.valueOf(novoJogo.getGridTabuleiro()[7][0]));
         if (!grid07.getText().equals("0")) {
             grid07.setEditable(false);
         } else {
             grid07.setText("");
         }
-        grid08.setText(String.valueOf(novoJogo.getGridTabuleiro()[0][8]));
+        grid08.setText(String.valueOf(novoJogo.getGridTabuleiro()[8][0]));
         if (!grid08.getText().equals("0")) {
             grid08.setEditable(false);
         } else {
