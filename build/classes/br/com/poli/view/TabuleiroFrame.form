@@ -41,7 +41,9 @@
               <EmptySpace min="-2" pref="23" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="0" attributes="0">
                   <Group type="102" attributes="0">
-                      <EmptySpace min="-2" pref="177" max="-2" attributes="0"/>
+                      <EmptySpace min="-2" pref="42" max="-2" attributes="0"/>
+                      <Component id="acertadoErrado" min="-2" pref="101" max="-2" attributes="0"/>
+                      <EmptySpace min="-2" pref="83" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
                           <Group type="102" attributes="0">
                               <Component id="grid07" min="-2" max="-2" attributes="0"/>
@@ -237,8 +239,8 @@
                       <Group type="103" groupAlignment="0" attributes="0">
                           <Group type="102" alignment="1" attributes="0">
                               <Group type="103" groupAlignment="1" attributes="0">
-                                  <Component id="progressoErros" alignment="0" max="32767" attributes="0"/>
-                                  <Component id="progressoDicas" alignment="0" max="32767" attributes="0"/>
+                                  <Component id="progressoErros" alignment="0" pref="219" max="32767" attributes="0"/>
+                                  <Component id="progressoDicas" alignment="0" pref="0" max="32767" attributes="0"/>
                                   <Group type="102" alignment="0" attributes="0">
                                       <Group type="103" groupAlignment="1" attributes="0">
                                           <Component id="jLabel3" alignment="0" min="-2" max="-2" attributes="0"/>
@@ -292,31 +294,36 @@
                   <Component id="jLabel3" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
               <EmptySpace max="-2" attributes="0"/>
-              <Group type="103" groupAlignment="0" attributes="0">
-                  <Group type="103" groupAlignment="3" attributes="0">
-                      <Component id="grid01" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="grid11" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="grid21" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="grid31" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="grid41" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="grid51" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="grid61" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="grid71" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="grid81" alignment="3" min="-2" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                  <Group type="102" attributes="0">
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Group type="103" groupAlignment="3" attributes="0">
+                              <Component id="grid01" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="grid11" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="grid21" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="grid31" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="grid41" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="grid51" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="grid61" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="grid71" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="grid81" alignment="3" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                          <Component id="progressoErros" min="-2" pref="30" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="3" attributes="0">
+                          <Component id="grid02" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="grid12" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="grid22" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="grid32" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="grid42" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="grid52" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="grid62" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="grid72" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="grid82" alignment="3" min="-2" max="-2" attributes="0"/>
+                      </Group>
                   </Group>
-                  <Component id="progressoErros" min="-2" pref="30" max="-2" attributes="0"/>
-              </Group>
-              <EmptySpace min="-2" pref="11" max="-2" attributes="0"/>
-              <Group type="103" groupAlignment="3" attributes="0">
-                  <Component id="grid02" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="grid12" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="grid22" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="grid32" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="grid42" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="grid52" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="grid62" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="grid72" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="grid82" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="acertadoErrado" max="32767" attributes="0"/>
               </Group>
               <EmptySpace type="unrelated" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
@@ -1587,6 +1594,8 @@
         </Property>
         <Property name="text" type="java.lang.String" value="Clique em enter para confirmar a jogada"/>
       </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="acertadoErrado">
     </Component>
   </SubComponents>
 </Form>
