@@ -271,8 +271,8 @@
               <Component id="jLabel1" min="-2" max="-2" attributes="0"/>
               <EmptySpace min="-2" pref="42" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
-                  <Component id="grid00" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="grid10" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="grid00" alignment="3" min="-2" pref="30" max="-2" attributes="0"/>
+                  <Component id="grid10" alignment="3" min="-2" pref="30" max="-2" attributes="0"/>
                   <Component id="grid20" alignment="3" min="-2" max="-2" attributes="0"/>
                   <Component id="grid30" alignment="3" min="-2" max="-2" attributes="0"/>
                   <Component id="grid40" alignment="3" min="-2" max="-2" attributes="0"/>
@@ -427,6 +427,9 @@
         <Property name="alignmentX" type="float" value="1.0"/>
         <Property name="alignmentY" type="float" value="0.0"/>
       </Properties>
+      <Events>
+        <EventHandler event="keyTyped" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="grid10KeyTyped"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JTextField" name="grid20">
       <Properties>
@@ -440,7 +443,7 @@
         </Property>
       </Properties>
       <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="grid20ActionPerformed"/>
+        <EventHandler event="keyTyped" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="grid20KeyTyped"/>
       </Events>
     </Component>
     <Component class="javax.swing.JTextField" name="grid30">
@@ -455,7 +458,7 @@
         </Property>
       </Properties>
       <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="grid30ActionPerformed"/>
+        <EventHandler event="keyTyped" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="grid30KeyTyped"/>
       </Events>
     </Component>
     <Component class="javax.swing.JTextField" name="grid40">
@@ -470,7 +473,7 @@
         </Property>
       </Properties>
       <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="grid40ActionPerformed"/>
+        <EventHandler event="keyTyped" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="grid40KeyTyped"/>
       </Events>
     </Component>
     <Component class="javax.swing.JTextField" name="grid50">
@@ -485,7 +488,7 @@
         </Property>
       </Properties>
       <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="grid50ActionPerformed"/>
+        <EventHandler event="keyTyped" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="grid50KeyTyped"/>
       </Events>
     </Component>
     <Component class="javax.swing.JTextField" name="grid60">
@@ -500,7 +503,7 @@
         </Property>
       </Properties>
       <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="grid60ActionPerformed"/>
+        <EventHandler event="keyTyped" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="grid60KeyTyped"/>
       </Events>
     </Component>
     <Component class="javax.swing.JTextField" name="grid70">
@@ -515,7 +518,7 @@
         </Property>
       </Properties>
       <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="grid70ActionPerformed"/>
+        <EventHandler event="keyTyped" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="grid70KeyTyped"/>
       </Events>
     </Component>
     <Component class="javax.swing.JTextField" name="grid80">
@@ -530,7 +533,7 @@
         </Property>
       </Properties>
       <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="grid80ActionPerformed"/>
+        <EventHandler event="keyTyped" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="grid80KeyTyped"/>
       </Events>
     </Component>
     <Component class="javax.swing.JTextField" name="grid01">
@@ -544,6 +547,9 @@
           <Dimension value="[30, 30]"/>
         </Property>
       </Properties>
+      <Events>
+        <EventHandler event="keyTyped" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="grid01KeyTyped"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JTextField" name="grid11">
       <Properties>
@@ -555,7 +561,7 @@
         </Property>
       </Properties>
       <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="grid11ActionPerformed"/>
+        <EventHandler event="keyTyped" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="grid11KeyTyped"/>
       </Events>
     </Component>
     <Component class="javax.swing.JTextField" name="grid21">
@@ -568,7 +574,7 @@
         </Property>
       </Properties>
       <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="grid21ActionPerformed"/>
+        <EventHandler event="keyTyped" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="grid21KeyTyped"/>
       </Events>
     </Component>
     <Component class="javax.swing.JTextField" name="grid31">
@@ -580,6 +586,9 @@
           <Dimension value="[30, 30]"/>
         </Property>
       </Properties>
+      <Events>
+        <EventHandler event="keyTyped" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="grid31KeyTyped"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JTextField" name="grid41">
       <Properties>
@@ -591,7 +600,7 @@
         </Property>
       </Properties>
       <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="grid41ActionPerformed"/>
+        <EventHandler event="keyTyped" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="grid41KeyTyped"/>
       </Events>
     </Component>
     <Component class="javax.swing.JTextField" name="grid51">
@@ -604,7 +613,7 @@
         </Property>
       </Properties>
       <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="grid51ActionPerformed"/>
+        <EventHandler event="keyTyped" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="grid51KeyTyped"/>
       </Events>
     </Component>
     <Component class="javax.swing.JTextField" name="grid61">
@@ -617,7 +626,7 @@
         </Property>
       </Properties>
       <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="grid61ActionPerformed"/>
+        <EventHandler event="keyTyped" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="grid61KeyTyped"/>
       </Events>
     </Component>
     <Component class="javax.swing.JTextField" name="grid71">
@@ -630,7 +639,7 @@
         </Property>
       </Properties>
       <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="grid71ActionPerformed"/>
+        <EventHandler event="keyTyped" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="grid71KeyTyped"/>
       </Events>
     </Component>
     <Component class="javax.swing.JTextField" name="grid81">
@@ -643,7 +652,7 @@
         </Property>
       </Properties>
       <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="grid81ActionPerformed"/>
+        <EventHandler event="keyTyped" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="grid81KeyTyped"/>
       </Events>
     </Component>
     <Component class="javax.swing.JTextField" name="grid02">
@@ -657,6 +666,9 @@
           <Dimension value="[30, 30]"/>
         </Property>
       </Properties>
+      <Events>
+        <EventHandler event="keyTyped" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="grid02KeyTyped"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JTextField" name="grid12">
       <Properties>
@@ -668,7 +680,7 @@
         </Property>
       </Properties>
       <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="grid12ActionPerformed"/>
+        <EventHandler event="keyTyped" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="grid12KeyTyped"/>
       </Events>
     </Component>
     <Component class="javax.swing.JTextField" name="grid22">
@@ -681,7 +693,7 @@
         </Property>
       </Properties>
       <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="grid22ActionPerformed"/>
+        <EventHandler event="keyTyped" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="grid22KeyTyped"/>
       </Events>
     </Component>
     <Component class="javax.swing.JTextField" name="grid32">
@@ -694,7 +706,7 @@
         </Property>
       </Properties>
       <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="grid32ActionPerformed"/>
+        <EventHandler event="keyTyped" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="grid32KeyTyped"/>
       </Events>
     </Component>
     <Component class="javax.swing.JTextField" name="grid42">
@@ -707,7 +719,7 @@
         </Property>
       </Properties>
       <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="grid42ActionPerformed"/>
+        <EventHandler event="keyTyped" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="grid42KeyTyped"/>
       </Events>
     </Component>
     <Component class="javax.swing.JTextField" name="grid52">
@@ -720,7 +732,7 @@
         </Property>
       </Properties>
       <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="grid52ActionPerformed"/>
+        <EventHandler event="keyTyped" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="grid52KeyTyped"/>
       </Events>
     </Component>
     <Component class="javax.swing.JTextField" name="grid62">
@@ -733,7 +745,7 @@
         </Property>
       </Properties>
       <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="grid62ActionPerformed"/>
+        <EventHandler event="keyTyped" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="grid62KeyTyped"/>
       </Events>
     </Component>
     <Component class="javax.swing.JTextField" name="grid72">
@@ -746,7 +758,7 @@
         </Property>
       </Properties>
       <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="grid72ActionPerformed"/>
+        <EventHandler event="keyTyped" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="grid72KeyTyped"/>
       </Events>
     </Component>
     <Component class="javax.swing.JTextField" name="grid82">
@@ -759,7 +771,7 @@
         </Property>
       </Properties>
       <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="grid82ActionPerformed"/>
+        <EventHandler event="keyTyped" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="grid82KeyTyped"/>
       </Events>
     </Component>
     <Component class="javax.swing.JTextField" name="grid03">
@@ -774,7 +786,7 @@
         </Property>
       </Properties>
       <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="grid03ActionPerformed"/>
+        <EventHandler event="keyTyped" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="grid03KeyTyped"/>
       </Events>
     </Component>
     <Component class="javax.swing.JTextField" name="grid13">
@@ -787,7 +799,7 @@
         </Property>
       </Properties>
       <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="grid13ActionPerformed"/>
+        <EventHandler event="keyTyped" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="grid13KeyTyped"/>
       </Events>
     </Component>
     <Component class="javax.swing.JTextField" name="grid23">
@@ -800,7 +812,7 @@
         </Property>
       </Properties>
       <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="grid23ActionPerformed"/>
+        <EventHandler event="keyTyped" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="grid23KeyTyped"/>
       </Events>
     </Component>
     <Component class="javax.swing.JTextField" name="grid33">
@@ -813,7 +825,7 @@
         </Property>
       </Properties>
       <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="grid33ActionPerformed"/>
+        <EventHandler event="keyTyped" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="grid33KeyTyped"/>
       </Events>
     </Component>
     <Component class="javax.swing.JTextField" name="grid43">
@@ -826,7 +838,7 @@
         </Property>
       </Properties>
       <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="grid43ActionPerformed"/>
+        <EventHandler event="keyTyped" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="grid43KeyTyped"/>
       </Events>
     </Component>
     <Component class="javax.swing.JTextField" name="grid53">
@@ -839,7 +851,7 @@
         </Property>
       </Properties>
       <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="grid53ActionPerformed"/>
+        <EventHandler event="keyTyped" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="grid53KeyTyped"/>
       </Events>
     </Component>
     <Component class="javax.swing.JTextField" name="grid63">
@@ -852,7 +864,7 @@
         </Property>
       </Properties>
       <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="grid63ActionPerformed"/>
+        <EventHandler event="keyTyped" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="grid63KeyTyped"/>
       </Events>
     </Component>
     <Component class="javax.swing.JTextField" name="grid73">
@@ -865,7 +877,7 @@
         </Property>
       </Properties>
       <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="grid73ActionPerformed"/>
+        <EventHandler event="keyTyped" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="grid73KeyTyped"/>
       </Events>
     </Component>
     <Component class="javax.swing.JTextField" name="grid83">
@@ -878,7 +890,7 @@
         </Property>
       </Properties>
       <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="grid83ActionPerformed"/>
+        <EventHandler event="keyTyped" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="grid83KeyTyped"/>
       </Events>
     </Component>
     <Component class="javax.swing.JTextField" name="grid04">
@@ -893,7 +905,7 @@
         </Property>
       </Properties>
       <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="grid04ActionPerformed"/>
+        <EventHandler event="keyTyped" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="grid04KeyTyped"/>
       </Events>
     </Component>
     <Component class="javax.swing.JTextField" name="grid14">
@@ -906,7 +918,7 @@
         </Property>
       </Properties>
       <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="grid14ActionPerformed"/>
+        <EventHandler event="keyTyped" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="grid14KeyTyped"/>
       </Events>
     </Component>
     <Component class="javax.swing.JTextField" name="grid24">
@@ -919,7 +931,7 @@
         </Property>
       </Properties>
       <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="grid24ActionPerformed"/>
+        <EventHandler event="keyTyped" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="grid24KeyTyped"/>
       </Events>
     </Component>
     <Component class="javax.swing.JTextField" name="grid34">
@@ -932,7 +944,7 @@
         </Property>
       </Properties>
       <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="grid34ActionPerformed"/>
+        <EventHandler event="keyTyped" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="grid34KeyTyped"/>
       </Events>
     </Component>
     <Component class="javax.swing.JTextField" name="grid44">
@@ -945,7 +957,7 @@
         </Property>
       </Properties>
       <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="grid44ActionPerformed"/>
+        <EventHandler event="keyTyped" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="grid44KeyTyped"/>
       </Events>
     </Component>
     <Component class="javax.swing.JTextField" name="grid54">
@@ -958,7 +970,7 @@
         </Property>
       </Properties>
       <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="grid54ActionPerformed"/>
+        <EventHandler event="keyTyped" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="grid54KeyTyped"/>
       </Events>
     </Component>
     <Component class="javax.swing.JTextField" name="grid64">
@@ -971,7 +983,7 @@
         </Property>
       </Properties>
       <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="grid64ActionPerformed"/>
+        <EventHandler event="keyTyped" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="grid64KeyTyped"/>
       </Events>
     </Component>
     <Component class="javax.swing.JTextField" name="grid74">
@@ -984,7 +996,7 @@
         </Property>
       </Properties>
       <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="grid74ActionPerformed"/>
+        <EventHandler event="keyTyped" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="grid74KeyTyped"/>
       </Events>
     </Component>
     <Component class="javax.swing.JTextField" name="grid84">
@@ -997,7 +1009,7 @@
         </Property>
       </Properties>
       <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="grid84ActionPerformed"/>
+        <EventHandler event="keyTyped" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="grid84KeyTyped"/>
       </Events>
     </Component>
     <Component class="javax.swing.JTextField" name="grid05">
@@ -1012,7 +1024,7 @@
         </Property>
       </Properties>
       <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="grid05ActionPerformed"/>
+        <EventHandler event="keyTyped" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="grid05KeyTyped"/>
       </Events>
     </Component>
     <Component class="javax.swing.JTextField" name="grid15">
@@ -1025,7 +1037,7 @@
         </Property>
       </Properties>
       <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="grid15ActionPerformed"/>
+        <EventHandler event="keyTyped" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="grid15KeyTyped"/>
       </Events>
     </Component>
     <Component class="javax.swing.JTextField" name="grid25">
@@ -1038,7 +1050,7 @@
         </Property>
       </Properties>
       <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="grid25ActionPerformed"/>
+        <EventHandler event="keyTyped" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="grid25KeyTyped"/>
       </Events>
     </Component>
     <Component class="javax.swing.JTextField" name="grid35">
@@ -1051,7 +1063,7 @@
         </Property>
       </Properties>
       <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="grid35ActionPerformed"/>
+        <EventHandler event="keyTyped" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="grid35KeyTyped"/>
       </Events>
     </Component>
     <Component class="javax.swing.JTextField" name="grid45">
@@ -1064,7 +1076,7 @@
         </Property>
       </Properties>
       <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="grid45ActionPerformed"/>
+        <EventHandler event="keyTyped" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="grid45KeyTyped"/>
       </Events>
     </Component>
     <Component class="javax.swing.JTextField" name="grid55">
@@ -1077,7 +1089,7 @@
         </Property>
       </Properties>
       <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="grid55ActionPerformed"/>
+        <EventHandler event="keyTyped" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="grid55KeyTyped"/>
       </Events>
     </Component>
     <Component class="javax.swing.JTextField" name="grid65">
@@ -1090,7 +1102,7 @@
         </Property>
       </Properties>
       <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="grid65ActionPerformed"/>
+        <EventHandler event="keyTyped" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="grid65KeyTyped"/>
       </Events>
     </Component>
     <Component class="javax.swing.JTextField" name="grid75">
@@ -1103,7 +1115,7 @@
         </Property>
       </Properties>
       <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="grid75ActionPerformed"/>
+        <EventHandler event="keyTyped" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="grid75KeyTyped"/>
       </Events>
     </Component>
     <Component class="javax.swing.JTextField" name="grid85">
@@ -1116,7 +1128,7 @@
         </Property>
       </Properties>
       <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="grid85ActionPerformed"/>
+        <EventHandler event="keyTyped" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="grid85KeyTyped"/>
       </Events>
     </Component>
     <Component class="javax.swing.JTextField" name="grid06">
@@ -1131,7 +1143,7 @@
         </Property>
       </Properties>
       <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="grid06ActionPerformed"/>
+        <EventHandler event="keyTyped" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="grid06KeyTyped"/>
       </Events>
     </Component>
     <Component class="javax.swing.JTextField" name="grid16">
@@ -1144,7 +1156,7 @@
         </Property>
       </Properties>
       <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="grid16ActionPerformed"/>
+        <EventHandler event="keyTyped" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="grid16KeyTyped"/>
       </Events>
     </Component>
     <Component class="javax.swing.JTextField" name="grid26">
@@ -1157,7 +1169,7 @@
         </Property>
       </Properties>
       <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="grid26ActionPerformed"/>
+        <EventHandler event="keyTyped" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="grid26KeyTyped"/>
       </Events>
     </Component>
     <Component class="javax.swing.JTextField" name="grid36">
@@ -1170,7 +1182,7 @@
         </Property>
       </Properties>
       <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="grid36ActionPerformed"/>
+        <EventHandler event="keyTyped" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="grid36KeyTyped"/>
       </Events>
     </Component>
     <Component class="javax.swing.JTextField" name="grid46">
@@ -1183,7 +1195,7 @@
         </Property>
       </Properties>
       <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="grid46ActionPerformed"/>
+        <EventHandler event="keyTyped" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="grid46KeyTyped"/>
       </Events>
     </Component>
     <Component class="javax.swing.JTextField" name="grid56">
@@ -1196,7 +1208,7 @@
         </Property>
       </Properties>
       <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="grid56ActionPerformed"/>
+        <EventHandler event="keyTyped" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="grid56KeyTyped"/>
       </Events>
     </Component>
     <Component class="javax.swing.JTextField" name="grid76">
@@ -1209,7 +1221,7 @@
         </Property>
       </Properties>
       <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="grid76ActionPerformed"/>
+        <EventHandler event="keyTyped" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="grid76KeyTyped"/>
       </Events>
     </Component>
     <Component class="javax.swing.JTextField" name="grid86">
@@ -1222,7 +1234,7 @@
         </Property>
       </Properties>
       <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="grid86ActionPerformed"/>
+        <EventHandler event="keyTyped" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="grid86KeyTyped"/>
       </Events>
     </Component>
     <Component class="javax.swing.JTextField" name="grid66">
@@ -1235,7 +1247,7 @@
         </Property>
       </Properties>
       <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="grid66ActionPerformed"/>
+        <EventHandler event="keyTyped" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="grid66KeyTyped"/>
       </Events>
     </Component>
     <Component class="javax.swing.JTextField" name="grid07">
@@ -1250,7 +1262,7 @@
         </Property>
       </Properties>
       <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="grid07ActionPerformed"/>
+        <EventHandler event="keyTyped" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="grid07KeyTyped"/>
       </Events>
     </Component>
     <Component class="javax.swing.JTextField" name="grid17">
@@ -1263,7 +1275,7 @@
         </Property>
       </Properties>
       <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="grid17ActionPerformed"/>
+        <EventHandler event="keyTyped" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="grid17KeyTyped"/>
       </Events>
     </Component>
     <Component class="javax.swing.JTextField" name="grid27">
@@ -1276,7 +1288,7 @@
         </Property>
       </Properties>
       <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="grid27ActionPerformed"/>
+        <EventHandler event="keyTyped" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="grid27KeyTyped"/>
       </Events>
     </Component>
     <Component class="javax.swing.JTextField" name="grid37">
@@ -1289,7 +1301,7 @@
         </Property>
       </Properties>
       <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="grid37ActionPerformed"/>
+        <EventHandler event="keyTyped" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="grid37KeyTyped"/>
       </Events>
     </Component>
     <Component class="javax.swing.JTextField" name="grid47">
@@ -1302,7 +1314,7 @@
         </Property>
       </Properties>
       <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="grid47ActionPerformed"/>
+        <EventHandler event="keyTyped" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="grid47KeyTyped"/>
       </Events>
     </Component>
     <Component class="javax.swing.JTextField" name="grid57">
@@ -1315,7 +1327,7 @@
         </Property>
       </Properties>
       <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="grid57ActionPerformed"/>
+        <EventHandler event="keyTyped" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="grid57KeyTyped"/>
       </Events>
     </Component>
     <Component class="javax.swing.JTextField" name="grid67">
@@ -1328,7 +1340,7 @@
         </Property>
       </Properties>
       <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="grid67ActionPerformed"/>
+        <EventHandler event="keyTyped" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="grid67KeyTyped"/>
       </Events>
     </Component>
     <Component class="javax.swing.JTextField" name="grid77">
@@ -1341,7 +1353,7 @@
         </Property>
       </Properties>
       <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="grid77ActionPerformed"/>
+        <EventHandler event="keyTyped" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="grid77KeyTyped"/>
       </Events>
     </Component>
     <Component class="javax.swing.JTextField" name="grid87">
@@ -1354,7 +1366,7 @@
         </Property>
       </Properties>
       <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="grid87ActionPerformed"/>
+        <EventHandler event="keyTyped" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="grid87KeyTyped"/>
       </Events>
     </Component>
     <Component class="javax.swing.JTextField" name="grid08">
@@ -1369,7 +1381,7 @@
         </Property>
       </Properties>
       <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="grid08ActionPerformed"/>
+        <EventHandler event="keyTyped" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="grid08KeyTyped"/>
       </Events>
     </Component>
     <Component class="javax.swing.JTextField" name="grid18">
@@ -1382,7 +1394,7 @@
         </Property>
       </Properties>
       <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="grid18ActionPerformed"/>
+        <EventHandler event="keyTyped" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="grid18KeyTyped"/>
       </Events>
     </Component>
     <Component class="javax.swing.JTextField" name="grid28">
@@ -1395,7 +1407,7 @@
         </Property>
       </Properties>
       <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="grid28ActionPerformed"/>
+        <EventHandler event="keyTyped" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="grid28KeyTyped"/>
       </Events>
     </Component>
     <Component class="javax.swing.JTextField" name="grid38">
@@ -1408,7 +1420,7 @@
         </Property>
       </Properties>
       <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="grid38ActionPerformed"/>
+        <EventHandler event="keyTyped" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="grid38KeyTyped"/>
       </Events>
     </Component>
     <Component class="javax.swing.JTextField" name="grid48">
@@ -1421,7 +1433,7 @@
         </Property>
       </Properties>
       <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="grid48ActionPerformed"/>
+        <EventHandler event="keyTyped" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="grid48KeyTyped"/>
       </Events>
     </Component>
     <Component class="javax.swing.JTextField" name="grid58">
@@ -1434,7 +1446,7 @@
         </Property>
       </Properties>
       <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="grid58ActionPerformed"/>
+        <EventHandler event="keyTyped" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="grid58KeyTyped"/>
       </Events>
     </Component>
     <Component class="javax.swing.JTextField" name="grid68">
@@ -1447,7 +1459,7 @@
         </Property>
       </Properties>
       <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="grid68ActionPerformed"/>
+        <EventHandler event="keyTyped" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="grid68KeyTyped"/>
       </Events>
     </Component>
     <Component class="javax.swing.JTextField" name="grid78">
@@ -1460,7 +1472,7 @@
         </Property>
       </Properties>
       <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="grid78ActionPerformed"/>
+        <EventHandler event="keyTyped" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="grid78KeyTyped"/>
       </Events>
     </Component>
     <Component class="javax.swing.JTextField" name="grid88">
@@ -1473,7 +1485,7 @@
         </Property>
       </Properties>
       <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="grid88ActionPerformed"/>
+        <EventHandler event="keyTyped" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="grid88KeyTyped"/>
       </Events>
     </Component>
     <Component class="javax.swing.JLabel" name="jLabel1">

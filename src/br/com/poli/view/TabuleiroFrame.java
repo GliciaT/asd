@@ -19,7 +19,7 @@ import javax.swing.JOptionPane;
  * @author dylan
  */
 public class TabuleiroFrame extends javax.swing.JFrame {
-    
+
     Partida novoJogo;
 
     /**
@@ -29,20 +29,20 @@ public class TabuleiroFrame extends javax.swing.JFrame {
         initComponents();
         clock1.start();
     }
-    
+
     public TabuleiroFrame(String nome, DificuldadePartida dificuldade, int idade) {
         novoJogo = new Partida(nome, dificuldade, idade);
         initComponents();
         setAllTextField();
         clock1.start();
-        
+
     }
     Thread clock1 = new Thread() {
-        
+
         @Override
         public void run() {
             int hor = 00, min = 00, seg = 00;
-            
+
             for (;;) {
                 try {
                     //System.out.println(hor + ":" + min + ":" + seg);
@@ -62,7 +62,7 @@ public class TabuleiroFrame extends javax.swing.JFrame {
                     tempo.setText(hor + ":" + min + ":" + seg);
                     Thread.sleep(999);
                 } catch (InterruptedException e) {
-                    
+
                 }
             }
         }
@@ -193,14 +193,19 @@ public class TabuleiroFrame extends javax.swing.JFrame {
         grid10.setFont(new java.awt.Font("Dialog", 0, 18)); // NOI18N
         grid10.setAlignmentX(1.0F);
         grid10.setAlignmentY(0.0F);
+        grid10.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                grid10KeyTyped(evt);
+            }
+        });
 
         grid20.setFont(new java.awt.Font("Dialog", 0, 18)); // NOI18N
         grid20.setAlignmentX(2.0F);
         grid20.setAlignmentY(0.0F);
         grid20.setPreferredSize(new java.awt.Dimension(30, 30));
-        grid20.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                grid20ActionPerformed(evt);
+        grid20.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                grid20KeyTyped(evt);
             }
         });
 
@@ -208,9 +213,9 @@ public class TabuleiroFrame extends javax.swing.JFrame {
         grid30.setAlignmentX(3.0F);
         grid30.setAlignmentY(0.0F);
         grid30.setPreferredSize(new java.awt.Dimension(30, 30));
-        grid30.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                grid30ActionPerformed(evt);
+        grid30.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                grid30KeyTyped(evt);
             }
         });
 
@@ -218,9 +223,9 @@ public class TabuleiroFrame extends javax.swing.JFrame {
         grid40.setAlignmentX(4.0F);
         grid40.setAlignmentY(0.0F);
         grid40.setPreferredSize(new java.awt.Dimension(30, 30));
-        grid40.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                grid40ActionPerformed(evt);
+        grid40.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                grid40KeyTyped(evt);
             }
         });
 
@@ -228,9 +233,9 @@ public class TabuleiroFrame extends javax.swing.JFrame {
         grid50.setAlignmentX(5.0F);
         grid50.setAlignmentY(0.0F);
         grid50.setPreferredSize(new java.awt.Dimension(30, 30));
-        grid50.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                grid50ActionPerformed(evt);
+        grid50.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                grid50KeyTyped(evt);
             }
         });
 
@@ -238,9 +243,9 @@ public class TabuleiroFrame extends javax.swing.JFrame {
         grid60.setAlignmentX(6.0F);
         grid60.setAlignmentY(0.0F);
         grid60.setPreferredSize(new java.awt.Dimension(30, 30));
-        grid60.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                grid60ActionPerformed(evt);
+        grid60.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                grid60KeyTyped(evt);
             }
         });
 
@@ -248,9 +253,9 @@ public class TabuleiroFrame extends javax.swing.JFrame {
         grid70.setAlignmentX(7.0F);
         grid70.setAlignmentY(0.0F);
         grid70.setPreferredSize(new java.awt.Dimension(30, 30));
-        grid70.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                grid70ActionPerformed(evt);
+        grid70.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                grid70KeyTyped(evt);
             }
         });
 
@@ -258,9 +263,9 @@ public class TabuleiroFrame extends javax.swing.JFrame {
         grid80.setAlignmentX(8.0F);
         grid80.setAlignmentY(0.0F);
         grid80.setPreferredSize(new java.awt.Dimension(30, 30));
-        grid80.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                grid80ActionPerformed(evt);
+        grid80.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                grid80KeyTyped(evt);
             }
         });
 
@@ -268,63 +273,73 @@ public class TabuleiroFrame extends javax.swing.JFrame {
         grid01.setAlignmentX(0.0F);
         grid01.setAlignmentY(1.0F);
         grid01.setPreferredSize(new java.awt.Dimension(30, 30));
+        grid01.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                grid01KeyTyped(evt);
+            }
+        });
 
         grid11.setFont(new java.awt.Font("Dialog", 0, 18)); // NOI18N
         grid11.setPreferredSize(new java.awt.Dimension(30, 30));
-        grid11.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                grid11ActionPerformed(evt);
+        grid11.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                grid11KeyTyped(evt);
             }
         });
 
         grid21.setFont(new java.awt.Font("Dialog", 0, 18)); // NOI18N
         grid21.setPreferredSize(new java.awt.Dimension(30, 30));
-        grid21.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                grid21ActionPerformed(evt);
+        grid21.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                grid21KeyTyped(evt);
             }
         });
 
         grid31.setFont(new java.awt.Font("Dialog", 0, 18)); // NOI18N
         grid31.setPreferredSize(new java.awt.Dimension(30, 30));
+        grid31.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                grid31KeyTyped(evt);
+            }
+        });
 
         grid41.setFont(new java.awt.Font("Dialog", 0, 18)); // NOI18N
         grid41.setPreferredSize(new java.awt.Dimension(30, 30));
-        grid41.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                grid41ActionPerformed(evt);
+        grid41.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                grid41KeyTyped(evt);
             }
         });
 
         grid51.setFont(new java.awt.Font("Dialog", 0, 18)); // NOI18N
         grid51.setPreferredSize(new java.awt.Dimension(30, 30));
-        grid51.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                grid51ActionPerformed(evt);
+        grid51.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                grid51KeyTyped(evt);
             }
         });
 
         grid61.setFont(new java.awt.Font("Dialog", 0, 18)); // NOI18N
         grid61.setPreferredSize(new java.awt.Dimension(30, 30));
-        grid61.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                grid61ActionPerformed(evt);
+        grid61.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                grid61KeyTyped(evt);
             }
         });
 
         grid71.setFont(new java.awt.Font("Dialog", 0, 18)); // NOI18N
         grid71.setPreferredSize(new java.awt.Dimension(30, 30));
-        grid71.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                grid71ActionPerformed(evt);
+        grid71.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                grid71KeyTyped(evt);
             }
         });
 
         grid81.setFont(new java.awt.Font("Dialog", 0, 18)); // NOI18N
         grid81.setPreferredSize(new java.awt.Dimension(30, 30));
-        grid81.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                grid81ActionPerformed(evt);
+        grid81.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                grid81KeyTyped(evt);
             }
         });
 
@@ -332,68 +347,73 @@ public class TabuleiroFrame extends javax.swing.JFrame {
         grid02.setAlignmentX(0.0F);
         grid02.setAlignmentY(2.0F);
         grid02.setPreferredSize(new java.awt.Dimension(30, 30));
+        grid02.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                grid02KeyTyped(evt);
+            }
+        });
 
         grid12.setFont(new java.awt.Font("Dialog", 0, 18)); // NOI18N
         grid12.setPreferredSize(new java.awt.Dimension(30, 30));
-        grid12.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                grid12ActionPerformed(evt);
+        grid12.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                grid12KeyTyped(evt);
             }
         });
 
         grid22.setFont(new java.awt.Font("Dialog", 0, 18)); // NOI18N
         grid22.setPreferredSize(new java.awt.Dimension(30, 30));
-        grid22.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                grid22ActionPerformed(evt);
+        grid22.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                grid22KeyTyped(evt);
             }
         });
 
         grid32.setFont(new java.awt.Font("Dialog", 0, 18)); // NOI18N
         grid32.setPreferredSize(new java.awt.Dimension(30, 30));
-        grid32.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                grid32ActionPerformed(evt);
+        grid32.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                grid32KeyTyped(evt);
             }
         });
 
         grid42.setFont(new java.awt.Font("Dialog", 0, 18)); // NOI18N
         grid42.setPreferredSize(new java.awt.Dimension(30, 30));
-        grid42.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                grid42ActionPerformed(evt);
+        grid42.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                grid42KeyTyped(evt);
             }
         });
 
         grid52.setFont(new java.awt.Font("Dialog", 0, 18)); // NOI18N
         grid52.setPreferredSize(new java.awt.Dimension(30, 30));
-        grid52.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                grid52ActionPerformed(evt);
+        grid52.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                grid52KeyTyped(evt);
             }
         });
 
         grid62.setFont(new java.awt.Font("Dialog", 0, 18)); // NOI18N
         grid62.setPreferredSize(new java.awt.Dimension(30, 30));
-        grid62.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                grid62ActionPerformed(evt);
+        grid62.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                grid62KeyTyped(evt);
             }
         });
 
         grid72.setFont(new java.awt.Font("Dialog", 0, 18)); // NOI18N
         grid72.setPreferredSize(new java.awt.Dimension(30, 30));
-        grid72.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                grid72ActionPerformed(evt);
+        grid72.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                grid72KeyTyped(evt);
             }
         });
 
         grid82.setFont(new java.awt.Font("Dialog", 0, 18)); // NOI18N
         grid82.setPreferredSize(new java.awt.Dimension(30, 30));
-        grid82.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                grid82ActionPerformed(evt);
+        grid82.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                grid82KeyTyped(evt);
             }
         });
 
@@ -401,73 +421,73 @@ public class TabuleiroFrame extends javax.swing.JFrame {
         grid03.setAlignmentX(0.0F);
         grid03.setAlignmentY(3.0F);
         grid03.setPreferredSize(new java.awt.Dimension(30, 30));
-        grid03.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                grid03ActionPerformed(evt);
+        grid03.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                grid03KeyTyped(evt);
             }
         });
 
         grid13.setFont(new java.awt.Font("Dialog", 0, 18)); // NOI18N
         grid13.setPreferredSize(new java.awt.Dimension(30, 30));
-        grid13.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                grid13ActionPerformed(evt);
+        grid13.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                grid13KeyTyped(evt);
             }
         });
 
         grid23.setFont(new java.awt.Font("Dialog", 0, 18)); // NOI18N
         grid23.setPreferredSize(new java.awt.Dimension(30, 30));
-        grid23.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                grid23ActionPerformed(evt);
+        grid23.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                grid23KeyTyped(evt);
             }
         });
 
         grid33.setFont(new java.awt.Font("Dialog", 0, 18)); // NOI18N
         grid33.setPreferredSize(new java.awt.Dimension(30, 30));
-        grid33.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                grid33ActionPerformed(evt);
+        grid33.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                grid33KeyTyped(evt);
             }
         });
 
         grid43.setFont(new java.awt.Font("Dialog", 0, 18)); // NOI18N
         grid43.setPreferredSize(new java.awt.Dimension(30, 30));
-        grid43.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                grid43ActionPerformed(evt);
+        grid43.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                grid43KeyTyped(evt);
             }
         });
 
         grid53.setFont(new java.awt.Font("Dialog", 0, 18)); // NOI18N
         grid53.setPreferredSize(new java.awt.Dimension(30, 30));
-        grid53.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                grid53ActionPerformed(evt);
+        grid53.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                grid53KeyTyped(evt);
             }
         });
 
         grid63.setFont(new java.awt.Font("Dialog", 0, 18)); // NOI18N
         grid63.setPreferredSize(new java.awt.Dimension(30, 30));
-        grid63.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                grid63ActionPerformed(evt);
+        grid63.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                grid63KeyTyped(evt);
             }
         });
 
         grid73.setFont(new java.awt.Font("Dialog", 0, 18)); // NOI18N
         grid73.setPreferredSize(new java.awt.Dimension(30, 30));
-        grid73.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                grid73ActionPerformed(evt);
+        grid73.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                grid73KeyTyped(evt);
             }
         });
 
         grid83.setFont(new java.awt.Font("Dialog", 0, 18)); // NOI18N
         grid83.setPreferredSize(new java.awt.Dimension(30, 30));
-        grid83.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                grid83ActionPerformed(evt);
+        grid83.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                grid83KeyTyped(evt);
             }
         });
 
@@ -475,73 +495,73 @@ public class TabuleiroFrame extends javax.swing.JFrame {
         grid04.setAlignmentX(0.0F);
         grid04.setAlignmentY(4.0F);
         grid04.setPreferredSize(new java.awt.Dimension(30, 30));
-        grid04.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                grid04ActionPerformed(evt);
+        grid04.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                grid04KeyTyped(evt);
             }
         });
 
         grid14.setFont(new java.awt.Font("Dialog", 0, 18)); // NOI18N
         grid14.setPreferredSize(new java.awt.Dimension(30, 30));
-        grid14.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                grid14ActionPerformed(evt);
+        grid14.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                grid14KeyTyped(evt);
             }
         });
 
         grid24.setFont(new java.awt.Font("Dialog", 0, 18)); // NOI18N
         grid24.setPreferredSize(new java.awt.Dimension(30, 30));
-        grid24.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                grid24ActionPerformed(evt);
+        grid24.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                grid24KeyTyped(evt);
             }
         });
 
         grid34.setFont(new java.awt.Font("Dialog", 0, 18)); // NOI18N
         grid34.setPreferredSize(new java.awt.Dimension(30, 30));
-        grid34.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                grid34ActionPerformed(evt);
+        grid34.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                grid34KeyTyped(evt);
             }
         });
 
         grid44.setFont(new java.awt.Font("Dialog", 0, 18)); // NOI18N
         grid44.setPreferredSize(new java.awt.Dimension(30, 30));
-        grid44.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                grid44ActionPerformed(evt);
+        grid44.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                grid44KeyTyped(evt);
             }
         });
 
         grid54.setFont(new java.awt.Font("Dialog", 0, 18)); // NOI18N
         grid54.setPreferredSize(new java.awt.Dimension(30, 30));
-        grid54.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                grid54ActionPerformed(evt);
+        grid54.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                grid54KeyTyped(evt);
             }
         });
 
         grid64.setFont(new java.awt.Font("Dialog", 0, 18)); // NOI18N
         grid64.setPreferredSize(new java.awt.Dimension(30, 30));
-        grid64.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                grid64ActionPerformed(evt);
+        grid64.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                grid64KeyTyped(evt);
             }
         });
 
         grid74.setFont(new java.awt.Font("Dialog", 0, 18)); // NOI18N
         grid74.setPreferredSize(new java.awt.Dimension(30, 30));
-        grid74.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                grid74ActionPerformed(evt);
+        grid74.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                grid74KeyTyped(evt);
             }
         });
 
         grid84.setFont(new java.awt.Font("Dialog", 0, 18)); // NOI18N
         grid84.setPreferredSize(new java.awt.Dimension(30, 30));
-        grid84.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                grid84ActionPerformed(evt);
+        grid84.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                grid84KeyTyped(evt);
             }
         });
 
@@ -549,73 +569,73 @@ public class TabuleiroFrame extends javax.swing.JFrame {
         grid05.setAlignmentX(0.0F);
         grid05.setAlignmentY(5.0F);
         grid05.setPreferredSize(new java.awt.Dimension(30, 30));
-        grid05.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                grid05ActionPerformed(evt);
+        grid05.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                grid05KeyTyped(evt);
             }
         });
 
         grid15.setFont(new java.awt.Font("Dialog", 0, 18)); // NOI18N
         grid15.setPreferredSize(new java.awt.Dimension(30, 30));
-        grid15.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                grid15ActionPerformed(evt);
+        grid15.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                grid15KeyTyped(evt);
             }
         });
 
         grid25.setFont(new java.awt.Font("Dialog", 0, 18)); // NOI18N
         grid25.setPreferredSize(new java.awt.Dimension(30, 30));
-        grid25.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                grid25ActionPerformed(evt);
+        grid25.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                grid25KeyTyped(evt);
             }
         });
 
         grid35.setFont(new java.awt.Font("Dialog", 0, 18)); // NOI18N
         grid35.setPreferredSize(new java.awt.Dimension(30, 30));
-        grid35.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                grid35ActionPerformed(evt);
+        grid35.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                grid35KeyTyped(evt);
             }
         });
 
         grid45.setFont(new java.awt.Font("Dialog", 0, 18)); // NOI18N
         grid45.setPreferredSize(new java.awt.Dimension(30, 30));
-        grid45.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                grid45ActionPerformed(evt);
+        grid45.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                grid45KeyTyped(evt);
             }
         });
 
         grid55.setFont(new java.awt.Font("Dialog", 0, 18)); // NOI18N
         grid55.setPreferredSize(new java.awt.Dimension(30, 30));
-        grid55.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                grid55ActionPerformed(evt);
+        grid55.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                grid55KeyTyped(evt);
             }
         });
 
         grid65.setFont(new java.awt.Font("Dialog", 0, 18)); // NOI18N
         grid65.setPreferredSize(new java.awt.Dimension(30, 30));
-        grid65.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                grid65ActionPerformed(evt);
+        grid65.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                grid65KeyTyped(evt);
             }
         });
 
         grid75.setFont(new java.awt.Font("Dialog", 0, 18)); // NOI18N
         grid75.setPreferredSize(new java.awt.Dimension(30, 30));
-        grid75.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                grid75ActionPerformed(evt);
+        grid75.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                grid75KeyTyped(evt);
             }
         });
 
         grid85.setFont(new java.awt.Font("Dialog", 0, 18)); // NOI18N
         grid85.setPreferredSize(new java.awt.Dimension(30, 30));
-        grid85.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                grid85ActionPerformed(evt);
+        grid85.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                grid85KeyTyped(evt);
             }
         });
 
@@ -623,73 +643,73 @@ public class TabuleiroFrame extends javax.swing.JFrame {
         grid06.setAlignmentX(0.0F);
         grid06.setAlignmentY(6.0F);
         grid06.setPreferredSize(new java.awt.Dimension(30, 30));
-        grid06.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                grid06ActionPerformed(evt);
+        grid06.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                grid06KeyTyped(evt);
             }
         });
 
         grid16.setFont(new java.awt.Font("Dialog", 0, 18)); // NOI18N
         grid16.setPreferredSize(new java.awt.Dimension(30, 30));
-        grid16.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                grid16ActionPerformed(evt);
+        grid16.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                grid16KeyTyped(evt);
             }
         });
 
         grid26.setFont(new java.awt.Font("Dialog", 0, 18)); // NOI18N
         grid26.setPreferredSize(new java.awt.Dimension(30, 30));
-        grid26.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                grid26ActionPerformed(evt);
+        grid26.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                grid26KeyTyped(evt);
             }
         });
 
         grid36.setFont(new java.awt.Font("Dialog", 0, 18)); // NOI18N
         grid36.setPreferredSize(new java.awt.Dimension(30, 30));
-        grid36.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                grid36ActionPerformed(evt);
+        grid36.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                grid36KeyTyped(evt);
             }
         });
 
         grid46.setFont(new java.awt.Font("Dialog", 0, 18)); // NOI18N
         grid46.setPreferredSize(new java.awt.Dimension(30, 30));
-        grid46.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                grid46ActionPerformed(evt);
+        grid46.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                grid46KeyTyped(evt);
             }
         });
 
         grid56.setFont(new java.awt.Font("Dialog", 0, 18)); // NOI18N
         grid56.setPreferredSize(new java.awt.Dimension(30, 30));
-        grid56.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                grid56ActionPerformed(evt);
+        grid56.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                grid56KeyTyped(evt);
             }
         });
 
         grid76.setFont(new java.awt.Font("Dialog", 0, 18)); // NOI18N
         grid76.setPreferredSize(new java.awt.Dimension(30, 30));
-        grid76.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                grid76ActionPerformed(evt);
+        grid76.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                grid76KeyTyped(evt);
             }
         });
 
         grid86.setFont(new java.awt.Font("Dialog", 0, 18)); // NOI18N
         grid86.setPreferredSize(new java.awt.Dimension(30, 30));
-        grid86.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                grid86ActionPerformed(evt);
+        grid86.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                grid86KeyTyped(evt);
             }
         });
 
         grid66.setFont(new java.awt.Font("Dialog", 0, 18)); // NOI18N
         grid66.setPreferredSize(new java.awt.Dimension(30, 30));
-        grid66.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                grid66ActionPerformed(evt);
+        grid66.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                grid66KeyTyped(evt);
             }
         });
 
@@ -697,73 +717,73 @@ public class TabuleiroFrame extends javax.swing.JFrame {
         grid07.setAlignmentX(0.0F);
         grid07.setAlignmentY(7.0F);
         grid07.setPreferredSize(new java.awt.Dimension(30, 30));
-        grid07.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                grid07ActionPerformed(evt);
+        grid07.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                grid07KeyTyped(evt);
             }
         });
 
         grid17.setFont(new java.awt.Font("Dialog", 0, 18)); // NOI18N
         grid17.setPreferredSize(new java.awt.Dimension(30, 30));
-        grid17.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                grid17ActionPerformed(evt);
+        grid17.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                grid17KeyTyped(evt);
             }
         });
 
         grid27.setFont(new java.awt.Font("Dialog", 0, 18)); // NOI18N
         grid27.setPreferredSize(new java.awt.Dimension(30, 30));
-        grid27.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                grid27ActionPerformed(evt);
+        grid27.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                grid27KeyTyped(evt);
             }
         });
 
         grid37.setFont(new java.awt.Font("Dialog", 0, 18)); // NOI18N
         grid37.setPreferredSize(new java.awt.Dimension(30, 30));
-        grid37.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                grid37ActionPerformed(evt);
+        grid37.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                grid37KeyTyped(evt);
             }
         });
 
         grid47.setFont(new java.awt.Font("Dialog", 0, 18)); // NOI18N
         grid47.setPreferredSize(new java.awt.Dimension(30, 30));
-        grid47.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                grid47ActionPerformed(evt);
+        grid47.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                grid47KeyTyped(evt);
             }
         });
 
         grid57.setFont(new java.awt.Font("Dialog", 0, 18)); // NOI18N
         grid57.setPreferredSize(new java.awt.Dimension(30, 30));
-        grid57.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                grid57ActionPerformed(evt);
+        grid57.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                grid57KeyTyped(evt);
             }
         });
 
         grid67.setFont(new java.awt.Font("Dialog", 0, 18)); // NOI18N
         grid67.setPreferredSize(new java.awt.Dimension(30, 30));
-        grid67.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                grid67ActionPerformed(evt);
+        grid67.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                grid67KeyTyped(evt);
             }
         });
 
         grid77.setFont(new java.awt.Font("Dialog", 0, 18)); // NOI18N
         grid77.setPreferredSize(new java.awt.Dimension(30, 30));
-        grid77.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                grid77ActionPerformed(evt);
+        grid77.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                grid77KeyTyped(evt);
             }
         });
 
         grid87.setFont(new java.awt.Font("Dialog", 0, 18)); // NOI18N
         grid87.setPreferredSize(new java.awt.Dimension(30, 30));
-        grid87.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                grid87ActionPerformed(evt);
+        grid87.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                grid87KeyTyped(evt);
             }
         });
 
@@ -771,73 +791,73 @@ public class TabuleiroFrame extends javax.swing.JFrame {
         grid08.setAlignmentX(0.0F);
         grid08.setAlignmentY(8.0F);
         grid08.setPreferredSize(new java.awt.Dimension(30, 30));
-        grid08.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                grid08ActionPerformed(evt);
+        grid08.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                grid08KeyTyped(evt);
             }
         });
 
         grid18.setFont(new java.awt.Font("Dialog", 0, 18)); // NOI18N
         grid18.setPreferredSize(new java.awt.Dimension(30, 30));
-        grid18.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                grid18ActionPerformed(evt);
+        grid18.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                grid18KeyTyped(evt);
             }
         });
 
         grid28.setFont(new java.awt.Font("Dialog", 0, 18)); // NOI18N
         grid28.setPreferredSize(new java.awt.Dimension(30, 30));
-        grid28.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                grid28ActionPerformed(evt);
+        grid28.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                grid28KeyTyped(evt);
             }
         });
 
         grid38.setFont(new java.awt.Font("Dialog", 0, 18)); // NOI18N
         grid38.setPreferredSize(new java.awt.Dimension(30, 30));
-        grid38.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                grid38ActionPerformed(evt);
+        grid38.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                grid38KeyTyped(evt);
             }
         });
 
         grid48.setFont(new java.awt.Font("Dialog", 0, 18)); // NOI18N
         grid48.setPreferredSize(new java.awt.Dimension(30, 30));
-        grid48.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                grid48ActionPerformed(evt);
+        grid48.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                grid48KeyTyped(evt);
             }
         });
 
         grid58.setFont(new java.awt.Font("Dialog", 0, 18)); // NOI18N
         grid58.setPreferredSize(new java.awt.Dimension(30, 30));
-        grid58.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                grid58ActionPerformed(evt);
+        grid58.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                grid58KeyTyped(evt);
             }
         });
 
         grid68.setFont(new java.awt.Font("Dialog", 0, 18)); // NOI18N
         grid68.setPreferredSize(new java.awt.Dimension(30, 30));
-        grid68.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                grid68ActionPerformed(evt);
+        grid68.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                grid68KeyTyped(evt);
             }
         });
 
         grid78.setFont(new java.awt.Font("Dialog", 0, 18)); // NOI18N
         grid78.setPreferredSize(new java.awt.Dimension(30, 30));
-        grid78.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                grid78ActionPerformed(evt);
+        grid78.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                grid78KeyTyped(evt);
             }
         });
 
         grid88.setFont(new java.awt.Font("Dialog", 0, 18)); // NOI18N
         grid88.setPreferredSize(new java.awt.Dimension(30, 30));
-        grid88.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                grid88ActionPerformed(evt);
+        grid88.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                grid88KeyTyped(evt);
             }
         });
 
@@ -1091,8 +1111,8 @@ public class TabuleiroFrame extends javax.swing.JFrame {
                 .addComponent(jLabel1)
                 .addGap(42, 42, 42)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(grid00, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(grid10, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(grid00, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(grid10, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(grid20, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(grid30, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(grid40, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -1211,313 +1231,9 @@ public class TabuleiroFrame extends javax.swing.JFrame {
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
-    private void grid20ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_grid20ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_grid20ActionPerformed
-
-    private void grid30ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_grid30ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_grid30ActionPerformed
-
-    private void grid40ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_grid40ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_grid40ActionPerformed
-
-    private void grid50ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_grid50ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_grid50ActionPerformed
-
-    private void grid60ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_grid60ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_grid60ActionPerformed
-
-    private void grid70ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_grid70ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_grid70ActionPerformed
-
-    private void grid80ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_grid80ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_grid80ActionPerformed
-
     private void jTextField16ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField16ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jTextField16ActionPerformed
-
-    private void grid11ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_grid11ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_grid11ActionPerformed
-
-    private void grid21ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_grid21ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_grid21ActionPerformed
-
-    private void grid41ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_grid41ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_grid41ActionPerformed
-
-    private void grid51ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_grid51ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_grid51ActionPerformed
-
-    private void grid61ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_grid61ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_grid61ActionPerformed
-
-    private void grid71ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_grid71ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_grid71ActionPerformed
-
-    private void grid81ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_grid81ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_grid81ActionPerformed
-
-    private void grid12ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_grid12ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_grid12ActionPerformed
-
-    private void grid22ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_grid22ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_grid22ActionPerformed
-
-    private void grid32ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_grid32ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_grid32ActionPerformed
-
-    private void grid42ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_grid42ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_grid42ActionPerformed
-
-    private void grid52ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_grid52ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_grid52ActionPerformed
-
-    private void grid62ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_grid62ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_grid62ActionPerformed
-
-    private void grid72ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_grid72ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_grid72ActionPerformed
-
-    private void grid82ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_grid82ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_grid82ActionPerformed
-
-    private void grid03ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_grid03ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_grid03ActionPerformed
-
-    private void grid13ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_grid13ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_grid13ActionPerformed
-
-    private void grid23ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_grid23ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_grid23ActionPerformed
-
-    private void grid33ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_grid33ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_grid33ActionPerformed
-
-    private void grid43ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_grid43ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_grid43ActionPerformed
-
-    private void grid53ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_grid53ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_grid53ActionPerformed
-
-    private void grid63ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_grid63ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_grid63ActionPerformed
-
-    private void grid73ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_grid73ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_grid73ActionPerformed
-
-    private void grid83ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_grid83ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_grid83ActionPerformed
-
-    private void grid04ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_grid04ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_grid04ActionPerformed
-
-    private void grid14ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_grid14ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_grid14ActionPerformed
-
-    private void grid24ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_grid24ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_grid24ActionPerformed
-
-    private void grid34ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_grid34ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_grid34ActionPerformed
-
-    private void grid44ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_grid44ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_grid44ActionPerformed
-
-    private void grid54ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_grid54ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_grid54ActionPerformed
-
-    private void grid64ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_grid64ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_grid64ActionPerformed
-
-    private void grid74ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_grid74ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_grid74ActionPerformed
-
-    private void grid84ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_grid84ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_grid84ActionPerformed
-
-    private void grid05ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_grid05ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_grid05ActionPerformed
-
-    private void grid15ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_grid15ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_grid15ActionPerformed
-
-    private void grid25ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_grid25ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_grid25ActionPerformed
-
-    private void grid35ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_grid35ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_grid35ActionPerformed
-
-    private void grid45ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_grid45ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_grid45ActionPerformed
-
-    private void grid55ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_grid55ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_grid55ActionPerformed
-
-    private void grid65ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_grid65ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_grid65ActionPerformed
-
-    private void grid75ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_grid75ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_grid75ActionPerformed
-
-    private void grid85ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_grid85ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_grid85ActionPerformed
-
-    private void grid06ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_grid06ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_grid06ActionPerformed
-
-    private void grid16ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_grid16ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_grid16ActionPerformed
-
-    private void grid26ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_grid26ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_grid26ActionPerformed
-
-    private void grid36ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_grid36ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_grid36ActionPerformed
-
-    private void grid46ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_grid46ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_grid46ActionPerformed
-
-    private void grid56ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_grid56ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_grid56ActionPerformed
-
-    private void grid76ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_grid76ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_grid76ActionPerformed
-
-    private void grid86ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_grid86ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_grid86ActionPerformed
-
-    private void grid66ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_grid66ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_grid66ActionPerformed
-
-    private void grid07ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_grid07ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_grid07ActionPerformed
-
-    private void grid17ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_grid17ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_grid17ActionPerformed
-
-    private void grid27ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_grid27ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_grid27ActionPerformed
-
-    private void grid37ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_grid37ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_grid37ActionPerformed
-
-    private void grid47ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_grid47ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_grid47ActionPerformed
-
-    private void grid57ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_grid57ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_grid57ActionPerformed
-
-    private void grid67ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_grid67ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_grid67ActionPerformed
-
-    private void grid77ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_grid77ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_grid77ActionPerformed
-
-    private void grid87ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_grid87ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_grid87ActionPerformed
-
-    private void grid08ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_grid08ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_grid08ActionPerformed
-
-    private void grid18ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_grid18ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_grid18ActionPerformed
-
-    private void grid28ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_grid28ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_grid28ActionPerformed
-
-    private void grid38ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_grid38ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_grid38ActionPerformed
-
-    private void grid48ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_grid48ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_grid48ActionPerformed
-
-    private void grid58ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_grid58ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_grid58ActionPerformed
-
-    private void grid68ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_grid68ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_grid68ActionPerformed
-
-    private void grid78ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_grid78ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_grid78ActionPerformed
-
-    private void grid88ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_grid88ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_grid88ActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         // TODO add your handling code here:
@@ -1527,7 +1243,7 @@ public class TabuleiroFrame extends javax.swing.JFrame {
         dispose();
         new FimDeJogoFrame().setVisible(true);
     }//GEN-LAST:event_jButton2ActionPerformed
-
+    // grid00
     private void grid00KeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_grid00KeyTyped
         if (!grid00.getText().equals("")) {
             int valor = Integer.parseInt(grid00.getText());
@@ -1549,6 +1265,1218 @@ public class TabuleiroFrame extends javax.swing.JFrame {
         //progressoErros.setValue(novoJogo.getQuantidadeErros());
         progressoErros.setMaximum(novoJogo.getQuantidadeMaximaErrosDificuldade());
     }//GEN-LAST:event_progressoErrosPropertyChange
+
+    private void grid10KeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_grid10KeyTyped
+        if (!grid10.getText().equals("")) {
+            int valor = Integer.parseInt(grid10.getText());
+            try {
+                novoJogo.executaMovimento(1, 0, valor);
+                grid10.setText(String.valueOf(novoJogo.getGridTabuleiro()[1][0]));
+                grid10.setEditable(false);
+            } catch (MovimentoInvalidoException ex) {
+                JOptionPane.showMessageDialog(null, ex.getMessage());
+            } catch (MovimentoIncorretoException ex) {
+                progressoErros.setValue(novoJogo.getQuantidadeErros());
+                JOptionPane.showMessageDialog(null, ex.getMessage());
+            }
+        }
+    }//GEN-LAST:event_grid10KeyTyped
+
+    private void grid20KeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_grid20KeyTyped
+        if (!grid20.getText().equals("")) {
+            int valor = Integer.parseInt(grid20.getText());
+            try {
+                novoJogo.executaMovimento(2, 0, valor);
+                grid20.setText(String.valueOf(novoJogo.getGridTabuleiro()[2][0]));
+                grid20.setEditable(false);
+            } catch (MovimentoInvalidoException ex) {
+                JOptionPane.showMessageDialog(null, ex.getMessage());
+            } catch (MovimentoIncorretoException ex) {
+                progressoErros.setValue(novoJogo.getQuantidadeErros());
+                JOptionPane.showMessageDialog(null, ex.getMessage());
+            }
+        }
+    }//GEN-LAST:event_grid20KeyTyped
+
+    private void grid01KeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_grid01KeyTyped
+        if (!grid01.getText().equals("")) {
+            int valor = Integer.parseInt(grid01.getText());
+            try {
+                novoJogo.executaMovimento(0, 1, valor);
+                grid01.setText(String.valueOf(novoJogo.getGridTabuleiro()[0][1]));
+                grid01.setEditable(false);
+            } catch (MovimentoInvalidoException ex) {
+                JOptionPane.showMessageDialog(null, ex.getMessage());
+            } catch (MovimentoIncorretoException ex) {
+                progressoErros.setValue(novoJogo.getQuantidadeErros());
+                JOptionPane.showMessageDialog(null, ex.getMessage());
+            }
+        }
+    }//GEN-LAST:event_grid01KeyTyped
+
+    private void grid11KeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_grid11KeyTyped
+        if (!grid11.getText().equals("")) {
+            int valor = Integer.parseInt(grid11.getText());
+            try {
+                novoJogo.executaMovimento(1, 1, valor);
+                grid11.setText(String.valueOf(novoJogo.getGridTabuleiro()[1][1]));
+                grid11.setEditable(false);
+            } catch (MovimentoInvalidoException ex) {
+                JOptionPane.showMessageDialog(null, ex.getMessage());
+            } catch (MovimentoIncorretoException ex) {
+                progressoErros.setValue(novoJogo.getQuantidadeErros());
+                JOptionPane.showMessageDialog(null, ex.getMessage());
+            }
+        }
+    }//GEN-LAST:event_grid11KeyTyped
+
+    private void grid21KeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_grid21KeyTyped
+        if (!grid21.getText().equals("")) {
+            int valor = Integer.parseInt(grid21.getText());
+            try {
+                novoJogo.executaMovimento(2, 1, valor);
+                grid21.setText(String.valueOf(novoJogo.getGridTabuleiro()[2][1]));
+                grid21.setEditable(false);
+            } catch (MovimentoInvalidoException ex) {
+                JOptionPane.showMessageDialog(null, ex.getMessage());
+            } catch (MovimentoIncorretoException ex) {
+                progressoErros.setValue(novoJogo.getQuantidadeErros());
+                JOptionPane.showMessageDialog(null, ex.getMessage());
+            }
+        }
+    }//GEN-LAST:event_grid21KeyTyped
+
+    private void grid02KeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_grid02KeyTyped
+        if (!grid02.getText().equals("")) {
+            int valor = Integer.parseInt(grid02.getText());
+            try {
+                novoJogo.executaMovimento(0, 2, valor);
+                grid02.setText(String.valueOf(novoJogo.getGridTabuleiro()[0][2]));
+                grid02.setEditable(false);
+            } catch (MovimentoInvalidoException ex) {
+                JOptionPane.showMessageDialog(null, ex.getMessage());
+            } catch (MovimentoIncorretoException ex) {
+                progressoErros.setValue(novoJogo.getQuantidadeErros());
+                JOptionPane.showMessageDialog(null, ex.getMessage());
+            }
+        }
+    }//GEN-LAST:event_grid02KeyTyped
+
+    private void grid12KeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_grid12KeyTyped
+        if (!grid12.getText().equals("")) {
+            int valor = Integer.parseInt(grid12.getText());
+            try {
+                novoJogo.executaMovimento(1, 2, valor);
+                grid12.setText(String.valueOf(novoJogo.getGridTabuleiro()[1][2]));
+                grid12.setEditable(false);
+            } catch (MovimentoInvalidoException ex) {
+                JOptionPane.showMessageDialog(null, ex.getMessage());
+            } catch (MovimentoIncorretoException ex) {
+                progressoErros.setValue(novoJogo.getQuantidadeErros());
+                JOptionPane.showMessageDialog(null, ex.getMessage());
+            }
+        }
+    }//GEN-LAST:event_grid12KeyTyped
+
+    private void grid22KeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_grid22KeyTyped
+        if (!grid22.getText().equals("")) {
+            int valor = Integer.parseInt(grid22.getText());
+            try {
+                novoJogo.executaMovimento(2, 2, valor);
+                grid22.setText(String.valueOf(novoJogo.getGridTabuleiro()[2][2]));
+                grid22.setEditable(false);
+            } catch (MovimentoInvalidoException ex) {
+                JOptionPane.showMessageDialog(null, ex.getMessage());
+            } catch (MovimentoIncorretoException ex) {
+                progressoErros.setValue(novoJogo.getQuantidadeErros());
+                JOptionPane.showMessageDialog(null, ex.getMessage());
+            }
+        }
+    }//GEN-LAST:event_grid22KeyTyped
+
+    private void grid30KeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_grid30KeyTyped
+        if (!grid30.getText().equals("")) {
+            int valor = Integer.parseInt(grid30.getText());
+            try {
+                novoJogo.executaMovimento(3, 0, valor);
+                grid30.setText(String.valueOf(novoJogo.getGridTabuleiro()[3][0]));
+                grid30.setEditable(false);
+            } catch (MovimentoInvalidoException ex) {
+                JOptionPane.showMessageDialog(null, ex.getMessage());
+            } catch (MovimentoIncorretoException ex) {
+                progressoErros.setValue(novoJogo.getQuantidadeErros());
+                JOptionPane.showMessageDialog(null, ex.getMessage());
+            }
+        }
+    }//GEN-LAST:event_grid30KeyTyped
+
+    private void grid40KeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_grid40KeyTyped
+        if (!grid40.getText().equals("")) {
+            int valor = Integer.parseInt(grid40.getText());
+            try {
+                novoJogo.executaMovimento(4, 0, valor);
+                grid40.setText(String.valueOf(novoJogo.getGridTabuleiro()[4][0]));
+                grid40.setEditable(false);
+            } catch (MovimentoInvalidoException ex) {
+                JOptionPane.showMessageDialog(null, ex.getMessage());
+            } catch (MovimentoIncorretoException ex) {
+                progressoErros.setValue(novoJogo.getQuantidadeErros());
+                JOptionPane.showMessageDialog(null, ex.getMessage());
+            }
+        }
+    }//GEN-LAST:event_grid40KeyTyped
+
+    private void grid50KeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_grid50KeyTyped
+        if (!grid50.getText().equals("")) {
+            int valor = Integer.parseInt(grid50.getText());
+            try {
+                novoJogo.executaMovimento(5, 0, valor);
+                grid50.setText(String.valueOf(novoJogo.getGridTabuleiro()[5][0]));
+                grid50.setEditable(false);
+            } catch (MovimentoInvalidoException ex) {
+                JOptionPane.showMessageDialog(null, ex.getMessage());
+            } catch (MovimentoIncorretoException ex) {
+                progressoErros.setValue(novoJogo.getQuantidadeErros());
+                JOptionPane.showMessageDialog(null, ex.getMessage());
+            }
+        }
+    }//GEN-LAST:event_grid50KeyTyped
+
+    private void grid31KeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_grid31KeyTyped
+        if (!grid31.getText().equals("")) {
+            int valor = Integer.parseInt(grid31.getText());
+            try {
+                novoJogo.executaMovimento(3, 1, valor);
+                grid31.setText(String.valueOf(novoJogo.getGridTabuleiro()[3][1]));
+                grid31.setEditable(false);
+            } catch (MovimentoInvalidoException ex) {
+                JOptionPane.showMessageDialog(null, ex.getMessage());
+            } catch (MovimentoIncorretoException ex) {
+                progressoErros.setValue(novoJogo.getQuantidadeErros());
+                JOptionPane.showMessageDialog(null, ex.getMessage());
+            }
+        }    }//GEN-LAST:event_grid31KeyTyped
+
+    private void grid41KeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_grid41KeyTyped
+        if (!grid41.getText().equals("")) {
+            int valor = Integer.parseInt(grid41.getText());
+            try {
+                novoJogo.executaMovimento(4, 1, valor);
+                grid41.setText(String.valueOf(novoJogo.getGridTabuleiro()[4][1]));
+                grid41.setEditable(false);
+            } catch (MovimentoInvalidoException ex) {
+                JOptionPane.showMessageDialog(null, ex.getMessage());
+            } catch (MovimentoIncorretoException ex) {
+                progressoErros.setValue(novoJogo.getQuantidadeErros());
+                JOptionPane.showMessageDialog(null, ex.getMessage());
+            }
+        }    }//GEN-LAST:event_grid41KeyTyped
+
+    private void grid51KeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_grid51KeyTyped
+        if (!grid51.getText().equals("")) {
+            int valor = Integer.parseInt(grid51.getText());
+            try {
+                novoJogo.executaMovimento(5, 1, valor);
+                grid51.setText(String.valueOf(novoJogo.getGridTabuleiro()[5][1]));
+                grid51.setEditable(false);
+            } catch (MovimentoInvalidoException ex) {
+                JOptionPane.showMessageDialog(null, ex.getMessage());
+            } catch (MovimentoIncorretoException ex) {
+                progressoErros.setValue(novoJogo.getQuantidadeErros());
+                JOptionPane.showMessageDialog(null, ex.getMessage());
+            }
+        }    }//GEN-LAST:event_grid51KeyTyped
+
+    private void grid32KeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_grid32KeyTyped
+        if (!grid32.getText().equals("")) {
+            int valor = Integer.parseInt(grid32.getText());
+            try {
+                novoJogo.executaMovimento(3, 2, valor);
+                grid32.setText(String.valueOf(novoJogo.getGridTabuleiro()[3][2]));
+                grid32.setEditable(false);
+            } catch (MovimentoInvalidoException ex) {
+                JOptionPane.showMessageDialog(null, ex.getMessage());
+            } catch (MovimentoIncorretoException ex) {
+                progressoErros.setValue(novoJogo.getQuantidadeErros());
+                JOptionPane.showMessageDialog(null, ex.getMessage());
+            }
+        }    }//GEN-LAST:event_grid32KeyTyped
+
+    private void grid42KeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_grid42KeyTyped
+        if (!grid42.getText().equals("")) {
+            int valor = Integer.parseInt(grid42.getText());
+            try {
+                novoJogo.executaMovimento(4, 2, valor);
+                grid42.setText(String.valueOf(novoJogo.getGridTabuleiro()[4][2]));
+                grid42.setEditable(false);
+            } catch (MovimentoInvalidoException ex) {
+                JOptionPane.showMessageDialog(null, ex.getMessage());
+            } catch (MovimentoIncorretoException ex) {
+                progressoErros.setValue(novoJogo.getQuantidadeErros());
+                JOptionPane.showMessageDialog(null, ex.getMessage());
+            }
+        }    }//GEN-LAST:event_grid42KeyTyped
+
+    private void grid52KeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_grid52KeyTyped
+        if (!grid52.getText().equals("")) {
+            int valor = Integer.parseInt(grid52.getText());
+            try {
+                novoJogo.executaMovimento(5, 2, valor);
+                grid52.setText(String.valueOf(novoJogo.getGridTabuleiro()[5][2]));
+                grid52.setEditable(false);
+            } catch (MovimentoInvalidoException ex) {
+                JOptionPane.showMessageDialog(null, ex.getMessage());
+            } catch (MovimentoIncorretoException ex) {
+                progressoErros.setValue(novoJogo.getQuantidadeErros());
+                JOptionPane.showMessageDialog(null, ex.getMessage());
+            }
+        }    }//GEN-LAST:event_grid52KeyTyped
+
+    private void grid03KeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_grid03KeyTyped
+        if (!grid03.getText().equals("")) {
+            int valor = Integer.parseInt(grid03.getText());
+            try {
+                novoJogo.executaMovimento(0, 3, valor);
+                grid03.setText(String.valueOf(novoJogo.getGridTabuleiro()[0][3]));
+                grid03.setEditable(false);
+            } catch (MovimentoInvalidoException ex) {
+                JOptionPane.showMessageDialog(null, ex.getMessage());
+            } catch (MovimentoIncorretoException ex) {
+                progressoErros.setValue(novoJogo.getQuantidadeErros());
+                JOptionPane.showMessageDialog(null, ex.getMessage());
+            }
+        }    }//GEN-LAST:event_grid03KeyTyped
+
+    private void grid13KeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_grid13KeyTyped
+        if (!grid13.getText().equals("")) {
+            int valor = Integer.parseInt(grid13.getText());
+            try {
+                novoJogo.executaMovimento(1, 3, valor);
+                grid13.setText(String.valueOf(novoJogo.getGridTabuleiro()[1][3]));
+                grid13.setEditable(false);
+            } catch (MovimentoInvalidoException ex) {
+                JOptionPane.showMessageDialog(null, ex.getMessage());
+            } catch (MovimentoIncorretoException ex) {
+                progressoErros.setValue(novoJogo.getQuantidadeErros());
+                JOptionPane.showMessageDialog(null, ex.getMessage());
+            }
+        }    }//GEN-LAST:event_grid13KeyTyped
+
+    private void grid23KeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_grid23KeyTyped
+        if (!grid23.getText().equals("")) {
+            int valor = Integer.parseInt(grid23.getText());
+            try {
+                novoJogo.executaMovimento(2, 3, valor);
+                grid23.setText(String.valueOf(novoJogo.getGridTabuleiro()[2][3]));
+                grid23.setEditable(false);
+            } catch (MovimentoInvalidoException ex) {
+                JOptionPane.showMessageDialog(null, ex.getMessage());
+            } catch (MovimentoIncorretoException ex) {
+                progressoErros.setValue(novoJogo.getQuantidadeErros());
+                JOptionPane.showMessageDialog(null, ex.getMessage());
+            }
+        }    }//GEN-LAST:event_grid23KeyTyped
+
+    private void grid33KeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_grid33KeyTyped
+        if (!grid33.getText().equals("")) {
+            int valor = Integer.parseInt(grid33.getText());
+            try {
+                novoJogo.executaMovimento(3, 3, valor);
+                grid33.setText(String.valueOf(novoJogo.getGridTabuleiro()[3][3]));
+                grid33.setEditable(false);
+            } catch (MovimentoInvalidoException ex) {
+                JOptionPane.showMessageDialog(null, ex.getMessage());
+            } catch (MovimentoIncorretoException ex) {
+                progressoErros.setValue(novoJogo.getQuantidadeErros());
+                JOptionPane.showMessageDialog(null, ex.getMessage());
+            }
+        }    }//GEN-LAST:event_grid33KeyTyped
+
+    private void grid04KeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_grid04KeyTyped
+        if (!grid04.getText().equals("")) {
+            int valor = Integer.parseInt(grid04.getText());
+            try {
+                novoJogo.executaMovimento(0, 4, valor);
+                grid04.setText(String.valueOf(novoJogo.getGridTabuleiro()[0][4]));
+                grid04.setEditable(false);
+            } catch (MovimentoInvalidoException ex) {
+                JOptionPane.showMessageDialog(null, ex.getMessage());
+            } catch (MovimentoIncorretoException ex) {
+                progressoErros.setValue(novoJogo.getQuantidadeErros());
+                JOptionPane.showMessageDialog(null, ex.getMessage());
+            }
+        }    }//GEN-LAST:event_grid04KeyTyped
+
+    private void grid14KeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_grid14KeyTyped
+        if (!grid14.getText().equals("")) {
+            int valor = Integer.parseInt(grid14.getText());
+            try {
+                novoJogo.executaMovimento(1, 4, valor);
+                grid14.setText(String.valueOf(novoJogo.getGridTabuleiro()[1][4]));
+                grid14.setEditable(false);
+            } catch (MovimentoInvalidoException ex) {
+                JOptionPane.showMessageDialog(null, ex.getMessage());
+            } catch (MovimentoIncorretoException ex) {
+                progressoErros.setValue(novoJogo.getQuantidadeErros());
+                JOptionPane.showMessageDialog(null, ex.getMessage());
+            }
+        }    }//GEN-LAST:event_grid14KeyTyped
+
+    private void grid24KeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_grid24KeyTyped
+        if (!grid24.getText().equals("")) {
+            int valor = Integer.parseInt(grid24.getText());
+            try {
+                novoJogo.executaMovimento(2, 4, valor);
+                grid24.setText(String.valueOf(novoJogo.getGridTabuleiro()[2][4]));
+                grid24.setEditable(false);
+            } catch (MovimentoInvalidoException ex) {
+                JOptionPane.showMessageDialog(null, ex.getMessage());
+            } catch (MovimentoIncorretoException ex) {
+                progressoErros.setValue(novoJogo.getQuantidadeErros());
+                JOptionPane.showMessageDialog(null, ex.getMessage());
+            }
+        }    }//GEN-LAST:event_grid24KeyTyped
+
+    private void grid05KeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_grid05KeyTyped
+        if (!grid05.getText().equals("")) {
+            int valor = Integer.parseInt(grid05.getText());
+            try {
+                novoJogo.executaMovimento(0, 5, valor);
+                grid05.setText(String.valueOf(novoJogo.getGridTabuleiro()[0][5]));
+                grid05.setEditable(false);
+            } catch (MovimentoInvalidoException ex) {
+                JOptionPane.showMessageDialog(null, ex.getMessage());
+            } catch (MovimentoIncorretoException ex) {
+                progressoErros.setValue(novoJogo.getQuantidadeErros());
+                JOptionPane.showMessageDialog(null, ex.getMessage());
+            }
+        }    }//GEN-LAST:event_grid05KeyTyped
+
+    private void grid15KeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_grid15KeyTyped
+        if (!grid15.getText().equals("")) {
+            int valor = Integer.parseInt(grid15.getText());
+            try {
+                novoJogo.executaMovimento(1, 5, valor);
+                grid15.setText(String.valueOf(novoJogo.getGridTabuleiro()[1][5]));
+                grid15.setEditable(false);
+            } catch (MovimentoInvalidoException ex) {
+                JOptionPane.showMessageDialog(null, ex.getMessage());
+            } catch (MovimentoIncorretoException ex) {
+                progressoErros.setValue(novoJogo.getQuantidadeErros());
+                JOptionPane.showMessageDialog(null, ex.getMessage());
+            }
+        }    }//GEN-LAST:event_grid15KeyTyped
+
+    private void grid25KeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_grid25KeyTyped
+        if (!grid25.getText().equals("")) {
+            int valor = Integer.parseInt(grid25.getText());
+            try {
+                novoJogo.executaMovimento(2, 5, valor);
+                grid25.setText(String.valueOf(novoJogo.getGridTabuleiro()[2][5]));
+                grid25.setEditable(false);
+            } catch (MovimentoInvalidoException ex) {
+                JOptionPane.showMessageDialog(null, ex.getMessage());
+            } catch (MovimentoIncorretoException ex) {
+                progressoErros.setValue(novoJogo.getQuantidadeErros());
+                JOptionPane.showMessageDialog(null, ex.getMessage());
+            }
+        }    }//GEN-LAST:event_grid25KeyTyped
+
+    private void grid43KeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_grid43KeyTyped
+        if (!grid43.getText().equals("")) {
+            int valor = Integer.parseInt(grid43.getText());
+            try {
+                novoJogo.executaMovimento(4, 3, valor);
+                grid43.setText(String.valueOf(novoJogo.getGridTabuleiro()[4][3]));
+                grid43.setEditable(false);
+            } catch (MovimentoInvalidoException ex) {
+                JOptionPane.showMessageDialog(null, ex.getMessage());
+            } catch (MovimentoIncorretoException ex) {
+                progressoErros.setValue(novoJogo.getQuantidadeErros());
+                JOptionPane.showMessageDialog(null, ex.getMessage());
+            }
+        }    }//GEN-LAST:event_grid43KeyTyped
+
+    private void grid53KeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_grid53KeyTyped
+        if (!grid53.getText().equals("")) {
+            int valor = Integer.parseInt(grid53.getText());
+            try {
+                novoJogo.executaMovimento(5, 3, valor);
+                grid53.setText(String.valueOf(novoJogo.getGridTabuleiro()[5][3]));
+                grid53.setEditable(false);
+            } catch (MovimentoInvalidoException ex) {
+                JOptionPane.showMessageDialog(null, ex.getMessage());
+            } catch (MovimentoIncorretoException ex) {
+                progressoErros.setValue(novoJogo.getQuantidadeErros());
+                JOptionPane.showMessageDialog(null, ex.getMessage());
+            }
+        }    }//GEN-LAST:event_grid53KeyTyped
+
+    private void grid34KeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_grid34KeyTyped
+        if (!grid34.getText().equals("")) {
+            int valor = Integer.parseInt(grid34.getText());
+            try {
+                novoJogo.executaMovimento(3, 4, valor);
+                grid34.setText(String.valueOf(novoJogo.getGridTabuleiro()[3][4]));
+                grid34.setEditable(false);
+            } catch (MovimentoInvalidoException ex) {
+                JOptionPane.showMessageDialog(null, ex.getMessage());
+            } catch (MovimentoIncorretoException ex) {
+                progressoErros.setValue(novoJogo.getQuantidadeErros());
+                JOptionPane.showMessageDialog(null, ex.getMessage());
+            }
+        }    }//GEN-LAST:event_grid34KeyTyped
+
+    private void grid44KeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_grid44KeyTyped
+        if (!grid44.getText().equals("")) {
+            int valor = Integer.parseInt(grid44.getText());
+            try {
+                novoJogo.executaMovimento(4, 4, valor);
+                grid44.setText(String.valueOf(novoJogo.getGridTabuleiro()[4][4]));
+                grid44.setEditable(false);
+            } catch (MovimentoInvalidoException ex) {
+                JOptionPane.showMessageDialog(null, ex.getMessage());
+            } catch (MovimentoIncorretoException ex) {
+                progressoErros.setValue(novoJogo.getQuantidadeErros());
+                JOptionPane.showMessageDialog(null, ex.getMessage());
+            }
+        }    }//GEN-LAST:event_grid44KeyTyped
+
+    private void grid54KeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_grid54KeyTyped
+        if (!grid54.getText().equals("")) {
+            int valor = Integer.parseInt(grid54.getText());
+            try {
+                novoJogo.executaMovimento(5, 4, valor);
+                grid54.setText(String.valueOf(novoJogo.getGridTabuleiro()[5][4]));
+                grid54.setEditable(false);
+            } catch (MovimentoInvalidoException ex) {
+                JOptionPane.showMessageDialog(null, ex.getMessage());
+            } catch (MovimentoIncorretoException ex) {
+                progressoErros.setValue(novoJogo.getQuantidadeErros());
+                JOptionPane.showMessageDialog(null, ex.getMessage());
+            }
+        }    }//GEN-LAST:event_grid54KeyTyped
+
+    private void grid35KeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_grid35KeyTyped
+        if (!grid35.getText().equals("")) {
+            int valor = Integer.parseInt(grid35.getText());
+            try {
+                novoJogo.executaMovimento(3, 5, valor);
+                grid35.setText(String.valueOf(novoJogo.getGridTabuleiro()[3][5]));
+                grid35.setEditable(false);
+                
+            } catch (MovimentoInvalidoException ex) {
+                JOptionPane.showMessageDialog(null, ex.getMessage());
+            } catch (MovimentoIncorretoException ex) {
+                progressoErros.setValue(novoJogo.getQuantidadeErros());
+                JOptionPane.showMessageDialog(null, ex.getMessage());
+            }
+        }    }//GEN-LAST:event_grid35KeyTyped
+
+    private void grid45KeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_grid45KeyTyped
+        if (!grid45.getText().equals("")) {
+            int valor = Integer.parseInt(grid45.getText());
+            try {
+                novoJogo.executaMovimento(4, 5, valor);
+                grid45.setText(String.valueOf(novoJogo.getGridTabuleiro()[4][5]));
+                grid45.setEditable(false);
+            } catch (MovimentoInvalidoException ex) {
+                JOptionPane.showMessageDialog(null, ex.getMessage());
+            } catch (MovimentoIncorretoException ex) {
+                progressoErros.setValue(novoJogo.getQuantidadeErros());
+                JOptionPane.showMessageDialog(null, ex.getMessage());
+            }
+        }    }//GEN-LAST:event_grid45KeyTyped
+
+    private void grid55KeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_grid55KeyTyped
+        if (!grid55.getText().equals("")) {
+            int valor = Integer.parseInt(grid55.getText());
+            try {
+                novoJogo.executaMovimento(5, 5, valor);
+                grid55.setText(String.valueOf(novoJogo.getGridTabuleiro()[5][5]));
+                grid55.setEditable(false);
+            } catch (MovimentoInvalidoException ex) {
+                JOptionPane.showMessageDialog(null, ex.getMessage());
+            } catch (MovimentoIncorretoException ex) {
+                progressoErros.setValue(novoJogo.getQuantidadeErros());
+                JOptionPane.showMessageDialog(null, ex.getMessage());
+            }
+        }    }//GEN-LAST:event_grid55KeyTyped
+
+    private void grid60KeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_grid60KeyTyped
+        if (!grid60.getText().equals("")) {
+            int valor = Integer.parseInt(grid60.getText());
+            try {
+                novoJogo.executaMovimento(6, 0, valor);
+                grid60.setText(String.valueOf(novoJogo.getGridTabuleiro()[6][0]));
+                grid60.setEditable(false);
+            } catch (MovimentoInvalidoException ex) {
+                JOptionPane.showMessageDialog(null, ex.getMessage());
+            } catch (MovimentoIncorretoException ex) {
+                progressoErros.setValue(novoJogo.getQuantidadeErros());
+                JOptionPane.showMessageDialog(null, ex.getMessage());
+            }
+        }    }//GEN-LAST:event_grid60KeyTyped
+
+    private void grid70KeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_grid70KeyTyped
+        if (!grid70.getText().equals("")) {
+            int valor = Integer.parseInt(grid70.getText());
+            try {
+                novoJogo.executaMovimento(7, 0, valor);
+                grid70.setText(String.valueOf(novoJogo.getGridTabuleiro()[7][0]));
+                grid70.setEditable(false);
+            } catch (MovimentoInvalidoException ex) {
+                JOptionPane.showMessageDialog(null, ex.getMessage());
+            } catch (MovimentoIncorretoException ex) {
+                progressoErros.setValue(novoJogo.getQuantidadeErros());
+                JOptionPane.showMessageDialog(null, ex.getMessage());
+            }
+        }    }//GEN-LAST:event_grid70KeyTyped
+
+    private void grid80KeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_grid80KeyTyped
+        if (!grid80.getText().equals("")) {
+            int valor = Integer.parseInt(grid80.getText());
+            try {
+                novoJogo.executaMovimento(8, 0, valor);
+                grid80.setText(String.valueOf(novoJogo.getGridTabuleiro()[8][0]));
+                grid80.setEditable(false);
+            } catch (MovimentoInvalidoException ex) {
+                JOptionPane.showMessageDialog(null, ex.getMessage());
+            } catch (MovimentoIncorretoException ex) {
+                progressoErros.setValue(novoJogo.getQuantidadeErros());
+                JOptionPane.showMessageDialog(null, ex.getMessage());
+            }
+        }    }//GEN-LAST:event_grid80KeyTyped
+
+    private void grid61KeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_grid61KeyTyped
+        if (!grid61.getText().equals("")) {
+            int valor = Integer.parseInt(grid61.getText());
+            try {
+                novoJogo.executaMovimento(6, 1, valor);
+                grid61.setText(String.valueOf(novoJogo.getGridTabuleiro()[6][1]));
+                grid61.setEditable(false);
+            } catch (MovimentoInvalidoException ex) {
+                JOptionPane.showMessageDialog(null, ex.getMessage());
+            } catch (MovimentoIncorretoException ex) {
+                progressoErros.setValue(novoJogo.getQuantidadeErros());
+                JOptionPane.showMessageDialog(null, ex.getMessage());
+            }
+        }    }//GEN-LAST:event_grid61KeyTyped
+
+    private void grid71KeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_grid71KeyTyped
+        if (!grid71.getText().equals("")) {
+            int valor = Integer.parseInt(grid71.getText());
+            try {
+                novoJogo.executaMovimento(7, 1, valor);
+                grid71.setText(String.valueOf(novoJogo.getGridTabuleiro()[7][1]));
+                grid71.setEditable(false);
+            } catch (MovimentoInvalidoException ex) {
+                JOptionPane.showMessageDialog(null, ex.getMessage());
+            } catch (MovimentoIncorretoException ex) {
+                progressoErros.setValue(novoJogo.getQuantidadeErros());
+                JOptionPane.showMessageDialog(null, ex.getMessage());
+            }
+        }    }//GEN-LAST:event_grid71KeyTyped
+
+    private void grid81KeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_grid81KeyTyped
+        if (!grid81.getText().equals("")) {
+            int valor = Integer.parseInt(grid81.getText());
+            try {
+                novoJogo.executaMovimento(8, 1, valor);
+                grid81.setText(String.valueOf(novoJogo.getGridTabuleiro()[8][1]));
+                grid81.setEditable(false);
+            } catch (MovimentoInvalidoException ex) {
+                JOptionPane.showMessageDialog(null, ex.getMessage());
+            } catch (MovimentoIncorretoException ex) {
+                progressoErros.setValue(novoJogo.getQuantidadeErros());
+                JOptionPane.showMessageDialog(null, ex.getMessage());
+            }
+        }    }//GEN-LAST:event_grid81KeyTyped
+
+    private void grid62KeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_grid62KeyTyped
+        if (!grid62.getText().equals("")) {
+            int valor = Integer.parseInt(grid62.getText());
+            try {
+                novoJogo.executaMovimento(6, 2, valor);
+                grid62.setText(String.valueOf(novoJogo.getGridTabuleiro()[6][2]));
+                grid62.setEditable(false);
+            } catch (MovimentoInvalidoException ex) {
+                JOptionPane.showMessageDialog(null, ex.getMessage());
+            } catch (MovimentoIncorretoException ex) {
+                progressoErros.setValue(novoJogo.getQuantidadeErros());
+                JOptionPane.showMessageDialog(null, ex.getMessage());
+            }
+        }    }//GEN-LAST:event_grid62KeyTyped
+
+    private void grid72KeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_grid72KeyTyped
+        if (!grid72.getText().equals("")) {
+            int valor = Integer.parseInt(grid72.getText());
+            try {
+                novoJogo.executaMovimento(7, 2, valor);
+                grid72.setText(String.valueOf(novoJogo.getGridTabuleiro()[7][2]));
+                grid72.setEditable(false);
+            } catch (MovimentoInvalidoException ex) {
+                JOptionPane.showMessageDialog(null, ex.getMessage());
+            } catch (MovimentoIncorretoException ex) {
+                progressoErros.setValue(novoJogo.getQuantidadeErros());
+                JOptionPane.showMessageDialog(null, ex.getMessage());
+            }
+        }    }//GEN-LAST:event_grid72KeyTyped
+
+    private void grid82KeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_grid82KeyTyped
+        if (!grid82.getText().equals("")) {
+            int valor = Integer.parseInt(grid82.getText());
+            try {
+                novoJogo.executaMovimento(8, 2, valor);
+                grid82.setText(String.valueOf(novoJogo.getGridTabuleiro()[8][2]));
+                grid82.setEditable(false);
+            } catch (MovimentoInvalidoException ex) {
+                JOptionPane.showMessageDialog(null, ex.getMessage());
+            } catch (MovimentoIncorretoException ex) {
+                progressoErros.setValue(novoJogo.getQuantidadeErros());
+                JOptionPane.showMessageDialog(null, ex.getMessage());
+            }
+        }    }//GEN-LAST:event_grid82KeyTyped
+
+    private void grid63KeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_grid63KeyTyped
+        if (!grid63.getText().equals("")) {
+            int valor = Integer.parseInt(grid63.getText());
+            try {
+                novoJogo.executaMovimento(6, 3, valor);
+                grid63.setText(String.valueOf(novoJogo.getGridTabuleiro()[6][3]));
+                grid63.setEditable(false);
+            } catch (MovimentoInvalidoException ex) {
+                JOptionPane.showMessageDialog(null, ex.getMessage());
+            } catch (MovimentoIncorretoException ex) {
+                progressoErros.setValue(novoJogo.getQuantidadeErros());
+                JOptionPane.showMessageDialog(null, ex.getMessage());
+            }
+        }    }//GEN-LAST:event_grid63KeyTyped
+
+    private void grid73KeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_grid73KeyTyped
+        if (!grid73.getText().equals("")) {
+            int valor = Integer.parseInt(grid73.getText());
+            try {
+                novoJogo.executaMovimento(7, 3, valor);
+                grid73.setText(String.valueOf(novoJogo.getGridTabuleiro()[7][3]));
+                grid73.setEditable(false);
+            } catch (MovimentoInvalidoException ex) {
+                JOptionPane.showMessageDialog(null, ex.getMessage());
+            } catch (MovimentoIncorretoException ex) {
+                progressoErros.setValue(novoJogo.getQuantidadeErros());
+                JOptionPane.showMessageDialog(null, ex.getMessage());
+            }
+        }    }//GEN-LAST:event_grid73KeyTyped
+
+    private void grid83KeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_grid83KeyTyped
+        if (!grid83.getText().equals("")) {
+            int valor = Integer.parseInt(grid83.getText());
+            try {
+                novoJogo.executaMovimento(8, 3, valor);
+                grid83.setText(String.valueOf(novoJogo.getGridTabuleiro()[8][3]));
+                grid83.setEditable(false);
+            } catch (MovimentoInvalidoException ex) {
+                JOptionPane.showMessageDialog(null, ex.getMessage());
+            } catch (MovimentoIncorretoException ex) {
+                progressoErros.setValue(novoJogo.getQuantidadeErros());
+                JOptionPane.showMessageDialog(null, ex.getMessage());
+            }
+        }    }//GEN-LAST:event_grid83KeyTyped
+
+    private void grid64KeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_grid64KeyTyped
+        if (!grid64.getText().equals("")) {
+            int valor = Integer.parseInt(grid64.getText());
+            try {
+                novoJogo.executaMovimento(6, 4, valor);
+                grid64.setText(String.valueOf(novoJogo.getGridTabuleiro()[6][4]));
+                grid64.setEditable(false);
+            } catch (MovimentoInvalidoException ex) {
+                JOptionPane.showMessageDialog(null, ex.getMessage());
+            } catch (MovimentoIncorretoException ex) {
+                progressoErros.setValue(novoJogo.getQuantidadeErros());
+                JOptionPane.showMessageDialog(null, ex.getMessage());
+            }
+        }    }//GEN-LAST:event_grid64KeyTyped
+
+    private void grid74KeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_grid74KeyTyped
+        if (!grid74.getText().equals("")) {
+            int valor = Integer.parseInt(grid74.getText());
+            try {
+                novoJogo.executaMovimento(7, 4, valor);
+                grid74.setText(String.valueOf(novoJogo.getGridTabuleiro()[7][4]));
+                grid74.setEditable(false);
+            } catch (MovimentoInvalidoException ex) {
+                JOptionPane.showMessageDialog(null, ex.getMessage());
+            } catch (MovimentoIncorretoException ex) {
+                progressoErros.setValue(novoJogo.getQuantidadeErros());
+                JOptionPane.showMessageDialog(null, ex.getMessage());
+            }
+        }    }//GEN-LAST:event_grid74KeyTyped
+
+    private void grid84KeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_grid84KeyTyped
+        if (!grid84.getText().equals("")) {
+            int valor = Integer.parseInt(grid84.getText());
+            try {
+                novoJogo.executaMovimento(8, 4, valor);
+                grid84.setText(String.valueOf(novoJogo.getGridTabuleiro()[8][4]));
+                grid84.setEditable(false);
+            } catch (MovimentoInvalidoException ex) {
+                JOptionPane.showMessageDialog(null, ex.getMessage());
+            } catch (MovimentoIncorretoException ex) {
+                progressoErros.setValue(novoJogo.getQuantidadeErros());
+                JOptionPane.showMessageDialog(null, ex.getMessage());
+            }
+        }    }//GEN-LAST:event_grid84KeyTyped
+
+    private void grid65KeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_grid65KeyTyped
+        if (!grid65.getText().equals("")) {
+            int valor = Integer.parseInt(grid65.getText());
+            try {
+                novoJogo.executaMovimento(6, 5, valor);
+                grid65.setText(String.valueOf(novoJogo.getGridTabuleiro()[6][5]));
+                grid65.setEditable(false);
+            } catch (MovimentoInvalidoException ex) {
+                JOptionPane.showMessageDialog(null, ex.getMessage());
+            } catch (MovimentoIncorretoException ex) {
+                progressoErros.setValue(novoJogo.getQuantidadeErros());
+                JOptionPane.showMessageDialog(null, ex.getMessage());
+            }
+        }    }//GEN-LAST:event_grid65KeyTyped
+
+    private void grid75KeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_grid75KeyTyped
+        if (!grid75.getText().equals("")) {
+            int valor = Integer.parseInt(grid75.getText());
+            try {
+                novoJogo.executaMovimento(7, 5, valor);
+                grid75.setText(String.valueOf(novoJogo.getGridTabuleiro()[7][5]));
+                grid75.setEditable(false);
+            } catch (MovimentoInvalidoException ex) {
+                JOptionPane.showMessageDialog(null, ex.getMessage());
+            } catch (MovimentoIncorretoException ex) {
+                progressoErros.setValue(novoJogo.getQuantidadeErros());
+                JOptionPane.showMessageDialog(null, ex.getMessage());
+            }
+        }    }//GEN-LAST:event_grid75KeyTyped
+
+    private void grid85KeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_grid85KeyTyped
+        if (!grid85.getText().equals("")) {
+            int valor = Integer.parseInt(grid85.getText());
+            try {
+                novoJogo.executaMovimento(8, 5, valor);
+                grid85.setText(String.valueOf(novoJogo.getGridTabuleiro()[8][5]));
+                grid85.setEditable(false);
+            } catch (MovimentoInvalidoException ex) {
+                JOptionPane.showMessageDialog(null, ex.getMessage());
+            } catch (MovimentoIncorretoException ex) {
+                progressoErros.setValue(novoJogo.getQuantidadeErros());
+                JOptionPane.showMessageDialog(null, ex.getMessage());
+            }
+        }    }//GEN-LAST:event_grid85KeyTyped
+
+    private void grid06KeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_grid06KeyTyped
+        if (!grid06.getText().equals("")) {
+            int valor = Integer.parseInt(grid06.getText());
+            try {
+                novoJogo.executaMovimento(0, 6, valor);
+                grid06.setText(String.valueOf(novoJogo.getGridTabuleiro()[0][6]));
+                grid06.setEditable(false);
+            } catch (MovimentoInvalidoException ex) {
+                JOptionPane.showMessageDialog(null, ex.getMessage());
+            } catch (MovimentoIncorretoException ex) {
+                progressoErros.setValue(novoJogo.getQuantidadeErros());
+                JOptionPane.showMessageDialog(null, ex.getMessage());
+            }
+        }    }//GEN-LAST:event_grid06KeyTyped
+
+    private void grid16KeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_grid16KeyTyped
+        if (!grid16.getText().equals("")) {
+            int valor = Integer.parseInt(grid16.getText());
+            try {
+                novoJogo.executaMovimento(1, 6, valor);
+                grid16.setText(String.valueOf(novoJogo.getGridTabuleiro()[1][6]));
+                grid16.setEditable(false);
+            } catch (MovimentoInvalidoException ex) {
+                JOptionPane.showMessageDialog(null, ex.getMessage());
+            } catch (MovimentoIncorretoException ex) {
+                progressoErros.setValue(novoJogo.getQuantidadeErros());
+                JOptionPane.showMessageDialog(null, ex.getMessage());
+            }
+        }    }//GEN-LAST:event_grid16KeyTyped
+
+    private void grid26KeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_grid26KeyTyped
+        if (!grid26.getText().equals("")) {
+            int valor = Integer.parseInt(grid26.getText());
+            try {
+                novoJogo.executaMovimento(2, 6, valor);
+                grid26.setText(String.valueOf(novoJogo.getGridTabuleiro()[2][6]));
+                grid26.setEditable(false);
+            } catch (MovimentoInvalidoException ex) {
+                JOptionPane.showMessageDialog(null, ex.getMessage());
+            } catch (MovimentoIncorretoException ex) {
+                progressoErros.setValue(novoJogo.getQuantidadeErros());
+                JOptionPane.showMessageDialog(null, ex.getMessage());
+            }
+        }    }//GEN-LAST:event_grid26KeyTyped
+
+    private void grid07KeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_grid07KeyTyped
+        if (!grid07.getText().equals("")) {
+            int valor = Integer.parseInt(grid07.getText());
+            try {
+                novoJogo.executaMovimento(0, 7, valor);
+                grid07.setText(String.valueOf(novoJogo.getGridTabuleiro()[0][7]));
+                grid07.setEditable(false);
+            } catch (MovimentoInvalidoException ex) {
+                JOptionPane.showMessageDialog(null, ex.getMessage());
+            } catch (MovimentoIncorretoException ex) {
+                progressoErros.setValue(novoJogo.getQuantidadeErros());
+                JOptionPane.showMessageDialog(null, ex.getMessage());
+            }
+        }    }//GEN-LAST:event_grid07KeyTyped
+
+    private void grid17KeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_grid17KeyTyped
+        if (!grid17.getText().equals("")) {
+            int valor = Integer.parseInt(grid17.getText());
+            try {
+                novoJogo.executaMovimento(1, 7, valor);
+                grid17.setText(String.valueOf(novoJogo.getGridTabuleiro()[1][7]));
+                grid17.setEditable(false);
+            } catch (MovimentoInvalidoException ex) {
+                JOptionPane.showMessageDialog(null, ex.getMessage());
+            } catch (MovimentoIncorretoException ex) {
+                progressoErros.setValue(novoJogo.getQuantidadeErros());
+                JOptionPane.showMessageDialog(null, ex.getMessage());
+            }
+        }    }//GEN-LAST:event_grid17KeyTyped
+
+    private void grid27KeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_grid27KeyTyped
+        if (!grid27.getText().equals("")) {
+            int valor = Integer.parseInt(grid27.getText());
+            try {
+                novoJogo.executaMovimento(2, 7, valor);
+                grid27.setText(String.valueOf(novoJogo.getGridTabuleiro()[2][7]));
+                grid27.setEditable(false);
+            } catch (MovimentoInvalidoException ex) {
+                JOptionPane.showMessageDialog(null, ex.getMessage());
+            } catch (MovimentoIncorretoException ex) {
+                progressoErros.setValue(novoJogo.getQuantidadeErros());
+                JOptionPane.showMessageDialog(null, ex.getMessage());
+            }
+        }    }//GEN-LAST:event_grid27KeyTyped
+
+    private void grid08KeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_grid08KeyTyped
+        if (!grid08.getText().equals("")) {
+            int valor = Integer.parseInt(grid08.getText());
+            try {
+                novoJogo.executaMovimento(0, 8, valor);
+                grid08.setText(String.valueOf(novoJogo.getGridTabuleiro()[0][8]));
+                grid08.setEditable(false);
+            } catch (MovimentoInvalidoException ex) {
+                JOptionPane.showMessageDialog(null, ex.getMessage());
+            } catch (MovimentoIncorretoException ex) {
+                progressoErros.setValue(novoJogo.getQuantidadeErros());
+                JOptionPane.showMessageDialog(null, ex.getMessage());
+            }
+        }    }//GEN-LAST:event_grid08KeyTyped
+
+    private void grid18KeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_grid18KeyTyped
+        if (!grid18.getText().equals("")) {
+            int valor = Integer.parseInt(grid18.getText());
+            try {
+                novoJogo.executaMovimento(1, 8, valor);
+                grid18.setText(String.valueOf(novoJogo.getGridTabuleiro()[1][8]));
+                grid18.setEditable(false);
+            } catch (MovimentoInvalidoException ex) {
+                JOptionPane.showMessageDialog(null, ex.getMessage());
+            } catch (MovimentoIncorretoException ex) {
+                progressoErros.setValue(novoJogo.getQuantidadeErros());
+                JOptionPane.showMessageDialog(null, ex.getMessage());
+            }
+        }    }//GEN-LAST:event_grid18KeyTyped
+
+    private void grid28KeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_grid28KeyTyped
+        if (!grid28.getText().equals("")) {
+            int valor = Integer.parseInt(grid28.getText());
+            try {
+                novoJogo.executaMovimento(2, 8, valor);
+                grid28.setText(String.valueOf(novoJogo.getGridTabuleiro()[2][8]));
+                grid28.setEditable(false);
+            } catch (MovimentoInvalidoException ex) {
+                JOptionPane.showMessageDialog(null, ex.getMessage());
+            } catch (MovimentoIncorretoException ex) {
+                progressoErros.setValue(novoJogo.getQuantidadeErros());
+                JOptionPane.showMessageDialog(null, ex.getMessage());
+            }
+        }    }//GEN-LAST:event_grid28KeyTyped
+
+    private void grid36KeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_grid36KeyTyped
+        if (!grid36.getText().equals("")) {
+            int valor = Integer.parseInt(grid36.getText());
+            try {
+                novoJogo.executaMovimento(3, 6, valor);
+                grid36.setText(String.valueOf(novoJogo.getGridTabuleiro()[3][6]));
+                grid36.setEditable(false);
+            } catch (MovimentoInvalidoException ex) {
+                JOptionPane.showMessageDialog(null, ex.getMessage());
+            } catch (MovimentoIncorretoException ex) {
+                progressoErros.setValue(novoJogo.getQuantidadeErros());
+                JOptionPane.showMessageDialog(null, ex.getMessage());
+            }
+        }    }//GEN-LAST:event_grid36KeyTyped
+
+    private void grid46KeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_grid46KeyTyped
+        if (!grid46.getText().equals("")) {
+            int valor = Integer.parseInt(grid46.getText());
+            try {
+                novoJogo.executaMovimento(4, 6, valor);
+                grid46.setText(String.valueOf(novoJogo.getGridTabuleiro()[4][6]));
+                grid46.setEditable(false);
+            } catch (MovimentoInvalidoException ex) {
+                JOptionPane.showMessageDialog(null, ex.getMessage());
+            } catch (MovimentoIncorretoException ex) {
+                progressoErros.setValue(novoJogo.getQuantidadeErros());
+                JOptionPane.showMessageDialog(null, ex.getMessage());
+            }
+        }    }//GEN-LAST:event_grid46KeyTyped
+
+    private void grid56KeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_grid56KeyTyped
+        if (!grid56.getText().equals("")) {
+            int valor = Integer.parseInt(grid56.getText());
+            try {
+                novoJogo.executaMovimento(5, 6, valor);
+                grid56.setText(String.valueOf(novoJogo.getGridTabuleiro()[5][6]));
+                grid56.setEditable(false);
+            } catch (MovimentoInvalidoException ex) {
+                JOptionPane.showMessageDialog(null, ex.getMessage());
+            } catch (MovimentoIncorretoException ex) {
+                progressoErros.setValue(novoJogo.getQuantidadeErros());
+                JOptionPane.showMessageDialog(null, ex.getMessage());
+            }
+        }    }//GEN-LAST:event_grid56KeyTyped
+
+    private void grid37KeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_grid37KeyTyped
+        if (!grid37.getText().equals("")) {
+            int valor = Integer.parseInt(grid37.getText());
+            try {
+                novoJogo.executaMovimento(3, 7, valor);
+                grid37.setText(String.valueOf(novoJogo.getGridTabuleiro()[3][7]));
+                grid37.setEditable(false);
+            } catch (MovimentoInvalidoException ex) {
+                JOptionPane.showMessageDialog(null, ex.getMessage());
+            } catch (MovimentoIncorretoException ex) {
+                progressoErros.setValue(novoJogo.getQuantidadeErros());
+                JOptionPane.showMessageDialog(null, ex.getMessage());
+            }
+        }    }//GEN-LAST:event_grid37KeyTyped
+
+    private void grid47KeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_grid47KeyTyped
+        if (!grid47.getText().equals("")) {
+            int valor = Integer.parseInt(grid47.getText());
+            try {
+                novoJogo.executaMovimento(4, 7, valor);
+                grid47.setText(String.valueOf(novoJogo.getGridTabuleiro()[4][7]));
+                grid47.setEditable(false);
+            } catch (MovimentoInvalidoException ex) {
+                JOptionPane.showMessageDialog(null, ex.getMessage());
+            } catch (MovimentoIncorretoException ex) {
+                progressoErros.setValue(novoJogo.getQuantidadeErros());
+                JOptionPane.showMessageDialog(null, ex.getMessage());
+            }
+        }    }//GEN-LAST:event_grid47KeyTyped
+
+    private void grid57KeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_grid57KeyTyped
+        if (!grid57.getText().equals("")) {
+            int valor = Integer.parseInt(grid57.getText());
+            try {
+                novoJogo.executaMovimento(5, 7, valor);
+                grid57.setText(String.valueOf(novoJogo.getGridTabuleiro()[5][7]));
+                grid57.setEditable(false);
+            } catch (MovimentoInvalidoException ex) {
+                JOptionPane.showMessageDialog(null, ex.getMessage());
+            } catch (MovimentoIncorretoException ex) {
+                progressoErros.setValue(novoJogo.getQuantidadeErros());
+                JOptionPane.showMessageDialog(null, ex.getMessage());
+            }
+        }    }//GEN-LAST:event_grid57KeyTyped
+
+    private void grid38KeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_grid38KeyTyped
+        if (!grid38.getText().equals("")) {
+            int valor = Integer.parseInt(grid38.getText());
+            try {
+                novoJogo.executaMovimento(3, 8, valor);
+                grid38.setText(String.valueOf(novoJogo.getGridTabuleiro()[3][8]));
+                grid38.setEditable(false);
+            } catch (MovimentoInvalidoException ex) {
+                JOptionPane.showMessageDialog(null, ex.getMessage());
+            } catch (MovimentoIncorretoException ex) {
+                progressoErros.setValue(novoJogo.getQuantidadeErros());
+                JOptionPane.showMessageDialog(null, ex.getMessage());
+            }
+        }    }//GEN-LAST:event_grid38KeyTyped
+
+    private void grid48KeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_grid48KeyTyped
+        if (!grid48.getText().equals("")) {
+            int valor = Integer.parseInt(grid48.getText());
+            try {
+                novoJogo.executaMovimento(4, 8, valor);
+                grid48.setText(String.valueOf(novoJogo.getGridTabuleiro()[4][8]));
+                grid48.setEditable(false);
+            } catch (MovimentoInvalidoException ex) {
+                JOptionPane.showMessageDialog(null, ex.getMessage());
+            } catch (MovimentoIncorretoException ex) {
+                progressoErros.setValue(novoJogo.getQuantidadeErros());
+                JOptionPane.showMessageDialog(null, ex.getMessage());
+            }
+        }    }//GEN-LAST:event_grid48KeyTyped
+
+    private void grid58KeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_grid58KeyTyped
+        if (!grid58.getText().equals("")) {
+            int valor = Integer.parseInt(grid58.getText());
+            try {
+                novoJogo.executaMovimento(5, 8, valor);
+                grid58.setText(String.valueOf(novoJogo.getGridTabuleiro()[5][8]));
+                grid58.setEditable(false);
+            } catch (MovimentoInvalidoException ex) {
+                JOptionPane.showMessageDialog(null, ex.getMessage());
+            } catch (MovimentoIncorretoException ex) {
+                progressoErros.setValue(novoJogo.getQuantidadeErros());
+                JOptionPane.showMessageDialog(null, ex.getMessage());
+            }
+        }    }//GEN-LAST:event_grid58KeyTyped
+
+    private void grid66KeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_grid66KeyTyped
+        if (!grid66.getText().equals("")) {
+            int valor = Integer.parseInt(grid66.getText());
+            try {
+                novoJogo.executaMovimento(6, 6, valor);
+                grid66.setText(String.valueOf(novoJogo.getGridTabuleiro()[6][6]));
+                grid66.setEditable(false);
+            } catch (MovimentoInvalidoException ex) {
+                JOptionPane.showMessageDialog(null, ex.getMessage());
+            } catch (MovimentoIncorretoException ex) {
+                progressoErros.setValue(novoJogo.getQuantidadeErros());
+                JOptionPane.showMessageDialog(null, ex.getMessage());
+            }
+        }    }//GEN-LAST:event_grid66KeyTyped
+
+    private void grid76KeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_grid76KeyTyped
+        if (!grid76.getText().equals("")) {
+            int valor = Integer.parseInt(grid76.getText());
+            try {
+                novoJogo.executaMovimento(7, 6, valor);
+                grid76.setText(String.valueOf(novoJogo.getGridTabuleiro()[7][6]));
+                grid76.setEditable(false);
+            } catch (MovimentoInvalidoException ex) {
+                JOptionPane.showMessageDialog(null, ex.getMessage());
+            } catch (MovimentoIncorretoException ex) {
+                progressoErros.setValue(novoJogo.getQuantidadeErros());
+                JOptionPane.showMessageDialog(null, ex.getMessage());
+            }
+        }    }//GEN-LAST:event_grid76KeyTyped
+
+    private void grid86KeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_grid86KeyTyped
+        if (!grid86.getText().equals("")) {
+            int valor = Integer.parseInt(grid86.getText());
+            try {
+                novoJogo.executaMovimento(8, 6, valor);
+                grid86.setText(String.valueOf(novoJogo.getGridTabuleiro()[8][6]));
+                grid86.setEditable(false);
+            } catch (MovimentoInvalidoException ex) {
+                JOptionPane.showMessageDialog(null, ex.getMessage());
+            } catch (MovimentoIncorretoException ex) {
+                progressoErros.setValue(novoJogo.getQuantidadeErros());
+                JOptionPane.showMessageDialog(null, ex.getMessage());
+            }
+        }    }//GEN-LAST:event_grid86KeyTyped
+
+    private void grid67KeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_grid67KeyTyped
+        if (!grid67.getText().equals("")) {
+            int valor = Integer.parseInt(grid67.getText());
+            try {
+                novoJogo.executaMovimento(6, 7, valor);
+                grid67.setText(String.valueOf(novoJogo.getGridTabuleiro()[6][7]));
+                grid67.setEditable(false);
+            } catch (MovimentoInvalidoException ex) {
+                JOptionPane.showMessageDialog(null, ex.getMessage());
+            } catch (MovimentoIncorretoException ex) {
+                progressoErros.setValue(novoJogo.getQuantidadeErros());
+                JOptionPane.showMessageDialog(null, ex.getMessage());
+            }
+        }    }//GEN-LAST:event_grid67KeyTyped
+
+    private void grid77KeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_grid77KeyTyped
+        if (!grid77.getText().equals("")) {
+            int valor = Integer.parseInt(grid77.getText());
+            try {
+                novoJogo.executaMovimento(7, 7, valor);
+                grid77.setText(String.valueOf(novoJogo.getGridTabuleiro()[7][7]));
+                grid77.setEditable(false);
+            } catch (MovimentoInvalidoException ex) {
+                JOptionPane.showMessageDialog(null, ex.getMessage());
+            } catch (MovimentoIncorretoException ex) {
+                progressoErros.setValue(novoJogo.getQuantidadeErros());
+                JOptionPane.showMessageDialog(null, ex.getMessage());
+            }
+        }    }//GEN-LAST:event_grid77KeyTyped
+
+    private void grid87KeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_grid87KeyTyped
+        if (!grid87.getText().equals("")) {
+            int valor = Integer.parseInt(grid87.getText());
+            try {
+                novoJogo.executaMovimento(8, 7, valor);
+                grid87.setText(String.valueOf(novoJogo.getGridTabuleiro()[8][7]));
+                grid87.setEditable(false);
+            } catch (MovimentoInvalidoException ex) {
+                JOptionPane.showMessageDialog(null, ex.getMessage());
+            } catch (MovimentoIncorretoException ex) {
+                progressoErros.setValue(novoJogo.getQuantidadeErros());
+                JOptionPane.showMessageDialog(null, ex.getMessage());
+            }
+        }    }//GEN-LAST:event_grid87KeyTyped
+
+    private void grid68KeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_grid68KeyTyped
+        if (!grid68.getText().equals("")) {
+            int valor = Integer.parseInt(grid68.getText());
+            try {
+                novoJogo.executaMovimento(6, 8, valor);
+                grid68.setText(String.valueOf(novoJogo.getGridTabuleiro()[6][8]));
+                grid68.setEditable(false);
+            } catch (MovimentoInvalidoException ex) {
+                JOptionPane.showMessageDialog(null, ex.getMessage());
+            } catch (MovimentoIncorretoException ex) {
+                progressoErros.setValue(novoJogo.getQuantidadeErros());
+                JOptionPane.showMessageDialog(null, ex.getMessage());
+            }
+        }    }//GEN-LAST:event_grid68KeyTyped
+
+    private void grid78KeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_grid78KeyTyped
+        if (!grid78.getText().equals("")) {
+            int valor = Integer.parseInt(grid78.getText());
+            try {
+                novoJogo.executaMovimento(7, 8, valor);
+                grid78.setText(String.valueOf(novoJogo.getGridTabuleiro()[7][8]));
+                grid78.setEditable(false);
+            } catch (MovimentoInvalidoException ex) {
+                JOptionPane.showMessageDialog(null, ex.getMessage());
+            } catch (MovimentoIncorretoException ex) {
+                progressoErros.setValue(novoJogo.getQuantidadeErros());
+                JOptionPane.showMessageDialog(null, ex.getMessage());
+            }
+        }    }//GEN-LAST:event_grid78KeyTyped
+
+    private void grid88KeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_grid88KeyTyped
+        if (!grid88.getText().equals("")) {
+            int valor = Integer.parseInt(grid88.getText());
+            try {
+                novoJogo.executaMovimento(8, 8, valor);
+                grid88.setText(String.valueOf(novoJogo.getGridTabuleiro()[8][8]));
+                grid88.setEditable(false);
+            } catch (MovimentoInvalidoException ex) {
+                JOptionPane.showMessageDialog(null, ex.getMessage());
+            } catch (MovimentoIncorretoException ex) {
+                progressoErros.setValue(novoJogo.getQuantidadeErros());
+                JOptionPane.showMessageDialog(null, ex.getMessage());
+            }
+        }    }//GEN-LAST:event_grid88KeyTyped
 //sujeito a melhores implementações 
 
     public void setAllTextField() {

@@ -110,7 +110,7 @@ public class FimDeJogoFrame extends javax.swing.JFrame {
         jTextField8 = new javax.swing.JTextField();
         jLabel2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
-        jLabel4 = new javax.swing.JLabel();
+        Pontuacao = new javax.swing.JLabel();
         JogarNovamente = new javax.swing.JButton();
         Sair = new javax.swing.JButton();
         jLabel5 = new javax.swing.JLabel();
@@ -772,8 +772,13 @@ public class FimDeJogoFrame extends javax.swing.JFrame {
         jLabel3.setFont(new java.awt.Font("DejaVu Sans Light", 0, 18)); // NOI18N
         jLabel3.setText("PONTUAÇÃO:");
 
-        jLabel4.setFont(new java.awt.Font("DejaVu Sans Light", 2, 36)); // NOI18N
-        jLabel4.setText("xxxxxxx");
+        Pontuacao.setFont(new java.awt.Font("DejaVu Sans Light", 2, 36)); // NOI18N
+        Pontuacao.setText("xxxxxxx");
+        Pontuacao.addPropertyChangeListener(new java.beans.PropertyChangeListener() {
+            public void propertyChange(java.beans.PropertyChangeEvent evt) {
+                PontuacaoPropertyChange(evt);
+            }
+        });
 
         JogarNovamente.setText("JOGAR NOVAMENTE");
         JogarNovamente.addActionListener(new java.awt.event.ActionListener() {
@@ -976,7 +981,7 @@ public class FimDeJogoFrame extends javax.swing.JFrame {
                         .addGap(93, 93, 93))
                     .addGroup(layout.createSequentialGroup()
                         .addGap(65, 65, 65)
-                        .addComponent(jLabel4)))
+                        .addComponent(Pontuacao)))
                 .addGap(70, 70, 70))
             .addGroup(layout.createSequentialGroup()
                 .addGap(415, 415, 415)
@@ -1043,7 +1048,7 @@ public class FimDeJogoFrame extends javax.swing.JFrame {
                     .addGroup(layout.createSequentialGroup()
                         .addComponent(jLabel3)
                         .addGap(78, 78, 78)
-                        .addComponent(jLabel4)))
+                        .addComponent(Pontuacao)))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jTextField110, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -1443,6 +1448,10 @@ public class FimDeJogoFrame extends javax.swing.JFrame {
         dispose();
     }//GEN-LAST:event_SairActionPerformed
 
+    private void PontuacaoPropertyChange(java.beans.PropertyChangeEvent evt) {//GEN-FIRST:event_PontuacaoPropertyChange
+        
+    }//GEN-LAST:event_PontuacaoPropertyChange
+
     /**
      * @param args the command line arguments
      */
@@ -1480,10 +1489,10 @@ public class FimDeJogoFrame extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton JogarNovamente;
+    private javax.swing.JLabel Pontuacao;
     private javax.swing.JButton Sair;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
-    private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JTextField jTextField1;
     private javax.swing.JTextField jTextField10;
