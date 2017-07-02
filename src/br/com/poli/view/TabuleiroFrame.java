@@ -1296,8 +1296,8 @@ public class TabuleiroFrame extends javax.swing.JFrame {
         if (!grid10.getText().equals("")) {
             int valor = Integer.parseInt(grid10.getText());
             try {
-                novoJogo.executaMovimento(1, 0, valor);
-                grid10.setText(String.valueOf(novoJogo.getGridTabuleiro()[1][0]));
+                novoJogo.executaMovimento(0, 1, valor);
+                grid10.setText(String.valueOf(novoJogo.getGridTabuleiro()[0][1]));
                 grid10.setEditable(false);
             } catch (MovimentoInvalidoException ex) {
                 JOptionPane.showMessageDialog(null, ex.getMessage());
@@ -1312,8 +1312,8 @@ public class TabuleiroFrame extends javax.swing.JFrame {
         if (!grid20.getText().equals("")) {
             int valor = Integer.parseInt(grid20.getText());
             try {
-                novoJogo.executaMovimento(2, 0, valor);
-                grid20.setText(String.valueOf(novoJogo.getGridTabuleiro()[2][0]));
+                novoJogo.executaMovimento(0, 2, valor);
+                grid20.setText(String.valueOf(novoJogo.getGridTabuleiro()[0][2]));
                 grid20.setEditable(false);
             } catch (MovimentoInvalidoException ex) {
                 JOptionPane.showMessageDialog(null, ex.getMessage());
@@ -1328,8 +1328,8 @@ public class TabuleiroFrame extends javax.swing.JFrame {
         if (!grid01.getText().equals("")) {
             int valor = Integer.parseInt(grid01.getText());
             try {
-                novoJogo.executaMovimento(0, 1, valor);
-                grid01.setText(String.valueOf(novoJogo.getGridTabuleiro()[0][1]));
+                novoJogo.executaMovimento(1, 0, valor);
+                grid01.setText(String.valueOf(novoJogo.getGridTabuleiro()[1][0]));
                 grid01.setEditable(false);
             } catch (MovimentoInvalidoException ex) {
                 JOptionPane.showMessageDialog(null, ex.getMessage());
@@ -1360,8 +1360,8 @@ public class TabuleiroFrame extends javax.swing.JFrame {
         if (!grid21.getText().equals("")) {
             int valor = Integer.parseInt(grid21.getText());
             try {
-                novoJogo.executaMovimento(2, 1, valor);
-                grid21.setText(String.valueOf(novoJogo.getGridTabuleiro()[2][1]));
+                novoJogo.executaMovimento(1, 2, valor);
+                grid21.setText(String.valueOf(novoJogo.getGridTabuleiro()[1][2]));
                 grid21.setEditable(false);
             } catch (MovimentoInvalidoException ex) {
                 JOptionPane.showMessageDialog(null, ex.getMessage());
@@ -1376,8 +1376,8 @@ public class TabuleiroFrame extends javax.swing.JFrame {
         if (!grid02.getText().equals("")) {
             int valor = Integer.parseInt(grid02.getText());
             try {
-                novoJogo.executaMovimento(0, 2, valor);
-                grid02.setText(String.valueOf(novoJogo.getGridTabuleiro()[0][2]));
+                novoJogo.executaMovimento(2, 0, valor);
+                grid02.setText(String.valueOf(novoJogo.getGridTabuleiro()[2][0]));
                 grid02.setEditable(false);
             } catch (MovimentoInvalidoException ex) {
                 JOptionPane.showMessageDialog(null, ex.getMessage());
@@ -1392,8 +1392,8 @@ public class TabuleiroFrame extends javax.swing.JFrame {
         if (!grid12.getText().equals("")) {
             int valor = Integer.parseInt(grid12.getText());
             try {
-                novoJogo.executaMovimento(1, 2, valor);
-                grid12.setText(String.valueOf(novoJogo.getGridTabuleiro()[1][2]));
+                novoJogo.executaMovimento(2, 1, valor);
+                grid12.setText(String.valueOf(novoJogo.getGridTabuleiro()[2][1]));
                 grid12.setEditable(false);
             } catch (MovimentoInvalidoException ex) {
                 JOptionPane.showMessageDialog(null, ex.getMessage());
@@ -1424,8 +1424,8 @@ public class TabuleiroFrame extends javax.swing.JFrame {
         if (!grid30.getText().equals("")) {
             int valor = Integer.parseInt(grid30.getText());
             try {
-                novoJogo.executaMovimento(3, 0, valor);
-                grid30.setText(String.valueOf(novoJogo.getGridTabuleiro()[3][0]));
+                novoJogo.executaMovimento(0, 3, valor);
+                grid30.setText(String.valueOf(novoJogo.getGridTabuleiro()[0][3]));
                 grid30.setEditable(false);
             } catch (MovimentoInvalidoException ex) {
                 JOptionPane.showMessageDialog(null, ex.getMessage());
@@ -1440,8 +1440,8 @@ public class TabuleiroFrame extends javax.swing.JFrame {
         if (!grid40.getText().equals("")) {
             int valor = Integer.parseInt(grid40.getText());
             try {
-                novoJogo.executaMovimento(4, 0, valor);
-                grid40.setText(String.valueOf(novoJogo.getGridTabuleiro()[4][0]));
+                novoJogo.executaMovimento(0, 4, valor);
+                grid40.setText(String.valueOf(novoJogo.getGridTabuleiro()[0][4]));
                 grid40.setEditable(false);
             } catch (MovimentoInvalidoException ex) {
                 JOptionPane.showMessageDialog(null, ex.getMessage());
@@ -1456,8 +1456,8 @@ public class TabuleiroFrame extends javax.swing.JFrame {
         if (!grid50.getText().equals("")) {
             int valor = Integer.parseInt(grid50.getText());
             try {
-                novoJogo.executaMovimento(5, 0, valor);
-                grid50.setText(String.valueOf(novoJogo.getGridTabuleiro()[5][0]));
+                novoJogo.executaMovimento(0, 5, valor);
+                grid50.setText(String.valueOf(novoJogo.getGridTabuleiro()[0][5]));
                 grid50.setEditable(false);
             } catch (MovimentoInvalidoException ex) {
                 JOptionPane.showMessageDialog(null, ex.getMessage());
@@ -1472,8 +1472,8 @@ public class TabuleiroFrame extends javax.swing.JFrame {
         if (!grid31.getText().equals("")) {
             int valor = Integer.parseInt(grid31.getText());
             try {
-                novoJogo.executaMovimento(3, 1, valor);
-                grid31.setText(String.valueOf(novoJogo.getGridTabuleiro()[3][1]));
+                novoJogo.executaMovimento(1, 3, valor);
+                grid31.setText(String.valueOf(novoJogo.getGridTabuleiro()[1][3]));
                 grid31.setEditable(false);
             } catch (MovimentoInvalidoException ex) {
                 JOptionPane.showMessageDialog(null, ex.getMessage());
@@ -1487,8 +1487,8 @@ public class TabuleiroFrame extends javax.swing.JFrame {
         if (!grid41.getText().equals("")) {
             int valor = Integer.parseInt(grid41.getText());
             try {
-                novoJogo.executaMovimento(4, 1, valor);
-                grid41.setText(String.valueOf(novoJogo.getGridTabuleiro()[4][1]));
+                novoJogo.executaMovimento(1, 4, valor);
+                grid41.setText(String.valueOf(novoJogo.getGridTabuleiro()[1][4]));
                 grid41.setEditable(false);
             } catch (MovimentoInvalidoException ex) {
                 JOptionPane.showMessageDialog(null, ex.getMessage());
@@ -1502,8 +1502,8 @@ public class TabuleiroFrame extends javax.swing.JFrame {
         if (!grid51.getText().equals("")) {
             int valor = Integer.parseInt(grid51.getText());
             try {
-                novoJogo.executaMovimento(5, 1, valor);
-                grid51.setText(String.valueOf(novoJogo.getGridTabuleiro()[5][1]));
+                novoJogo.executaMovimento(1, 5, valor);
+                grid51.setText(String.valueOf(novoJogo.getGridTabuleiro()[1][5]));
                 grid51.setEditable(false);
             } catch (MovimentoInvalidoException ex) {
                 JOptionPane.showMessageDialog(null, ex.getMessage());
@@ -1517,8 +1517,8 @@ public class TabuleiroFrame extends javax.swing.JFrame {
         if (!grid32.getText().equals("")) {
             int valor = Integer.parseInt(grid32.getText());
             try {
-                novoJogo.executaMovimento(3, 2, valor);
-                grid32.setText(String.valueOf(novoJogo.getGridTabuleiro()[3][2]));
+                novoJogo.executaMovimento(2, 3, valor);
+                grid32.setText(String.valueOf(novoJogo.getGridTabuleiro()[2][3]));
                 grid32.setEditable(false);
             } catch (MovimentoInvalidoException ex) {
                 JOptionPane.showMessageDialog(null, ex.getMessage());
@@ -1532,8 +1532,8 @@ public class TabuleiroFrame extends javax.swing.JFrame {
         if (!grid42.getText().equals("")) {
             int valor = Integer.parseInt(grid42.getText());
             try {
-                novoJogo.executaMovimento(4, 2, valor);
-                grid42.setText(String.valueOf(novoJogo.getGridTabuleiro()[4][2]));
+                novoJogo.executaMovimento(2, 4, valor);
+                grid42.setText(String.valueOf(novoJogo.getGridTabuleiro()[2][4]));
                 grid42.setEditable(false);
             } catch (MovimentoInvalidoException ex) {
                 JOptionPane.showMessageDialog(null, ex.getMessage());
@@ -1547,8 +1547,8 @@ public class TabuleiroFrame extends javax.swing.JFrame {
         if (!grid52.getText().equals("")) {
             int valor = Integer.parseInt(grid52.getText());
             try {
-                novoJogo.executaMovimento(5, 2, valor);
-                grid52.setText(String.valueOf(novoJogo.getGridTabuleiro()[5][2]));
+                novoJogo.executaMovimento(2, 5, valor);
+                grid52.setText(String.valueOf(novoJogo.getGridTabuleiro()[2][5]));
                 grid52.setEditable(false);
             } catch (MovimentoInvalidoException ex) {
                 JOptionPane.showMessageDialog(null, ex.getMessage());
@@ -1562,8 +1562,8 @@ public class TabuleiroFrame extends javax.swing.JFrame {
         if (!grid03.getText().equals("")) {
             int valor = Integer.parseInt(grid03.getText());
             try {
-                novoJogo.executaMovimento(0, 3, valor);
-                grid03.setText(String.valueOf(novoJogo.getGridTabuleiro()[0][3]));
+                novoJogo.executaMovimento(3, 0, valor);
+                grid03.setText(String.valueOf(novoJogo.getGridTabuleiro()[3][0]));
                 grid03.setEditable(false);
             } catch (MovimentoInvalidoException ex) {
                 JOptionPane.showMessageDialog(null, ex.getMessage());
@@ -1577,8 +1577,8 @@ public class TabuleiroFrame extends javax.swing.JFrame {
         if (!grid13.getText().equals("")) {
             int valor = Integer.parseInt(grid13.getText());
             try {
-                novoJogo.executaMovimento(1, 3, valor);
-                grid13.setText(String.valueOf(novoJogo.getGridTabuleiro()[1][3]));
+                novoJogo.executaMovimento(3, 1, valor);
+                grid13.setText(String.valueOf(novoJogo.getGridTabuleiro()[3][1]));
                 grid13.setEditable(false);
             } catch (MovimentoInvalidoException ex) {
                 JOptionPane.showMessageDialog(null, ex.getMessage());
@@ -1592,8 +1592,8 @@ public class TabuleiroFrame extends javax.swing.JFrame {
         if (!grid23.getText().equals("")) {
             int valor = Integer.parseInt(grid23.getText());
             try {
-                novoJogo.executaMovimento(2, 3, valor);
-                grid23.setText(String.valueOf(novoJogo.getGridTabuleiro()[2][3]));
+                novoJogo.executaMovimento(3, 2, valor);
+                grid23.setText(String.valueOf(novoJogo.getGridTabuleiro()[3][2]));
                 grid23.setEditable(false);
             } catch (MovimentoInvalidoException ex) {
                 JOptionPane.showMessageDialog(null, ex.getMessage());
@@ -1622,8 +1622,8 @@ public class TabuleiroFrame extends javax.swing.JFrame {
         if (!grid04.getText().equals("")) {
             int valor = Integer.parseInt(grid04.getText());
             try {
-                novoJogo.executaMovimento(0, 4, valor);
-                grid04.setText(String.valueOf(novoJogo.getGridTabuleiro()[0][4]));
+                novoJogo.executaMovimento(4, 0, valor);
+                grid04.setText(String.valueOf(novoJogo.getGridTabuleiro()[4][0]));
                 grid04.setEditable(false);
             } catch (MovimentoInvalidoException ex) {
                 JOptionPane.showMessageDialog(null, ex.getMessage());
@@ -1637,8 +1637,8 @@ public class TabuleiroFrame extends javax.swing.JFrame {
         if (!grid14.getText().equals("")) {
             int valor = Integer.parseInt(grid14.getText());
             try {
-                novoJogo.executaMovimento(1, 4, valor);
-                grid14.setText(String.valueOf(novoJogo.getGridTabuleiro()[1][4]));
+                novoJogo.executaMovimento(4, 1, valor);
+                grid14.setText(String.valueOf(novoJogo.getGridTabuleiro()[4][1]));
                 grid14.setEditable(false);
             } catch (MovimentoInvalidoException ex) {
                 JOptionPane.showMessageDialog(null, ex.getMessage());
@@ -1652,8 +1652,8 @@ public class TabuleiroFrame extends javax.swing.JFrame {
         if (!grid24.getText().equals("")) {
             int valor = Integer.parseInt(grid24.getText());
             try {
-                novoJogo.executaMovimento(2, 4, valor);
-                grid24.setText(String.valueOf(novoJogo.getGridTabuleiro()[2][4]));
+                novoJogo.executaMovimento(4, 2, valor);
+                grid24.setText(String.valueOf(novoJogo.getGridTabuleiro()[4][2]));
                 grid24.setEditable(false);
             } catch (MovimentoInvalidoException ex) {
                 JOptionPane.showMessageDialog(null, ex.getMessage());
@@ -1667,8 +1667,8 @@ public class TabuleiroFrame extends javax.swing.JFrame {
         if (!grid05.getText().equals("")) {
             int valor = Integer.parseInt(grid05.getText());
             try {
-                novoJogo.executaMovimento(0, 5, valor);
-                grid05.setText(String.valueOf(novoJogo.getGridTabuleiro()[0][5]));
+                novoJogo.executaMovimento(5, 0, valor);
+                grid05.setText(String.valueOf(novoJogo.getGridTabuleiro()[5][0]));
                 grid05.setEditable(false);
             } catch (MovimentoInvalidoException ex) {
                 JOptionPane.showMessageDialog(null, ex.getMessage());
@@ -1682,8 +1682,8 @@ public class TabuleiroFrame extends javax.swing.JFrame {
         if (!grid15.getText().equals("")) {
             int valor = Integer.parseInt(grid15.getText());
             try {
-                novoJogo.executaMovimento(1, 5, valor);
-                grid15.setText(String.valueOf(novoJogo.getGridTabuleiro()[1][5]));
+                novoJogo.executaMovimento(5, 1, valor);
+                grid15.setText(String.valueOf(novoJogo.getGridTabuleiro()[5][1]));
                 grid15.setEditable(false);
             } catch (MovimentoInvalidoException ex) {
                 JOptionPane.showMessageDialog(null, ex.getMessage());
@@ -1697,8 +1697,8 @@ public class TabuleiroFrame extends javax.swing.JFrame {
         if (!grid25.getText().equals("")) {
             int valor = Integer.parseInt(grid25.getText());
             try {
-                novoJogo.executaMovimento(2, 5, valor);
-                grid25.setText(String.valueOf(novoJogo.getGridTabuleiro()[2][5]));
+                novoJogo.executaMovimento(5, 2, valor);
+                grid25.setText(String.valueOf(novoJogo.getGridTabuleiro()[5][2]));
                 grid25.setEditable(false);
             } catch (MovimentoInvalidoException ex) {
                 JOptionPane.showMessageDialog(null, ex.getMessage());
@@ -1712,8 +1712,8 @@ public class TabuleiroFrame extends javax.swing.JFrame {
         if (!grid43.getText().equals("")) {
             int valor = Integer.parseInt(grid43.getText());
             try {
-                novoJogo.executaMovimento(4, 3, valor);
-                grid43.setText(String.valueOf(novoJogo.getGridTabuleiro()[4][3]));
+                novoJogo.executaMovimento(3, 4, valor);
+                grid43.setText(String.valueOf(novoJogo.getGridTabuleiro()[3][4]));
                 grid43.setEditable(false);
             } catch (MovimentoInvalidoException ex) {
                 JOptionPane.showMessageDialog(null, ex.getMessage());
@@ -1727,8 +1727,8 @@ public class TabuleiroFrame extends javax.swing.JFrame {
         if (!grid53.getText().equals("")) {
             int valor = Integer.parseInt(grid53.getText());
             try {
-                novoJogo.executaMovimento(5, 3, valor);
-                grid53.setText(String.valueOf(novoJogo.getGridTabuleiro()[5][3]));
+                novoJogo.executaMovimento(3, 5, valor);
+                grid53.setText(String.valueOf(novoJogo.getGridTabuleiro()[3][5]));
                 grid53.setEditable(false);
             } catch (MovimentoInvalidoException ex) {
                 JOptionPane.showMessageDialog(null, ex.getMessage());
@@ -1742,8 +1742,8 @@ public class TabuleiroFrame extends javax.swing.JFrame {
         if (!grid34.getText().equals("")) {
             int valor = Integer.parseInt(grid34.getText());
             try {
-                novoJogo.executaMovimento(3, 4, valor);
-                grid34.setText(String.valueOf(novoJogo.getGridTabuleiro()[3][4]));
+                novoJogo.executaMovimento(4, 3, valor);
+                grid34.setText(String.valueOf(novoJogo.getGridTabuleiro()[4][3]));
                 grid34.setEditable(false);
             } catch (MovimentoInvalidoException ex) {
                 JOptionPane.showMessageDialog(null, ex.getMessage());
@@ -1772,8 +1772,8 @@ public class TabuleiroFrame extends javax.swing.JFrame {
         if (!grid54.getText().equals("")) {
             int valor = Integer.parseInt(grid54.getText());
             try {
-                novoJogo.executaMovimento(5, 4, valor);
-                grid54.setText(String.valueOf(novoJogo.getGridTabuleiro()[5][4]));
+                novoJogo.executaMovimento(4, 5, valor);
+                grid54.setText(String.valueOf(novoJogo.getGridTabuleiro()[4][5]));
                 grid54.setEditable(false);
             } catch (MovimentoInvalidoException ex) {
                 JOptionPane.showMessageDialog(null, ex.getMessage());
@@ -1787,8 +1787,8 @@ public class TabuleiroFrame extends javax.swing.JFrame {
         if (!grid35.getText().equals("")) {
             int valor = Integer.parseInt(grid35.getText());
             try {
-                novoJogo.executaMovimento(3, 5, valor);
-                grid35.setText(String.valueOf(novoJogo.getGridTabuleiro()[3][5]));
+                novoJogo.executaMovimento(5, 3, valor);
+                grid35.setText(String.valueOf(novoJogo.getGridTabuleiro()[5][3]));
                 grid35.setEditable(false);
                 
             } catch (MovimentoInvalidoException ex) {
@@ -1803,8 +1803,8 @@ public class TabuleiroFrame extends javax.swing.JFrame {
         if (!grid45.getText().equals("")) {
             int valor = Integer.parseInt(grid45.getText());
             try {
-                novoJogo.executaMovimento(4, 5, valor);
-                grid45.setText(String.valueOf(novoJogo.getGridTabuleiro()[4][5]));
+                novoJogo.executaMovimento(5, 4, valor);
+                grid45.setText(String.valueOf(novoJogo.getGridTabuleiro()[5][4]));
                 grid45.setEditable(false);
             } catch (MovimentoInvalidoException ex) {
                 JOptionPane.showMessageDialog(null, ex.getMessage());
@@ -1833,8 +1833,8 @@ public class TabuleiroFrame extends javax.swing.JFrame {
         if (!grid60.getText().equals("")) {
             int valor = Integer.parseInt(grid60.getText());
             try {
-                novoJogo.executaMovimento(6, 0, valor);
-                grid60.setText(String.valueOf(novoJogo.getGridTabuleiro()[6][0]));
+                novoJogo.executaMovimento(0, 6, valor);
+                grid60.setText(String.valueOf(novoJogo.getGridTabuleiro()[0][6]));
                 grid60.setEditable(false);
             } catch (MovimentoInvalidoException ex) {
                 JOptionPane.showMessageDialog(null, ex.getMessage());
@@ -1848,8 +1848,8 @@ public class TabuleiroFrame extends javax.swing.JFrame {
         if (!grid70.getText().equals("")) {
             int valor = Integer.parseInt(grid70.getText());
             try {
-                novoJogo.executaMovimento(7, 0, valor);
-                grid70.setText(String.valueOf(novoJogo.getGridTabuleiro()[7][0]));
+                novoJogo.executaMovimento(0, 7, valor);
+                grid70.setText(String.valueOf(novoJogo.getGridTabuleiro()[0][7]));
                 grid70.setEditable(false);
             } catch (MovimentoInvalidoException ex) {
                 JOptionPane.showMessageDialog(null, ex.getMessage());
@@ -1863,8 +1863,8 @@ public class TabuleiroFrame extends javax.swing.JFrame {
         if (!grid80.getText().equals("")) {
             int valor = Integer.parseInt(grid80.getText());
             try {
-                novoJogo.executaMovimento(8, 0, valor);
-                grid80.setText(String.valueOf(novoJogo.getGridTabuleiro()[8][0]));
+                novoJogo.executaMovimento(0, 8, valor);
+                grid80.setText(String.valueOf(novoJogo.getGridTabuleiro()[0][8]));
                 grid80.setEditable(false);
             } catch (MovimentoInvalidoException ex) {
                 JOptionPane.showMessageDialog(null, ex.getMessage());
@@ -1878,8 +1878,8 @@ public class TabuleiroFrame extends javax.swing.JFrame {
         if (!grid61.getText().equals("")) {
             int valor = Integer.parseInt(grid61.getText());
             try {
-                novoJogo.executaMovimento(6, 1, valor);
-                grid61.setText(String.valueOf(novoJogo.getGridTabuleiro()[6][1]));
+                novoJogo.executaMovimento(1, 6, valor);
+                grid61.setText(String.valueOf(novoJogo.getGridTabuleiro()[1][6]));
                 grid61.setEditable(false);
             } catch (MovimentoInvalidoException ex) {
                 JOptionPane.showMessageDialog(null, ex.getMessage());
@@ -1893,8 +1893,8 @@ public class TabuleiroFrame extends javax.swing.JFrame {
         if (!grid71.getText().equals("")) {
             int valor = Integer.parseInt(grid71.getText());
             try {
-                novoJogo.executaMovimento(7, 1, valor);
-                grid71.setText(String.valueOf(novoJogo.getGridTabuleiro()[7][1]));
+                novoJogo.executaMovimento(1, 7, valor);
+                grid71.setText(String.valueOf(novoJogo.getGridTabuleiro()[1][7]));
                 grid71.setEditable(false);
             } catch (MovimentoInvalidoException ex) {
                 JOptionPane.showMessageDialog(null, ex.getMessage());
@@ -1908,8 +1908,8 @@ public class TabuleiroFrame extends javax.swing.JFrame {
         if (!grid81.getText().equals("")) {
             int valor = Integer.parseInt(grid81.getText());
             try {
-                novoJogo.executaMovimento(8, 1, valor);
-                grid81.setText(String.valueOf(novoJogo.getGridTabuleiro()[8][1]));
+                novoJogo.executaMovimento(1, 8, valor);
+                grid81.setText(String.valueOf(novoJogo.getGridTabuleiro()[1][8]));
                 grid81.setEditable(false);
             } catch (MovimentoInvalidoException ex) {
                 JOptionPane.showMessageDialog(null, ex.getMessage());
@@ -1923,8 +1923,8 @@ public class TabuleiroFrame extends javax.swing.JFrame {
         if (!grid62.getText().equals("")) {
             int valor = Integer.parseInt(grid62.getText());
             try {
-                novoJogo.executaMovimento(6, 2, valor);
-                grid62.setText(String.valueOf(novoJogo.getGridTabuleiro()[6][2]));
+                novoJogo.executaMovimento(2, 6, valor);
+                grid62.setText(String.valueOf(novoJogo.getGridTabuleiro()[2][6]));
                 grid62.setEditable(false);
             } catch (MovimentoInvalidoException ex) {
                 JOptionPane.showMessageDialog(null, ex.getMessage());
@@ -1938,8 +1938,8 @@ public class TabuleiroFrame extends javax.swing.JFrame {
         if (!grid72.getText().equals("")) {
             int valor = Integer.parseInt(grid72.getText());
             try {
-                novoJogo.executaMovimento(7, 2, valor);
-                grid72.setText(String.valueOf(novoJogo.getGridTabuleiro()[7][2]));
+                novoJogo.executaMovimento(2, 7, valor);
+                grid72.setText(String.valueOf(novoJogo.getGridTabuleiro()[2][7]));
                 grid72.setEditable(false);
             } catch (MovimentoInvalidoException ex) {
                 JOptionPane.showMessageDialog(null, ex.getMessage());
@@ -1953,8 +1953,8 @@ public class TabuleiroFrame extends javax.swing.JFrame {
         if (!grid82.getText().equals("")) {
             int valor = Integer.parseInt(grid82.getText());
             try {
-                novoJogo.executaMovimento(8, 2, valor);
-                grid82.setText(String.valueOf(novoJogo.getGridTabuleiro()[8][2]));
+                novoJogo.executaMovimento(2, 8, valor);
+                grid82.setText(String.valueOf(novoJogo.getGridTabuleiro()[2][8]));
                 grid82.setEditable(false);
             } catch (MovimentoInvalidoException ex) {
                 JOptionPane.showMessageDialog(null, ex.getMessage());
@@ -1968,8 +1968,8 @@ public class TabuleiroFrame extends javax.swing.JFrame {
         if (!grid63.getText().equals("")) {
             int valor = Integer.parseInt(grid63.getText());
             try {
-                novoJogo.executaMovimento(6, 3, valor);
-                grid63.setText(String.valueOf(novoJogo.getGridTabuleiro()[6][3]));
+                novoJogo.executaMovimento(3, 6, valor);
+                grid63.setText(String.valueOf(novoJogo.getGridTabuleiro()[3][6]));
                 grid63.setEditable(false);
             } catch (MovimentoInvalidoException ex) {
                 JOptionPane.showMessageDialog(null, ex.getMessage());
@@ -1983,8 +1983,8 @@ public class TabuleiroFrame extends javax.swing.JFrame {
         if (!grid73.getText().equals("")) {
             int valor = Integer.parseInt(grid73.getText());
             try {
-                novoJogo.executaMovimento(7, 3, valor);
-                grid73.setText(String.valueOf(novoJogo.getGridTabuleiro()[7][3]));
+                novoJogo.executaMovimento(3, 7, valor);
+                grid73.setText(String.valueOf(novoJogo.getGridTabuleiro()[3][7]));
                 grid73.setEditable(false);
             } catch (MovimentoInvalidoException ex) {
                 JOptionPane.showMessageDialog(null, ex.getMessage());
@@ -1998,8 +1998,8 @@ public class TabuleiroFrame extends javax.swing.JFrame {
         if (!grid83.getText().equals("")) {
             int valor = Integer.parseInt(grid83.getText());
             try {
-                novoJogo.executaMovimento(8, 3, valor);
-                grid83.setText(String.valueOf(novoJogo.getGridTabuleiro()[8][3]));
+                novoJogo.executaMovimento(3, 8, valor);
+                grid83.setText(String.valueOf(novoJogo.getGridTabuleiro()[3][8]));
                 grid83.setEditable(false);
             } catch (MovimentoInvalidoException ex) {
                 JOptionPane.showMessageDialog(null, ex.getMessage());
@@ -2013,8 +2013,8 @@ public class TabuleiroFrame extends javax.swing.JFrame {
         if (!grid64.getText().equals("")) {
             int valor = Integer.parseInt(grid64.getText());
             try {
-                novoJogo.executaMovimento(6, 4, valor);
-                grid64.setText(String.valueOf(novoJogo.getGridTabuleiro()[6][4]));
+                novoJogo.executaMovimento(4, 6, valor);
+                grid64.setText(String.valueOf(novoJogo.getGridTabuleiro()[4][6]));
                 grid64.setEditable(false);
             } catch (MovimentoInvalidoException ex) {
                 JOptionPane.showMessageDialog(null, ex.getMessage());
@@ -2028,8 +2028,8 @@ public class TabuleiroFrame extends javax.swing.JFrame {
         if (!grid74.getText().equals("")) {
             int valor = Integer.parseInt(grid74.getText());
             try {
-                novoJogo.executaMovimento(7, 4, valor);
-                grid74.setText(String.valueOf(novoJogo.getGridTabuleiro()[7][4]));
+                novoJogo.executaMovimento(4, 7, valor);
+                grid74.setText(String.valueOf(novoJogo.getGridTabuleiro()[4][7]));
                 grid74.setEditable(false);
             } catch (MovimentoInvalidoException ex) {
                 JOptionPane.showMessageDialog(null, ex.getMessage());
@@ -2043,8 +2043,8 @@ public class TabuleiroFrame extends javax.swing.JFrame {
         if (!grid84.getText().equals("")) {
             int valor = Integer.parseInt(grid84.getText());
             try {
-                novoJogo.executaMovimento(8, 4, valor);
-                grid84.setText(String.valueOf(novoJogo.getGridTabuleiro()[8][4]));
+                novoJogo.executaMovimento(4, 8, valor);
+                grid84.setText(String.valueOf(novoJogo.getGridTabuleiro()[4][8]));
                 grid84.setEditable(false);
             } catch (MovimentoInvalidoException ex) {
                 JOptionPane.showMessageDialog(null, ex.getMessage());
@@ -2058,8 +2058,8 @@ public class TabuleiroFrame extends javax.swing.JFrame {
         if (!grid65.getText().equals("")) {
             int valor = Integer.parseInt(grid65.getText());
             try {
-                novoJogo.executaMovimento(6, 5, valor);
-                grid65.setText(String.valueOf(novoJogo.getGridTabuleiro()[6][5]));
+                novoJogo.executaMovimento(5, 6, valor);
+                grid65.setText(String.valueOf(novoJogo.getGridTabuleiro()[5][6]));
                 grid65.setEditable(false);
             } catch (MovimentoInvalidoException ex) {
                 JOptionPane.showMessageDialog(null, ex.getMessage());
@@ -2073,8 +2073,8 @@ public class TabuleiroFrame extends javax.swing.JFrame {
         if (!grid75.getText().equals("")) {
             int valor = Integer.parseInt(grid75.getText());
             try {
-                novoJogo.executaMovimento(7, 5, valor);
-                grid75.setText(String.valueOf(novoJogo.getGridTabuleiro()[7][5]));
+                novoJogo.executaMovimento(5, 7, valor);
+                grid75.setText(String.valueOf(novoJogo.getGridTabuleiro()[5][7]));
                 grid75.setEditable(false);
             } catch (MovimentoInvalidoException ex) {
                 JOptionPane.showMessageDialog(null, ex.getMessage());
@@ -2088,8 +2088,8 @@ public class TabuleiroFrame extends javax.swing.JFrame {
         if (!grid85.getText().equals("")) {
             int valor = Integer.parseInt(grid85.getText());
             try {
-                novoJogo.executaMovimento(8, 5, valor);
-                grid85.setText(String.valueOf(novoJogo.getGridTabuleiro()[8][5]));
+                novoJogo.executaMovimento(5, 8, valor);
+                grid85.setText(String.valueOf(novoJogo.getGridTabuleiro()[5][8]));
                 grid85.setEditable(false);
             } catch (MovimentoInvalidoException ex) {
                 JOptionPane.showMessageDialog(null, ex.getMessage());
@@ -2103,8 +2103,8 @@ public class TabuleiroFrame extends javax.swing.JFrame {
         if (!grid06.getText().equals("")) {
             int valor = Integer.parseInt(grid06.getText());
             try {
-                novoJogo.executaMovimento(0, 6, valor);
-                grid06.setText(String.valueOf(novoJogo.getGridTabuleiro()[0][6]));
+                novoJogo.executaMovimento(6, 0, valor);
+                grid06.setText(String.valueOf(novoJogo.getGridTabuleiro()[6][0]));
                 grid06.setEditable(false);
             } catch (MovimentoInvalidoException ex) {
                 JOptionPane.showMessageDialog(null, ex.getMessage());
@@ -2118,8 +2118,8 @@ public class TabuleiroFrame extends javax.swing.JFrame {
         if (!grid16.getText().equals("")) {
             int valor = Integer.parseInt(grid16.getText());
             try {
-                novoJogo.executaMovimento(1, 6, valor);
-                grid16.setText(String.valueOf(novoJogo.getGridTabuleiro()[1][6]));
+                novoJogo.executaMovimento(6, 1, valor);
+                grid16.setText(String.valueOf(novoJogo.getGridTabuleiro()[6][1]));
                 grid16.setEditable(false);
             } catch (MovimentoInvalidoException ex) {
                 JOptionPane.showMessageDialog(null, ex.getMessage());
@@ -2133,8 +2133,8 @@ public class TabuleiroFrame extends javax.swing.JFrame {
         if (!grid26.getText().equals("")) {
             int valor = Integer.parseInt(grid26.getText());
             try {
-                novoJogo.executaMovimento(2, 6, valor);
-                grid26.setText(String.valueOf(novoJogo.getGridTabuleiro()[2][6]));
+                novoJogo.executaMovimento(6, 2, valor);
+                grid26.setText(String.valueOf(novoJogo.getGridTabuleiro()[6][2]));
                 grid26.setEditable(false);
             } catch (MovimentoInvalidoException ex) {
                 JOptionPane.showMessageDialog(null, ex.getMessage());
@@ -2148,8 +2148,8 @@ public class TabuleiroFrame extends javax.swing.JFrame {
         if (!grid07.getText().equals("")) {
             int valor = Integer.parseInt(grid07.getText());
             try {
-                novoJogo.executaMovimento(0, 7, valor);
-                grid07.setText(String.valueOf(novoJogo.getGridTabuleiro()[0][7]));
+                novoJogo.executaMovimento(7, 0, valor);
+                grid07.setText(String.valueOf(novoJogo.getGridTabuleiro()[7][0]));
                 grid07.setEditable(false);
             } catch (MovimentoInvalidoException ex) {
                 JOptionPane.showMessageDialog(null, ex.getMessage());
@@ -2163,8 +2163,8 @@ public class TabuleiroFrame extends javax.swing.JFrame {
         if (!grid17.getText().equals("")) {
             int valor = Integer.parseInt(grid17.getText());
             try {
-                novoJogo.executaMovimento(1, 7, valor);
-                grid17.setText(String.valueOf(novoJogo.getGridTabuleiro()[1][7]));
+                novoJogo.executaMovimento(7, 1, valor);
+                grid17.setText(String.valueOf(novoJogo.getGridTabuleiro()[7][1]));
                 grid17.setEditable(false);
             } catch (MovimentoInvalidoException ex) {
                 JOptionPane.showMessageDialog(null, ex.getMessage());
@@ -2178,8 +2178,8 @@ public class TabuleiroFrame extends javax.swing.JFrame {
         if (!grid27.getText().equals("")) {
             int valor = Integer.parseInt(grid27.getText());
             try {
-                novoJogo.executaMovimento(2, 7, valor);
-                grid27.setText(String.valueOf(novoJogo.getGridTabuleiro()[2][7]));
+                novoJogo.executaMovimento(7, 2, valor);
+                grid27.setText(String.valueOf(novoJogo.getGridTabuleiro()[7][2]));
                 grid27.setEditable(false);
             } catch (MovimentoInvalidoException ex) {
                 JOptionPane.showMessageDialog(null, ex.getMessage());
@@ -2193,8 +2193,8 @@ public class TabuleiroFrame extends javax.swing.JFrame {
         if (!grid08.getText().equals("")) {
             int valor = Integer.parseInt(grid08.getText());
             try {
-                novoJogo.executaMovimento(0, 8, valor);
-                grid08.setText(String.valueOf(novoJogo.getGridTabuleiro()[0][8]));
+                novoJogo.executaMovimento(8, 0, valor);
+                grid08.setText(String.valueOf(novoJogo.getGridTabuleiro()[8][0]));
                 grid08.setEditable(false);
             } catch (MovimentoInvalidoException ex) {
                 JOptionPane.showMessageDialog(null, ex.getMessage());
@@ -2208,8 +2208,8 @@ public class TabuleiroFrame extends javax.swing.JFrame {
         if (!grid18.getText().equals("")) {
             int valor = Integer.parseInt(grid18.getText());
             try {
-                novoJogo.executaMovimento(1, 8, valor);
-                grid18.setText(String.valueOf(novoJogo.getGridTabuleiro()[1][8]));
+                novoJogo.executaMovimento(8, 1, valor);
+                grid18.setText(String.valueOf(novoJogo.getGridTabuleiro()[8][1]));
                 grid18.setEditable(false);
             } catch (MovimentoInvalidoException ex) {
                 JOptionPane.showMessageDialog(null, ex.getMessage());
@@ -2223,8 +2223,8 @@ public class TabuleiroFrame extends javax.swing.JFrame {
         if (!grid28.getText().equals("")) {
             int valor = Integer.parseInt(grid28.getText());
             try {
-                novoJogo.executaMovimento(2, 8, valor);
-                grid28.setText(String.valueOf(novoJogo.getGridTabuleiro()[2][8]));
+                novoJogo.executaMovimento(8, 2, valor);
+                grid28.setText(String.valueOf(novoJogo.getGridTabuleiro()[8][2]);
                 grid28.setEditable(false);
             } catch (MovimentoInvalidoException ex) {
                 JOptionPane.showMessageDialog(null, ex.getMessage());
@@ -2238,8 +2238,8 @@ public class TabuleiroFrame extends javax.swing.JFrame {
         if (!grid36.getText().equals("")) {
             int valor = Integer.parseInt(grid36.getText());
             try {
-                novoJogo.executaMovimento(3, 6, valor);
-                grid36.setText(String.valueOf(novoJogo.getGridTabuleiro()[3][6]));
+                novoJogo.executaMovimento(6, 3, valor);
+                grid36.setText(String.valueOf(novoJogo.getGridTabuleiro()[6][3]));
                 grid36.setEditable(false);
             } catch (MovimentoInvalidoException ex) {
                 JOptionPane.showMessageDialog(null, ex.getMessage());
@@ -2253,8 +2253,8 @@ public class TabuleiroFrame extends javax.swing.JFrame {
         if (!grid46.getText().equals("")) {
             int valor = Integer.parseInt(grid46.getText());
             try {
-                novoJogo.executaMovimento(4, 6, valor);
-                grid46.setText(String.valueOf(novoJogo.getGridTabuleiro()[4][6]));
+                novoJogo.executaMovimento(6,4, valor);
+                grid46.setText(String.valueOf(novoJogo.getGridTabuleiro()[6][4]));
                 grid46.setEditable(false);
             } catch (MovimentoInvalidoException ex) {
                 JOptionPane.showMessageDialog(null, ex.getMessage());
@@ -2268,8 +2268,8 @@ public class TabuleiroFrame extends javax.swing.JFrame {
         if (!grid56.getText().equals("")) {
             int valor = Integer.parseInt(grid56.getText());
             try {
-                novoJogo.executaMovimento(5, 6, valor);
-                grid56.setText(String.valueOf(novoJogo.getGridTabuleiro()[5][6]));
+                novoJogo.executaMovimento(6, 5, valor);
+                grid56.setText(String.valueOf(novoJogo.getGridTabuleiro()[6][5]));
                 grid56.setEditable(false);
             } catch (MovimentoInvalidoException ex) {
                 JOptionPane.showMessageDialog(null, ex.getMessage());
@@ -2283,8 +2283,8 @@ public class TabuleiroFrame extends javax.swing.JFrame {
         if (!grid37.getText().equals("")) {
             int valor = Integer.parseInt(grid37.getText());
             try {
-                novoJogo.executaMovimento(3, 7, valor);
-                grid37.setText(String.valueOf(novoJogo.getGridTabuleiro()[3][7]));
+                novoJogo.executaMovimento(7, 3, valor);
+                grid37.setText(String.valueOf(novoJogo.getGridTabuleiro()[7][3]));
                 grid37.setEditable(false);
             } catch (MovimentoInvalidoException ex) {
                 JOptionPane.showMessageDialog(null, ex.getMessage());
@@ -2298,8 +2298,8 @@ public class TabuleiroFrame extends javax.swing.JFrame {
         if (!grid47.getText().equals("")) {
             int valor = Integer.parseInt(grid47.getText());
             try {
-                novoJogo.executaMovimento(4, 7, valor);
-                grid47.setText(String.valueOf(novoJogo.getGridTabuleiro()[4][7]));
+                novoJogo.executaMovimento(7, 4, valor);
+                grid47.setText(String.valueOf(novoJogo.getGridTabuleiro()[7][4]));
                 grid47.setEditable(false);
             } catch (MovimentoInvalidoException ex) {
                 JOptionPane.showMessageDialog(null, ex.getMessage());
@@ -2313,8 +2313,8 @@ public class TabuleiroFrame extends javax.swing.JFrame {
         if (!grid57.getText().equals("")) {
             int valor = Integer.parseInt(grid57.getText());
             try {
-                novoJogo.executaMovimento(5, 7, valor);
-                grid57.setText(String.valueOf(novoJogo.getGridTabuleiro()[5][7]));
+                novoJogo.executaMovimento(7, 5, valor);
+                grid57.setText(String.valueOf(novoJogo.getGridTabuleiro()[7][5]));
                 grid57.setEditable(false);
             } catch (MovimentoInvalidoException ex) {
                 JOptionPane.showMessageDialog(null, ex.getMessage());
@@ -2328,8 +2328,8 @@ public class TabuleiroFrame extends javax.swing.JFrame {
         if (!grid38.getText().equals("")) {
             int valor = Integer.parseInt(grid38.getText());
             try {
-                novoJogo.executaMovimento(3, 8, valor);
-                grid38.setText(String.valueOf(novoJogo.getGridTabuleiro()[3][8]));
+                novoJogo.executaMovimento(8, 3, valor);
+                grid38.setText(String.valueOf(novoJogo.getGridTabuleiro()[8][3]));
                 grid38.setEditable(false);
             } catch (MovimentoInvalidoException ex) {
                 JOptionPane.showMessageDialog(null, ex.getMessage());
@@ -2343,8 +2343,8 @@ public class TabuleiroFrame extends javax.swing.JFrame {
         if (!grid48.getText().equals("")) {
             int valor = Integer.parseInt(grid48.getText());
             try {
-                novoJogo.executaMovimento(4, 8, valor);
-                grid48.setText(String.valueOf(novoJogo.getGridTabuleiro()[4][8]));
+                novoJogo.executaMovimento(8, 4, valor);
+                grid48.setText(String.valueOf(novoJogo.getGridTabuleiro()[8][4]));
                 grid48.setEditable(false);
             } catch (MovimentoInvalidoException ex) {
                 JOptionPane.showMessageDialog(null, ex.getMessage());
@@ -2358,8 +2358,8 @@ public class TabuleiroFrame extends javax.swing.JFrame {
         if (!grid58.getText().equals("")) {
             int valor = Integer.parseInt(grid58.getText());
             try {
-                novoJogo.executaMovimento(5, 8, valor);
-                grid58.setText(String.valueOf(novoJogo.getGridTabuleiro()[5][8]));
+                novoJogo.executaMovimento(8, 5, valor);
+                grid58.setText(String.valueOf(novoJogo.getGridTabuleiro()[8][5]));
                 grid58.setEditable(false);
             } catch (MovimentoInvalidoException ex) {
                 JOptionPane.showMessageDialog(null, ex.getMessage());
@@ -2388,8 +2388,8 @@ public class TabuleiroFrame extends javax.swing.JFrame {
         if (!grid76.getText().equals("")) {
             int valor = Integer.parseInt(grid76.getText());
             try {
-                novoJogo.executaMovimento(7, 6, valor);
-                grid76.setText(String.valueOf(novoJogo.getGridTabuleiro()[7][6]));
+                novoJogo.executaMovimento(6, 7, valor);
+                grid76.setText(String.valueOf(novoJogo.getGridTabuleiro()[6][7]));
                 grid76.setEditable(false);
             } catch (MovimentoInvalidoException ex) {
                 JOptionPane.showMessageDialog(null, ex.getMessage());
@@ -2403,8 +2403,8 @@ public class TabuleiroFrame extends javax.swing.JFrame {
         if (!grid86.getText().equals("")) {
             int valor = Integer.parseInt(grid86.getText());
             try {
-                novoJogo.executaMovimento(8, 6, valor);
-                grid86.setText(String.valueOf(novoJogo.getGridTabuleiro()[8][6]));
+                novoJogo.executaMovimento(6, 8, valor);
+                grid86.setText(String.valueOf(novoJogo.getGridTabuleiro()[6][8]));
                 grid86.setEditable(false);
             } catch (MovimentoInvalidoException ex) {
                 JOptionPane.showMessageDialog(null, ex.getMessage());
@@ -2418,8 +2418,8 @@ public class TabuleiroFrame extends javax.swing.JFrame {
         if (!grid67.getText().equals("")) {
             int valor = Integer.parseInt(grid67.getText());
             try {
-                novoJogo.executaMovimento(6, 7, valor);
-                grid67.setText(String.valueOf(novoJogo.getGridTabuleiro()[6][7]));
+                novoJogo.executaMovimento(7, 6, valor);
+                grid67.setText(String.valueOf(novoJogo.getGridTabuleiro()[7][6]));
                 grid67.setEditable(false);
             } catch (MovimentoInvalidoException ex) {
                 JOptionPane.showMessageDialog(null, ex.getMessage());
@@ -2448,8 +2448,8 @@ public class TabuleiroFrame extends javax.swing.JFrame {
         if (!grid87.getText().equals("")) {
             int valor = Integer.parseInt(grid87.getText());
             try {
-                novoJogo.executaMovimento(8, 7, valor);
-                grid87.setText(String.valueOf(novoJogo.getGridTabuleiro()[8][7]));
+                novoJogo.executaMovimento(7, 8, valor);
+                grid87.setText(String.valueOf(novoJogo.getGridTabuleiro()[7][8]));
                 grid87.setEditable(false);
             } catch (MovimentoInvalidoException ex) {
                 JOptionPane.showMessageDialog(null, ex.getMessage());
@@ -2463,8 +2463,8 @@ public class TabuleiroFrame extends javax.swing.JFrame {
         if (!grid68.getText().equals("")) {
             int valor = Integer.parseInt(grid68.getText());
             try {
-                novoJogo.executaMovimento(6, 8, valor);
-                grid68.setText(String.valueOf(novoJogo.getGridTabuleiro()[6][8]));
+                novoJogo.executaMovimento(8, 6, valor);
+                grid68.setText(String.valueOf(novoJogo.getGridTabuleiro()[8][6]));
                 grid68.setEditable(false);
             } catch (MovimentoInvalidoException ex) {
                 JOptionPane.showMessageDialog(null, ex.getMessage());
@@ -2478,8 +2478,8 @@ public class TabuleiroFrame extends javax.swing.JFrame {
         if (!grid78.getText().equals("")) {
             int valor = Integer.parseInt(grid78.getText());
             try {
-                novoJogo.executaMovimento(7, 8, valor);
-                grid78.setText(String.valueOf(novoJogo.getGridTabuleiro()[7][8]));
+                novoJogo.executaMovimento(8, 7, valor);
+                grid78.setText(String.valueOf(novoJogo.getGridTabuleiro()[8][7]));
                 grid78.setEditable(false);
             } catch (MovimentoInvalidoException ex) {
                 JOptionPane.showMessageDialog(null, ex.getMessage());
@@ -2566,7 +2566,7 @@ public class TabuleiroFrame extends javax.swing.JFrame {
         } else {
             grid08.setText("");
         }
-        grid10.setText(String.valueOf(novoJogo.getGridTabuleiro()[1][0]));
+        grid10.setText(String.valueOf(novoJogo.getGridTabuleiro()[0][1]));
         if (!grid10.getText().equals("0")) {
             grid10.setEditable(false);
         } else {
@@ -2578,55 +2578,55 @@ public class TabuleiroFrame extends javax.swing.JFrame {
         } else {
             grid11.setText("");
         }
-        grid12.setText(String.valueOf(novoJogo.getGridTabuleiro()[1][2]));
+        grid12.setText(String.valueOf(novoJogo.getGridTabuleiro()[2][1]));
         if (!grid12.getText().equals("0")) {
             grid12.setEditable(false);
         } else {
             grid12.setText("");
         }
-        grid13.setText(String.valueOf(novoJogo.getGridTabuleiro()[1][3]));
+        grid13.setText(String.valueOf(novoJogo.getGridTabuleiro()[3][1]));
         if (!grid13.getText().equals("0")) {
             grid13.setEditable(false);
         } else {
             grid13.setText("");
         }
-        grid14.setText(String.valueOf(novoJogo.getGridTabuleiro()[1][4]));
+        grid14.setText(String.valueOf(novoJogo.getGridTabuleiro()[4][1]));
         if (!grid14.getText().equals("0")) {
             grid14.setEditable(false);
         } else {
             grid14.setText("");
         }
-        grid15.setText(String.valueOf(novoJogo.getGridTabuleiro()[1][5]));
+        grid15.setText(String.valueOf(novoJogo.getGridTabuleiro()[5][1]));
         if (!grid15.getText().equals("0")) {
             grid15.setEditable(false);
         } else {
             grid15.setText("");
         }
-        grid16.setText(String.valueOf(novoJogo.getGridTabuleiro()[1][6]));
+        grid16.setText(String.valueOf(novoJogo.getGridTabuleiro()[6][1]));
         if (!grid16.getText().equals("0")) {
             grid16.setEditable(false);
         } else {
             grid16.setText("");
         }
-        grid17.setText(String.valueOf(novoJogo.getGridTabuleiro()[1][7]));
+        grid17.setText(String.valueOf(novoJogo.getGridTabuleiro()[7][1]));
         if (!grid17.getText().equals("0")) {
             grid17.setEditable(false);
         } else {
             grid17.setText("");
         }
-        grid18.setText(String.valueOf(novoJogo.getGridTabuleiro()[1][8]));
+        grid18.setText(String.valueOf(novoJogo.getGridTabuleiro()[8][1]));
         if (!grid18.getText().equals("0")) {
             grid18.setEditable(false);
         } else {
             grid18.setText("");
         }
-        grid20.setText(String.valueOf(novoJogo.getGridTabuleiro()[2][0]));
+        grid20.setText(String.valueOf(novoJogo.getGridTabuleiro()[0][2]));
         if (!grid20.getText().equals("0")) {
             grid20.setEditable(false);
         } else {
             grid20.setText("");
         }
-        grid21.setText(String.valueOf(novoJogo.getGridTabuleiro()[2][1]));
+        grid21.setText(String.valueOf(novoJogo.getGridTabuleiro()[1][2]));
         if (!grid21.getText().equals("0")) {
             grid21.setEditable(false);
         } else {
@@ -2638,55 +2638,55 @@ public class TabuleiroFrame extends javax.swing.JFrame {
         } else {
             grid22.setText("");
         }
-        grid23.setText(String.valueOf(novoJogo.getGridTabuleiro()[2][3]));
+        grid23.setText(String.valueOf(novoJogo.getGridTabuleiro()[3][2]));
         if (!grid23.getText().equals("0")) {
             grid23.setEditable(false);
         } else {
             grid23.setText("");
         }
-        grid24.setText(String.valueOf(novoJogo.getGridTabuleiro()[2][4]));
+        grid24.setText(String.valueOf(novoJogo.getGridTabuleiro()[4][2]));
         if (!grid24.getText().equals("0")) {
             grid24.setEditable(false);
         } else {
             grid24.setText("");
         }
-        grid25.setText(String.valueOf(novoJogo.getGridTabuleiro()[2][5]));
+        grid25.setText(String.valueOf(novoJogo.getGridTabuleiro()[5][2]));
         if (!grid25.getText().equals("0")) {
             grid25.setEditable(false);
         } else {
             grid25.setText("");
         }
-        grid26.setText(String.valueOf(novoJogo.getGridTabuleiro()[2][6]));
+        grid26.setText(String.valueOf(novoJogo.getGridTabuleiro()[6][2]));
         if (!grid26.getText().equals("0")) {
             grid26.setEditable(false);
         } else {
             grid26.setText("");
         }
-        grid27.setText(String.valueOf(novoJogo.getGridTabuleiro()[2][7]));
+        grid27.setText(String.valueOf(novoJogo.getGridTabuleiro()[7][2]));
         if (!grid27.getText().equals("0")) {
             grid27.setEditable(false);
         } else {
             grid27.setText("");
         }
-        grid28.setText(String.valueOf(novoJogo.getGridTabuleiro()[2][8]));
+        grid28.setText(String.valueOf(novoJogo.getGridTabuleiro()[8][2]));
         if (!grid28.getText().equals("0")) {
             grid28.setEditable(false);
         } else {
             grid28.setText("");
         }
-        grid30.setText(String.valueOf(novoJogo.getGridTabuleiro()[3][0]));
+        grid30.setText(String.valueOf(novoJogo.getGridTabuleiro()[0][3]));
         if (!grid30.getText().equals("0")) {
             grid30.setEditable(false);
         } else {
             grid30.setText("");
         }
-        grid31.setText(String.valueOf(novoJogo.getGridTabuleiro()[3][1]));
+        grid31.setText(String.valueOf(novoJogo.getGridTabuleiro()[1][3]));
         if (!grid31.getText().equals("0")) {
             grid31.setEditable(false);
         } else {
             grid31.setText("");
         }
-        grid32.setText(String.valueOf(novoJogo.getGridTabuleiro()[3][2]));
+        grid32.setText(String.valueOf(novoJogo.getGridTabuleiro()[2][3]));
         if (!grid32.getText().equals("0")) {
             grid32.setEditable(false);
         } else {
@@ -2698,55 +2698,55 @@ public class TabuleiroFrame extends javax.swing.JFrame {
         } else {
             grid33.setText("");
         }
-        grid34.setText(String.valueOf(novoJogo.getGridTabuleiro()[3][4]));
+        grid34.setText(String.valueOf(novoJogo.getGridTabuleiro()[4][3]));
         if (!grid34.getText().equals("0")) {
             grid34.setEditable(false);
         } else {
             grid34.setText("");
         }
-        grid35.setText(String.valueOf(novoJogo.getGridTabuleiro()[3][5]));
+        grid35.setText(String.valueOf(novoJogo.getGridTabuleiro()[5][3]));
         if (!grid35.getText().equals("0")) {
             grid35.setEditable(false);
         } else {
             grid35.setText("");
         }
-        grid36.setText(String.valueOf(novoJogo.getGridTabuleiro()[3][6]));
+        grid36.setText(String.valueOf(novoJogo.getGridTabuleiro()[6][3]));
         if (!grid36.getText().equals("0")) {
             grid36.setEditable(false);
         } else {
             grid36.setText("");
         }
-        grid37.setText(String.valueOf(novoJogo.getGridTabuleiro()[3][7]));
+        grid37.setText(String.valueOf(novoJogo.getGridTabuleiro()[7][3]));
         if (!grid37.getText().equals("0")) {
             grid37.setEditable(false);
         } else {
             grid37.setText("");
         }
-        grid38.setText(String.valueOf(novoJogo.getGridTabuleiro()[3][8]));
+        grid38.setText(String.valueOf(novoJogo.getGridTabuleiro()[8][3]));
         if (!grid38.getText().equals("0")) {
             grid38.setEditable(false);
         } else {
             grid38.setText("");
         }
-        grid40.setText(String.valueOf(novoJogo.getGridTabuleiro()[4][0]));
+        grid40.setText(String.valueOf(novoJogo.getGridTabuleiro()[0][4]));
         if (!grid40.getText().equals("0")) {
             grid40.setEditable(false);
         } else {
             grid40.setText("");
         }
-        grid41.setText(String.valueOf(novoJogo.getGridTabuleiro()[4][1]));
+        grid41.setText(String.valueOf(novoJogo.getGridTabuleiro()[1][4]));
         if (!grid41.getText().equals("0")) {
             grid41.setEditable(false);
         } else {
             grid41.setText("");
         }
-        grid42.setText(String.valueOf(novoJogo.getGridTabuleiro()[4][2]));
+        grid42.setText(String.valueOf(novoJogo.getGridTabuleiro()[2][4]));
         if (!grid42.getText().equals("0")) {
             grid42.setEditable(false);
         } else {
             grid42.setText("");
         }
-        grid43.setText(String.valueOf(novoJogo.getGridTabuleiro()[4][3]));
+        grid43.setText(String.valueOf(novoJogo.getGridTabuleiro()[3][4]));
         if (!grid43.getText().equals("0")) {
             grid43.setEditable(false);
         } else {
@@ -2758,55 +2758,55 @@ public class TabuleiroFrame extends javax.swing.JFrame {
         } else {
             grid44.setText("");
         }
-        grid45.setText(String.valueOf(novoJogo.getGridTabuleiro()[4][5]));
+        grid45.setText(String.valueOf(novoJogo.getGridTabuleiro()[5][4]));
         if (!grid45.getText().equals("0")) {
             grid45.setEditable(false);
         } else {
             grid45.setText("");
         }
-        grid46.setText(String.valueOf(novoJogo.getGridTabuleiro()[4][6]));
+        grid46.setText(String.valueOf(novoJogo.getGridTabuleiro()[6][4]));
         if (!grid46.getText().equals("0")) {
             grid46.setEditable(false);
         } else {
             grid46.setText("");
         }
-        grid47.setText(String.valueOf(novoJogo.getGridTabuleiro()[4][7]));
+        grid47.setText(String.valueOf(novoJogo.getGridTabuleiro()[7][4]));
         if (!grid47.getText().equals("0")) {
             grid47.setEditable(false);
         } else {
             grid47.setText("");
         }
-        grid48.setText(String.valueOf(novoJogo.getGridTabuleiro()[4][8]));
+        grid48.setText(String.valueOf(novoJogo.getGridTabuleiro()[8][4]));
         if (!grid48.getText().equals("0")) {
             grid48.setEditable(false);
         } else {
             grid48.setText("");
         }
-        grid50.setText(String.valueOf(novoJogo.getGridTabuleiro()[5][0]));
+        grid50.setText(String.valueOf(novoJogo.getGridTabuleiro()[0][5]));
         if (!grid50.getText().equals("0")) {
             grid50.setEditable(false);
         } else {
             grid50.setText("");
         }
-        grid51.setText(String.valueOf(novoJogo.getGridTabuleiro()[5][1]));
+        grid51.setText(String.valueOf(novoJogo.getGridTabuleiro()[1][5]));
         if (!grid51.getText().equals("0")) {
             grid51.setEditable(false);
         } else {
             grid51.setText("");
         }
-        grid52.setText(String.valueOf(novoJogo.getGridTabuleiro()[5][2]));
+        grid52.setText(String.valueOf(novoJogo.getGridTabuleiro()[2][5]));
         if (!grid52.getText().equals("0")) {
             grid52.setEditable(false);
         } else {
             grid52.setText("");
         }
-        grid53.setText(String.valueOf(novoJogo.getGridTabuleiro()[5][3]));
+        grid53.setText(String.valueOf(novoJogo.getGridTabuleiro()[3][5]));
         if (!grid53.getText().equals("0")) {
             grid53.setEditable(false);
         } else {
             grid53.setText("");
         }
-        grid54.setText(String.valueOf(novoJogo.getGridTabuleiro()[5][4]));
+        grid54.setText(String.valueOf(novoJogo.getGridTabuleiro()[4][5]));
         if (!grid54.getText().equals("0")) {
             grid54.setEditable(false);
         } else {
@@ -2818,55 +2818,55 @@ public class TabuleiroFrame extends javax.swing.JFrame {
         } else {
             grid55.setText("");
         }
-        grid56.setText(String.valueOf(novoJogo.getGridTabuleiro()[5][6]));
+        grid56.setText(String.valueOf(novoJogo.getGridTabuleiro()[6][5]));
         if (!grid56.getText().equals("0")) {
             grid56.setEditable(false);
         } else {
             grid56.setText("");
         }
-        grid57.setText(String.valueOf(novoJogo.getGridTabuleiro()[5][7]));
+        grid57.setText(String.valueOf(novoJogo.getGridTabuleiro()[7][5]));
         if (!grid57.getText().equals("0")) {
             grid57.setEditable(false);
         } else {
             grid57.setText("");
         }
-        grid58.setText(String.valueOf(novoJogo.getGridTabuleiro()[5][8]));
+        grid58.setText(String.valueOf(novoJogo.getGridTabuleiro()[8][5]));
         if (!grid58.getText().equals("0")) {
             grid58.setEditable(false);
         } else {
             grid58.setText("");
         }
-        grid60.setText(String.valueOf(novoJogo.getGridTabuleiro()[6][0]));
+        grid60.setText(String.valueOf(novoJogo.getGridTabuleiro()[0][6]));
         if (!grid60.getText().equals("0")) {
             grid60.setEditable(false);
         } else {
             grid60.setText("");
         }
-        grid61.setText(String.valueOf(novoJogo.getGridTabuleiro()[6][1]));
+        grid61.setText(String.valueOf(novoJogo.getGridTabuleiro()[1][6]));
         if (!grid61.getText().equals("0")) {
             grid61.setEditable(false);
         } else {
             grid61.setText("");
         }
-        grid62.setText(String.valueOf(novoJogo.getGridTabuleiro()[6][2]));
+        grid62.setText(String.valueOf(novoJogo.getGridTabuleiro()[2][6]));
         if (!grid62.getText().equals("0")) {
             grid62.setEditable(false);
         } else {
             grid62.setText("");
         }
-        grid63.setText(String.valueOf(novoJogo.getGridTabuleiro()[6][3]));
+        grid63.setText(String.valueOf(novoJogo.getGridTabuleiro()[3][6]));
         if (!grid63.getText().equals("0")) {
             grid63.setEditable(false);
         } else {
             grid63.setText("");
         }
-        grid64.setText(String.valueOf(novoJogo.getGridTabuleiro()[6][4]));
+        grid64.setText(String.valueOf(novoJogo.getGridTabuleiro()[4][6]));
         if (!grid64.getText().equals("0")) {
             grid64.setEditable(false);
         } else {
             grid64.setText("");
         }
-        grid65.setText(String.valueOf(novoJogo.getGridTabuleiro()[6][5]));
+        grid65.setText(String.valueOf(novoJogo.getGridTabuleiro()[5][6]));
         if (!grid65.getText().equals("0")) {
             grid65.setEditable(false);
         } else {
@@ -2878,55 +2878,55 @@ public class TabuleiroFrame extends javax.swing.JFrame {
         } else {
             grid66.setText("");
         }
-        grid67.setText(String.valueOf(novoJogo.getGridTabuleiro()[6][7]));
+        grid67.setText(String.valueOf(novoJogo.getGridTabuleiro()[7][6]));
         if (!grid67.getText().equals("0")) {
             grid67.setEditable(false);
         } else {
             grid67.setText("");
         }
-        grid68.setText(String.valueOf(novoJogo.getGridTabuleiro()[6][8]));
+        grid68.setText(String.valueOf(novoJogo.getGridTabuleiro()[8][6]));
         if (!grid68.getText().equals("0")) {
             grid68.setEditable(false);
         } else {
             grid68.setText("");
         }
-        grid70.setText(String.valueOf(novoJogo.getGridTabuleiro()[7][0]));
+        grid70.setText(String.valueOf(novoJogo.getGridTabuleiro()[0][7]));
         if (!grid70.getText().equals("0")) {
             grid70.setEditable(false);
         } else {
             grid70.setText("");
         }
-        grid71.setText(String.valueOf(novoJogo.getGridTabuleiro()[7][1]));
+        grid71.setText(String.valueOf(novoJogo.getGridTabuleiro()[1][7]));
         if (!grid71.getText().equals("0")) {
             grid71.setEditable(false);
         } else {
             grid71.setText("");
         }
-        grid72.setText(String.valueOf(novoJogo.getGridTabuleiro()[7][2]));
+        grid72.setText(String.valueOf(novoJogo.getGridTabuleiro()[2][7]));
         if (!grid72.getText().equals("0")) {
             grid72.setEditable(false);
         } else {
             grid72.setText("");
         }
-        grid73.setText(String.valueOf(novoJogo.getGridTabuleiro()[7][3]));
+        grid73.setText(String.valueOf(novoJogo.getGridTabuleiro()[3][7]));
         if (!grid73.getText().equals("0")) {
             grid73.setEditable(false);
         } else {
             grid73.setText("");
         }
-        grid74.setText(String.valueOf(novoJogo.getGridTabuleiro()[7][4]));
+        grid74.setText(String.valueOf(novoJogo.getGridTabuleiro()[4][7]));
         if (!grid74.getText().equals("0")) {
             grid74.setEditable(false);
         } else {
             grid74.setText("");
         }
-        grid75.setText(String.valueOf(novoJogo.getGridTabuleiro()[7][5]));
+        grid75.setText(String.valueOf(novoJogo.getGridTabuleiro()[5][7]));
         if (!grid75.getText().equals("0")) {
             grid75.setEditable(false);
         } else {
             grid75.setText("");
         }
-        grid76.setText(String.valueOf(novoJogo.getGridTabuleiro()[7][6]));
+        grid76.setText(String.valueOf(novoJogo.getGridTabuleiro()[6][7]));
         if (!grid76.getText().equals("0")) {
             grid76.setEditable(false);
         } else {
@@ -2938,55 +2938,55 @@ public class TabuleiroFrame extends javax.swing.JFrame {
         } else {
             grid77.setText("");
         }
-        grid78.setText(String.valueOf(novoJogo.getGridTabuleiro()[7][8]));
+        grid78.setText(String.valueOf(novoJogo.getGridTabuleiro()[8][7]));
         if (!grid78.getText().equals("0")) {
             grid78.setEditable(false);
         } else {
             grid78.setText("");
         }
-        grid80.setText(String.valueOf(novoJogo.getGridTabuleiro()[8][0]));
+        grid80.setText(String.valueOf(novoJogo.getGridTabuleiro()[0][8]));
         if (!grid80.getText().equals("0")) {
             grid80.setEditable(false);
         } else {
             grid80.setText("");
         }
-        grid81.setText(String.valueOf(novoJogo.getGridTabuleiro()[8][1]));
+        grid81.setText(String.valueOf(novoJogo.getGridTabuleiro()[1][8]));
         if (!grid81.getText().equals("0")) {
             grid81.setEditable(false);
         } else {
             grid81.setText("");
         }
-        grid82.setText(String.valueOf(novoJogo.getGridTabuleiro()[8][2]));
+        grid82.setText(String.valueOf(novoJogo.getGridTabuleiro()[2][8]));
         if (!grid82.getText().equals("0")) {
             grid82.setEditable(false);
         } else {
             grid82.setText("");
         }
-        grid83.setText(String.valueOf(novoJogo.getGridTabuleiro()[8][3]));
+        grid83.setText(String.valueOf(novoJogo.getGridTabuleiro()[3][8]));
         if (!grid83.getText().equals("0")) {
             grid83.setEditable(false);
         } else {
             grid83.setText("");
         }
-        grid84.setText(String.valueOf(novoJogo.getGridTabuleiro()[8][4]));
+        grid84.setText(String.valueOf(novoJogo.getGridTabuleiro()[4][8]));
         if (!grid84.getText().equals("0")) {
             grid84.setEditable(false);
         } else {
             grid84.setText("");
         }
-        grid85.setText(String.valueOf(novoJogo.getGridTabuleiro()[8][5]));
+        grid85.setText(String.valueOf(novoJogo.getGridTabuleiro()[5][8]));
         if (!grid85.getText().equals("0")) {
             grid85.setEditable(false);
         } else {
             grid85.setText("");
         }
-        grid86.setText(String.valueOf(novoJogo.getGridTabuleiro()[8][6]));
+        grid86.setText(String.valueOf(novoJogo.getGridTabuleiro()[6][8]));
         if (!grid86.getText().equals("0")) {
             grid86.setEditable(false);
         } else {
             grid86.setText("");
         }
-        grid87.setText(String.valueOf(novoJogo.getGridTabuleiro()[8][7]));
+        grid87.setText(String.valueOf(novoJogo.getGridTabuleiro()[7][8]));
         if (!grid87.getText().equals("0")) {
             grid87.setEditable(false);
         } else {
