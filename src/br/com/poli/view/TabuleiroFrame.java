@@ -2224,7 +2224,7 @@ public class TabuleiroFrame extends javax.swing.JFrame {
             int valor = Integer.parseInt(grid28.getText());
             try {
                 novoJogo.executaMovimento(8, 2, valor);
-                grid28.setText(String.valueOf(novoJogo.getGridTabuleiro()[8][2]);
+                grid28.setText(String.valueOf(novoJogo.getGridTabuleiro()[8][2]));
                 grid28.setEditable(false);
             } catch (MovimentoInvalidoException ex) {
                 JOptionPane.showMessageDialog(null, ex.getMessage());
