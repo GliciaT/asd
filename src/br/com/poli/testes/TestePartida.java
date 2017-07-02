@@ -2,12 +2,15 @@ package br.com.poli.testes;
 
 import br.com.poli.calculaScore.CalculaScoreComIdade;
 import br.com.poli.calculaScore.CalculaScoreSemIdade;
+import br.com.poli.exception.DicasInsuficienteException;
 import br.com.poli.exception.MovimentoIncorretoException;
 import br.com.poli.exception.MovimentoInvalidoException;
 //import br.com.poli.exception.SemSolucaoException;
 import br.com.poli.principal.DificuldadePartida;
 import br.com.poli.principal.Partida;
 import java.util.Random;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 //modificar os testes
 
 public class TestePartida {
@@ -45,7 +48,14 @@ public class TestePartida {
         } catch (MovimentoInvalidoException | MovimentoIncorretoException e) {
             System.out.println(e.getMessage());
         }
-
+        
+        //teste de dicas
+        try {    
+            jogo1.darDicas();
+        } catch (DicasInsuficienteException e) {
+            System.out.println(e.getMessage());
+        }
+        
         //provocar Fim de jogo
         while (jogo1.isFimDeJogo() != true) {
             try {
