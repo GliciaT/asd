@@ -768,10 +768,12 @@ public class FimDeJogoFrame extends javax.swing.JFrame {
             CalculaScoreSemIdade calcula = new CalculaScoreSemIdade();
             calcula.calcula(aux);
             score.setText(""+aux.getScore());
+            //score.setText("Sem idade");
         } else {
             CalculaScoreComIdade calcula = new CalculaScoreComIdade();
             calcula.calcula(aux);
             score.setText(""+aux.getScore());
+            //score.setText("Com idade");
         }
     }//GEN-LAST:event_scorePropertyChange
 

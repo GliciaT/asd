@@ -80,6 +80,7 @@ public class Partida {
             return true;
         }
         if (desistiu) {
+            this.tempoFinal = new Date(System.currentTimeMillis());
             try {
                 resolvePartida();
             } catch (SemSolucaoException e) {
