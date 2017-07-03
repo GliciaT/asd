@@ -1275,7 +1275,7 @@ public class TabuleiroFrame extends javax.swing.JFrame {
             int valor = Integer.parseInt(grid00.getText());
             try {
                 novoJogo.executaMovimento(0, 0, valor);
-                acertadoErrado.setText("Acertou");
+                acertadoErrado.setText("A C E R T O U");
                 grid00.setText(String.valueOf(novoJogo.getGridTabuleiro()[0][0]));
                 grid00.setEditable(false);
             } catch (MovimentoInvalidoException ex) {
@@ -1302,7 +1302,7 @@ public class TabuleiroFrame extends javax.swing.JFrame {
             int valor = Integer.parseInt(grid10.getText());
             try {
                 novoJogo.executaMovimento(0, 1, valor);
-                acertadoErrado.setText("Acertou");
+                acertadoErrado.setText("A C E R T O U");
                 grid10.setText(String.valueOf(novoJogo.getGridTabuleiro()[0][1]));
                 grid10.setEditable(false);
             } catch (MovimentoInvalidoException ex) {
@@ -1323,7 +1323,7 @@ public class TabuleiroFrame extends javax.swing.JFrame {
             int valor = Integer.parseInt(grid20.getText());
             try {
                 novoJogo.executaMovimento(0, 2, valor);
-                acertadoErrado.setText("Acertou");
+                acertadoErrado.setText("A C E R T O U");
                 grid20.setText(String.valueOf(novoJogo.getGridTabuleiro()[0][2]));
                 grid20.setEditable(false);
             } catch (MovimentoInvalidoException ex) {
@@ -1345,7 +1345,7 @@ public class TabuleiroFrame extends javax.swing.JFrame {
             int valor = Integer.parseInt(grid01.getText());
             try {
                 novoJogo.executaMovimento(1, 0, valor);
-                acertadoErrado.setText("Acertou");
+                acertadoErrado.setText("A C E R T O U");
                 grid01.setText(String.valueOf(novoJogo.getGridTabuleiro()[1][0]));
                 grid01.setEditable(false);
             } catch (MovimentoInvalidoException ex) {
@@ -1367,7 +1367,7 @@ public class TabuleiroFrame extends javax.swing.JFrame {
             int valor = Integer.parseInt(grid11.getText());
             try {
                 novoJogo.executaMovimento(1, 1, valor);
-                acertadoErrado.setText("Acertou");
+                acertadoErrado.setText("A C E R T O U");
                 grid11.setText(String.valueOf(novoJogo.getGridTabuleiro()[1][1]));
                 grid11.setEditable(false);
             } catch (MovimentoInvalidoException ex) {
@@ -1389,7 +1389,7 @@ public class TabuleiroFrame extends javax.swing.JFrame {
             int valor = Integer.parseInt(grid21.getText());
             try {
                 novoJogo.executaMovimento(1, 2, valor);
-                acertadoErrado.setText("Acertou");
+                acertadoErrado.setText("A C E R T O U");
                 grid21.setText(String.valueOf(novoJogo.getGridTabuleiro()[1][2]));
                 grid21.setEditable(false);
             } catch (MovimentoInvalidoException ex) {
@@ -1411,7 +1411,7 @@ public class TabuleiroFrame extends javax.swing.JFrame {
             int valor = Integer.parseInt(grid02.getText());
             try {
                 novoJogo.executaMovimento(2, 0, valor);
-                acertadoErrado.setText("Acertou");
+                acertadoErrado.setText("A C E R T O U");
                 grid02.setText(String.valueOf(novoJogo.getGridTabuleiro()[2][0]));
                 grid02.setEditable(false);
             } catch (MovimentoInvalidoException ex) {
@@ -1433,7 +1433,7 @@ public class TabuleiroFrame extends javax.swing.JFrame {
             int valor = Integer.parseInt(grid12.getText());
             try {
                 novoJogo.executaMovimento(2, 1, valor);
-                acertadoErrado.setText("Acertou");
+                acertadoErrado.setText("A C E R T O U");
                 grid12.setText(String.valueOf(novoJogo.getGridTabuleiro()[2][1]));
                 grid12.setEditable(false);
             } catch (MovimentoInvalidoException ex) {
@@ -1455,7 +1455,7 @@ public class TabuleiroFrame extends javax.swing.JFrame {
             int valor = Integer.parseInt(grid22.getText());
             try {
                 novoJogo.executaMovimento(2, 2, valor);
-                acertadoErrado.setText("Acertou");
+                acertadoErrado.setText("A C E R T O U");
                 grid22.setText(String.valueOf(novoJogo.getGridTabuleiro()[2][2]));
                 grid22.setEditable(false);
             } catch (MovimentoInvalidoException ex) {
@@ -1477,7 +1477,7 @@ public class TabuleiroFrame extends javax.swing.JFrame {
             int valor = Integer.parseInt(grid30.getText());
             try {
                 novoJogo.executaMovimento(0, 3, valor);
-                acertadoErrado.setText("Acertou");
+                acertadoErrado.setText("A C E R T O U");
                 grid30.setText(String.valueOf(novoJogo.getGridTabuleiro()[0][3]));
                 grid30.setEditable(false);
             } catch (MovimentoInvalidoException ex) {
@@ -1499,7 +1499,7 @@ public class TabuleiroFrame extends javax.swing.JFrame {
             int valor = Integer.parseInt(grid40.getText());
             try {
                 novoJogo.executaMovimento(0, 4, valor);
-                acertadoErrado.setText("Acertou");
+                acertadoErrado.setText("A C E R T O U");
                 grid40.setText(String.valueOf(novoJogo.getGridTabuleiro()[0][4]));
                 grid40.setEditable(false);
             } catch (MovimentoInvalidoException ex) {
@@ -1521,7 +1521,7 @@ public class TabuleiroFrame extends javax.swing.JFrame {
             int valor = Integer.parseInt(grid50.getText());
             try {
                 novoJogo.executaMovimento(0, 5, valor);
-                acertadoErrado.setText("Acertou");
+                acertadoErrado.setText("A C E R T O U");
                 grid50.setText(String.valueOf(novoJogo.getGridTabuleiro()[0][5]));
                 grid50.setEditable(false);
             } catch (MovimentoInvalidoException ex) {
@@ -1543,7 +1543,7 @@ public class TabuleiroFrame extends javax.swing.JFrame {
             int valor = Integer.parseInt(grid31.getText());
             try {
                 novoJogo.executaMovimento(1, 3, valor);
-                acertadoErrado.setText("Acertou");
+                acertadoErrado.setText("A C E R T O U");
                 grid31.setText(String.valueOf(novoJogo.getGridTabuleiro()[1][3]));
                 grid31.setEditable(false);
             } catch (MovimentoInvalidoException ex) {
@@ -1565,7 +1565,7 @@ public class TabuleiroFrame extends javax.swing.JFrame {
             int valor = Integer.parseInt(grid41.getText());
             try {
                 novoJogo.executaMovimento(1, 4, valor);
-                acertadoErrado.setText("Acertou");
+                acertadoErrado.setText("A C E R T O U");
                 grid41.setText(String.valueOf(novoJogo.getGridTabuleiro()[1][4]));
                 grid41.setEditable(false);
             } catch (MovimentoInvalidoException ex) {
@@ -1586,7 +1586,7 @@ public class TabuleiroFrame extends javax.swing.JFrame {
             int valor = Integer.parseInt(grid51.getText());
             try {
                 novoJogo.executaMovimento(1, 5, valor);
-                acertadoErrado.setText("Acertou");
+                acertadoErrado.setText("A C E R T O U");
                 grid51.setText(String.valueOf(novoJogo.getGridTabuleiro()[1][5]));
                 grid51.setEditable(false);
             } catch (MovimentoInvalidoException ex) {
@@ -1607,7 +1607,7 @@ public class TabuleiroFrame extends javax.swing.JFrame {
             int valor = Integer.parseInt(grid32.getText());
             try {
                 novoJogo.executaMovimento(2, 3, valor);
-                acertadoErrado.setText("Acertou");
+                acertadoErrado.setText("A C E R T O U");
                 grid32.setText(String.valueOf(novoJogo.getGridTabuleiro()[2][3]));
                 grid32.setEditable(false);
             } catch (MovimentoInvalidoException ex) {
@@ -1628,7 +1628,7 @@ public class TabuleiroFrame extends javax.swing.JFrame {
             int valor = Integer.parseInt(grid42.getText());
             try {
                 novoJogo.executaMovimento(2, 4, valor);
-                acertadoErrado.setText("Acertou");
+                acertadoErrado.setText("A C E R T O U");
                 grid42.setText(String.valueOf(novoJogo.getGridTabuleiro()[2][4]));
                 grid42.setEditable(false);
             } catch (MovimentoInvalidoException ex) {
@@ -1649,7 +1649,7 @@ public class TabuleiroFrame extends javax.swing.JFrame {
             int valor = Integer.parseInt(grid52.getText());
             try {
                 novoJogo.executaMovimento(2, 5, valor);
-                acertadoErrado.setText("Acertou");
+                acertadoErrado.setText("A C E R T O U");
                 grid52.setText(String.valueOf(novoJogo.getGridTabuleiro()[2][5]));
                 grid52.setEditable(false);
             } catch (MovimentoInvalidoException ex) {
@@ -1670,7 +1670,7 @@ public class TabuleiroFrame extends javax.swing.JFrame {
             int valor = Integer.parseInt(grid03.getText());
             try {
                 novoJogo.executaMovimento(3, 0, valor);
-                acertadoErrado.setText("Acertou");
+                acertadoErrado.setText("A C E R T O U");
                 grid03.setText(String.valueOf(novoJogo.getGridTabuleiro()[3][0]));
                 grid03.setEditable(false);
             } catch (MovimentoInvalidoException ex) {
@@ -1691,7 +1691,7 @@ public class TabuleiroFrame extends javax.swing.JFrame {
             int valor = Integer.parseInt(grid13.getText());
             try {
                 novoJogo.executaMovimento(3, 1, valor);
-                acertadoErrado.setText("Acertou");
+                acertadoErrado.setText("A C E R T O U");
                 grid13.setText(String.valueOf(novoJogo.getGridTabuleiro()[3][1]));
                 grid13.setEditable(false);
             } catch (MovimentoInvalidoException ex) {
@@ -1712,7 +1712,7 @@ public class TabuleiroFrame extends javax.swing.JFrame {
             int valor = Integer.parseInt(grid23.getText());
             try {
                 novoJogo.executaMovimento(3, 2, valor);
-                acertadoErrado.setText("Acertou");
+                acertadoErrado.setText("A C E R T O U");
                 grid23.setText(String.valueOf(novoJogo.getGridTabuleiro()[3][2]));
                 grid23.setEditable(false);
             } catch (MovimentoInvalidoException ex) {
@@ -1733,7 +1733,7 @@ public class TabuleiroFrame extends javax.swing.JFrame {
             int valor = Integer.parseInt(grid33.getText());
             try {
                 novoJogo.executaMovimento(3, 3, valor);
-                acertadoErrado.setText("Acertou");
+                acertadoErrado.setText("A C E R T O U");
                 grid33.setText(String.valueOf(novoJogo.getGridTabuleiro()[3][3]));
                 grid33.setEditable(false);
             } catch (MovimentoInvalidoException ex) {
@@ -1754,7 +1754,7 @@ public class TabuleiroFrame extends javax.swing.JFrame {
             int valor = Integer.parseInt(grid04.getText());
             try {
                 novoJogo.executaMovimento(4, 0, valor);
-                acertadoErrado.setText("Acertou");
+                acertadoErrado.setText("A C E R T O U");
                 grid04.setText(String.valueOf(novoJogo.getGridTabuleiro()[4][0]));
                 grid04.setEditable(false);
             } catch (MovimentoInvalidoException ex) {
@@ -1775,7 +1775,7 @@ public class TabuleiroFrame extends javax.swing.JFrame {
             int valor = Integer.parseInt(grid14.getText());
             try {
                 novoJogo.executaMovimento(4, 1, valor);
-                acertadoErrado.setText("Acertou");
+                acertadoErrado.setText("A C E R T O U");
                 grid14.setText(String.valueOf(novoJogo.getGridTabuleiro()[4][1]));
                 grid14.setEditable(false);
             } catch (MovimentoInvalidoException ex) {
@@ -1796,7 +1796,7 @@ public class TabuleiroFrame extends javax.swing.JFrame {
             int valor = Integer.parseInt(grid24.getText());
             try {
                 novoJogo.executaMovimento(4, 2, valor);
-                acertadoErrado.setText("Acertou");
+                acertadoErrado.setText("A C E R T O U");
                 grid24.setText(String.valueOf(novoJogo.getGridTabuleiro()[4][2]));
                 grid24.setEditable(false);
             } catch (MovimentoInvalidoException ex) {
@@ -1817,7 +1817,7 @@ public class TabuleiroFrame extends javax.swing.JFrame {
             int valor = Integer.parseInt(grid05.getText());
             try {
                 novoJogo.executaMovimento(5, 0, valor);
-                acertadoErrado.setText("Acertou");
+                acertadoErrado.setText("A C E R T O U");
                 grid05.setText(String.valueOf(novoJogo.getGridTabuleiro()[5][0]));
                 grid05.setEditable(false);
             } catch (MovimentoInvalidoException ex) {
@@ -1838,7 +1838,7 @@ public class TabuleiroFrame extends javax.swing.JFrame {
             int valor = Integer.parseInt(grid15.getText());
             try {
                 novoJogo.executaMovimento(5, 1, valor);
-                acertadoErrado.setText("Acertou");
+                acertadoErrado.setText("A C E R T O U");
                 grid15.setText(String.valueOf(novoJogo.getGridTabuleiro()[5][1]));
                 grid15.setEditable(false);
             } catch (MovimentoInvalidoException ex) {
@@ -1859,7 +1859,7 @@ public class TabuleiroFrame extends javax.swing.JFrame {
             int valor = Integer.parseInt(grid25.getText());
             try {
                 novoJogo.executaMovimento(5, 2, valor);
-                acertadoErrado.setText("Acertou");
+                acertadoErrado.setText("A C E R T O U");
                 grid25.setText(String.valueOf(novoJogo.getGridTabuleiro()[5][2]));
                 grid25.setEditable(false);
             } catch (MovimentoInvalidoException ex) {
@@ -1880,7 +1880,7 @@ public class TabuleiroFrame extends javax.swing.JFrame {
             int valor = Integer.parseInt(grid43.getText());
             try {
                 novoJogo.executaMovimento(3, 4, valor);
-                acertadoErrado.setText("Acertou");
+                acertadoErrado.setText("A C E R T O U");
                 grid43.setText(String.valueOf(novoJogo.getGridTabuleiro()[3][4]));
                 grid43.setEditable(false);
             } catch (MovimentoInvalidoException ex) {
@@ -1901,7 +1901,7 @@ public class TabuleiroFrame extends javax.swing.JFrame {
             int valor = Integer.parseInt(grid53.getText());
             try {
                 novoJogo.executaMovimento(3, 5, valor);
-                acertadoErrado.setText("Acertou");
+                acertadoErrado.setText("A C E R T O U");
                 grid53.setText(String.valueOf(novoJogo.getGridTabuleiro()[3][5]));
                 grid53.setEditable(false);
             } catch (MovimentoInvalidoException ex) {
@@ -1922,7 +1922,7 @@ public class TabuleiroFrame extends javax.swing.JFrame {
             int valor = Integer.parseInt(grid34.getText());
             try {
                 novoJogo.executaMovimento(4, 3, valor);
-                acertadoErrado.setText("Acertou");
+                acertadoErrado.setText("A C E R T O U");
                 grid34.setText(String.valueOf(novoJogo.getGridTabuleiro()[4][3]));
                 grid34.setEditable(false);
             } catch (MovimentoInvalidoException ex) {
@@ -1943,7 +1943,7 @@ public class TabuleiroFrame extends javax.swing.JFrame {
             int valor = Integer.parseInt(grid44.getText());
             try {
                 novoJogo.executaMovimento(4, 4, valor);
-                acertadoErrado.setText("Acertou");
+                acertadoErrado.setText("A C E R T O U");
                 grid44.setText(String.valueOf(novoJogo.getGridTabuleiro()[4][4]));
                 grid44.setEditable(false);
             } catch (MovimentoInvalidoException ex) {
@@ -1964,7 +1964,7 @@ public class TabuleiroFrame extends javax.swing.JFrame {
             int valor = Integer.parseInt(grid54.getText());
             try {
                 novoJogo.executaMovimento(4, 5, valor);
-                acertadoErrado.setText("Acertou");
+                acertadoErrado.setText("A C E R T O U");
                 grid54.setText(String.valueOf(novoJogo.getGridTabuleiro()[4][5]));
                 grid54.setEditable(false);
             } catch (MovimentoInvalidoException ex) {
@@ -1985,7 +1985,7 @@ public class TabuleiroFrame extends javax.swing.JFrame {
             int valor = Integer.parseInt(grid35.getText());
             try {
                 novoJogo.executaMovimento(5, 3, valor);
-                acertadoErrado.setText("Acertou");
+                acertadoErrado.setText("A C E R T O U");
                 grid35.setText(String.valueOf(novoJogo.getGridTabuleiro()[5][3]));
                 grid35.setEditable(false);
 
@@ -2007,7 +2007,7 @@ public class TabuleiroFrame extends javax.swing.JFrame {
             int valor = Integer.parseInt(grid45.getText());
             try {
                 novoJogo.executaMovimento(5, 4, valor);
-                acertadoErrado.setText("Acertou");
+                acertadoErrado.setText("A C E R T O U");
                 grid45.setText(String.valueOf(novoJogo.getGridTabuleiro()[5][4]));
                 grid45.setEditable(false);
             } catch (MovimentoInvalidoException ex) {
@@ -2028,7 +2028,7 @@ public class TabuleiroFrame extends javax.swing.JFrame {
             int valor = Integer.parseInt(grid55.getText());
             try {
                 novoJogo.executaMovimento(5, 5, valor);
-                acertadoErrado.setText("Acertou");
+                acertadoErrado.setText("A C E R T O U");
                 grid55.setText(String.valueOf(novoJogo.getGridTabuleiro()[5][5]));
                 grid55.setEditable(false);
             } catch (MovimentoInvalidoException ex) {
@@ -2049,7 +2049,7 @@ public class TabuleiroFrame extends javax.swing.JFrame {
             int valor = Integer.parseInt(grid60.getText());
             try {
                 novoJogo.executaMovimento(0, 6, valor);
-                acertadoErrado.setText("Acertou");
+                acertadoErrado.setText("A C E R T O U");
                 grid60.setText(String.valueOf(novoJogo.getGridTabuleiro()[0][6]));
                 grid60.setEditable(false);
             } catch (MovimentoInvalidoException ex) {
@@ -2070,7 +2070,7 @@ public class TabuleiroFrame extends javax.swing.JFrame {
             int valor = Integer.parseInt(grid70.getText());
             try {
                 novoJogo.executaMovimento(0, 7, valor);
-                acertadoErrado.setText("Acertou");
+                acertadoErrado.setText("A C E R T O U");
                 grid70.setText(String.valueOf(novoJogo.getGridTabuleiro()[0][7]));
                 grid70.setEditable(false);
             } catch (MovimentoInvalidoException ex) {
@@ -2091,7 +2091,7 @@ public class TabuleiroFrame extends javax.swing.JFrame {
             int valor = Integer.parseInt(grid80.getText());
             try {
                 novoJogo.executaMovimento(0, 8, valor);
-                acertadoErrado.setText("Acertou");
+                acertadoErrado.setText("A C E R T O U");
                 grid80.setText(String.valueOf(novoJogo.getGridTabuleiro()[0][8]));
                 grid80.setEditable(false);
             } catch (MovimentoInvalidoException ex) {
@@ -2112,7 +2112,7 @@ public class TabuleiroFrame extends javax.swing.JFrame {
             int valor = Integer.parseInt(grid61.getText());
             try {
                 novoJogo.executaMovimento(1, 6, valor);
-                acertadoErrado.setText("Acertou");
+                acertadoErrado.setText("A C E R T O U");
                 grid61.setText(String.valueOf(novoJogo.getGridTabuleiro()[1][6]));
                 grid61.setEditable(false);
             } catch (MovimentoInvalidoException ex) {
@@ -2133,7 +2133,7 @@ public class TabuleiroFrame extends javax.swing.JFrame {
             int valor = Integer.parseInt(grid71.getText());
             try {
                 novoJogo.executaMovimento(1, 7, valor);
-                acertadoErrado.setText("Acertou");
+                acertadoErrado.setText("A C E R T O U");
                 grid71.setText(String.valueOf(novoJogo.getGridTabuleiro()[1][7]));
                 grid71.setEditable(false);
             } catch (MovimentoInvalidoException ex) {
@@ -2154,7 +2154,7 @@ public class TabuleiroFrame extends javax.swing.JFrame {
             int valor = Integer.parseInt(grid81.getText());
             try {
                 novoJogo.executaMovimento(1, 8, valor);
-                acertadoErrado.setText("Acertou");
+                acertadoErrado.setText("A C E R T O U");
                 grid81.setText(String.valueOf(novoJogo.getGridTabuleiro()[1][8]));
                 grid81.setEditable(false);
             } catch (MovimentoInvalidoException ex) {
@@ -2175,7 +2175,7 @@ public class TabuleiroFrame extends javax.swing.JFrame {
             int valor = Integer.parseInt(grid62.getText());
             try {
                 novoJogo.executaMovimento(2, 6, valor);
-                acertadoErrado.setText("Acertou");
+                acertadoErrado.setText("A C E R T O U");
                 grid62.setText(String.valueOf(novoJogo.getGridTabuleiro()[2][6]));
                 grid62.setEditable(false);
             } catch (MovimentoInvalidoException ex) {
@@ -2196,7 +2196,7 @@ public class TabuleiroFrame extends javax.swing.JFrame {
             int valor = Integer.parseInt(grid72.getText());
             try {
                 novoJogo.executaMovimento(2, 7, valor);
-                acertadoErrado.setText("Acertou");
+                acertadoErrado.setText("A C E R T O U");
                 grid72.setText(String.valueOf(novoJogo.getGridTabuleiro()[2][7]));
                 grid72.setEditable(false);
             } catch (MovimentoInvalidoException ex) {
@@ -2217,7 +2217,7 @@ public class TabuleiroFrame extends javax.swing.JFrame {
             int valor = Integer.parseInt(grid82.getText());
             try {
                 novoJogo.executaMovimento(2, 8, valor);
-                acertadoErrado.setText("Acertou");
+                acertadoErrado.setText("A C E R T O U");
                 grid82.setText(String.valueOf(novoJogo.getGridTabuleiro()[2][8]));
                 grid82.setEditable(false);
             } catch (MovimentoInvalidoException ex) {
@@ -2238,7 +2238,7 @@ public class TabuleiroFrame extends javax.swing.JFrame {
             int valor = Integer.parseInt(grid63.getText());
             try {
                 novoJogo.executaMovimento(3, 6, valor);
-                acertadoErrado.setText("Acertou");
+                acertadoErrado.setText("A C E R T O U");
                 grid63.setText(String.valueOf(novoJogo.getGridTabuleiro()[3][6]));
                 grid63.setEditable(false);
             } catch (MovimentoInvalidoException ex) {
@@ -2259,7 +2259,7 @@ public class TabuleiroFrame extends javax.swing.JFrame {
             int valor = Integer.parseInt(grid73.getText());
             try {
                 novoJogo.executaMovimento(3, 7, valor);
-                acertadoErrado.setText("Acertou");
+                acertadoErrado.setText("A C E R T O U");
                 grid73.setText(String.valueOf(novoJogo.getGridTabuleiro()[3][7]));
                 grid73.setEditable(false);
             } catch (MovimentoInvalidoException ex) {
@@ -2280,7 +2280,7 @@ public class TabuleiroFrame extends javax.swing.JFrame {
             int valor = Integer.parseInt(grid83.getText());
             try {
                 novoJogo.executaMovimento(3, 8, valor);
-                acertadoErrado.setText("Acertou");
+                acertadoErrado.setText("A C E R T O U");
                 grid83.setText(String.valueOf(novoJogo.getGridTabuleiro()[3][8]));
                 grid83.setEditable(false);
             } catch (MovimentoInvalidoException ex) {
@@ -2301,7 +2301,7 @@ public class TabuleiroFrame extends javax.swing.JFrame {
             int valor = Integer.parseInt(grid64.getText());
             try {
                 novoJogo.executaMovimento(4, 6, valor);
-                acertadoErrado.setText("Acertou");
+                acertadoErrado.setText("A C E R T O U");
                 grid64.setText(String.valueOf(novoJogo.getGridTabuleiro()[4][6]));
                 grid64.setEditable(false);
             } catch (MovimentoInvalidoException ex) {
@@ -2322,7 +2322,7 @@ public class TabuleiroFrame extends javax.swing.JFrame {
             int valor = Integer.parseInt(grid74.getText());
             try {
                 novoJogo.executaMovimento(4, 7, valor);
-                acertadoErrado.setText("Acertou");
+                acertadoErrado.setText("A C E R T O U");
                 grid74.setText(String.valueOf(novoJogo.getGridTabuleiro()[4][7]));
                 grid74.setEditable(false);
             } catch (MovimentoInvalidoException ex) {
@@ -2343,7 +2343,7 @@ public class TabuleiroFrame extends javax.swing.JFrame {
             int valor = Integer.parseInt(grid84.getText());
             try {
                 novoJogo.executaMovimento(4, 8, valor);
-                acertadoErrado.setText("Acertou");
+                acertadoErrado.setText("A C E R T O U");
                 grid84.setText(String.valueOf(novoJogo.getGridTabuleiro()[4][8]));
                 grid84.setEditable(false);
             } catch (MovimentoInvalidoException ex) {
@@ -2364,7 +2364,7 @@ public class TabuleiroFrame extends javax.swing.JFrame {
             int valor = Integer.parseInt(grid65.getText());
             try {
                 novoJogo.executaMovimento(5, 6, valor);
-                acertadoErrado.setText("Acertou");
+                acertadoErrado.setText("A C E R T O U");
                 grid65.setText(String.valueOf(novoJogo.getGridTabuleiro()[5][6]));
                 grid65.setEditable(false);
             } catch (MovimentoInvalidoException ex) {
@@ -2385,7 +2385,7 @@ public class TabuleiroFrame extends javax.swing.JFrame {
             int valor = Integer.parseInt(grid75.getText());
             try {
                 novoJogo.executaMovimento(5, 7, valor);
-                acertadoErrado.setText("Acertou");
+                acertadoErrado.setText("A C E R T O U");
                 grid75.setText(String.valueOf(novoJogo.getGridTabuleiro()[5][7]));
                 grid75.setEditable(false);
             } catch (MovimentoInvalidoException ex) {
@@ -2406,7 +2406,7 @@ public class TabuleiroFrame extends javax.swing.JFrame {
             int valor = Integer.parseInt(grid85.getText());
             try {
                 novoJogo.executaMovimento(5, 8, valor);
-                acertadoErrado.setText("Acertou");
+                acertadoErrado.setText("A C E R T O U");
                 grid85.setText(String.valueOf(novoJogo.getGridTabuleiro()[5][8]));
                 grid85.setEditable(false);
             } catch (MovimentoInvalidoException ex) {
@@ -2427,7 +2427,7 @@ public class TabuleiroFrame extends javax.swing.JFrame {
             int valor = Integer.parseInt(grid06.getText());
             try {
                 novoJogo.executaMovimento(6, 0, valor);
-                acertadoErrado.setText("Acertou");
+                acertadoErrado.setText("A C E R T O U");
                 grid06.setText(String.valueOf(novoJogo.getGridTabuleiro()[6][0]));
                 grid06.setEditable(false);
             } catch (MovimentoInvalidoException ex) {
@@ -2448,7 +2448,7 @@ public class TabuleiroFrame extends javax.swing.JFrame {
             int valor = Integer.parseInt(grid16.getText());
             try {
                 novoJogo.executaMovimento(6, 1, valor);
-                acertadoErrado.setText("Acertou");
+                acertadoErrado.setText("A C E R T O U");
                 grid16.setText(String.valueOf(novoJogo.getGridTabuleiro()[6][1]));
                 grid16.setEditable(false);
             } catch (MovimentoInvalidoException ex) {
@@ -2469,7 +2469,7 @@ public class TabuleiroFrame extends javax.swing.JFrame {
             int valor = Integer.parseInt(grid26.getText());
             try {
                 novoJogo.executaMovimento(6, 2, valor);
-                acertadoErrado.setText("Acertou");
+                acertadoErrado.setText("A C E R T O U");
                 grid26.setText(String.valueOf(novoJogo.getGridTabuleiro()[6][2]));
                 grid26.setEditable(false);
             } catch (MovimentoInvalidoException ex) {
@@ -2490,7 +2490,7 @@ public class TabuleiroFrame extends javax.swing.JFrame {
             int valor = Integer.parseInt(grid07.getText());
             try {
                 novoJogo.executaMovimento(7, 0, valor);
-                acertadoErrado.setText("Acertou");
+                acertadoErrado.setText("A C E R T O U");
                 grid07.setText(String.valueOf(novoJogo.getGridTabuleiro()[7][0]));
                 grid07.setEditable(false);
             } catch (MovimentoInvalidoException ex) {
@@ -2511,7 +2511,7 @@ public class TabuleiroFrame extends javax.swing.JFrame {
             int valor = Integer.parseInt(grid17.getText());
             try {
                 novoJogo.executaMovimento(7, 1, valor);
-                acertadoErrado.setText("Acertou");
+                acertadoErrado.setText("A C E R T O U");
                 grid17.setText(String.valueOf(novoJogo.getGridTabuleiro()[7][1]));
                 grid17.setEditable(false);
             } catch (MovimentoInvalidoException ex) {
@@ -2532,7 +2532,7 @@ public class TabuleiroFrame extends javax.swing.JFrame {
             int valor = Integer.parseInt(grid27.getText());
             try {
                 novoJogo.executaMovimento(7, 2, valor);
-                acertadoErrado.setText("Acertou");
+                acertadoErrado.setText("A C E R T O U");
                 grid27.setText(String.valueOf(novoJogo.getGridTabuleiro()[7][2]));
                 grid27.setEditable(false);
             } catch (MovimentoInvalidoException ex) {
@@ -2553,7 +2553,7 @@ public class TabuleiroFrame extends javax.swing.JFrame {
             int valor = Integer.parseInt(grid08.getText());
             try {
                 novoJogo.executaMovimento(8, 0, valor);
-                acertadoErrado.setText("Acertou");
+                acertadoErrado.setText("A C E R T O U");
                 grid08.setText(String.valueOf(novoJogo.getGridTabuleiro()[8][0]));
                 grid08.setEditable(false);
             } catch (MovimentoInvalidoException ex) {
@@ -2574,7 +2574,7 @@ public class TabuleiroFrame extends javax.swing.JFrame {
             int valor = Integer.parseInt(grid18.getText());
             try {
                 novoJogo.executaMovimento(8, 1, valor);
-                acertadoErrado.setText("Acertou");
+                acertadoErrado.setText("A C E R T O U");
                 grid18.setText(String.valueOf(novoJogo.getGridTabuleiro()[8][1]));
                 grid18.setEditable(false);
             } catch (MovimentoInvalidoException ex) {
@@ -2595,7 +2595,7 @@ public class TabuleiroFrame extends javax.swing.JFrame {
             int valor = Integer.parseInt(grid28.getText());
             try {
                 novoJogo.executaMovimento(8, 2, valor);
-                acertadoErrado.setText("Acertou");
+                acertadoErrado.setText("A C E R T O U");
                 grid28.setText(String.valueOf(novoJogo.getGridTabuleiro()[8][2]));
                 grid28.setEditable(false);
             } catch (MovimentoInvalidoException ex) {
@@ -2616,7 +2616,7 @@ public class TabuleiroFrame extends javax.swing.JFrame {
             int valor = Integer.parseInt(grid36.getText());
             try {
                 novoJogo.executaMovimento(6, 3, valor);
-                acertadoErrado.setText("Acertou");
+                acertadoErrado.setText("A C E R T O U");
                 grid36.setText(String.valueOf(novoJogo.getGridTabuleiro()[6][3]));
                 grid36.setEditable(false);
             } catch (MovimentoInvalidoException ex) {
@@ -2637,7 +2637,7 @@ public class TabuleiroFrame extends javax.swing.JFrame {
             int valor = Integer.parseInt(grid46.getText());
             try {
                 novoJogo.executaMovimento(6, 4, valor);
-                acertadoErrado.setText("Acertou");
+                acertadoErrado.setText("A C E R T O U");
                 grid46.setText(String.valueOf(novoJogo.getGridTabuleiro()[6][4]));
                 grid46.setEditable(false);
             } catch (MovimentoInvalidoException ex) {
@@ -2658,7 +2658,7 @@ public class TabuleiroFrame extends javax.swing.JFrame {
             int valor = Integer.parseInt(grid56.getText());
             try {
                 novoJogo.executaMovimento(6, 5, valor);
-                acertadoErrado.setText("Acertou");
+                acertadoErrado.setText("A C E R T O U");
                 grid56.setText(String.valueOf(novoJogo.getGridTabuleiro()[6][5]));
                 grid56.setEditable(false);
             } catch (MovimentoInvalidoException ex) {
@@ -2679,7 +2679,7 @@ public class TabuleiroFrame extends javax.swing.JFrame {
             int valor = Integer.parseInt(grid37.getText());
             try {
                 novoJogo.executaMovimento(7, 3, valor);
-                acertadoErrado.setText("Acertou");
+                acertadoErrado.setText("A C E R T O U");
                 grid37.setText(String.valueOf(novoJogo.getGridTabuleiro()[7][3]));
                 grid37.setEditable(false);
             } catch (MovimentoInvalidoException ex) {
@@ -2700,7 +2700,7 @@ public class TabuleiroFrame extends javax.swing.JFrame {
             int valor = Integer.parseInt(grid47.getText());
             try {
                 novoJogo.executaMovimento(7, 4, valor);
-                acertadoErrado.setText("Acertou");
+                acertadoErrado.setText("A C E R T O U");
                 grid47.setText(String.valueOf(novoJogo.getGridTabuleiro()[7][4]));
                 grid47.setEditable(false);
             } catch (MovimentoInvalidoException ex) {
@@ -2721,7 +2721,7 @@ public class TabuleiroFrame extends javax.swing.JFrame {
             int valor = Integer.parseInt(grid57.getText());
             try {
                 novoJogo.executaMovimento(7, 5, valor);
-                acertadoErrado.setText("Acertou");
+                acertadoErrado.setText("A C E R T O U");
                 grid57.setText(String.valueOf(novoJogo.getGridTabuleiro()[7][5]));
                 grid57.setEditable(false);
             } catch (MovimentoInvalidoException ex) {
@@ -2742,7 +2742,7 @@ public class TabuleiroFrame extends javax.swing.JFrame {
             int valor = Integer.parseInt(grid38.getText());
             try {
                 novoJogo.executaMovimento(8, 3, valor);
-                acertadoErrado.setText("Acertou");
+                acertadoErrado.setText("A C E R T O U");
                 grid38.setText(String.valueOf(novoJogo.getGridTabuleiro()[8][3]));
                 grid38.setEditable(false);
             } catch (MovimentoInvalidoException ex) {
@@ -2763,7 +2763,7 @@ public class TabuleiroFrame extends javax.swing.JFrame {
             int valor = Integer.parseInt(grid48.getText());
             try {
                 novoJogo.executaMovimento(8, 4, valor);
-                acertadoErrado.setText("Acertou");
+                acertadoErrado.setText("A C E R T O U");
                 grid48.setText(String.valueOf(novoJogo.getGridTabuleiro()[8][4]));
                 grid48.setEditable(false);
             } catch (MovimentoInvalidoException ex) {
@@ -2784,7 +2784,7 @@ public class TabuleiroFrame extends javax.swing.JFrame {
             int valor = Integer.parseInt(grid58.getText());
             try {
                 novoJogo.executaMovimento(8, 5, valor);
-                acertadoErrado.setText("Acertou");
+                acertadoErrado.setText("A C E R T O U");
                 grid58.setText(String.valueOf(novoJogo.getGridTabuleiro()[8][5]));
                 grid58.setEditable(false);
             } catch (MovimentoInvalidoException ex) {
@@ -2805,7 +2805,7 @@ public class TabuleiroFrame extends javax.swing.JFrame {
             int valor = Integer.parseInt(grid66.getText());
             try {
                 novoJogo.executaMovimento(6, 6, valor);
-                acertadoErrado.setText("Acertou");
+                acertadoErrado.setText("A C E R T O U");
                 grid66.setText(String.valueOf(novoJogo.getGridTabuleiro()[6][6]));
                 grid66.setEditable(false);
             } catch (MovimentoInvalidoException ex) {
@@ -2826,7 +2826,7 @@ public class TabuleiroFrame extends javax.swing.JFrame {
             int valor = Integer.parseInt(grid76.getText());
             try {
                 novoJogo.executaMovimento(6, 7, valor);
-                acertadoErrado.setText("Acertou");
+                acertadoErrado.setText("A C E R T O U");
                 grid76.setText(String.valueOf(novoJogo.getGridTabuleiro()[6][7]));
                 grid76.setEditable(false);
             } catch (MovimentoInvalidoException ex) {
@@ -2847,7 +2847,7 @@ public class TabuleiroFrame extends javax.swing.JFrame {
             int valor = Integer.parseInt(grid86.getText());
             try {
                 novoJogo.executaMovimento(6, 8, valor);
-                acertadoErrado.setText("Acertou");
+                acertadoErrado.setText("A C E R T O U");
                 grid86.setText(String.valueOf(novoJogo.getGridTabuleiro()[6][8]));
                 grid86.setEditable(false);
             } catch (MovimentoInvalidoException ex) {
@@ -2868,7 +2868,7 @@ public class TabuleiroFrame extends javax.swing.JFrame {
             int valor = Integer.parseInt(grid67.getText());
             try {
                 novoJogo.executaMovimento(7, 6, valor);
-                acertadoErrado.setText("Acertou");
+                acertadoErrado.setText("A C E R T O U");
                 grid67.setText(String.valueOf(novoJogo.getGridTabuleiro()[7][6]));
                 grid67.setEditable(false);
             } catch (MovimentoInvalidoException ex) {
@@ -2889,7 +2889,7 @@ public class TabuleiroFrame extends javax.swing.JFrame {
             int valor = Integer.parseInt(grid77.getText());
             try {
                 novoJogo.executaMovimento(7, 7, valor);
-                acertadoErrado.setText("Acertou");
+                acertadoErrado.setText("A C E R T O U");
                 grid77.setText(String.valueOf(novoJogo.getGridTabuleiro()[7][7]));
                 grid77.setEditable(false);
             } catch (MovimentoInvalidoException ex) {
@@ -2910,7 +2910,7 @@ public class TabuleiroFrame extends javax.swing.JFrame {
             int valor = Integer.parseInt(grid87.getText());
             try {
                 novoJogo.executaMovimento(7, 8, valor);
-                acertadoErrado.setText("Acertou");
+                acertadoErrado.setText("A C E R T O U");
                 grid87.setText(String.valueOf(novoJogo.getGridTabuleiro()[7][8]));
                 grid87.setEditable(false);
             } catch (MovimentoInvalidoException ex) {
@@ -2931,7 +2931,7 @@ public class TabuleiroFrame extends javax.swing.JFrame {
             int valor = Integer.parseInt(grid68.getText());
             try {
                 novoJogo.executaMovimento(8, 6, valor);
-                acertadoErrado.setText("Acertou");
+                acertadoErrado.setText("A C E R T O U");
                 grid68.setText(String.valueOf(novoJogo.getGridTabuleiro()[8][6]));
                 grid68.setEditable(false);
             } catch (MovimentoInvalidoException ex) {
@@ -2952,7 +2952,7 @@ public class TabuleiroFrame extends javax.swing.JFrame {
             int valor = Integer.parseInt(grid78.getText());
             try {
                 novoJogo.executaMovimento(8, 7, valor);
-                acertadoErrado.setText("Acertou");
+                acertadoErrado.setText("A C E R T O U");
                 grid78.setText(String.valueOf(novoJogo.getGridTabuleiro()[8][7]));
                 grid78.setEditable(false);
             } catch (MovimentoInvalidoException ex) {
@@ -2973,7 +2973,7 @@ public class TabuleiroFrame extends javax.swing.JFrame {
             int valor = Integer.parseInt(grid88.getText());
             try {
                 novoJogo.executaMovimento(8, 8, valor);
-                acertadoErrado.setText("Acertou");
+                acertadoErrado.setText("A C E R T O U");
                 grid88.setText(String.valueOf(novoJogo.getGridTabuleiro()[8][8]));
                 grid88.setEditable(false);
             } catch (MovimentoInvalidoException ex) {
