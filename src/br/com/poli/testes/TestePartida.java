@@ -17,7 +17,7 @@ public class TestePartida {
 
     public static void main(String[] args) {
         Partida jogo1;
-        jogo1 = new Partida("Ana", DificuldadePartida.FACIL);
+        jogo1 = new Partida("Ana", DificuldadePartida.FACIL, 2);
         //para forçar testes
         Random random = new Random();
         int x = 0, y = 0;
@@ -73,12 +73,6 @@ public class TestePartida {
             }
 
         }
-        //mostrar a solução
-        /*try {
-            jogo1.resolvePartida();
-        } catch (SemSolucaoException e) {
-            System.out.println(e.getMessage());
-        }*/
         //Calculo do score sem informar idade
         CalculaScoreSemIdade calcula = new CalculaScoreSemIdade();
         calcula.calcula(jogo1);

@@ -7,7 +7,7 @@ import br.com.poli.exception.SemSolucaoException;
 import java.util.Date;
 import java.util.Random;
 
-public class Partida {
+public final class Partida {
 
     private Jogador jogador;
     private Tabuleiro tabuleiro;
@@ -34,11 +34,9 @@ public class Partida {
     }
 
     public Partida(String nome, DificuldadePartida dificuldade, int idade) {
-        this.tempoInicial = new Date(System.currentTimeMillis());
         this.jogador = new Jogador(nome, idade);
         this.dificuldade = dificuldade;
-        this.tabuleiro = new Tabuleiro(dificuldade);
-        this.desistiu = false;
+        iniciaPartida();
     }
 
     public void executaMovimento(int x, int y, int valor) throws MovimentoInvalidoException, MovimentoIncorretoException {

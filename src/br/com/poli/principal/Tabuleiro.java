@@ -226,14 +226,3 @@ public class Tabuleiro implements ResolvedorSudoku {
         this.grid[x][y] = valor;
     }
 }
-/*public void main(String[] args) {
-  boolean solved = resolveTabuleiro(new Cell(0, 0));
-  if (!solved) {
-   System.out.println("SUDOKU cannot be solved.");
-   return;
-  }
-  System.out.println("SOLUTION\n");
-  printGrid(grid);
- }*/
-// utility to print the grid
-
