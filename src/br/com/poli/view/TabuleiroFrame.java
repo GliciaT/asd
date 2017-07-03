@@ -20,7 +20,7 @@ import javax.swing.JOptionPane;
  * @author dylan
  */
 public class TabuleiroFrame extends javax.swing.JFrame {
-    
+
     Partida novoJogo;
 
     /**
@@ -30,20 +30,20 @@ public class TabuleiroFrame extends javax.swing.JFrame {
         initComponents();
         clock1.start();
     }
-    
+
     public TabuleiroFrame(String nome, DificuldadePartida dificuldade, int idade) {
         novoJogo = new Partida(nome, dificuldade, idade);
         initComponents();
         setAllTextField();
         clock1.start();
-        
+
     }
     Thread clock1 = new Thread() {
-        
+
         @Override
         public void run() {
             int hor = 00, min = 00, seg = 00;
-            
+
             for (;;) {
                 try {
                     //System.out.println(hor + ":" + min + ":" + seg);
@@ -60,7 +60,7 @@ public class TabuleiroFrame extends javax.swing.JFrame {
                     tempo.setText(hor + ":" + min + ":" + seg);
                     Thread.sleep(999);
                 } catch (InterruptedException e) {
-                    
+
                 }
             }
         }
@@ -1280,13 +1280,14 @@ public class TabuleiroFrame extends javax.swing.JFrame {
                 grid00.setEditable(false);
             } catch (MovimentoInvalidoException ex) {
                 JOptionPane.showMessageDialog(null, ex.getMessage());
-            } catch (MovimentoIncorretoException ex) { 
+            } catch (MovimentoIncorretoException ex) {
                 progressoErros.setValue(novoJogo.getQuantidadeErros());
-                if (novoJogo.isFimDeJogo()) {
-                    JOptionPane.showMessageDialog(null, "O jogo acabou");
-                    abrirFimDeJogo(novoJogo);
-                }
+
                 acertadoErrado.setText(ex.getMessage());
+            }
+            if (novoJogo.isFimDeJogo()) {
+                JOptionPane.showMessageDialog(null, "O jogo acabou");
+                abrirFimDeJogo(novoJogo);
             }
         }
 
@@ -1308,11 +1309,12 @@ public class TabuleiroFrame extends javax.swing.JFrame {
                 JOptionPane.showMessageDialog(null, ex.getMessage());
             } catch (MovimentoIncorretoException ex) {
                 progressoErros.setValue(novoJogo.getQuantidadeErros());
-                if (novoJogo.isFimDeJogo()) {
-                    JOptionPane.showMessageDialog(null, "O jogo acabou");
-                    abrirFimDeJogo(novoJogo);
-                }
-                acertadoErrado.setText(ex.getMessage());            }
+                acertadoErrado.setText(ex.getMessage());
+            }
+        }
+        if (novoJogo.isFimDeJogo()) {
+            JOptionPane.showMessageDialog(null, "O jogo acabou");
+            abrirFimDeJogo(novoJogo);
         }
     }//GEN-LAST:event_grid10KeyTyped
 
@@ -1328,11 +1330,13 @@ public class TabuleiroFrame extends javax.swing.JFrame {
                 JOptionPane.showMessageDialog(null, ex.getMessage());
             } catch (MovimentoIncorretoException ex) {
                 progressoErros.setValue(novoJogo.getQuantidadeErros());
-                if (novoJogo.isFimDeJogo()) {
-                    JOptionPane.showMessageDialog(null, "O jogo acabou");
-                    abrirFimDeJogo(novoJogo);
-                }
-                acertadoErrado.setText(ex.getMessage());}
+
+                acertadoErrado.setText(ex.getMessage());
+            }
+        }
+        if (novoJogo.isFimDeJogo()) {
+            JOptionPane.showMessageDialog(null, "O jogo acabou");
+            abrirFimDeJogo(novoJogo);
         }
     }//GEN-LAST:event_grid20KeyTyped
 
@@ -1348,11 +1352,13 @@ public class TabuleiroFrame extends javax.swing.JFrame {
                 JOptionPane.showMessageDialog(null, ex.getMessage());
             } catch (MovimentoIncorretoException ex) {
                 progressoErros.setValue(novoJogo.getQuantidadeErros());
-                if (novoJogo.isFimDeJogo()) {
-                    JOptionPane.showMessageDialog(null, "O jogo acabou");
-                    abrirFimDeJogo(novoJogo);
-                }
-                acertadoErrado.setText(ex.getMessage());}
+
+                acertadoErrado.setText(ex.getMessage());
+            }
+        }
+        if (novoJogo.isFimDeJogo()) {
+            JOptionPane.showMessageDialog(null, "O jogo acabou");
+            abrirFimDeJogo(novoJogo);
         }
     }//GEN-LAST:event_grid01KeyTyped
 
@@ -1368,11 +1374,13 @@ public class TabuleiroFrame extends javax.swing.JFrame {
                 JOptionPane.showMessageDialog(null, ex.getMessage());
             } catch (MovimentoIncorretoException ex) {
                 progressoErros.setValue(novoJogo.getQuantidadeErros());
-                if (novoJogo.isFimDeJogo()) {
-                    JOptionPane.showMessageDialog(null, "O jogo acabou");
-                    abrirFimDeJogo(novoJogo);
-                }
-                acertadoErrado.setText(ex.getMessage());}
+
+                acertadoErrado.setText(ex.getMessage());
+            }
+        }
+        if (novoJogo.isFimDeJogo()) {
+            JOptionPane.showMessageDialog(null, "O jogo acabou");
+            abrirFimDeJogo(novoJogo);
         }
     }//GEN-LAST:event_grid11KeyTyped
 
@@ -1388,11 +1396,13 @@ public class TabuleiroFrame extends javax.swing.JFrame {
                 JOptionPane.showMessageDialog(null, ex.getMessage());
             } catch (MovimentoIncorretoException ex) {
                 progressoErros.setValue(novoJogo.getQuantidadeErros());
-                if (novoJogo.isFimDeJogo()) {
-                    JOptionPane.showMessageDialog(null, "O jogo acabou");
-                    abrirFimDeJogo(novoJogo);
-                }
-                acertadoErrado.setText(ex.getMessage());}
+
+                acertadoErrado.setText(ex.getMessage());
+            }
+        }
+        if (novoJogo.isFimDeJogo()) {
+            JOptionPane.showMessageDialog(null, "O jogo acabou");
+            abrirFimDeJogo(novoJogo);
         }
     }//GEN-LAST:event_grid21KeyTyped
 
@@ -1407,12 +1417,14 @@ public class TabuleiroFrame extends javax.swing.JFrame {
             } catch (MovimentoInvalidoException ex) {
                 JOptionPane.showMessageDialog(null, ex.getMessage());
             } catch (MovimentoIncorretoException ex) {
-               progressoErros.setValue(novoJogo.getQuantidadeErros());
-                if (novoJogo.isFimDeJogo()) {
-                    JOptionPane.showMessageDialog(null, "O jogo acabou");
-                    abrirFimDeJogo(novoJogo);
-                }
-                acertadoErrado.setText(ex.getMessage());}
+                progressoErros.setValue(novoJogo.getQuantidadeErros());
+
+                acertadoErrado.setText(ex.getMessage());
+            }
+        }
+        if (novoJogo.isFimDeJogo()) {
+            JOptionPane.showMessageDialog(null, "O jogo acabou");
+            abrirFimDeJogo(novoJogo);
         }
     }//GEN-LAST:event_grid02KeyTyped
 
@@ -1428,11 +1440,13 @@ public class TabuleiroFrame extends javax.swing.JFrame {
                 JOptionPane.showMessageDialog(null, ex.getMessage());
             } catch (MovimentoIncorretoException ex) {
                 progressoErros.setValue(novoJogo.getQuantidadeErros());
-                if (novoJogo.isFimDeJogo()) {
-                    JOptionPane.showMessageDialog(null, "O jogo acabou");
-                    abrirFimDeJogo(novoJogo);
-                }
-                acertadoErrado.setText(ex.getMessage());}
+
+                acertadoErrado.setText(ex.getMessage());
+            }
+        }
+        if (novoJogo.isFimDeJogo()) {
+            JOptionPane.showMessageDialog(null, "O jogo acabou");
+            abrirFimDeJogo(novoJogo);
         }
     }//GEN-LAST:event_grid12KeyTyped
 
@@ -1448,11 +1462,13 @@ public class TabuleiroFrame extends javax.swing.JFrame {
                 JOptionPane.showMessageDialog(null, ex.getMessage());
             } catch (MovimentoIncorretoException ex) {
                 progressoErros.setValue(novoJogo.getQuantidadeErros());
-                if (novoJogo.isFimDeJogo()) {
-                    JOptionPane.showMessageDialog(null, "O jogo acabou");
-                    abrirFimDeJogo(novoJogo);
-                }
-                acertadoErrado.setText(ex.getMessage());}
+
+                acertadoErrado.setText(ex.getMessage());
+            }
+        }
+        if (novoJogo.isFimDeJogo()) {
+            JOptionPane.showMessageDialog(null, "O jogo acabou");
+            abrirFimDeJogo(novoJogo);
         }
     }//GEN-LAST:event_grid22KeyTyped
 
@@ -1468,11 +1484,13 @@ public class TabuleiroFrame extends javax.swing.JFrame {
                 JOptionPane.showMessageDialog(null, ex.getMessage());
             } catch (MovimentoIncorretoException ex) {
                 progressoErros.setValue(novoJogo.getQuantidadeErros());
-                if (novoJogo.isFimDeJogo()) {
-                    JOptionPane.showMessageDialog(null, "O jogo acabou");
-                    abrirFimDeJogo(novoJogo);
-                }
-                acertadoErrado.setText(ex.getMessage());}
+
+                acertadoErrado.setText(ex.getMessage());
+            }
+        }
+        if (novoJogo.isFimDeJogo()) {
+            JOptionPane.showMessageDialog(null, "O jogo acabou");
+            abrirFimDeJogo(novoJogo);
         }
     }//GEN-LAST:event_grid30KeyTyped
 
@@ -1488,11 +1506,13 @@ public class TabuleiroFrame extends javax.swing.JFrame {
                 JOptionPane.showMessageDialog(null, ex.getMessage());
             } catch (MovimentoIncorretoException ex) {
                 progressoErros.setValue(novoJogo.getQuantidadeErros());
-                if (novoJogo.isFimDeJogo()) {
-                    JOptionPane.showMessageDialog(null, "O jogo acabou");
-                    abrirFimDeJogo(novoJogo);
-                }
-                acertadoErrado.setText(ex.getMessage());}
+
+                acertadoErrado.setText(ex.getMessage());
+            }
+        }
+        if (novoJogo.isFimDeJogo()) {
+            JOptionPane.showMessageDialog(null, "O jogo acabou");
+            abrirFimDeJogo(novoJogo);
         }
     }//GEN-LAST:event_grid40KeyTyped
 
@@ -1508,11 +1528,13 @@ public class TabuleiroFrame extends javax.swing.JFrame {
                 JOptionPane.showMessageDialog(null, ex.getMessage());
             } catch (MovimentoIncorretoException ex) {
                 progressoErros.setValue(novoJogo.getQuantidadeErros());
-                if (novoJogo.isFimDeJogo()) {
-                    JOptionPane.showMessageDialog(null, "O jogo acabou");
-                    abrirFimDeJogo(novoJogo);
-                }
-                acertadoErrado.setText(ex.getMessage());}
+
+                acertadoErrado.setText(ex.getMessage());
+            }
+        }
+        if (novoJogo.isFimDeJogo()) {
+            JOptionPane.showMessageDialog(null, "O jogo acabou");
+            abrirFimDeJogo(novoJogo);
         }
     }//GEN-LAST:event_grid50KeyTyped
 
@@ -1528,11 +1550,14 @@ public class TabuleiroFrame extends javax.swing.JFrame {
                 JOptionPane.showMessageDialog(null, ex.getMessage());
             } catch (MovimentoIncorretoException ex) {
                 progressoErros.setValue(novoJogo.getQuantidadeErros());
-                if (novoJogo.isFimDeJogo()) {
-                    JOptionPane.showMessageDialog(null, "O jogo acabou");
-                    abrirFimDeJogo(novoJogo);
-                }
-                acertadoErrado.setText(ex.getMessage());}
+
+                acertadoErrado.setText(ex.getMessage());
+            }
+        }
+        if (novoJogo.isFimDeJogo()) {
+            JOptionPane.showMessageDialog(null, "O jogo acabou");
+            abrirFimDeJogo(novoJogo);
+        } else {
         }    }//GEN-LAST:event_grid31KeyTyped
 
     private void grid41KeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_grid41KeyTyped
@@ -1547,11 +1572,13 @@ public class TabuleiroFrame extends javax.swing.JFrame {
                 JOptionPane.showMessageDialog(null, ex.getMessage());
             } catch (MovimentoIncorretoException ex) {
                 progressoErros.setValue(novoJogo.getQuantidadeErros());
-                if (novoJogo.isFimDeJogo()) {
-                    JOptionPane.showMessageDialog(null, "O jogo acabou");
-                    abrirFimDeJogo(novoJogo);
-                }
-                acertadoErrado.setText(ex.getMessage());}
+
+                acertadoErrado.setText(ex.getMessage());
+            }
+            if (novoJogo.isFimDeJogo()) {
+                JOptionPane.showMessageDialog(null, "O jogo acabou");
+                abrirFimDeJogo(novoJogo);
+            }
         }    }//GEN-LAST:event_grid41KeyTyped
 
     private void grid51KeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_grid51KeyTyped
@@ -1566,11 +1593,13 @@ public class TabuleiroFrame extends javax.swing.JFrame {
                 JOptionPane.showMessageDialog(null, ex.getMessage());
             } catch (MovimentoIncorretoException ex) {
                 progressoErros.setValue(novoJogo.getQuantidadeErros());
-                if (novoJogo.isFimDeJogo()) {
-                    JOptionPane.showMessageDialog(null, "O jogo acabou");
-                    abrirFimDeJogo(novoJogo);
-                }
-                acertadoErrado.setText(ex.getMessage());}
+
+                acertadoErrado.setText(ex.getMessage());
+            }
+            if (novoJogo.isFimDeJogo()) {
+                JOptionPane.showMessageDialog(null, "O jogo acabou");
+                abrirFimDeJogo(novoJogo);
+            }
         }    }//GEN-LAST:event_grid51KeyTyped
 
     private void grid32KeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_grid32KeyTyped
@@ -1585,11 +1614,13 @@ public class TabuleiroFrame extends javax.swing.JFrame {
                 JOptionPane.showMessageDialog(null, ex.getMessage());
             } catch (MovimentoIncorretoException ex) {
                 progressoErros.setValue(novoJogo.getQuantidadeErros());
-                if (novoJogo.isFimDeJogo()) {
-                    JOptionPane.showMessageDialog(null, "O jogo acabou");
-                    abrirFimDeJogo(novoJogo);
-                }
-                acertadoErrado.setText(ex.getMessage());}
+
+                acertadoErrado.setText(ex.getMessage());
+            }
+            if (novoJogo.isFimDeJogo()) {
+                JOptionPane.showMessageDialog(null, "O jogo acabou");
+                abrirFimDeJogo(novoJogo);
+            }
         }    }//GEN-LAST:event_grid32KeyTyped
 
     private void grid42KeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_grid42KeyTyped
@@ -1604,11 +1635,13 @@ public class TabuleiroFrame extends javax.swing.JFrame {
                 JOptionPane.showMessageDialog(null, ex.getMessage());
             } catch (MovimentoIncorretoException ex) {
                 progressoErros.setValue(novoJogo.getQuantidadeErros());
-                if (novoJogo.isFimDeJogo()) {
-                    JOptionPane.showMessageDialog(null, "O jogo acabou");
-                    abrirFimDeJogo(novoJogo);
-                }
-                acertadoErrado.setText(ex.getMessage());}
+
+                acertadoErrado.setText(ex.getMessage());
+            }
+            if (novoJogo.isFimDeJogo()) {
+                JOptionPane.showMessageDialog(null, "O jogo acabou");
+                abrirFimDeJogo(novoJogo);
+            }
         }    }//GEN-LAST:event_grid42KeyTyped
 
     private void grid52KeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_grid52KeyTyped
@@ -1623,11 +1656,13 @@ public class TabuleiroFrame extends javax.swing.JFrame {
                 JOptionPane.showMessageDialog(null, ex.getMessage());
             } catch (MovimentoIncorretoException ex) {
                 progressoErros.setValue(novoJogo.getQuantidadeErros());
-                if (novoJogo.isFimDeJogo()) {
-                    JOptionPane.showMessageDialog(null, "O jogo acabou");
-                    abrirFimDeJogo(novoJogo);
-                }
-                acertadoErrado.setText(ex.getMessage());}
+
+                acertadoErrado.setText(ex.getMessage());
+            }
+            if (novoJogo.isFimDeJogo()) {
+                JOptionPane.showMessageDialog(null, "O jogo acabou");
+                abrirFimDeJogo(novoJogo);
+            }
         }    }//GEN-LAST:event_grid52KeyTyped
 
     private void grid03KeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_grid03KeyTyped
@@ -1642,11 +1677,13 @@ public class TabuleiroFrame extends javax.swing.JFrame {
                 JOptionPane.showMessageDialog(null, ex.getMessage());
             } catch (MovimentoIncorretoException ex) {
                 progressoErros.setValue(novoJogo.getQuantidadeErros());
-                if (novoJogo.isFimDeJogo()) {
-                    JOptionPane.showMessageDialog(null, "O jogo acabou");
-                    abrirFimDeJogo(novoJogo);
-                }
-                acertadoErrado.setText(ex.getMessage());}
+
+                acertadoErrado.setText(ex.getMessage());
+            }
+            if (novoJogo.isFimDeJogo()) {
+                JOptionPane.showMessageDialog(null, "O jogo acabou");
+                abrirFimDeJogo(novoJogo);
+            }
         }    }//GEN-LAST:event_grid03KeyTyped
 
     private void grid13KeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_grid13KeyTyped
@@ -1661,11 +1698,13 @@ public class TabuleiroFrame extends javax.swing.JFrame {
                 JOptionPane.showMessageDialog(null, ex.getMessage());
             } catch (MovimentoIncorretoException ex) {
                 progressoErros.setValue(novoJogo.getQuantidadeErros());
-                if (novoJogo.isFimDeJogo()) {
-                    JOptionPane.showMessageDialog(null, "O jogo acabou");
-                    abrirFimDeJogo(novoJogo);
-                }
-                acertadoErrado.setText(ex.getMessage());}
+
+                acertadoErrado.setText(ex.getMessage());
+            }
+            if (novoJogo.isFimDeJogo()) {
+                JOptionPane.showMessageDialog(null, "O jogo acabou");
+                abrirFimDeJogo(novoJogo);
+            }
         }    }//GEN-LAST:event_grid13KeyTyped
 
     private void grid23KeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_grid23KeyTyped
@@ -1680,11 +1719,13 @@ public class TabuleiroFrame extends javax.swing.JFrame {
                 JOptionPane.showMessageDialog(null, ex.getMessage());
             } catch (MovimentoIncorretoException ex) {
                 progressoErros.setValue(novoJogo.getQuantidadeErros());
-                if (novoJogo.isFimDeJogo()) {
-                    JOptionPane.showMessageDialog(null, "O jogo acabou");
-                    abrirFimDeJogo(novoJogo);
-                }
-                acertadoErrado.setText(ex.getMessage());}
+
+                acertadoErrado.setText(ex.getMessage());
+            }
+            if (novoJogo.isFimDeJogo()) {
+                JOptionPane.showMessageDialog(null, "O jogo acabou");
+                abrirFimDeJogo(novoJogo);
+            }
         }    }//GEN-LAST:event_grid23KeyTyped
 
     private void grid33KeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_grid33KeyTyped
@@ -1699,11 +1740,13 @@ public class TabuleiroFrame extends javax.swing.JFrame {
                 JOptionPane.showMessageDialog(null, ex.getMessage());
             } catch (MovimentoIncorretoException ex) {
                 progressoErros.setValue(novoJogo.getQuantidadeErros());
-                if (novoJogo.isFimDeJogo()) {
-                    JOptionPane.showMessageDialog(null, "O jogo acabou");
-                    abrirFimDeJogo(novoJogo);
-                }
-                acertadoErrado.setText(ex.getMessage());}
+
+                acertadoErrado.setText(ex.getMessage());
+            }
+            if (novoJogo.isFimDeJogo()) {
+                JOptionPane.showMessageDialog(null, "O jogo acabou");
+                abrirFimDeJogo(novoJogo);
+            }
         }    }//GEN-LAST:event_grid33KeyTyped
 
     private void grid04KeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_grid04KeyTyped
@@ -1718,11 +1761,13 @@ public class TabuleiroFrame extends javax.swing.JFrame {
                 JOptionPane.showMessageDialog(null, ex.getMessage());
             } catch (MovimentoIncorretoException ex) {
                 progressoErros.setValue(novoJogo.getQuantidadeErros());
-                if (novoJogo.isFimDeJogo()) {
-                    JOptionPane.showMessageDialog(null, "O jogo acabou");
-                    abrirFimDeJogo(novoJogo);
-                }
-                acertadoErrado.setText(ex.getMessage());}
+
+                acertadoErrado.setText(ex.getMessage());
+            }
+            if (novoJogo.isFimDeJogo()) {
+                JOptionPane.showMessageDialog(null, "O jogo acabou");
+                abrirFimDeJogo(novoJogo);
+            }
         }    }//GEN-LAST:event_grid04KeyTyped
 
     private void grid14KeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_grid14KeyTyped
@@ -1737,11 +1782,13 @@ public class TabuleiroFrame extends javax.swing.JFrame {
                 JOptionPane.showMessageDialog(null, ex.getMessage());
             } catch (MovimentoIncorretoException ex) {
                 progressoErros.setValue(novoJogo.getQuantidadeErros());
-                if (novoJogo.isFimDeJogo()) {
-                    JOptionPane.showMessageDialog(null, "O jogo acabou");
-                    abrirFimDeJogo(novoJogo);
-                }
-                acertadoErrado.setText(ex.getMessage());}
+
+                acertadoErrado.setText(ex.getMessage());
+            }
+            if (novoJogo.isFimDeJogo()) {
+                JOptionPane.showMessageDialog(null, "O jogo acabou");
+                abrirFimDeJogo(novoJogo);
+            }
         }    }//GEN-LAST:event_grid14KeyTyped
 
     private void grid24KeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_grid24KeyTyped
@@ -1756,11 +1803,13 @@ public class TabuleiroFrame extends javax.swing.JFrame {
                 JOptionPane.showMessageDialog(null, ex.getMessage());
             } catch (MovimentoIncorretoException ex) {
                 progressoErros.setValue(novoJogo.getQuantidadeErros());
-                if (novoJogo.isFimDeJogo()) {
-                    JOptionPane.showMessageDialog(null, "O jogo acabou");
-                    abrirFimDeJogo(novoJogo);
-                }
-                acertadoErrado.setText(ex.getMessage());}
+
+                acertadoErrado.setText(ex.getMessage());
+            }
+            if (novoJogo.isFimDeJogo()) {
+                JOptionPane.showMessageDialog(null, "O jogo acabou");
+                abrirFimDeJogo(novoJogo);
+            }
         }    }//GEN-LAST:event_grid24KeyTyped
 
     private void grid05KeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_grid05KeyTyped
@@ -1775,11 +1824,13 @@ public class TabuleiroFrame extends javax.swing.JFrame {
                 JOptionPane.showMessageDialog(null, ex.getMessage());
             } catch (MovimentoIncorretoException ex) {
                 progressoErros.setValue(novoJogo.getQuantidadeErros());
-                if (novoJogo.isFimDeJogo()) {
-                    JOptionPane.showMessageDialog(null, "O jogo acabou");
-                    abrirFimDeJogo(novoJogo);
-                }
-                acertadoErrado.setText(ex.getMessage());}
+
+                acertadoErrado.setText(ex.getMessage());
+            }
+            if (novoJogo.isFimDeJogo()) {
+                JOptionPane.showMessageDialog(null, "O jogo acabou");
+                abrirFimDeJogo(novoJogo);
+            }
         }    }//GEN-LAST:event_grid05KeyTyped
 
     private void grid15KeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_grid15KeyTyped
@@ -1794,11 +1845,13 @@ public class TabuleiroFrame extends javax.swing.JFrame {
                 JOptionPane.showMessageDialog(null, ex.getMessage());
             } catch (MovimentoIncorretoException ex) {
                 progressoErros.setValue(novoJogo.getQuantidadeErros());
-                if (novoJogo.isFimDeJogo()) {
-                    JOptionPane.showMessageDialog(null, "O jogo acabou");
-                    abrirFimDeJogo(novoJogo);
-                }
-                acertadoErrado.setText(ex.getMessage());}
+
+                acertadoErrado.setText(ex.getMessage());
+            }
+            if (novoJogo.isFimDeJogo()) {
+                JOptionPane.showMessageDialog(null, "O jogo acabou");
+                abrirFimDeJogo(novoJogo);
+            }
         }    }//GEN-LAST:event_grid15KeyTyped
 
     private void grid25KeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_grid25KeyTyped
@@ -1813,11 +1866,13 @@ public class TabuleiroFrame extends javax.swing.JFrame {
                 JOptionPane.showMessageDialog(null, ex.getMessage());
             } catch (MovimentoIncorretoException ex) {
                 progressoErros.setValue(novoJogo.getQuantidadeErros());
-                if (novoJogo.isFimDeJogo()) {
-                    JOptionPane.showMessageDialog(null, "O jogo acabou");
-                    abrirFimDeJogo(novoJogo);
-                }
-                acertadoErrado.setText(ex.getMessage());}
+
+                acertadoErrado.setText(ex.getMessage());
+            }
+            if (novoJogo.isFimDeJogo()) {
+                JOptionPane.showMessageDialog(null, "O jogo acabou");
+                abrirFimDeJogo(novoJogo);
+            }
         }    }//GEN-LAST:event_grid25KeyTyped
 
     private void grid43KeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_grid43KeyTyped
@@ -1832,11 +1887,13 @@ public class TabuleiroFrame extends javax.swing.JFrame {
                 JOptionPane.showMessageDialog(null, ex.getMessage());
             } catch (MovimentoIncorretoException ex) {
                 progressoErros.setValue(novoJogo.getQuantidadeErros());
-                if (novoJogo.isFimDeJogo()) {
-                    JOptionPane.showMessageDialog(null, "O jogo acabou");
-                    abrirFimDeJogo(novoJogo);
-                }
-                acertadoErrado.setText(ex.getMessage());}
+
+                acertadoErrado.setText(ex.getMessage());
+            }
+            if (novoJogo.isFimDeJogo()) {
+                JOptionPane.showMessageDialog(null, "O jogo acabou");
+                abrirFimDeJogo(novoJogo);
+            }
         }    }//GEN-LAST:event_grid43KeyTyped
 
     private void grid53KeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_grid53KeyTyped
@@ -1851,11 +1908,13 @@ public class TabuleiroFrame extends javax.swing.JFrame {
                 JOptionPane.showMessageDialog(null, ex.getMessage());
             } catch (MovimentoIncorretoException ex) {
                 progressoErros.setValue(novoJogo.getQuantidadeErros());
-                if (novoJogo.isFimDeJogo()) {
-                    JOptionPane.showMessageDialog(null, "O jogo acabou");
-                    abrirFimDeJogo(novoJogo);
-                }
-                acertadoErrado.setText(ex.getMessage());}
+
+                acertadoErrado.setText(ex.getMessage());
+            }
+            if (novoJogo.isFimDeJogo()) {
+                JOptionPane.showMessageDialog(null, "O jogo acabou");
+                abrirFimDeJogo(novoJogo);
+            }
         }    }//GEN-LAST:event_grid53KeyTyped
 
     private void grid34KeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_grid34KeyTyped
@@ -1870,11 +1929,13 @@ public class TabuleiroFrame extends javax.swing.JFrame {
                 JOptionPane.showMessageDialog(null, ex.getMessage());
             } catch (MovimentoIncorretoException ex) {
                 progressoErros.setValue(novoJogo.getQuantidadeErros());
-                if (novoJogo.isFimDeJogo()) {
-                    JOptionPane.showMessageDialog(null, "O jogo acabou");
-                    abrirFimDeJogo(novoJogo);
-                }
-                acertadoErrado.setText(ex.getMessage());}
+
+                acertadoErrado.setText(ex.getMessage());
+            }
+            if (novoJogo.isFimDeJogo()) {
+                JOptionPane.showMessageDialog(null, "O jogo acabou");
+                abrirFimDeJogo(novoJogo);
+            }
         }    }//GEN-LAST:event_grid34KeyTyped
 
     private void grid44KeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_grid44KeyTyped
@@ -1889,11 +1950,13 @@ public class TabuleiroFrame extends javax.swing.JFrame {
                 JOptionPane.showMessageDialog(null, ex.getMessage());
             } catch (MovimentoIncorretoException ex) {
                 progressoErros.setValue(novoJogo.getQuantidadeErros());
-                if (novoJogo.isFimDeJogo()) {
-                    JOptionPane.showMessageDialog(null, "O jogo acabou");
-                    abrirFimDeJogo(novoJogo);
-                }
-                acertadoErrado.setText(ex.getMessage());}
+
+                acertadoErrado.setText(ex.getMessage());
+            }
+            if (novoJogo.isFimDeJogo()) {
+                JOptionPane.showMessageDialog(null, "O jogo acabou");
+                abrirFimDeJogo(novoJogo);
+            }
         }    }//GEN-LAST:event_grid44KeyTyped
 
     private void grid54KeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_grid54KeyTyped
@@ -1908,11 +1971,13 @@ public class TabuleiroFrame extends javax.swing.JFrame {
                 JOptionPane.showMessageDialog(null, ex.getMessage());
             } catch (MovimentoIncorretoException ex) {
                 progressoErros.setValue(novoJogo.getQuantidadeErros());
-                if (novoJogo.isFimDeJogo()) {
-                    JOptionPane.showMessageDialog(null, "O jogo acabou");
-                    abrirFimDeJogo(novoJogo);
-                }
-                acertadoErrado.setText(ex.getMessage());}
+
+                acertadoErrado.setText(ex.getMessage());
+            }
+            if (novoJogo.isFimDeJogo()) {
+                JOptionPane.showMessageDialog(null, "O jogo acabou");
+                abrirFimDeJogo(novoJogo);
+            }
         }    }//GEN-LAST:event_grid54KeyTyped
 
     private void grid35KeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_grid35KeyTyped
@@ -1923,16 +1988,18 @@ public class TabuleiroFrame extends javax.swing.JFrame {
                 acertadoErrado.setText("Acertou");
                 grid35.setText(String.valueOf(novoJogo.getGridTabuleiro()[5][3]));
                 grid35.setEditable(false);
-                
+
             } catch (MovimentoInvalidoException ex) {
                 JOptionPane.showMessageDialog(null, ex.getMessage());
             } catch (MovimentoIncorretoException ex) {
                 progressoErros.setValue(novoJogo.getQuantidadeErros());
-                if (novoJogo.isFimDeJogo()) {
-                    JOptionPane.showMessageDialog(null, "O jogo acabou");
-                    abrirFimDeJogo(novoJogo);
-                }
-                acertadoErrado.setText(ex.getMessage());}
+
+                acertadoErrado.setText(ex.getMessage());
+            }
+            if (novoJogo.isFimDeJogo()) {
+                JOptionPane.showMessageDialog(null, "O jogo acabou");
+                abrirFimDeJogo(novoJogo);
+            }
         }    }//GEN-LAST:event_grid35KeyTyped
 
     private void grid45KeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_grid45KeyTyped
@@ -1947,11 +2014,13 @@ public class TabuleiroFrame extends javax.swing.JFrame {
                 JOptionPane.showMessageDialog(null, ex.getMessage());
             } catch (MovimentoIncorretoException ex) {
                 progressoErros.setValue(novoJogo.getQuantidadeErros());
-                if (novoJogo.isFimDeJogo()) {
-                    JOptionPane.showMessageDialog(null, "O jogo acabou");
-                    abrirFimDeJogo(novoJogo);
-                }
-                acertadoErrado.setText(ex.getMessage());}
+
+                acertadoErrado.setText(ex.getMessage());
+            }
+            if (novoJogo.isFimDeJogo()) {
+                JOptionPane.showMessageDialog(null, "O jogo acabou");
+                abrirFimDeJogo(novoJogo);
+            }
         }    }//GEN-LAST:event_grid45KeyTyped
 
     private void grid55KeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_grid55KeyTyped
@@ -1966,11 +2035,13 @@ public class TabuleiroFrame extends javax.swing.JFrame {
                 JOptionPane.showMessageDialog(null, ex.getMessage());
             } catch (MovimentoIncorretoException ex) {
                 progressoErros.setValue(novoJogo.getQuantidadeErros());
-                if (novoJogo.isFimDeJogo()) {
-                    JOptionPane.showMessageDialog(null, "O jogo acabou");
-                    abrirFimDeJogo(novoJogo);
-                }
-                acertadoErrado.setText(ex.getMessage());}
+
+                acertadoErrado.setText(ex.getMessage());
+            }
+            if (novoJogo.isFimDeJogo()) {
+                JOptionPane.showMessageDialog(null, "O jogo acabou");
+                abrirFimDeJogo(novoJogo);
+            }
         }    }//GEN-LAST:event_grid55KeyTyped
 
     private void grid60KeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_grid60KeyTyped
@@ -1985,11 +2056,13 @@ public class TabuleiroFrame extends javax.swing.JFrame {
                 JOptionPane.showMessageDialog(null, ex.getMessage());
             } catch (MovimentoIncorretoException ex) {
                 progressoErros.setValue(novoJogo.getQuantidadeErros());
-                if (novoJogo.isFimDeJogo()) {
-                    JOptionPane.showMessageDialog(null, "O jogo acabou");
-                    abrirFimDeJogo(novoJogo);
-                }
-                acertadoErrado.setText(ex.getMessage());}
+
+                acertadoErrado.setText(ex.getMessage());
+            }
+            if (novoJogo.isFimDeJogo()) {
+                JOptionPane.showMessageDialog(null, "O jogo acabou");
+                abrirFimDeJogo(novoJogo);
+            }
         }    }//GEN-LAST:event_grid60KeyTyped
 
     private void grid70KeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_grid70KeyTyped
@@ -2004,11 +2077,13 @@ public class TabuleiroFrame extends javax.swing.JFrame {
                 JOptionPane.showMessageDialog(null, ex.getMessage());
             } catch (MovimentoIncorretoException ex) {
                 progressoErros.setValue(novoJogo.getQuantidadeErros());
-                if (novoJogo.isFimDeJogo()) {
-                    JOptionPane.showMessageDialog(null, "O jogo acabou");
-                    abrirFimDeJogo(novoJogo);
-                }
-                acertadoErrado.setText(ex.getMessage());}
+
+                acertadoErrado.setText(ex.getMessage());
+            }
+            if (novoJogo.isFimDeJogo()) {
+                JOptionPane.showMessageDialog(null, "O jogo acabou");
+                abrirFimDeJogo(novoJogo);
+            }
         }    }//GEN-LAST:event_grid70KeyTyped
 
     private void grid80KeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_grid80KeyTyped
@@ -2023,11 +2098,13 @@ public class TabuleiroFrame extends javax.swing.JFrame {
                 JOptionPane.showMessageDialog(null, ex.getMessage());
             } catch (MovimentoIncorretoException ex) {
                 progressoErros.setValue(novoJogo.getQuantidadeErros());
-                if (novoJogo.isFimDeJogo()) {
-                    JOptionPane.showMessageDialog(null, "O jogo acabou");
-                    abrirFimDeJogo(novoJogo);
-                }
-                acertadoErrado.setText(ex.getMessage());}
+
+                acertadoErrado.setText(ex.getMessage());
+            }
+            if (novoJogo.isFimDeJogo()) {
+                JOptionPane.showMessageDialog(null, "O jogo acabou");
+                abrirFimDeJogo(novoJogo);
+            }
         }    }//GEN-LAST:event_grid80KeyTyped
 
     private void grid61KeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_grid61KeyTyped
@@ -2042,11 +2119,13 @@ public class TabuleiroFrame extends javax.swing.JFrame {
                 JOptionPane.showMessageDialog(null, ex.getMessage());
             } catch (MovimentoIncorretoException ex) {
                 progressoErros.setValue(novoJogo.getQuantidadeErros());
-                if (novoJogo.isFimDeJogo()) {
-                    JOptionPane.showMessageDialog(null, "O jogo acabou");
-                    abrirFimDeJogo(novoJogo);
-                }
-                acertadoErrado.setText(ex.getMessage());}
+
+                acertadoErrado.setText(ex.getMessage());
+            }
+            if (novoJogo.isFimDeJogo()) {
+                JOptionPane.showMessageDialog(null, "O jogo acabou");
+                abrirFimDeJogo(novoJogo);
+            }
         }    }//GEN-LAST:event_grid61KeyTyped
 
     private void grid71KeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_grid71KeyTyped
@@ -2061,11 +2140,13 @@ public class TabuleiroFrame extends javax.swing.JFrame {
                 JOptionPane.showMessageDialog(null, ex.getMessage());
             } catch (MovimentoIncorretoException ex) {
                 progressoErros.setValue(novoJogo.getQuantidadeErros());
-                if (novoJogo.isFimDeJogo()) {
-                    JOptionPane.showMessageDialog(null, "O jogo acabou");
-                    abrirFimDeJogo(novoJogo);
-                }
-                acertadoErrado.setText(ex.getMessage());}
+
+                acertadoErrado.setText(ex.getMessage());
+            }
+            if (novoJogo.isFimDeJogo()) {
+                JOptionPane.showMessageDialog(null, "O jogo acabou");
+                abrirFimDeJogo(novoJogo);
+            }
         }    }//GEN-LAST:event_grid71KeyTyped
 
     private void grid81KeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_grid81KeyTyped
@@ -2080,11 +2161,13 @@ public class TabuleiroFrame extends javax.swing.JFrame {
                 JOptionPane.showMessageDialog(null, ex.getMessage());
             } catch (MovimentoIncorretoException ex) {
                 progressoErros.setValue(novoJogo.getQuantidadeErros());
-                if (novoJogo.isFimDeJogo()) {
-                    JOptionPane.showMessageDialog(null, "O jogo acabou");
-                    abrirFimDeJogo(novoJogo);
-                }
-                acertadoErrado.setText(ex.getMessage());}
+
+                acertadoErrado.setText(ex.getMessage());
+            }
+            if (novoJogo.isFimDeJogo()) {
+                JOptionPane.showMessageDialog(null, "O jogo acabou");
+                abrirFimDeJogo(novoJogo);
+            }
         }    }//GEN-LAST:event_grid81KeyTyped
 
     private void grid62KeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_grid62KeyTyped
@@ -2099,11 +2182,13 @@ public class TabuleiroFrame extends javax.swing.JFrame {
                 JOptionPane.showMessageDialog(null, ex.getMessage());
             } catch (MovimentoIncorretoException ex) {
                 progressoErros.setValue(novoJogo.getQuantidadeErros());
-                if (novoJogo.isFimDeJogo()) {
-                    JOptionPane.showMessageDialog(null, "O jogo acabou");
-                    abrirFimDeJogo(novoJogo);
-                }
-                acertadoErrado.setText(ex.getMessage());}
+
+                acertadoErrado.setText(ex.getMessage());
+            }
+            if (novoJogo.isFimDeJogo()) {
+                JOptionPane.showMessageDialog(null, "O jogo acabou");
+                abrirFimDeJogo(novoJogo);
+            }
         }    }//GEN-LAST:event_grid62KeyTyped
 
     private void grid72KeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_grid72KeyTyped
@@ -2118,11 +2203,13 @@ public class TabuleiroFrame extends javax.swing.JFrame {
                 JOptionPane.showMessageDialog(null, ex.getMessage());
             } catch (MovimentoIncorretoException ex) {
                 progressoErros.setValue(novoJogo.getQuantidadeErros());
-                if (novoJogo.isFimDeJogo()) {
-                    JOptionPane.showMessageDialog(null, "O jogo acabou");
-                    abrirFimDeJogo(novoJogo);
-                }
-                acertadoErrado.setText(ex.getMessage());}
+
+                acertadoErrado.setText(ex.getMessage());
+            }
+            if (novoJogo.isFimDeJogo()) {
+                JOptionPane.showMessageDialog(null, "O jogo acabou");
+                abrirFimDeJogo(novoJogo);
+            }
         }    }//GEN-LAST:event_grid72KeyTyped
 
     private void grid82KeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_grid82KeyTyped
@@ -2137,11 +2224,13 @@ public class TabuleiroFrame extends javax.swing.JFrame {
                 JOptionPane.showMessageDialog(null, ex.getMessage());
             } catch (MovimentoIncorretoException ex) {
                 progressoErros.setValue(novoJogo.getQuantidadeErros());
-                if (novoJogo.isFimDeJogo()) {
-                    JOptionPane.showMessageDialog(null, "O jogo acabou");
-                    abrirFimDeJogo(novoJogo);
-                }
-                acertadoErrado.setText(ex.getMessage());}
+
+                acertadoErrado.setText(ex.getMessage());
+            }
+            if (novoJogo.isFimDeJogo()) {
+                JOptionPane.showMessageDialog(null, "O jogo acabou");
+                abrirFimDeJogo(novoJogo);
+            }
         }    }//GEN-LAST:event_grid82KeyTyped
 
     private void grid63KeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_grid63KeyTyped
@@ -2156,11 +2245,13 @@ public class TabuleiroFrame extends javax.swing.JFrame {
                 JOptionPane.showMessageDialog(null, ex.getMessage());
             } catch (MovimentoIncorretoException ex) {
                 progressoErros.setValue(novoJogo.getQuantidadeErros());
-                if (novoJogo.isFimDeJogo()) {
-                    JOptionPane.showMessageDialog(null, "O jogo acabou");
-                    abrirFimDeJogo(novoJogo);
-                }
-                acertadoErrado.setText(ex.getMessage());}
+
+                acertadoErrado.setText(ex.getMessage());
+            }
+            if (novoJogo.isFimDeJogo()) {
+                JOptionPane.showMessageDialog(null, "O jogo acabou");
+                abrirFimDeJogo(novoJogo);
+            }
         }    }//GEN-LAST:event_grid63KeyTyped
 
     private void grid73KeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_grid73KeyTyped
@@ -2175,11 +2266,13 @@ public class TabuleiroFrame extends javax.swing.JFrame {
                 JOptionPane.showMessageDialog(null, ex.getMessage());
             } catch (MovimentoIncorretoException ex) {
                 progressoErros.setValue(novoJogo.getQuantidadeErros());
-                if (novoJogo.isFimDeJogo()) {
-                    JOptionPane.showMessageDialog(null, "O jogo acabou");
-                    abrirFimDeJogo(novoJogo);
-                }
-                acertadoErrado.setText(ex.getMessage());}
+
+                acertadoErrado.setText(ex.getMessage());
+            }
+            if (novoJogo.isFimDeJogo()) {
+                JOptionPane.showMessageDialog(null, "O jogo acabou");
+                abrirFimDeJogo(novoJogo);
+            }
         }    }//GEN-LAST:event_grid73KeyTyped
 
     private void grid83KeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_grid83KeyTyped
@@ -2194,11 +2287,13 @@ public class TabuleiroFrame extends javax.swing.JFrame {
                 JOptionPane.showMessageDialog(null, ex.getMessage());
             } catch (MovimentoIncorretoException ex) {
                 progressoErros.setValue(novoJogo.getQuantidadeErros());
-                if (novoJogo.isFimDeJogo()) {
-                    JOptionPane.showMessageDialog(null, "O jogo acabou");
-                    abrirFimDeJogo(novoJogo);
-                }
-                acertadoErrado.setText(ex.getMessage());}
+
+                acertadoErrado.setText(ex.getMessage());
+            }
+            if (novoJogo.isFimDeJogo()) {
+                JOptionPane.showMessageDialog(null, "O jogo acabou");
+                abrirFimDeJogo(novoJogo);
+            }
         }    }//GEN-LAST:event_grid83KeyTyped
 
     private void grid64KeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_grid64KeyTyped
@@ -2213,11 +2308,13 @@ public class TabuleiroFrame extends javax.swing.JFrame {
                 JOptionPane.showMessageDialog(null, ex.getMessage());
             } catch (MovimentoIncorretoException ex) {
                 progressoErros.setValue(novoJogo.getQuantidadeErros());
-                if (novoJogo.isFimDeJogo()) {
-                    JOptionPane.showMessageDialog(null, "O jogo acabou");
-                    abrirFimDeJogo(novoJogo);
-                }
-                acertadoErrado.setText(ex.getMessage());}
+
+                acertadoErrado.setText(ex.getMessage());
+            }
+            if (novoJogo.isFimDeJogo()) {
+                JOptionPane.showMessageDialog(null, "O jogo acabou");
+                abrirFimDeJogo(novoJogo);
+            }
         }    }//GEN-LAST:event_grid64KeyTyped
 
     private void grid74KeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_grid74KeyTyped
@@ -2232,11 +2329,13 @@ public class TabuleiroFrame extends javax.swing.JFrame {
                 JOptionPane.showMessageDialog(null, ex.getMessage());
             } catch (MovimentoIncorretoException ex) {
                 progressoErros.setValue(novoJogo.getQuantidadeErros());
-                if (novoJogo.isFimDeJogo()) {
-                    JOptionPane.showMessageDialog(null, "O jogo acabou");
-                    abrirFimDeJogo(novoJogo);
-                }
-                acertadoErrado.setText(ex.getMessage());}
+
+                acertadoErrado.setText(ex.getMessage());
+            }
+            if (novoJogo.isFimDeJogo()) {
+                JOptionPane.showMessageDialog(null, "O jogo acabou");
+                abrirFimDeJogo(novoJogo);
+            }
         }    }//GEN-LAST:event_grid74KeyTyped
 
     private void grid84KeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_grid84KeyTyped
@@ -2251,11 +2350,13 @@ public class TabuleiroFrame extends javax.swing.JFrame {
                 JOptionPane.showMessageDialog(null, ex.getMessage());
             } catch (MovimentoIncorretoException ex) {
                 progressoErros.setValue(novoJogo.getQuantidadeErros());
-                if (novoJogo.isFimDeJogo()) {
-                    JOptionPane.showMessageDialog(null, "O jogo acabou");
-                    abrirFimDeJogo(novoJogo);
-                }
-                acertadoErrado.setText(ex.getMessage());}
+
+                acertadoErrado.setText(ex.getMessage());
+            }
+            if (novoJogo.isFimDeJogo()) {
+                JOptionPane.showMessageDialog(null, "O jogo acabou");
+                abrirFimDeJogo(novoJogo);
+            }
         }    }//GEN-LAST:event_grid84KeyTyped
 
     private void grid65KeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_grid65KeyTyped
@@ -2270,11 +2371,13 @@ public class TabuleiroFrame extends javax.swing.JFrame {
                 JOptionPane.showMessageDialog(null, ex.getMessage());
             } catch (MovimentoIncorretoException ex) {
                 progressoErros.setValue(novoJogo.getQuantidadeErros());
-                if (novoJogo.isFimDeJogo()) {
-                    JOptionPane.showMessageDialog(null, "O jogo acabou");
-                    abrirFimDeJogo(novoJogo);
-                }
-                acertadoErrado.setText(ex.getMessage());}
+
+                acertadoErrado.setText(ex.getMessage());
+            }
+            if (novoJogo.isFimDeJogo()) {
+                JOptionPane.showMessageDialog(null, "O jogo acabou");
+                abrirFimDeJogo(novoJogo);
+            }
         }    }//GEN-LAST:event_grid65KeyTyped
 
     private void grid75KeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_grid75KeyTyped
@@ -2289,11 +2392,13 @@ public class TabuleiroFrame extends javax.swing.JFrame {
                 JOptionPane.showMessageDialog(null, ex.getMessage());
             } catch (MovimentoIncorretoException ex) {
                 progressoErros.setValue(novoJogo.getQuantidadeErros());
-                if (novoJogo.isFimDeJogo()) {
-                    JOptionPane.showMessageDialog(null, "O jogo acabou");
-                    abrirFimDeJogo(novoJogo);
-                }
-                acertadoErrado.setText(ex.getMessage());}
+
+                acertadoErrado.setText(ex.getMessage());
+            }
+            if (novoJogo.isFimDeJogo()) {
+                JOptionPane.showMessageDialog(null, "O jogo acabou");
+                abrirFimDeJogo(novoJogo);
+            }
         }    }//GEN-LAST:event_grid75KeyTyped
 
     private void grid85KeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_grid85KeyTyped
@@ -2308,11 +2413,13 @@ public class TabuleiroFrame extends javax.swing.JFrame {
                 JOptionPane.showMessageDialog(null, ex.getMessage());
             } catch (MovimentoIncorretoException ex) {
                 progressoErros.setValue(novoJogo.getQuantidadeErros());
-                if (novoJogo.isFimDeJogo()) {
-                    JOptionPane.showMessageDialog(null, "O jogo acabou");
-                    abrirFimDeJogo(novoJogo);
-                }
-                acertadoErrado.setText(ex.getMessage());}
+
+                acertadoErrado.setText(ex.getMessage());
+            }
+            if (novoJogo.isFimDeJogo()) {
+                JOptionPane.showMessageDialog(null, "O jogo acabou");
+                abrirFimDeJogo(novoJogo);
+            }
         }    }//GEN-LAST:event_grid85KeyTyped
 
     private void grid06KeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_grid06KeyTyped
@@ -2327,11 +2434,13 @@ public class TabuleiroFrame extends javax.swing.JFrame {
                 JOptionPane.showMessageDialog(null, ex.getMessage());
             } catch (MovimentoIncorretoException ex) {
                 progressoErros.setValue(novoJogo.getQuantidadeErros());
-                if (novoJogo.isFimDeJogo()) {
-                    JOptionPane.showMessageDialog(null, "O jogo acabou");
-                    abrirFimDeJogo(novoJogo);
-                }
-                acertadoErrado.setText(ex.getMessage());}
+
+                acertadoErrado.setText(ex.getMessage());
+            }
+            if (novoJogo.isFimDeJogo()) {
+                JOptionPane.showMessageDialog(null, "O jogo acabou");
+                abrirFimDeJogo(novoJogo);
+            }
         }    }//GEN-LAST:event_grid06KeyTyped
 
     private void grid16KeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_grid16KeyTyped
@@ -2346,11 +2455,13 @@ public class TabuleiroFrame extends javax.swing.JFrame {
                 JOptionPane.showMessageDialog(null, ex.getMessage());
             } catch (MovimentoIncorretoException ex) {
                 progressoErros.setValue(novoJogo.getQuantidadeErros());
-                if (novoJogo.isFimDeJogo()) {
-                    JOptionPane.showMessageDialog(null, "O jogo acabou");
-                    abrirFimDeJogo(novoJogo);
-                }
-                acertadoErrado.setText(ex.getMessage());}
+
+                acertadoErrado.setText(ex.getMessage());
+            }
+            if (novoJogo.isFimDeJogo()) {
+                JOptionPane.showMessageDialog(null, "O jogo acabou");
+                abrirFimDeJogo(novoJogo);
+            }
         }    }//GEN-LAST:event_grid16KeyTyped
 
     private void grid26KeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_grid26KeyTyped
@@ -2365,11 +2476,13 @@ public class TabuleiroFrame extends javax.swing.JFrame {
                 JOptionPane.showMessageDialog(null, ex.getMessage());
             } catch (MovimentoIncorretoException ex) {
                 progressoErros.setValue(novoJogo.getQuantidadeErros());
-                if (novoJogo.isFimDeJogo()) {
-                    JOptionPane.showMessageDialog(null, "O jogo acabou");
-                    abrirFimDeJogo(novoJogo);
-                }
-                acertadoErrado.setText(ex.getMessage());}
+
+                acertadoErrado.setText(ex.getMessage());
+            }
+            if (novoJogo.isFimDeJogo()) {
+                JOptionPane.showMessageDialog(null, "O jogo acabou");
+                abrirFimDeJogo(novoJogo);
+            }
         }    }//GEN-LAST:event_grid26KeyTyped
 
     private void grid07KeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_grid07KeyTyped
@@ -2384,11 +2497,13 @@ public class TabuleiroFrame extends javax.swing.JFrame {
                 JOptionPane.showMessageDialog(null, ex.getMessage());
             } catch (MovimentoIncorretoException ex) {
                 progressoErros.setValue(novoJogo.getQuantidadeErros());
-                if (novoJogo.isFimDeJogo()) {
-                    JOptionPane.showMessageDialog(null, "O jogo acabou");
-                    abrirFimDeJogo(novoJogo);
-                }
-                acertadoErrado.setText(ex.getMessage());}
+
+                acertadoErrado.setText(ex.getMessage());
+            }
+            if (novoJogo.isFimDeJogo()) {
+                JOptionPane.showMessageDialog(null, "O jogo acabou");
+                abrirFimDeJogo(novoJogo);
+            }
         }    }//GEN-LAST:event_grid07KeyTyped
 
     private void grid17KeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_grid17KeyTyped
@@ -2403,11 +2518,13 @@ public class TabuleiroFrame extends javax.swing.JFrame {
                 JOptionPane.showMessageDialog(null, ex.getMessage());
             } catch (MovimentoIncorretoException ex) {
                 progressoErros.setValue(novoJogo.getQuantidadeErros());
-                if (novoJogo.isFimDeJogo()) {
-                    JOptionPane.showMessageDialog(null, "O jogo acabou");
-                    abrirFimDeJogo(novoJogo);
-                }
-                acertadoErrado.setText(ex.getMessage());}
+
+                acertadoErrado.setText(ex.getMessage());
+            }
+            if (novoJogo.isFimDeJogo()) {
+                JOptionPane.showMessageDialog(null, "O jogo acabou");
+                abrirFimDeJogo(novoJogo);
+            }
         }    }//GEN-LAST:event_grid17KeyTyped
 
     private void grid27KeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_grid27KeyTyped
@@ -2422,11 +2539,13 @@ public class TabuleiroFrame extends javax.swing.JFrame {
                 JOptionPane.showMessageDialog(null, ex.getMessage());
             } catch (MovimentoIncorretoException ex) {
                 progressoErros.setValue(novoJogo.getQuantidadeErros());
-                if (novoJogo.isFimDeJogo()) {
-                    JOptionPane.showMessageDialog(null, "O jogo acabou");
-                    abrirFimDeJogo(novoJogo);
-                }
-                acertadoErrado.setText(ex.getMessage());}
+
+                acertadoErrado.setText(ex.getMessage());
+            }
+            if (novoJogo.isFimDeJogo()) {
+                JOptionPane.showMessageDialog(null, "O jogo acabou");
+                abrirFimDeJogo(novoJogo);
+            }
         }    }//GEN-LAST:event_grid27KeyTyped
 
     private void grid08KeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_grid08KeyTyped
@@ -2441,11 +2560,13 @@ public class TabuleiroFrame extends javax.swing.JFrame {
                 JOptionPane.showMessageDialog(null, ex.getMessage());
             } catch (MovimentoIncorretoException ex) {
                 progressoErros.setValue(novoJogo.getQuantidadeErros());
-                if (novoJogo.isFimDeJogo()) {
-                    JOptionPane.showMessageDialog(null, "O jogo acabou");
-                    abrirFimDeJogo(novoJogo);
-                }
-                acertadoErrado.setText(ex.getMessage());}
+
+                acertadoErrado.setText(ex.getMessage());
+            }
+            if (novoJogo.isFimDeJogo()) {
+                JOptionPane.showMessageDialog(null, "O jogo acabou");
+                abrirFimDeJogo(novoJogo);
+            }
         }    }//GEN-LAST:event_grid08KeyTyped
 
     private void grid18KeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_grid18KeyTyped
@@ -2460,11 +2581,13 @@ public class TabuleiroFrame extends javax.swing.JFrame {
                 JOptionPane.showMessageDialog(null, ex.getMessage());
             } catch (MovimentoIncorretoException ex) {
                 progressoErros.setValue(novoJogo.getQuantidadeErros());
-                if (novoJogo.isFimDeJogo()) {
-                    JOptionPane.showMessageDialog(null, "O jogo acabou");
-                    abrirFimDeJogo(novoJogo);
-                }
-                acertadoErrado.setText(ex.getMessage());}
+
+                acertadoErrado.setText(ex.getMessage());
+            }
+            if (novoJogo.isFimDeJogo()) {
+                JOptionPane.showMessageDialog(null, "O jogo acabou");
+                abrirFimDeJogo(novoJogo);
+            }
         }    }//GEN-LAST:event_grid18KeyTyped
 
     private void grid28KeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_grid28KeyTyped
@@ -2479,11 +2602,13 @@ public class TabuleiroFrame extends javax.swing.JFrame {
                 JOptionPane.showMessageDialog(null, ex.getMessage());
             } catch (MovimentoIncorretoException ex) {
                 progressoErros.setValue(novoJogo.getQuantidadeErros());
-                if (novoJogo.isFimDeJogo()) {
-                    JOptionPane.showMessageDialog(null, "O jogo acabou");
-                    abrirFimDeJogo(novoJogo);
-                }
-                acertadoErrado.setText(ex.getMessage());}
+
+                acertadoErrado.setText(ex.getMessage());
+            }
+            if (novoJogo.isFimDeJogo()) {
+                JOptionPane.showMessageDialog(null, "O jogo acabou");
+                abrirFimDeJogo(novoJogo);
+            }
         }    }//GEN-LAST:event_grid28KeyTyped
 
     private void grid36KeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_grid36KeyTyped
@@ -2498,18 +2623,20 @@ public class TabuleiroFrame extends javax.swing.JFrame {
                 JOptionPane.showMessageDialog(null, ex.getMessage());
             } catch (MovimentoIncorretoException ex) {
                 progressoErros.setValue(novoJogo.getQuantidadeErros());
-                if (novoJogo.isFimDeJogo()) {
-                    JOptionPane.showMessageDialog(null, "O jogo acabou");
-                    abrirFimDeJogo(novoJogo);
-                }
-                acertadoErrado.setText(ex.getMessage());}
+
+                acertadoErrado.setText(ex.getMessage());
+            }
+            if (novoJogo.isFimDeJogo()) {
+                JOptionPane.showMessageDialog(null, "O jogo acabou");
+                abrirFimDeJogo(novoJogo);
+            }
         }    }//GEN-LAST:event_grid36KeyTyped
 
     private void grid46KeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_grid46KeyTyped
         if (!grid46.getText().equals("")) {
             int valor = Integer.parseInt(grid46.getText());
             try {
-                novoJogo.executaMovimento(6,4, valor);
+                novoJogo.executaMovimento(6, 4, valor);
                 acertadoErrado.setText("Acertou");
                 grid46.setText(String.valueOf(novoJogo.getGridTabuleiro()[6][4]));
                 grid46.setEditable(false);
@@ -2517,11 +2644,13 @@ public class TabuleiroFrame extends javax.swing.JFrame {
                 JOptionPane.showMessageDialog(null, ex.getMessage());
             } catch (MovimentoIncorretoException ex) {
                 progressoErros.setValue(novoJogo.getQuantidadeErros());
-                if (novoJogo.isFimDeJogo()) {
-                    JOptionPane.showMessageDialog(null, "O jogo acabou");
-                    abrirFimDeJogo(novoJogo);
-                }
-                acertadoErrado.setText(ex.getMessage());}
+
+                acertadoErrado.setText(ex.getMessage());
+            }
+            if (novoJogo.isFimDeJogo()) {
+                JOptionPane.showMessageDialog(null, "O jogo acabou");
+                abrirFimDeJogo(novoJogo);
+            }
         }    }//GEN-LAST:event_grid46KeyTyped
 
     private void grid56KeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_grid56KeyTyped
@@ -2536,11 +2665,13 @@ public class TabuleiroFrame extends javax.swing.JFrame {
                 JOptionPane.showMessageDialog(null, ex.getMessage());
             } catch (MovimentoIncorretoException ex) {
                 progressoErros.setValue(novoJogo.getQuantidadeErros());
-                if (novoJogo.isFimDeJogo()) {
-                    JOptionPane.showMessageDialog(null, "O jogo acabou");
-                    abrirFimDeJogo(novoJogo);
-                }
-                acertadoErrado.setText(ex.getMessage());}
+
+                acertadoErrado.setText(ex.getMessage());
+            }
+            if (novoJogo.isFimDeJogo()) {
+                JOptionPane.showMessageDialog(null, "O jogo acabou");
+                abrirFimDeJogo(novoJogo);
+            }
         }    }//GEN-LAST:event_grid56KeyTyped
 
     private void grid37KeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_grid37KeyTyped
@@ -2555,11 +2686,13 @@ public class TabuleiroFrame extends javax.swing.JFrame {
                 JOptionPane.showMessageDialog(null, ex.getMessage());
             } catch (MovimentoIncorretoException ex) {
                 progressoErros.setValue(novoJogo.getQuantidadeErros());
-                if (novoJogo.isFimDeJogo()) {
-                    JOptionPane.showMessageDialog(null, "O jogo acabou");
-                    abrirFimDeJogo(novoJogo);
-                }
-                acertadoErrado.setText(ex.getMessage());}
+
+                acertadoErrado.setText(ex.getMessage());
+            }
+            if (novoJogo.isFimDeJogo()) {
+                JOptionPane.showMessageDialog(null, "O jogo acabou");
+                abrirFimDeJogo(novoJogo);
+            }
         }    }//GEN-LAST:event_grid37KeyTyped
 
     private void grid47KeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_grid47KeyTyped
@@ -2574,11 +2707,13 @@ public class TabuleiroFrame extends javax.swing.JFrame {
                 JOptionPane.showMessageDialog(null, ex.getMessage());
             } catch (MovimentoIncorretoException ex) {
                 progressoErros.setValue(novoJogo.getQuantidadeErros());
-                if (novoJogo.isFimDeJogo()) {
-                    JOptionPane.showMessageDialog(null, "O jogo acabou");
-                    abrirFimDeJogo(novoJogo);
-                }
-                acertadoErrado.setText(ex.getMessage());}
+
+                acertadoErrado.setText(ex.getMessage());
+            }
+            if (novoJogo.isFimDeJogo()) {
+                JOptionPane.showMessageDialog(null, "O jogo acabou");
+                abrirFimDeJogo(novoJogo);
+            }
         }    }//GEN-LAST:event_grid47KeyTyped
 
     private void grid57KeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_grid57KeyTyped
@@ -2593,11 +2728,13 @@ public class TabuleiroFrame extends javax.swing.JFrame {
                 JOptionPane.showMessageDialog(null, ex.getMessage());
             } catch (MovimentoIncorretoException ex) {
                 progressoErros.setValue(novoJogo.getQuantidadeErros());
-                if (novoJogo.isFimDeJogo()) {
-                    JOptionPane.showMessageDialog(null, "O jogo acabou");
-                    abrirFimDeJogo(novoJogo);
-                }
-                acertadoErrado.setText(ex.getMessage());}
+
+                acertadoErrado.setText(ex.getMessage());
+            }
+            if (novoJogo.isFimDeJogo()) {
+                JOptionPane.showMessageDialog(null, "O jogo acabou");
+                abrirFimDeJogo(novoJogo);
+            }
         }    }//GEN-LAST:event_grid57KeyTyped
 
     private void grid38KeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_grid38KeyTyped
@@ -2612,11 +2749,13 @@ public class TabuleiroFrame extends javax.swing.JFrame {
                 JOptionPane.showMessageDialog(null, ex.getMessage());
             } catch (MovimentoIncorretoException ex) {
                 progressoErros.setValue(novoJogo.getQuantidadeErros());
-                if (novoJogo.isFimDeJogo()) {
-                    JOptionPane.showMessageDialog(null, "O jogo acabou");
-                    abrirFimDeJogo(novoJogo);
-                }
-                acertadoErrado.setText(ex.getMessage());}
+
+                acertadoErrado.setText(ex.getMessage());
+            }
+            if (novoJogo.isFimDeJogo()) {
+                JOptionPane.showMessageDialog(null, "O jogo acabou");
+                abrirFimDeJogo(novoJogo);
+            }
         }    }//GEN-LAST:event_grid38KeyTyped
 
     private void grid48KeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_grid48KeyTyped
@@ -2631,11 +2770,13 @@ public class TabuleiroFrame extends javax.swing.JFrame {
                 JOptionPane.showMessageDialog(null, ex.getMessage());
             } catch (MovimentoIncorretoException ex) {
                 progressoErros.setValue(novoJogo.getQuantidadeErros());
-                if (novoJogo.isFimDeJogo()) {
-                    JOptionPane.showMessageDialog(null, "O jogo acabou");
-                    abrirFimDeJogo(novoJogo);
-                }
-                acertadoErrado.setText(ex.getMessage());}
+
+                acertadoErrado.setText(ex.getMessage());
+            }
+            if (novoJogo.isFimDeJogo()) {
+                JOptionPane.showMessageDialog(null, "O jogo acabou");
+                abrirFimDeJogo(novoJogo);
+            }
         }    }//GEN-LAST:event_grid48KeyTyped
 
     private void grid58KeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_grid58KeyTyped
@@ -2650,11 +2791,13 @@ public class TabuleiroFrame extends javax.swing.JFrame {
                 JOptionPane.showMessageDialog(null, ex.getMessage());
             } catch (MovimentoIncorretoException ex) {
                 progressoErros.setValue(novoJogo.getQuantidadeErros());
-                if (novoJogo.isFimDeJogo()) {
-                    JOptionPane.showMessageDialog(null, "O jogo acabou");
-                    abrirFimDeJogo(novoJogo);
-                }
-                acertadoErrado.setText(ex.getMessage());}
+
+                acertadoErrado.setText(ex.getMessage());
+            }
+            if (novoJogo.isFimDeJogo()) {
+                JOptionPane.showMessageDialog(null, "O jogo acabou");
+                abrirFimDeJogo(novoJogo);
+            }
         }    }//GEN-LAST:event_grid58KeyTyped
 
     private void grid66KeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_grid66KeyTyped
@@ -2669,11 +2812,13 @@ public class TabuleiroFrame extends javax.swing.JFrame {
                 JOptionPane.showMessageDialog(null, ex.getMessage());
             } catch (MovimentoIncorretoException ex) {
                 progressoErros.setValue(novoJogo.getQuantidadeErros());
-                if (novoJogo.isFimDeJogo()) {
-                    JOptionPane.showMessageDialog(null, "O jogo acabou");
-                    abrirFimDeJogo(novoJogo);
-                }
-                acertadoErrado.setText(ex.getMessage());}
+
+                acertadoErrado.setText(ex.getMessage());
+            }
+            if (novoJogo.isFimDeJogo()) {
+                JOptionPane.showMessageDialog(null, "O jogo acabou");
+                abrirFimDeJogo(novoJogo);
+            }
         }    }//GEN-LAST:event_grid66KeyTyped
 
     private void grid76KeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_grid76KeyTyped
@@ -2688,11 +2833,13 @@ public class TabuleiroFrame extends javax.swing.JFrame {
                 JOptionPane.showMessageDialog(null, ex.getMessage());
             } catch (MovimentoIncorretoException ex) {
                 progressoErros.setValue(novoJogo.getQuantidadeErros());
-                if (novoJogo.isFimDeJogo()) {
-                    JOptionPane.showMessageDialog(null, "O jogo acabou");
-                    abrirFimDeJogo(novoJogo);
-                }
-                acertadoErrado.setText(ex.getMessage());}
+
+                acertadoErrado.setText(ex.getMessage());
+            }
+            if (novoJogo.isFimDeJogo()) {
+                JOptionPane.showMessageDialog(null, "O jogo acabou");
+                abrirFimDeJogo(novoJogo);
+            }
         }    }//GEN-LAST:event_grid76KeyTyped
 
     private void grid86KeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_grid86KeyTyped
@@ -2707,11 +2854,13 @@ public class TabuleiroFrame extends javax.swing.JFrame {
                 JOptionPane.showMessageDialog(null, ex.getMessage());
             } catch (MovimentoIncorretoException ex) {
                 progressoErros.setValue(novoJogo.getQuantidadeErros());
-                if (novoJogo.isFimDeJogo()) {
-                    JOptionPane.showMessageDialog(null, "O jogo acabou");
-                    abrirFimDeJogo(novoJogo);
-                }
-                acertadoErrado.setText(ex.getMessage());}
+
+                acertadoErrado.setText(ex.getMessage());
+            }
+            if (novoJogo.isFimDeJogo()) {
+                JOptionPane.showMessageDialog(null, "O jogo acabou");
+                abrirFimDeJogo(novoJogo);
+            }
         }    }//GEN-LAST:event_grid86KeyTyped
 
     private void grid67KeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_grid67KeyTyped
@@ -2726,11 +2875,13 @@ public class TabuleiroFrame extends javax.swing.JFrame {
                 JOptionPane.showMessageDialog(null, ex.getMessage());
             } catch (MovimentoIncorretoException ex) {
                 progressoErros.setValue(novoJogo.getQuantidadeErros());
-                if (novoJogo.isFimDeJogo()) {
-                    JOptionPane.showMessageDialog(null, "O jogo acabou");
-                    abrirFimDeJogo(novoJogo);
-                }
-                acertadoErrado.setText(ex.getMessage());}
+
+                acertadoErrado.setText(ex.getMessage());
+            }
+            if (novoJogo.isFimDeJogo()) {
+                JOptionPane.showMessageDialog(null, "O jogo acabou");
+                abrirFimDeJogo(novoJogo);
+            }
         }    }//GEN-LAST:event_grid67KeyTyped
 
     private void grid77KeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_grid77KeyTyped
@@ -2745,11 +2896,13 @@ public class TabuleiroFrame extends javax.swing.JFrame {
                 JOptionPane.showMessageDialog(null, ex.getMessage());
             } catch (MovimentoIncorretoException ex) {
                 progressoErros.setValue(novoJogo.getQuantidadeErros());
-                if (novoJogo.isFimDeJogo()) {
-                    JOptionPane.showMessageDialog(null, "O jogo acabou");
-                    abrirFimDeJogo(novoJogo);
-                }
-                acertadoErrado.setText(ex.getMessage());}
+
+                acertadoErrado.setText(ex.getMessage());
+            }
+            if (novoJogo.isFimDeJogo()) {
+                JOptionPane.showMessageDialog(null, "O jogo acabou");
+                abrirFimDeJogo(novoJogo);
+            }
         }    }//GEN-LAST:event_grid77KeyTyped
 
     private void grid87KeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_grid87KeyTyped
@@ -2764,11 +2917,13 @@ public class TabuleiroFrame extends javax.swing.JFrame {
                 JOptionPane.showMessageDialog(null, ex.getMessage());
             } catch (MovimentoIncorretoException ex) {
                 progressoErros.setValue(novoJogo.getQuantidadeErros());
-                if (novoJogo.isFimDeJogo()) {
-                    JOptionPane.showMessageDialog(null, "O jogo acabou");
-                    abrirFimDeJogo(novoJogo);
-                }
-                acertadoErrado.setText(ex.getMessage());}
+
+                acertadoErrado.setText(ex.getMessage());
+            }
+            if (novoJogo.isFimDeJogo()) {
+                JOptionPane.showMessageDialog(null, "O jogo acabou");
+                abrirFimDeJogo(novoJogo);
+            }
         }    }//GEN-LAST:event_grid87KeyTyped
 
     private void grid68KeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_grid68KeyTyped
@@ -2783,11 +2938,13 @@ public class TabuleiroFrame extends javax.swing.JFrame {
                 JOptionPane.showMessageDialog(null, ex.getMessage());
             } catch (MovimentoIncorretoException ex) {
                 progressoErros.setValue(novoJogo.getQuantidadeErros());
-                if (novoJogo.isFimDeJogo()) {
-                    JOptionPane.showMessageDialog(null, "O jogo acabou");
-                    abrirFimDeJogo(novoJogo);
-                }
-                acertadoErrado.setText(ex.getMessage());}
+
+                acertadoErrado.setText(ex.getMessage());
+            }
+            if (novoJogo.isFimDeJogo()) {
+                JOptionPane.showMessageDialog(null, "O jogo acabou");
+                abrirFimDeJogo(novoJogo);
+            }
         }    }//GEN-LAST:event_grid68KeyTyped
 
     private void grid78KeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_grid78KeyTyped
@@ -2802,11 +2959,13 @@ public class TabuleiroFrame extends javax.swing.JFrame {
                 JOptionPane.showMessageDialog(null, ex.getMessage());
             } catch (MovimentoIncorretoException ex) {
                 progressoErros.setValue(novoJogo.getQuantidadeErros());
-                if (novoJogo.isFimDeJogo()) {
-                    JOptionPane.showMessageDialog(null, "O jogo acabou");
-                    abrirFimDeJogo(novoJogo);
-                }
-                acertadoErrado.setText(ex.getMessage());}
+
+                acertadoErrado.setText(ex.getMessage());
+            }
+            if (novoJogo.isFimDeJogo()) {
+                JOptionPane.showMessageDialog(null, "O jogo acabou");
+                abrirFimDeJogo(novoJogo);
+            }
         }    }//GEN-LAST:event_grid78KeyTyped
 
     private void grid88KeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_grid88KeyTyped
@@ -2821,11 +2980,13 @@ public class TabuleiroFrame extends javax.swing.JFrame {
                 JOptionPane.showMessageDialog(null, ex.getMessage());
             } catch (MovimentoIncorretoException ex) {
                 progressoErros.setValue(novoJogo.getQuantidadeErros());
-                if (novoJogo.isFimDeJogo()) {
-                    JOptionPane.showMessageDialog(null, "O jogo acabou");
-                    abrirFimDeJogo(novoJogo);
-                }
-                acertadoErrado.setText(ex.getMessage());}
+
+                acertadoErrado.setText(ex.getMessage());
+            }
+            if (novoJogo.isFimDeJogo()) {
+                JOptionPane.showMessageDialog(null, "O jogo acabou");
+                abrirFimDeJogo(novoJogo);
+            }
         }    }//GEN-LAST:event_grid88KeyTyped
 
     private void progressoDicasPropertyChange(java.beans.PropertyChangeEvent evt) {//GEN-FIRST:event_progressoDicasPropertyChange
@@ -2834,7 +2995,7 @@ public class TabuleiroFrame extends javax.swing.JFrame {
     /*Sujeito a melhores implementações 
  *Serve para colocar os valores do tabuleiro na interface
   São independente em relação ao tabuleiro, ou seja, as alterações neles não implicam diretamente na matriz*/
-    
+
     public void setAllTextField() {
         grid00.setText(String.valueOf(novoJogo.getGridTabuleiro()[0][0]));
         if (!grid00.getText().equals("0")) {
@@ -2958,7 +3119,7 @@ public class TabuleiroFrame extends javax.swing.JFrame {
         }
         grid22.setText(String.valueOf(novoJogo.getGridTabuleiro()[2][2]));
         if (!grid22.getText().equals("0")) {
-            grid02.setEditable(false);
+            grid22.setEditable(false);
         } else {
             grid22.setText("");
         }

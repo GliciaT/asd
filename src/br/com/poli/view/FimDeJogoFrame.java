@@ -14,7 +14,9 @@ import br.com.poli.principal.Partida;
  * @author dylan
  */
 public class FimDeJogoFrame extends javax.swing.JFrame {
+
     Partida aux;
+
     /**
      * Creates new form FimDeJogoFrame
      */
@@ -764,27 +766,27 @@ public class FimDeJogoFrame extends javax.swing.JFrame {
     }//GEN-LAST:event_buttonSairActionPerformed
 
     private void scorePropertyChange(java.beans.PropertyChangeEvent evt) {//GEN-FIRST:event_scorePropertyChange
-        if(aux.getIdadeJogador()==0){
+        if (aux.getIdadeJogador() == 0) {
             CalculaScoreSemIdade calcula = new CalculaScoreSemIdade();
             calcula.calcula(aux);
-            score.setText(""+aux.getScore());
+            score.setText("" + aux.getScore());
             //score.setText("Sem idade");
         } else {
             CalculaScoreComIdade calcula = new CalculaScoreComIdade();
             calcula.calcula(aux);
-            score.setText(""+aux.getScore());
+            score.setText("" + aux.getScore());
             //score.setText("Com idade");
         }
     }//GEN-LAST:event_scorePropertyChange
 
     private void textSituacaoPropertyChange(java.beans.PropertyChangeEvent evt) {//GEN-FIRST:event_textSituacaoPropertyChange
-        if(aux.getVenceu()){
+        if (aux.getVenceu()) {
             textSituacao.setText("Venceu");
-        } else{
+        } else {
             textSituacao.setText("Perdeu");
         }
     }//GEN-LAST:event_textSituacaoPropertyChange
-     public void setAllTextField() {
+    public void setAllTextField() {
         grid00.setText(String.valueOf(aux.getGridTabuleiro()[0][0]));
         if (!grid00.getText().equals("0")) {
             grid00.setEditable(false);
@@ -1272,6 +1274,7 @@ public class FimDeJogoFrame extends javax.swing.JFrame {
             grid88.setText("");
         }
     }
+
     /**
      * @param args the command line arguments
      */

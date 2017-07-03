@@ -151,7 +151,6 @@ public class LoginFrame extends javax.swing.JFrame {
             String a = dificuldade.getSelectedItem().toString();
             //JOptionPane.showMessageDialog(null, "O jogo vai começar"+idade.getValue());
 
-            
             switch (dificuldade.getSelectedItem().toString()) {
                 case "FACIL":
                     abrirTabuleiro(nome.getText(), DificuldadePartida.FACIL, (int) idade.getValue());
@@ -222,8 +221,9 @@ public class LoginFrame extends javax.swing.JFrame {
             }
         });
     }
-    public void abrirTabuleiro(String nome, DificuldadePartida dificuldade, int idade){
-        TabuleiroFrame tab = new TabuleiroFrame(nome,dificuldade,idade);
+
+    public void abrirTabuleiro(String nome, DificuldadePartida dificuldade, int idade) {
+        TabuleiroFrame tab = new TabuleiroFrame(nome, dificuldade, idade);
         dispose();
         tab.setVisible(true);
     }
