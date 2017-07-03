@@ -30,7 +30,7 @@ public class Tabuleiro implements ResolvedorSudoku {
                         System.out.println("Acertou");
                         return true;
                     } else {
-                        throw new MovimentoIncorretoException("Jogada errada");
+                        throw new MovimentoIncorretoException("E R R O U");
                     }
                 } else {
                     throw new MovimentoInvalidoException("Campo já preenchido");

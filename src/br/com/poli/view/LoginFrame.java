@@ -149,7 +149,6 @@ public class LoginFrame extends javax.swing.JFrame {
         if (ok) {
             String nomeUsuario = nome.getText();
             String a = dificuldade.getSelectedItem().toString();
-            //JOptionPane.showMessageDialog(null, "O jogo vai começar"+idade.getValue());
 
             switch (dificuldade.getSelectedItem().toString()) {
                 case "FACIL":
@@ -165,17 +164,8 @@ public class LoginFrame extends javax.swing.JFrame {
                     break;
             }
             dispose();
-            //new TabuleiroFrame().setVisible(true);
         }
-        /*else {
-            int idadeDoJogador = Integer.parseInt(idade.getText());
-            Partida novoJogo;
-            if (idadeDoJogador == 0) {
-                novoJogo = new Partida(nome.getText(), (DificuldadePartida) dificuldade.getSelectedItem());
-            } else {
-                novoJogo = new Partida(nome.getText(), (DificuldadePartida) dificuldade.getSelectedItem(), idadeDoJogador);
-            }
-        } */
+     
     }//GEN-LAST:event_playButtonActionPerformed
 
     private void nomeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_nomeActionPerformed

@@ -42,11 +42,14 @@ public class TabuleiroFrame extends javax.swing.JFrame {
 
         @Override
         public void run() {
+            
+            //Cronometro
+            
             int hor = 00, min = 00, seg = 00;
 
             for (;;) {
                 try {
-                    //System.out.println(hor + ":" + min + ":" + seg);
+                  
                     seg++;
                     if (seg > 59) {
                         seg = 0;
@@ -908,6 +911,8 @@ public class TabuleiroFrame extends javax.swing.JFrame {
         jLabel6.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         jLabel6.setText("Clique em enter para confirmar a jogada");
 
+        acertadoErrado.setFont(new java.awt.Font("DejaVu Sans Light", 1, 18)); // NOI18N
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -916,9 +921,9 @@ public class TabuleiroFrame extends javax.swing.JFrame {
                 .addGap(23, 23, 23)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(42, 42, 42)
-                        .addComponent(acertadoErrado, javax.swing.GroupLayout.PREFERRED_SIZE, 101, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(83, 83, 83)
+                        .addGap(32, 32, 32)
+                        .addComponent(acertadoErrado, javax.swing.GroupLayout.PREFERRED_SIZE, 149, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(45, 45, 45)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(layout.createSequentialGroup()
                                 .addComponent(grid07, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -2992,8 +2997,7 @@ public class TabuleiroFrame extends javax.swing.JFrame {
     private void progressoDicasPropertyChange(java.beans.PropertyChangeEvent evt) {//GEN-FIRST:event_progressoDicasPropertyChange
         progressoDicas.setMaximum(novoJogo.getQuantidadeMaximaErrosDicas());
     }//GEN-LAST:event_progressoDicasPropertyChange
-    /*Sujeito a melhores implementações 
- *Serve para colocar os valores do tabuleiro na interface
+/*Serve para colocar os valores do tabuleiro na interface
   São independente em relação ao tabuleiro, ou seja, as alterações neles não implicam diretamente na matriz*/
 
     public void setAllTextField() {
